@@ -103,8 +103,8 @@ Lockdoor Tools contents:
       - XSStrike : Most advanced XSS scanner.
       - joomscan : Joomla Vulnerability Scanner Project
    - Frameworks:
-      - Dzjecter # Server checking Tool
-      - W3af # web application attack and audit framework
+      - Dzjecter : Server checking Tool
+      - W3af : web application attack and audit framework
 
 **Privilege Escalation**:
 --------------------------
@@ -154,7 +154,7 @@ Lockdoor Tools contents:
    - WebShells : Webshells Collection
    - ShellSum : A defense tool - detect web shells in local directories
    - Weevely : Weaponized web shell
-   - python-pty-shells # Python PTY backdoors
+   - python-pty-shells : Python PTY backdoors
 
 **Password Attacks**:
 --------------------------
