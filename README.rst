@@ -2,8 +2,10 @@
 
    <h1 align="center">
 
-.. image:: ./pictures/logo.png
-
+.. image:: ./pictures/logo.png 
+   :height: 50px
+   :width: 50 px
+   
 .. raw:: html
 
    <br class="title">
