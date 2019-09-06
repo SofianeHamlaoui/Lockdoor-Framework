@@ -229,3 +229,15 @@ Lockdoor Resources contents:
    - `nmap_quick_reference_guide <ToolsResources/NETWORKING/nmap_quick_reference_guide.pdf>`_
    - `tcpdump <ToolsResources/NETWORKING/tcpdump.pdf>`_
    
+**Password Attacks**:
+--------------------------
+   - `password_attacks <ToolsResources/PASSWORD/CHEATSHEETS/password_attacks.md>`_
+   - `Some-Links-To-Wordlists <ToolsResources/PASSWORD/CHEATSHEETS/Some-Links-To-Wordlists.txt>`_
+  
+**Post Exploitation**:
+--------------------------
+   - `Cheatsheet_AVBypass <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_AVBypass.txt>`_
+   - `Cheatsheet_BuildReviews <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_BuildReviews.txt>`_
+   - `code-execution-reverse-shell-commands <ToolsResources/POST-EXPL/CHEATSHEETS/code-execution-reverse-shell-commands.txt>`_
+   - `important-linux-serv-files <ToolsResources/POST-EXPL/CHEATSHEETS/important-linux-serv-files.txt>`_
+   
