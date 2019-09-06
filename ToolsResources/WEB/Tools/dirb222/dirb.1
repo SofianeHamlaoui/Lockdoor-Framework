@@ -1,0 +1,116 @@
+.TH DIRB 1 "27/01/2009" "The Dark Raver"
+.\"=====================================================================
+.if n .ds MP MetaPost
+.if t .ds MP MetaPost
+.if n .ds MF Metafont
+.if t .ds MF M\s-2ETAFONT\s0
+.if t .ds TX \fRT\\h'-0.1667m'\\v'0.20v'E\\v'-0.20v'\\h'-0.125m'X\fP
+.if n .ds TX TeX
+.ie t .ds OX \fIT\v'+0.25m'E\v'-0.25m'X\fP\" for troff
+.el .ds OX TeX\" for nroff
+.\" the same but obliqued
+.\" BX definition must follow TX so BX can use TX
+.if t .ds BX \fRB\s-2IB\s0\fP\*(TX
+.if n .ds BX BibTeX
+.\" LX definition must follow TX so LX can use TX
+.if t .ds LX \fRL\\h'-0.36m'\\v'-0.15v'\s-2A\s0\\h'-0.15m'\\v'0.15v'\fP\*(TX
+.if n .ds LX LaTeX
+.\"=====================================================================
+.SH NAME
+dirb \- Web Content Scanner
+.SH SYNOPSIS
+.B dirb <url_base>
+.I <url_base>
+.I [<wordlist_file(s)>]
+.I [options]
+.\"=====================================================================
+.SH DESCRIPTION
+DIRB IS a Web Content Scanner. It looks for existing (and/or hidden) Web
+Objects. It basically works by launching a dictionary basesd
+attack against a web server and analizing the response.
+.SH OPTIONS
+.TP
+.B -a <agent_string>
+.rb
+Specify your custom USER_AGENT.
+(Default is: "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)")
+.TP
+.B -c <cookie_string>
+.rb 
+Set a cookie for the HTTP request.
+.TP
+.B -f
+.rb
+Fine tunning of NOT_FOUND (404) detection.
+.TP
+.B -H <header_string>
+.rb
+Add a custom header to the HTTP request.
+.TP
+.B -i
+.rb
+Use case-insensitive Search.
+.TP
+.B -l
+.rb
+Print "Location" header when found.
+.TP
+.B -N <nf_code> 
+.rb
+Ignore responses with this HTTP code.
+.TP
+.B -o <output_file> 
+.rb
+Save output to disk.
+.TP
+.B -p <proxy[:port]> 
+.rb
+Use this proxy. (Default port is 1080)
+.TP
+.B -P <proxy_username:proxy_password> 
+.rb
+Proxy Authentication.
+.TP
+.B -r 
+.rb
+Don't Search Recursively.
+.TP
+.B -R
+.rb
+Interactive Recursion.
+(Ask in which directories you want to scan)
+.TP
+.B -S
+.rb
+Silent Mode. Don't show tested words. (For dumb terminals)
+.TP
+.B -t
+.rb
+Don't force an ending '/' on URLs.
+.TP
+.B -u <username:password> 
+.rb
+Username and password to use.
+.TP
+.B -v
+.rb
+Show Also Not Existant Pages.
+.TP
+.B -w
+.rb
+Don't Stop on WARNING messages.
+.TP
+.B -x <extensions_file> 
+.rb
+Amplify search with the extensions on this file.
+.TP
+.B -X <extensions> 
+.rb
+Amplify search with this extensions.
+.TP
+.B -z <milisecs> 
+.rb
+Amplify search with this extensions.
+.\"=====================================================================
+.SH "SEE ALSO"
+.BR brain (x)

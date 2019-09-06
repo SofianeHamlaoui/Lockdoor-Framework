@@ -1,0 +1,3 @@
+s_readline();
+s_string("KSTET ");
+s_string_variable("COMMAND");

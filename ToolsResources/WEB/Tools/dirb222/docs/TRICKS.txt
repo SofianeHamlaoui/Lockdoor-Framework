@@ -1,0 +1,44 @@
+DIRB TRICKS
+===========
+
+
+1) Apache "Options MultiViews" (Common configuration)
+
+-> Sometimes with Apache servers configured with "Options MultiViews" you 
+don't need to include the file extension in the search, the system will tell 
+you the right name through a "Content-Location" header.
+
+
+2) Using extensions
+
+-> Before starting your scan. Navigate through the target URL and get the 
+most used file extensions. Include them in a extensions file (one extension by 
+line) and use it in your scan.
+
+Example extensions file:
+
+--------------
+			--> void extension (look for directorios or servlets)
+.asp
+.txt
+.html
+--------------
+
+-> You can also use the mode -X to input extensiones directly from de command 
+line:
+
+-X ,,.asp,.txt,.html
+
+
+3) Selective scanning
+
+-> If you don't want to scan uninteresting directories like /images, /css, /js,
+etc... You can use the mode -R (interactive recursion) and DIRB will ask you
+for which subdirectories you want to scan and for which you don't.
+
+
+4) Scanning IIS webservers
+
+-> IIS webserver URLs are case insensitives, so you can use the mode -i to cut 
+down the number of tries.
+

@@ -1,0 +1,19 @@
+DIRB INSTALLATION
+=================
+
+DIRB is based on libcurl so you need to install this library where autoconf 
+can locate it. Once libcurl is installed properly you must only do:
+
+	$ ./configure
+	$ make
+
+
+DIRB has been compiled and tested on the following platforms:
+
+- Linux/x86
+- Cygwin
+- OpenBSD/x86
+- Solaris/SPARC
+- AIX
+- HP/UX
+

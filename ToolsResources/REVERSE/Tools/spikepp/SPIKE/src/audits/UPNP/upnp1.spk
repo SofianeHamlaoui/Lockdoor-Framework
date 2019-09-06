@@ -1,0 +1,52 @@
+s_string_variable("NOTIFY"); 
+s_string(" "); 
+s_string_variable("127.0.0.1"); 
+s_string(" ");
+s_string_variable("HTTP/1.1"); 
+s_string("\r\n");
+
+s_string("Host: ");
+s_string_variable("192.168.1.100");
+s_string(":");
+s_string_variable("1900");
+s_string("\r\n");
+
+s_string_variable("CACHE-CONTROL");
+s_string(": ");
+s_string_variable("max-age");
+s_string("=");
+s_string_variable("10");
+s_string("\r\n");
+
+s_string("LOCATION: ");
+s_string_variable("http");
+s_string("://");
+s_string_variable("192.168.1.103");
+s_string(":");
+s_string_variable("555");
+s_string("/");
+s_string_variable("");
+s_string_variable(".xml");
+s_string("\r\n");
+
+s_string("NT: ");
+s_string_variable("urn");
+s_string(":schemas-upnp-org:device:InternetGatewayDevice:");
+s_string_variable("1");
+s_string("\r\n");
+
+s_string("NTS: ");
+s_string_variable("ssdp");
+s_string(":");
+s_string_variable("alive");
+s_string("\r\n");
+
+s_string("SERVER: ");
+s_string_variable("BOB");
+s_string("/2001 UPnP/1.0 product/1.1\r\n");
+
+s_string("USN: ");
+s_string_variable("uuid");
+s_string(":");
+s_string_variable("BOB");
+s_string("\r\n\r\n");

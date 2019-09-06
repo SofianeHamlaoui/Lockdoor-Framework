@@ -1,0 +1,18 @@
+Sadly, using openssl directly was becoming a pain in the ass because
+sometimes it wouldn't connect to Netscape Enterprise Server correctly.
+
+I tried fiddling with it quite a bit, but in the end, decided to rewrite
+webmitm to work with stunnel instead. So now that's what it does.
+
+The usage statement is actually quite useful. You should be transparently
+proxying within seconds! Then just take the http_ files and send them
+to makewebfuzz.pl http_request0.0 > webfuzz.c, type make, and you
+have a customized webfuzzer!
+
+Of course, it may not be optimal, and you can feel free to use vi and
+edit it up and make it whatever you want. Save your old webfuzzes
+for regressions testing, etc.
+
+-dave
+
+

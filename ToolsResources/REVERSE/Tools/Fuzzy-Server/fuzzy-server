@@ -1,0 +1,531 @@
+#!/bin/bash
+#Version: Alpha 1.0
+clear
+
+#Title
+figlet FUZZY-SERVER
+echo "--------------------------------------------------------------------------------"
+echo "|Made by BaconBombz|Hosted by GitHub|"
+echo "--------------------------------------------------------------------------------"
+
+#Not Taking Responsibility
+read -p "Do you have permission to use this tool on a server? [yes/no]: " safety
+clear
+
+#Listing Options
+figlet FUZZY-SERVER
+echo "--------------------------------------------------------------------------------"
+if [ $safety == yes ]
+then
+  cat<< END
+                    |Crash|
+1) Stats Fuzz Script| No  |
+2) Rtime Fuzz Script| No  |
+3) Ltime Fuzz Script| No  |
+4) Srun Fuzz Script | No  |
+5) Trun Fuzz Script | Yes |
+6) Gmon Fuzz Script | Yes |
+7) Gdog Fuzz Script | No  |
+8) Kstet Fuzz Script| Yes |
+9) Gter Fuzz Script | Yes |
+10) Hter Fuzz Script| Yes |
+11) Lter Fuzz Script| Yes |
+12) Kstan Fuzz Script| No |
+0) Exit
+END
+echo "--------------------------------------------------------------------------------"
+read -p "Option: " Operation
+elif [ $safety == no ]
+then
+  echo "THEN NEVER TRY THIS."
+  exit
+else
+  echo "Hmm? Try Again."
+  exit
+fi
+
+#Operation 1
+if [ $Operation == 1 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Stats] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Stats-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 2
+if [ $Operation == 2 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Rtime] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Rtime-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 3
+if [ $Operation == 3 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Ltime] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Ltime-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 4
+if [ $Operation == 4 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Srun] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Srun-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 5
+if [ $Operation == 5 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Trun] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Trun-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 6
+if [ $Operation == 6 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Gmon] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Gmon-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 7
+if [ $Operation == 7 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Gdog] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Gdog-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 8
+if [ $Operation == 8 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Kstet] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Kstet-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 9
+if [ $Operation == 9 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Gter] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Gter-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 10
+if [ $Operation == 10 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Hter] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Hter-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 11
+if [ $Operation == 11 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Lter] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Lter-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 12
+if [ $Operation == 12 ]
+then
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target IP?: " tIP
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "What Is The Target's Port?: " tPort
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipVar: " sVar
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  read -p "SkipString: " sString
+  clear
+  figlet FUZZY-SERVER
+  echo "--------------------------------------------------------------------------------"
+  echo Running The [Kstan] Fuzzing Script
+  echo "--------------------------------------------------------------------------------"
+  echo "Press CTRL-C To Stop"
+  echo "3"
+  sleep 1
+  echo "2"
+  sleep 1
+  echo "1"
+  sleep 1
+  generic_send_tcp $tIP $tPort Scripts/VulnServer_Kstan-Command_Crasher.spk $sVar $sString
+  echo "--------------------------------------------------------------------------------"
+  read -p "Go Back? [yes/no]: " back
+  if [ $back == yes ]
+  then
+    fuzzy-server
+  fi
+fi
+
+#Operation 0
+if [ $Operation == 0 ]
+then
+  exit
+fi

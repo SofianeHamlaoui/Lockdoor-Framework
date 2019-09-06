@@ -1,0 +1,116 @@
+DIRB FAQ
+========
+
+Questions:
+
+1) Can I use multiple wordfiles at a time?
+
+2) I Know 3 directories exist, how can I scan them?
+
+3) I'm newbie in security testing. Is DIRB an easy tool?
+
+4) Can DIRB find or exploit vulnerabilities?
+
+5) Can you include a description of each item found?
+
+6) I'm desperate. I've used all the avaliable CGI scanners against a 
+webserver and they don't found anything. DIRB can give me some hope?
+
+7) Can DIRB be used like a classical CGI scanner?
+
+8) What is the NOT_FOUND code?
+
+9) What about a multi-thread version?
+
+
+####################################################
+
+
+1) Can I use multiple wordfiles at a time?
+
+YES, the wordfile parameter lets you specify multiple files separated by 
+coma: ","
+
+Example:
+
+	$./dirb http://www.site.com/ wordlist1.txt,wordlist2.txt,wordlist3.txt
+
+
+2) I know 3 directories exist, how can I scan them?
+
+You have 2 options:
+
+- Scan directly each directory. For example:
+
+	$./dirb http://www.site.com/directory1/ wordlist.txt
+
+	$./dirb http://www.site.com/directory2/ wordlist.txt
+
+	$./dirb http://www.site.com/directory3/ wordlist.txt
+
+- Include the name of the 3 directories in a text file (one directory by line)
+and use it like a wordfile. DIRB will found the directories and scan into it. 
+For example:
+
+	$./dirb http://www.site.com/ wordlist.txt,dirnamefile.txt
+
+Content of dirnamefile.txt:
+----------------
+directory1
+directory2
+directory3
+----------------
+
+
+3) I'm newbie in security testing. Is DIRB an easy tool?
+
+NO. DIRB is a tool for automating the search of (normally hidden) web 
+applications. But once you have found them, you need a good knowledge on 
+security and penetration testing to get advantage of this information.
+
+
+4) Can DIRB find or exploit vulnerabilities?
+
+NO. DIRB look for web objects. To determine if they are vulnerable or not, 
+you must use your own intelligence or other kind of tool.
+
+
+5) Can you include a description of each item found?
+
+NO. DIRB scan generic contents. I don't know what exists behind each one. 
+Maybe some administrator use a file named "test.asp" as his main 
+administration menu or simply is a "hello world" script...
+
+
+
+6) I'm desperate. I've used all the avaliable CGI scanners against a 
+webserver and they don't found anything. DIRB can give me some hope?
+
+YES. DIRB can found something that classic CGI scanners can't found. Maybe 
+it's your last chance.
+
+
+7) Can DIRB be used like a classical CGI scanner?
+
+YES. You only need to define a wordlist with common vulnerable CGI names, and 
+feed this wordfile into DIRB. (The default dirb distribution comes
+with a wordfile for this usage: "wordlists/vulns/cgis.txt")
+
+
+8) What is the NOT_FOUND code?
+
+NOT_FOUND is the response code that gives a webserver for not existant pages or
+documents. DIRB use this code to locate only the correct existant pages and 
+eliminate the rest. By default most webservers use code 404 (Page not found) 
+but in some cases the NOT_FOUND code is not 404 and most CGI scanners will fail
+in detecting existing pages.
+
+
+9) What about a multi-thread version?
+
+I have tested a simplified demo version of dirb running multiple threads and 
+the speed gain was about 20-40%. This improvement is not significant and the 
+complexity of the code does it (by now) not very useful.
+
+
+

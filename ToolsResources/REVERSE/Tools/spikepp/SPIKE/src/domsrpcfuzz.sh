@@ -1,0 +1,114 @@
+#!/bin/sh
+#just to show you how - you can edit this to your liking
+#by using dcetest and ifids or epdump to find a UUID and Version and port.
+
+MAX=35
+#only comes up after you fuzz something else, like 5b82
+#or maybe it has to do with the task manager
+#UUID=7c857801-7381-11cf-884d-00aa004b2e24
+#UUID=5b821720-f63b-11d0-aad2-00c04fc324db
+#UUID=11178075-25d2-4c9c-8087-4c36924091e1
+#UUID=eb658b8a-7a64-4ddc-9b8d-a92610db0206
+#UUID=1c1c45ee-4395-11d2-b60b-00104b703efd
+#UUID=415a984a-88b3-49f3-92af-0508bedf0d6c
+#UUID=8dcc8327-dbe9-48e6-846c-33725865d50c
+#UUID=20610036-fa22-11cf-9823-00a0c911e5df
+#UUID=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+#UUID=300f3532-38cc-11d0-a3f0-0020af6b0add
+#BINGO on fuction 23! Memory jumps way up...
+#UUID=4b324fc8-1670-01d3-1278-5a47bf6ee188
+#VERSIONMAJOR=3
+#VERSIONMINOR=0
+#UUID=629b9f66-556c-11d1-8dd2-00aa004abd5e
+#UUID=63fbe424-2029-11d1-8db8-00aa004abd5e
+#UUID=2f5f6520-ca46-1067-b319-00dd010662da
+#VERSIONMAJOR=1
+#VERSIONMINOR=0
+#PORT=1025
+
+#UUID=3919286a-b10c-11d0-9ba8-00c04fd92ef5
+#UUID=c681d488-d850-11d0-8c52-00c04fd90f7e
+#UUID=c9378ff1-16f7-11d0-a0b2-00aa0061426a
+#UUID=d4781cd6-e5d3-44df-ad94-930efe48a887
+#VERSIONMAJOR=0
+#VERSIONMINOR=0
+#PORT=1025
+
+#NTDS Backup Interface
+#UUID=ecec0d70-a603-11d0-96b1-00a0c91ece30
+#UUID=16e0cf3a-a604-11d0-96b1-00a0c91ece30
+#MS NT Directory DRS Interface
+#UUID=e3514235-4b06-11d1-ab04-00c04fc2dcd2
+#UUID=d335b8f6-cb31-11d0-b0f9-006097ba4e54
+#UUID=98fe2c90-a542-11d0-a4ef-00a0c9062910
+#MS NT Directory XDS Interface
+#UUID=f5cc5a18-4264-101a-8c59-08002b2f8426
+#UUID=12345678-1234-abcd-ef00-01234567cffb
+#UUID=f5cc5a7c-4264-101a-8c59-08002b2f8426
+
+
+#UUID=18f70770-8e64-11cf-9af1-0020af6e72f4
+#UUID=82ad4280-036b-11cf-972c-00aa006887b0
+#UUID=8cfb5d70-31a4-11cf-a7d8-00805f48a135
+#UUID=70b51430-b6ca-11d0-b9b9-00a0c922e750
+#UUID=4f82f460-0e21-11cf-909e-00805f48a135
+#UUID=a9e69612-b80d-11d0-b9b9-00a0c922e750
+#UUID=98fe2c90-a542-11d0-a4ef-00a0c9062910
+#UUID=b196b284-bab4-101a-b69c-00aa00341d07
+#UUID=b196b286-bab4-101a-b69c-00aa00341d07
+#UUID=00000001-0000-0000-c000-000000000046
+#ismserv.exe
+#UUID=130ceefb-e466-11d1-b78b-00c04fa32883
+#UUID=68dcd486-669e-11d1-ab0c-00c04fc2dcd2
+#UUID=18f70770-8e64-11cf-9af1-0020af6e72f4
+#NTFRS
+#UUID=f5cc59b4-4264-101a-8c59-08002b2f8426
+
+#epmapper port 135
+#UUID=e1af8308-5d1f-11c9-91a4-08002b14a0fa
+#UUID=0b0a6584-9e0f-11cf-a3cf-00805f68cb1b
+#UUID=975201b0-59ca-11d0-a8d5-00a0c90d8051
+#UUID=00000136-0000-0000-c000-000000000046
+#UUID=000001a0-0000-0000-c000-000000000046
+#UUID=c6f3ee72-ce7e-11d1-b71e-00c04fc3111a
+#UUID=4d9f4ab8-7d1c-11cf-861e-0020af6e7c57
+#UUID=e60c73e6-88f9-11cf-9af1-0020af6e72f4
+#UUID=99fcfec4-5260-101b-bbcb-00aa0021347a
+
+
+#Echange 2003
+#UUID=98fe2c90-a542-11d0-a4ef-00a0c9062910
+#UUID=a4f1db00-ca47-1067-b31f-00dd010662da
+
+
+UUID=130ceefb-e466-11d1-b78b-00c04fa32883
+
+#26156 or 26153
+VERSIONMAJOR=2
+VERSIONMINOR=0
+PORT=1071
+TARGET=192.168.1.102
+#4,6,12,(16),24,25,29,31,34 vuln
+STARTFUNCTION=1
+
+#OBJECT=4e14fba2-2e22-11d1-9964-00c04fbbb345
+OBJECT=""
+#// simplestruct/confromantarray(conformant string)/conformantstruct
+#NdrConformantStringUnmarshall
+
+
+i=$STARTFUNCTION
+while [ "$i" -lt "$MAX" ]; do
+j=0
+while [ "$j" -lt "50" ]; do
+echo "Doing function $i try $j"
+/bin/sh -c "./msrpcfuzz $TARGET $PORT $UUID $VERSIONMAJOR $VERSIONMINOR $i 100 10 $OBJECT 2>> /crypt/out_msrpcfuzz"
+
+j=`expr $j + 1`
+done
+
+i=`expr $i + 1`
+done
+
+echo "DONE!"
+#27534

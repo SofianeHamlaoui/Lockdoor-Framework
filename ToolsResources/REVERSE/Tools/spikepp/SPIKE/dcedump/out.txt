@@ -1,0 +1,584 @@
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncadg_ip_udp:10.25.25.15[1169]
+RpcMgmtInqIfIds succeeded
+Interfaces: 13
+  00000134-0000-0000-c000-000000000046 v0.0
+  18f70770-8e64-11cf-9af1-0020af6e72f4 v0.0
+  00000131-0000-0000-c000-000000000046 v0.0
+  00000143-0000-0000-c000-000000000046 v0.0
+  00000132-0000-0000-c000-000000000046 v0.0
+  70b51430-b6ca-11d0-b9b9-00a0c922e750 v0.0
+  82ad4280-036b-11cf-972c-00aa006887b0 v2.0
+  8cfb5d70-31a4-11cf-a7d8-00805f48a135 v3.0
+  bfa951d1-2f0e-11d3-bfd1-00c04fa3490a v1.0
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+  00000001-0000-0000-c000-000000000046 v0.0
+  b196b284-bab4-101a-b69c-00aa00341d07 v0.0
+  b196b286-bab4-101a-b69c-00aa00341d07 v0.0
+
+IfId: ecec0d70-a603-11d0-96b1-00a0c91ece30 version 1.0
+Annotation: NTDS Backup Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\lsass]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 16e0cf3a-a604-11d0-96b1-00a0c91ece30 version 1.0
+Annotation: NTDS Restore Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\lsass]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: e3514235-4b06-11d1-ab04-00c04fc2dcd2 version 4.0
+Annotation: MS NT Directory DRS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\lsass]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: e3514235-4b06-11d1-ab04-00c04fc2dcd2 version 4.0
+Annotation: MS NT Directory DRS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC000000fc.00000001]
+
+IfId: e3514235-4b06-11d1-ab04-00c04fc2dcd2 version 4.0
+Annotation: MS NT Directory DRS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1026]
+RpcMgmtInqIfIds succeeded
+Interfaces: 11
+  12345778-1234-abcd-ef00-0123456789ab v0.0
+  c681d488-d850-11d0-8c52-00c04fd90f7e v1.0
+  3919286a-b10c-11d0-9ba8-00c04fd92ef5 v0.0
+  12345778-1234-abcd-ef00-0123456789ac v1.0
+  ecec0d70-a603-11d0-96b1-00a0c91ece30 v1.0
+  16e0cf3a-a604-11d0-96b1-00a0c91ece30 v1.0
+  e3514235-4b06-11d1-ab04-00c04fc2dcd2 v4.0
+  f5cc5a7c-4264-101a-8c59-08002b2f8426 v21.0
+  12345678-1234-abcd-ef00-01234567cffb v1.0
+  d335b8f6-cb31-11d0-b0f9-006097ba4e54 v1.5
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+
+IfId: e3514235-4b06-11d1-ab04-00c04fc2dcd2 version 4.0
+Annotation: MS NT Directory DRS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[NTDS_LPC]
+
+IfId: e3514235-4b06-11d1-ab04-00c04fc2dcd2 version 4.0
+Annotation: MS NT Directory DRS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncadg_ip_udp:10.25.25.15[1028]
+RpcMgmtInqIfIds succeeded
+Interfaces: 11
+  12345778-1234-abcd-ef00-0123456789ab v0.0
+  c681d488-d850-11d0-8c52-00c04fd90f7e v1.0
+  3919286a-b10c-11d0-9ba8-00c04fd92ef5 v0.0
+  12345778-1234-abcd-ef00-0123456789ac v1.0
+  ecec0d70-a603-11d0-96b1-00a0c91ece30 v1.0
+  16e0cf3a-a604-11d0-96b1-00a0c91ece30 v1.0
+  e3514235-4b06-11d1-ab04-00c04fc2dcd2 v4.0
+  f5cc5a7c-4264-101a-8c59-08002b2f8426 v21.0
+  12345678-1234-abcd-ef00-01234567cffb v1.0
+  d335b8f6-cb31-11d0-b0f9-006097ba4e54 v1.5
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+
+IfId: e3514235-4b06-11d1-ab04-00c04fc2dcd2 version 4.0
+Annotation: MS NT Directory DRS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_http:10.25.25.15[1029]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: f5cc5a7c-4264-101a-8c59-08002b2f8426 version 21.0
+Annotation: MS NT Directory XDS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\lsass]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: f5cc5a7c-4264-101a-8c59-08002b2f8426 version 21.0
+Annotation: MS NT Directory XDS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC000000fc.00000001]
+
+IfId: f5cc5a7c-4264-101a-8c59-08002b2f8426 version 21.0
+Annotation: MS NT Directory XDS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1026]
+RpcMgmtInqIfIds succeeded
+Interfaces: 11
+  12345778-1234-abcd-ef00-0123456789ab v0.0
+  c681d488-d850-11d0-8c52-00c04fd90f7e v1.0
+  3919286a-b10c-11d0-9ba8-00c04fd92ef5 v0.0
+  12345778-1234-abcd-ef00-0123456789ac v1.0
+  ecec0d70-a603-11d0-96b1-00a0c91ece30 v1.0
+  16e0cf3a-a604-11d0-96b1-00a0c91ece30 v1.0
+  e3514235-4b06-11d1-ab04-00c04fc2dcd2 v4.0
+  f5cc5a7c-4264-101a-8c59-08002b2f8426 v21.0
+  12345678-1234-abcd-ef00-01234567cffb v1.0
+  d335b8f6-cb31-11d0-b0f9-006097ba4e54 v1.5
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+
+IfId: f5cc5a7c-4264-101a-8c59-08002b2f8426 version 21.0
+Annotation: MS NT Directory XDS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[NTDS_LPC]
+
+IfId: f5cc5a7c-4264-101a-8c59-08002b2f8426 version 21.0
+Annotation: MS NT Directory XDS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncadg_ip_udp:10.25.25.15[1028]
+RpcMgmtInqIfIds succeeded
+Interfaces: 11
+  12345778-1234-abcd-ef00-0123456789ab v0.0
+  c681d488-d850-11d0-8c52-00c04fd90f7e v1.0
+  3919286a-b10c-11d0-9ba8-00c04fd92ef5 v0.0
+  12345778-1234-abcd-ef00-0123456789ac v1.0
+  ecec0d70-a603-11d0-96b1-00a0c91ece30 v1.0
+  16e0cf3a-a604-11d0-96b1-00a0c91ece30 v1.0
+  e3514235-4b06-11d1-ab04-00c04fc2dcd2 v4.0
+  f5cc5a7c-4264-101a-8c59-08002b2f8426 v21.0
+  12345678-1234-abcd-ef00-01234567cffb v1.0
+  d335b8f6-cb31-11d0-b0f9-006097ba4e54 v1.5
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+
+IfId: f5cc5a7c-4264-101a-8c59-08002b2f8426 version 21.0
+Annotation: MS NT Directory XDS Interface
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_http:10.25.25.15[1029]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 12345678-1234-abcd-ef00-01234567cffb version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\lsass]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 12345678-1234-abcd-ef00-01234567cffb version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC000000fc.00000001]
+
+IfId: 12345678-1234-abcd-ef00-01234567cffb version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1026]
+RpcMgmtInqIfIds succeeded
+Interfaces: 11
+  12345778-1234-abcd-ef00-0123456789ab v0.0
+  c681d488-d850-11d0-8c52-00c04fd90f7e v1.0
+  3919286a-b10c-11d0-9ba8-00c04fd92ef5 v0.0
+  12345778-1234-abcd-ef00-0123456789ac v1.0
+  ecec0d70-a603-11d0-96b1-00a0c91ece30 v1.0
+  16e0cf3a-a604-11d0-96b1-00a0c91ece30 v1.0
+  e3514235-4b06-11d1-ab04-00c04fc2dcd2 v4.0
+  f5cc5a7c-4264-101a-8c59-08002b2f8426 v21.0
+  12345678-1234-abcd-ef00-01234567cffb v1.0
+  d335b8f6-cb31-11d0-b0f9-006097ba4e54 v1.5
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+
+IfId: 12345678-1234-abcd-ef00-01234567cffb version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[NTDS_LPC]
+
+IfId: 12345678-1234-abcd-ef00-01234567cffb version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncadg_ip_udp:10.25.25.15[1028]
+RpcMgmtInqIfIds succeeded
+Interfaces: 11
+  12345778-1234-abcd-ef00-0123456789ab v0.0
+  c681d488-d850-11d0-8c52-00c04fd90f7e v1.0
+  3919286a-b10c-11d0-9ba8-00c04fd92ef5 v0.0
+  12345778-1234-abcd-ef00-0123456789ac v1.0
+  ecec0d70-a603-11d0-96b1-00a0c91ece30 v1.0
+  16e0cf3a-a604-11d0-96b1-00a0c91ece30 v1.0
+  e3514235-4b06-11d1-ab04-00c04fc2dcd2 v4.0
+  f5cc5a7c-4264-101a-8c59-08002b2f8426 v21.0
+  12345678-1234-abcd-ef00-01234567cffb v1.0
+  d335b8f6-cb31-11d0-b0f9-006097ba4e54 v1.5
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+
+IfId: 12345678-1234-abcd-ef00-01234567cffb version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_http:10.25.25.15[1029]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 369f33c1-0ee6-4872-9422-da2534b74643
+Binding: ncalrpc:[LRPC000002b4.00000001]
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 369f33c1-0ee6-4872-9422-da2534b74643
+Binding: ncacn_ip_tcp:10.25.25.15[1089]
+RpcMgmtInqIfIds failed: 0x6bb
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 67d9136e-b5c6-482e-838e-fbdfaae732b1
+Binding: ncalrpc:[LRPC000002b4.00000001]
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 67d9136e-b5c6-482e-838e-fbdfaae732b1
+Binding: ncacn_ip_tcp:10.25.25.15[1089]
+RpcMgmtInqIfIds failed: 0x6bb
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 5df458dc-b46f-4fad-9746-0a2dff857920
+Binding: ncalrpc:[LRPC000002b4.00000001]
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 5df458dc-b46f-4fad-9746-0a2dff857920
+Binding: ncacn_ip_tcp:10.25.25.15[1089]
+RpcMgmtInqIfIds failed: 0x6bb
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 2213f264-0230-47a1-be79-d3f575498ffd
+Binding: ncalrpc:[LRPC000002b4.00000001]
+
+IfId: 906b0ce0-c70b-1067-b317-00dd010662da version 1.0
+Annotation: 
+UUID: 2213f264-0230-47a1-be79-d3f575498ffd
+Binding: ncacn_ip_tcp:10.25.25.15[1089]
+RpcMgmtInqIfIds failed: 0x6bb
+
+IfId: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc version 1.0
+Annotation: Messenger Service
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[ntsvcs]
+
+IfId: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc version 1.0
+Annotation: Messenger Service
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\ntsvcs]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc version 1.0
+Annotation: Messenger Service
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\scerpc]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc version 1.0
+Annotation: Messenger Service
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncadg_ip_udp:10.25.25.15[1101]
+RpcMgmtInqIfIds succeeded
+Interfaces: 18
+  367abb81-9844-35f1-ad32-98f038001003 v2.0
+  93149ca2-973b-11d1-8c39-00c04fb984f9 v0.0
+  82273fdc-e32a-18c3-3f78-827929dc23ea v0.0
+  65a93890-fab9-43a3-b2a5-1e330ac28f11 v2.0
+  8d9f4e40-a03d-11ce-8f69-08003e30051b v1.0
+  4b324fc8-1670-01d3-1278-5a47bf6ee188 v3.0
+  6bffd098-a112-3610-9833-46c3f87e345a v1.0
+  17fdd703-1827-4e34-79d4-24a55c53bb37 v1.0
+  5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc v1.0
+  3dde7c30-165d-11d1-ab8f-00805f14db40 v1.0
+  8d0ffe72-d252-11d0-bf8f-00c04fd9126b v1.0
+  c9378ff1-16f7-11d0-a0b2-00aa0061426a v1.0
+  0d72a7d4-6148-11d1-b4aa-00c04fb66ea0 v1.0
+  4da1c422-943d-11d1-acae-00c04fc2aa3f v1.0
+  8fb6d884-2388-11d0-8c35-00c04fda2795 v4.1
+  6bffd098-a112-3610-9833-012892020162 v0.0
+  300f3532-38cc-11d0-a3f0-0020af6b0add v1.2
+  3ba0ffc0-93fc-11d0-a4ec-00a0c9062910 v1.0
+
+IfId: 4da1c422-943d-11d1-acae-00c04fc2aa3f version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1140]
+RpcMgmtInqIfIds succeeded
+Interfaces: 18
+  367abb81-9844-35f1-ad32-98f038001003 v2.0
+  93149ca2-973b-11d1-8c39-00c04fb984f9 v0.0
+  82273fdc-e32a-18c3-3f78-827929dc23ea v0.0
+  65a93890-fab9-43a3-b2a5-1e330ac28f11 v2.0
+  8d9f4e40-a03d-11ce-8f69-08003e30051b v1.0
+  4b324fc8-1670-01d3-1278-5a47bf6ee188 v3.0
+  6bffd098-a112-3610-9833-46c3f87e345a v1.0
+  17fdd703-1827-4e34-79d4-24a55c53bb37 v1.0
+  5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc v1.0
+  3dde7c30-165d-11d1-ab8f-00805f14db40 v1.0
+  8d0ffe72-d252-11d0-bf8f-00c04fd9126b v1.0
+  c9378ff1-16f7-11d0-a0b2-00aa0061426a v1.0
+  0d72a7d4-6148-11d1-b4aa-00c04fb66ea0 v1.0
+  4da1c422-943d-11d1-acae-00c04fc2aa3f v1.0
+  8fb6d884-2388-11d0-8c35-00c04fda2795 v4.1
+  6bffd098-a112-3610-9833-012892020162 v0.0
+  300f3532-38cc-11d0-a3f0-0020af6b0add v1.2
+  3ba0ffc0-93fc-11d0-a4ec-00a0c9062910 v1.0
+
+IfId: 130ceefb-e466-11d1-b78b-00c04fa32883 version 2.0
+Annotation: NTDS ISM IP Transport
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1133]
+RpcMgmtInqIfIds succeeded
+Interfaces: 6
+  130ceefb-e466-11d1-b78b-00c04fa32883 v2.0
+  68dcd486-669e-11d1-ab0c-00c04fc2dcd2 v1.0
+  00000134-0000-0000-c000-000000000046 v0.0
+  18f70770-8e64-11cf-9af1-0020af6e72f4 v0.0
+  00000131-0000-0000-c000-000000000046 v0.0
+  00000143-0000-0000-c000-000000000046 v0.0
+
+IfId: 1ff70682-0a51-30e8-076d-740be8cee98b version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC00000444.00000001]
+
+IfId: 1ff70682-0a51-30e8-076d-740be8cee98b version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1139]
+RpcMgmtInqIfIds succeeded
+Interfaces: 2
+  1ff70682-0a51-30e8-076d-740be8cee98b v1.0
+  378e52b0-c0a9-11cf-822d-00aa0051e40f v1.0
+
+IfId: 378e52b0-c0a9-11cf-822d-00aa0051e40f version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC00000444.00000001]
+
+IfId: 378e52b0-c0a9-11cf-822d-00aa0051e40f version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1139]
+RpcMgmtInqIfIds succeeded
+Interfaces: 2
+  1ff70682-0a51-30e8-076d-740be8cee98b v1.0
+  378e52b0-c0a9-11cf-822d-00aa0051e40f v1.0
+
+IfId: 50abc2a4-574d-40b3-9d66-ee4fd5fba076 version 5.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1148]
+RpcMgmtInqIfIds succeeded
+Interfaces: 1
+  50abc2a4-574d-40b3-9d66-ee4fd5fba076 v5.0
+
+IfId: f5cc59b4-4264-101a-8c59-08002b2f8426 version 1.1
+Annotation: NtFrs Service
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1151]
+RpcMgmtInqIfIds succeeded
+Interfaces: 3
+  f5cc59b4-4264-101a-8c59-08002b2f8426 v1.1
+  d049b186-814f-11d1-9a3c-00c04fc9b232 v1.1
+  a00c021c-2be2-11d2-b678-0000f87a8f8e v1.0
+
+IfId: f5cc59b4-4264-101a-8c59-08002b2f8426 version 1.1
+Annotation: NtFrs Service
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\pipe\\000003a4.000]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: d049b186-814f-11d1-9a3c-00c04fc9b232 version 1.1
+Annotation: NtFrs API
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1151]
+RpcMgmtInqIfIds succeeded
+Interfaces: 3
+  f5cc59b4-4264-101a-8c59-08002b2f8426 v1.1
+  d049b186-814f-11d1-9a3c-00c04fc9b232 v1.1
+  a00c021c-2be2-11d2-b678-0000f87a8f8e v1.0
+
+IfId: d049b186-814f-11d1-9a3c-00c04fc9b232 version 1.1
+Annotation: NtFrs API
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\pipe\\000003a4.000]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: a00c021c-2be2-11d2-b678-0000f87a8f8e version 1.0
+Annotation: PERFMON SERVICE
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1151]
+RpcMgmtInqIfIds succeeded
+Interfaces: 3
+  f5cc59b4-4264-101a-8c59-08002b2f8426 v1.1
+  d049b186-814f-11d1-9a3c-00c04fc9b232 v1.1
+  a00c021c-2be2-11d2-b678-0000f87a8f8e v1.0
+
+IfId: a00c021c-2be2-11d2-b678-0000f87a8f8e version 1.0
+Annotation: PERFMON SERVICE
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\pipe\\000003a4.000]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 45f52c28-7f9f-101a-b52b-08002b2efabe version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1153]
+RpcMgmtInqIfIds succeeded
+Interfaces: 2
+  45f52c28-7f9f-101a-b52b-08002b2efabe v1.0
+  811109bf-a4e1-11d1-ab54-00a0c91e9b45 v1.0
+
+IfId: 45f52c28-7f9f-101a-b52b-08002b2efabe version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC000004b0.00000001]
+
+IfId: 45f52c28-7f9f-101a-b52b-08002b2efabe version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\pipe\\WinsPipe]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 811109bf-a4e1-11d1-ab54-00a0c91e9b45 version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1153]
+RpcMgmtInqIfIds succeeded
+Interfaces: 2
+  45f52c28-7f9f-101a-b52b-08002b2efabe v1.0
+  811109bf-a4e1-11d1-ab54-00a0c91e9b45 v1.0
+
+IfId: 811109bf-a4e1-11d1-ab54-00a0c91e9b45 version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[LRPC000004b0.00000001]
+
+IfId: 811109bf-a4e1-11d1-ab54-00a0c91e9b45 version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\pipe\\WinsPipe]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 82ad4280-036b-11cf-972c-00aa006887b0 version 2.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[OLE5]
+
+IfId: 82ad4280-036b-11cf-972c-00aa006887b0 version 2.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[INETINFO_LPC]
+
+IfId: 82ad4280-036b-11cf-972c-00aa006887b0 version 2.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1154]
+RpcMgmtInqIfIds succeeded
+Interfaces: 13
+  00000134-0000-0000-c000-000000000046 v0.0
+  18f70770-8e64-11cf-9af1-0020af6e72f4 v0.0
+  00000131-0000-0000-c000-000000000046 v0.0
+  00000143-0000-0000-c000-000000000046 v0.0
+  00000132-0000-0000-c000-000000000046 v0.0
+  70b51430-b6ca-11d0-b9b9-00a0c922e750 v0.0
+  82ad4280-036b-11cf-972c-00aa006887b0 v2.0
+  8cfb5d70-31a4-11cf-a7d8-00805f48a135 v3.0
+  bfa951d1-2f0e-11d3-bfd1-00c04fa3490a v1.0
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+  00000001-0000-0000-c000-000000000046 v0.0
+  b196b284-bab4-101a-b69c-00aa00341d07 v0.0
+  b196b286-bab4-101a-b69c-00aa00341d07 v0.0
+
+IfId: 82ad4280-036b-11cf-972c-00aa006887b0 version 2.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\INETINFO]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 8cfb5d70-31a4-11cf-a7d8-00805f48a135 version 3.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[OLE5]
+
+IfId: 8cfb5d70-31a4-11cf-a7d8-00805f48a135 version 3.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[INETINFO_LPC]
+
+IfId: 8cfb5d70-31a4-11cf-a7d8-00805f48a135 version 3.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1154]
+RpcMgmtInqIfIds succeeded
+Interfaces: 13
+  00000134-0000-0000-c000-000000000046 v0.0
+  18f70770-8e64-11cf-9af1-0020af6e72f4 v0.0
+  00000131-0000-0000-c000-000000000046 v0.0
+  00000143-0000-0000-c000-000000000046 v0.0
+  00000132-0000-0000-c000-000000000046 v0.0
+  70b51430-b6ca-11d0-b9b9-00a0c922e750 v0.0
+  82ad4280-036b-11cf-972c-00aa006887b0 v2.0
+  8cfb5d70-31a4-11cf-a7d8-00805f48a135 v3.0
+  bfa951d1-2f0e-11d3-bfd1-00c04fa3490a v1.0
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+  00000001-0000-0000-c000-000000000046 v0.0
+  b196b284-bab4-101a-b69c-00aa00341d07 v0.0
+  b196b286-bab4-101a-b69c-00aa00341d07 v0.0
+
+IfId: 8cfb5d70-31a4-11cf-a7d8-00805f48a135 version 3.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\INETINFO]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: 8cfb5d70-31a4-11cf-a7d8-00805f48a135 version 3.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[SMTPSVC_LPC]
+
+IfId: 8cfb5d70-31a4-11cf-a7d8-00805f48a135 version 3.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\SMTPSVC]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[OLE5]
+
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[INETINFO_LPC]
+
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_ip_tcp:10.25.25.15[1154]
+RpcMgmtInqIfIds succeeded
+Interfaces: 13
+  00000134-0000-0000-c000-000000000046 v0.0
+  18f70770-8e64-11cf-9af1-0020af6e72f4 v0.0
+  00000131-0000-0000-c000-000000000046 v0.0
+  00000143-0000-0000-c000-000000000046 v0.0
+  00000132-0000-0000-c000-000000000046 v0.0
+  70b51430-b6ca-11d0-b9b9-00a0c922e750 v0.0
+  82ad4280-036b-11cf-972c-00aa006887b0 v2.0
+  8cfb5d70-31a4-11cf-a7d8-00805f48a135 v3.0
+  bfa951d1-2f0e-11d3-bfd1-00c04fa3490a v1.0
+  98fe2c90-a542-11d0-a4ef-00a0c9062910 v1.0
+  00000001-0000-0000-c000-000000000046 v0.0
+  b196b284-bab4-101a-b69c-00aa00341d07 v0.0
+  b196b286-bab4-101a-b69c-00aa00341d07 v0.0
+
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\INETINFO]
+RpcMgmtInqIfIds failed: 0x6ba
+
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncalrpc:[SMTPSVC_LPC]
+
+IfId: bfa951d1-2f0e-11d3-bfd1-00c04fa3490a version 1.0
+Annotation: 
+UUID: 00000000-0000-0000-0000-000000000000
+Binding: ncacn_np:\\\\MIR[\\PIPE\\SMTPSVC]
+RpcMgmtInqIfIds failed: 0x6ba
+

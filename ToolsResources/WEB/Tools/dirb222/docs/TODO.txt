@@ -1,0 +1,38 @@
+DIRB TODO LIST
+==============
+
+++ Alta prioridad:
+
+- Corregir permisos de ficheros y directorios
+- Añadir funcion test_dir()
+
+++ Prioridad media:
+
+- Opcion de mostrar informacion del finetuning
+
+++ Baja prioridad:
+
+- Que guarde a disco todo lo encontrado
+- Cuello de botella (elimina_dupwords()) => ¿Ordenar la lista de palabras?
+- Unificar funcion de debug()
+
+++ A largo plazo:
+
+*** Modulos
+- Importar burp
+- Importar spider
+
+*** Mejor deteccion de directorios
+-> Como detectar el directorio /cgi-bin => 403 en apache
+
+*** Modo inteligente (recorta el arbol de pruebas) --> algoritmos geneticos
+- Deteccion de Apache Options MultiViews => Content-Location: xxxx.php
+
+*** Dirb disribuido/multithread
+
+
+Sitios de test:
+
+http://www.intersil.com/ - nec=200 / variable (.asp, .html)
+http://www.yonkis.com/ - nec=302
+

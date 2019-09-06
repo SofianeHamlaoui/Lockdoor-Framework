@@ -1,0 +1,216 @@
+DCE-RPC tester.
+TcpConnected
+Entrynum=0
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncadg_ip_udp:192.168.1.100[1027]
+Entrynum=1
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncalrpc[wzcsvc]
+Entrynum=2
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncalrpc[Infrared Transfer Send]
+Entrynum=3
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncalrpc[Wireless Link Notification]
+Entrynum=4
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncalrpc[IcaApi]
+Entrynum=5
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncacn_np:\\TOSHIBA-USER[\pipe\Ctx_WinStation_API_service]
+Entrynum=6
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncalrpc[OLE3]
+Entrynum=7
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncacn_ip_tcp:192.168.1.100[1025]
+Entrynum=8
+
+annotation=
+uuid=1ff70682-0a51-30e8-076d-740be8cee98b , version=1
+Executable on NT: mstask.exe
+ncacn_np:\\TOSHIBA-USER[\PIPE\atsvc]
+Entrynum=9
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncalrpc[wzcsvc]
+Entrynum=10
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncalrpc[Infrared Transfer Send]
+Entrynum=11
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncalrpc[Wireless Link Notification]
+Entrynum=12
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncalrpc[IcaApi]
+Entrynum=13
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncacn_np:\\TOSHIBA-USER[\pipe\Ctx_WinStation_API_service]
+Entrynum=14
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncalrpc[OLE3]
+Entrynum=15
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncacn_ip_tcp:192.168.1.100[1025]
+Entrynum=16
+
+annotation=
+uuid=378e52b0-c0a9-11cf-822d-00aa0051e40f , version=1
+Executable on NT: mstask.exe
+ncacn_np:\\TOSHIBA-USER[\PIPE\atsvc]
+Entrynum=17
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncalrpc[wzcsvc]
+Entrynum=18
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncalrpc[Infrared Transfer Send]
+Entrynum=19
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncalrpc[Wireless Link Notification]
+Entrynum=20
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncalrpc[IcaApi]
+Entrynum=21
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncacn_np:\\TOSHIBA-USER[\pipe\Ctx_WinStation_API_service]
+Entrynum=22
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncalrpc[OLE3]
+Entrynum=23
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncacn_ip_tcp:192.168.1.100[1025]
+Entrynum=24
+
+annotation=
+uuid=0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53 , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\atsvc]
+Entrynum=25
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncalrpc[wzcsvc]
+Entrynum=26
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncalrpc[Infrared Transfer Send]
+Entrynum=27
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncalrpc[Wireless Link Notification]
+Entrynum=28
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncalrpc[IcaApi]
+Entrynum=29
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\pipe\Ctx_WinStation_API_service]
+Entrynum=30
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncalrpc[OLE3]
+Entrynum=31
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_ip_tcp:192.168.1.100[1025]
+Entrynum=32
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\atsvc]
+Entrynum=33
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\AudioSrv]
+Entrynum=34
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\wkssvc]
+Entrynum=35
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\srvsvc]
+Entrynum=36
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\SECLOGON]
+Entrynum=37
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\W32TIME]
+Entrynum=38
+
+annotation=Messenger Service
+uuid=5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc , version=1
+ncacn_np:\\TOSHIBA-USER[\PIPE\msgsvc]
+Entrynum=39
+
+Done

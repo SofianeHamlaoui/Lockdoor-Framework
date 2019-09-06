@@ -1,0 +1,20 @@
+/var/log/messages
+/var/log/auth.log
+/var/log/secure
+/var/log/mail.log
+/etc/passwd > check for /bin/bash users 
+/etc/fstab
+/var/log/lastlog
+/proc/meminfo
+
+
+
+
+
+
+
+
+
+
+
+ 

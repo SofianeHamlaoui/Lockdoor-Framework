@@ -1,0 +1,25 @@
+//MSSQL.SPK
+//DAVE AITEL
+//GPL v2.0
+//SPIKE 2.6 or >
+
+s_int_variable(0x12,3);
+s_int_variable(0x01,3);
+s_int_variable(0x00,3);
+s_int_variable(0x34,3);
+
+s_binary(" 00 00 00 00  00 00 ");
+s_int_variable(0x15,3);
+s_int_variable(0x00,3);
+s_int_variable(0x06,3);
+s_int_variable(0x01,3);
+s_int_variable(0x00,3);
+s_int_variable(0x1b,3);
+
+s_binary("00 01 02 00 1c 00 0c 03  00 28 00 04 ff 08 00 02");
+s_int_variable(0x10,3);
+s_int_variable(0x0,3);
+s_int_variable(0x0,3);
+s_int_variable(0x0,3);
+s_string_variable("MSSQLServer");
+s_binary("00 7c 09 00 00");

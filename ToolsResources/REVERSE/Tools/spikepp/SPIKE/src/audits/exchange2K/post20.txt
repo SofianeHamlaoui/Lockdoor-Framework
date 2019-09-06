@@ -1,0 +1,15 @@
+POST /public/Internet%20Newsgroups HTTP/1.1
+Host: 192.168.1.103
+User-Agent: Mozilla/5.0 Galeon/1.0.3 (X11; Linux i686; U;) Gecko/0
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+Accept-Language: en
+Accept-Encoding: gzip, deflate, compress;q=0.9
+Accept-Charset: ISO-8859-1, utf-8;q=0.66, *;q=0.66
+Keep-Alive: 300
+Connection: keep-alive
+Cookie: sessionid=21ac10e9-a2ce-40b7-8572-1784b7e4b2cd,0x9
+Referer: http://192.168.1.103/public/Internet%20Newsgroups/?Cmd=contents&View=Messages&Page=1&Error=10012
+Content-type: application/x-www-form-urlencoded
+Content-Length: 341
+
+FormType=Post&ViewName=Messages&Page=1&MsgID=%2FInternet%2520Newsgroups%2Ftest.EML&Cmd=renameselect&CmdDelete=delete&CmdMoveSelect=moveselect&CmdCopySelect=copyselect&CmdRenameSelect=renameselect&Link_CmdUpOne=http%3A%2F%2F192.168.1.103%2Fpublic%2F%3FCmd%3Dcontents%26Page%3D1&Link_CmdHelp=http%3A%2F%2F192.168.1.103%2Fpublic%2F%3FCmd%3Dhelp

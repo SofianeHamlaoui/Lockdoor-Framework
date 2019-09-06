@@ -1,0 +1,684 @@
+Querying Endpoint Mapper Database...
+68 registered endpoints found.
+ProtSeq:ncacn_http
+Endpoint:1029
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_http:10.25.25.15[1029]
+UUID:12345678-1234-abcd-ef00-01234567cffb
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_http
+Endpoint:1029
+NetOpt:
+Annotation:MS NT Directory XDS Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_http:10.25.25.15[1029]
+UUID:f5cc5a7c-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 21  VersMinor 0
+
+ProtSeq:ncacn_http
+Endpoint:1029
+NetOpt:
+Annotation:MS NT Directory DRS Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_http:10.25.25.15[1029]
+UUID:e3514235-4b06-11d1-ab04-00c04fc2dcd2
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 4  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1154
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1154]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1154
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1154]
+UUID:8cfb5d70-31a4-11cf-a7d8-00805f48a135
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 3  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1154
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1154]
+UUID:82ad4280-036b-11cf-972c-00aa006887b0
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 2  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1153
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1153]
+UUID:811109bf-a4e1-11d1-ab54-00a0c91e9b45
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1153
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1153]
+UUID:45f52c28-7f9f-101a-b52b-08002b2efabe
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1151
+NetOpt:
+Annotation:PERFMON SERVICE
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1151]
+UUID:a00c021c-2be2-11d2-b678-0000f87a8f8e
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1151
+NetOpt:
+Annotation:NtFrs API
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1151]
+UUID:d049b186-814f-11d1-9a3c-00c04fc9b232
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 1
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1151
+NetOpt:
+Annotation:NtFrs Service
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1151]
+UUID:f5cc59b4-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 1
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1148
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1148]
+UUID:50abc2a4-574d-40b3-9d66-ee4fd5fba076
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 5  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1139
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1139]
+UUID:378e52b0-c0a9-11cf-822d-00aa0051e40f
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1139
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1139]
+UUID:1ff70682-0a51-30e8-076d-740be8cee98b
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1133
+NetOpt:
+Annotation:NTDS ISM IP Transport
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1133]
+UUID:130ceefb-e466-11d1-b78b-00c04fa32883
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 2  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1140
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1140]
+UUID:4da1c422-943d-11d1-acae-00c04fc2aa3f
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1089
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1089]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1089
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1089]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1089
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1089]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1089
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1089]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1026
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1026]
+UUID:12345678-1234-abcd-ef00-01234567cffb
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1026
+NetOpt:
+Annotation:MS NT Directory XDS Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1026]
+UUID:f5cc5a7c-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 21  VersMinor 0
+
+ProtSeq:ncacn_ip_tcp
+Endpoint:1026
+NetOpt:
+Annotation:MS NT Directory DRS Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_ip_tcp:10.25.25.15[1026]
+UUID:e3514235-4b06-11d1-ab04-00c04fc2dcd2
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 4  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:SMTPSVC_LPC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[SMTPSVC_LPC]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:INETINFO_LPC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[INETINFO_LPC]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:OLE5
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[OLE5]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:SMTPSVC_LPC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[SMTPSVC_LPC]
+UUID:8cfb5d70-31a4-11cf-a7d8-00805f48a135
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 3  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:INETINFO_LPC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[INETINFO_LPC]
+UUID:8cfb5d70-31a4-11cf-a7d8-00805f48a135
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 3  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:OLE5
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[OLE5]
+UUID:8cfb5d70-31a4-11cf-a7d8-00805f48a135
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 3  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:INETINFO_LPC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[INETINFO_LPC]
+UUID:82ad4280-036b-11cf-972c-00aa006887b0
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 2  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:OLE5
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[OLE5]
+UUID:82ad4280-036b-11cf-972c-00aa006887b0
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 2  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000004b0.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000004b0.00000001]
+UUID:811109bf-a4e1-11d1-ab54-00a0c91e9b45
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000004b0.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000004b0.00000001]
+UUID:45f52c28-7f9f-101a-b52b-08002b2efabe
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC00000444.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC00000444.00000001]
+UUID:378e52b0-c0a9-11cf-822d-00aa0051e40f
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC00000444.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC00000444.00000001]
+UUID:1ff70682-0a51-30e8-076d-740be8cee98b
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:ntsvcs
+NetOpt:
+Annotation:Messenger Service
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[ntsvcs]
+UUID:5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000002b4.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000002b4.00000001]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000002b4.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000002b4.00000001]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000002b4.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000002b4.00000001]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000002b4.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000002b4.00000001]
+UUID:906b0ce0-c70b-1067-b317-00dd010662da
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:NTDS_LPC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[NTDS_LPC]
+UUID:12345678-1234-abcd-ef00-01234567cffb
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000000fc.00000001
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000000fc.00000001]
+UUID:12345678-1234-abcd-ef00-01234567cffb
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:NTDS_LPC
+NetOpt:
+Annotation:MS NT Directory XDS Interface
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[NTDS_LPC]
+UUID:f5cc5a7c-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 21  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000000fc.00000001
+NetOpt:
+Annotation:MS NT Directory XDS Interface
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000000fc.00000001]
+UUID:f5cc5a7c-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 21  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:NTDS_LPC
+NetOpt:
+Annotation:MS NT Directory DRS Interface
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[NTDS_LPC]
+UUID:e3514235-4b06-11d1-ab04-00c04fc2dcd2
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 4  VersMinor 0
+
+ProtSeq:ncalrpc
+Endpoint:LRPC000000fc.00000001
+NetOpt:
+Annotation:MS NT Directory DRS Interface
+IsListening:NOT_PINGED
+StringBinding:ncalrpc:[LRPC000000fc.00000001]
+UUID:e3514235-4b06-11d1-ab04-00c04fc2dcd2
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 4  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\SMTPSVC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\SMTPSVC]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\INETINFO
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\INETINFO]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\SMTPSVC
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\SMTPSVC]
+UUID:8cfb5d70-31a4-11cf-a7d8-00805f48a135
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 3  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\INETINFO
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\INETINFO]
+UUID:8cfb5d70-31a4-11cf-a7d8-00805f48a135
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 3  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\INETINFO
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\INETINFO]
+UUID:82ad4280-036b-11cf-972c-00aa006887b0
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 2  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\pipe\WinsPipe
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\pipe\\WinsPipe]
+UUID:811109bf-a4e1-11d1-ab54-00a0c91e9b45
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\pipe\WinsPipe
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\pipe\\WinsPipe]
+UUID:45f52c28-7f9f-101a-b52b-08002b2efabe
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\pipe\000003a4.000
+NetOpt:
+Annotation:PERFMON SERVICE
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\pipe\\000003a4.000]
+UUID:a00c021c-2be2-11d2-b678-0000f87a8f8e
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\pipe\000003a4.000
+NetOpt:
+Annotation:NtFrs API
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\pipe\\000003a4.000]
+UUID:d049b186-814f-11d1-9a3c-00c04fc9b232
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 1
+
+ProtSeq:ncacn_np
+Endpoint:\pipe\000003a4.000
+NetOpt:
+Annotation:NtFrs Service
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\pipe\\000003a4.000]
+UUID:f5cc59b4-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 1
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\scerpc
+NetOpt:
+Annotation:Messenger Service
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\scerpc]
+UUID:5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\ntsvcs
+NetOpt:
+Annotation:Messenger Service
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\ntsvcs]
+UUID:5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\lsass
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\lsass]
+UUID:12345678-1234-abcd-ef00-01234567cffb
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\lsass
+NetOpt:
+Annotation:MS NT Directory XDS Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\lsass]
+UUID:f5cc5a7c-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 21  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\lsass
+NetOpt:
+Annotation:MS NT Directory DRS Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\lsass]
+UUID:e3514235-4b06-11d1-ab04-00c04fc2dcd2
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 4  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\lsass
+NetOpt:
+Annotation:NTDS Restore Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\lsass]
+UUID:16e0cf3a-a604-11d0-96b1-00a0c91ece30
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncacn_np
+Endpoint:\PIPE\lsass
+NetOpt:
+Annotation:NTDS Backup Interface
+IsListening:NOT_PINGED
+StringBinding:ncacn_np:\\\\MIR[\\PIPE\\lsass]
+UUID:ecec0d70-a603-11d0-96b1-00a0c91ece30
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncadg_ip_udp
+Endpoint:1101
+NetOpt:
+Annotation:Messenger Service
+IsListening:NOT_PINGED
+StringBinding:ncadg_ip_udp:10.25.25.15[1101]
+UUID:5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncadg_ip_udp
+Endpoint:1028
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncadg_ip_udp:10.25.25.15[1028]
+UUID:12345678-1234-abcd-ef00-01234567cffb
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+ProtSeq:ncadg_ip_udp
+Endpoint:1028
+NetOpt:
+Annotation:MS NT Directory XDS Interface
+IsListening:NOT_PINGED
+StringBinding:ncadg_ip_udp:10.25.25.15[1028]
+UUID:f5cc5a7c-4264-101a-8c59-08002b2f8426
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 21  VersMinor 0
+
+ProtSeq:ncadg_ip_udp
+Endpoint:1028
+NetOpt:
+Annotation:MS NT Directory DRS Interface
+IsListening:NOT_PINGED
+StringBinding:ncadg_ip_udp:10.25.25.15[1028]
+UUID:e3514235-4b06-11d1-ab04-00c04fc2dcd2
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 4  VersMinor 0
+
+ProtSeq:ncadg_ip_udp
+Endpoint:1169
+NetOpt:
+Annotation:
+IsListening:NOT_PINGED
+StringBinding:ncadg_ip_udp:10.25.25.15[1169]
+UUID:bfa951d1-2f0e-11d3-bfd1-00c04fa3490a
+ComTimeOutValue:RPC_C_BINDING_MIN_TIMEOUT
+VersMajor 1  VersMinor 0
+
+
+C:\Program Files\Resource Kit\rpcdump.exe completed sucessfully after 1 seconds

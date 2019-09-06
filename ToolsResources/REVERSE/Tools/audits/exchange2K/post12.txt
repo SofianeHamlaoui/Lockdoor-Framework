@@ -1,0 +1,16 @@
+POST /exchange/dave/Contacts HTTP/1.1
+Host: 192.168.1.103
+User-Agent: Mozilla/5.0 Galeon/1.0.3 (X11; Linux i686; U;) Gecko/0
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+Accept-Language: en
+Accept-Encoding: gzip, deflate, compress;q=0.9
+Accept-Charset: ISO-8859-1, utf-8;q=0.66, *;q=0.66
+Keep-Alive: 300
+Connection: keep-alive
+Authorization: Basic ZGF2ZTpkYXZl
+Cookie: sessionid=a0b31012-be09-4b23-b0ef-ef77dd414bad,0x9
+Referer: http://192.168.1.103/exchange/dave/Contacts/?Cmd=new
+Content-type: application/x-www-form-urlencoded
+Content-Length: 2242
+
+urn%3Aschemas%3Acontacts%3Asn=Dave&urn%3Aschemas%3Acontacts%3AtelephoneNumber=23423&urn%3Aschemas%3Acontacts%3AgivenName=Aitel&urn%3Aschemas%3Acontacts%3AhomePhone=234234&urn%3Aschemas%3Acontacts%3Amiddlename=dave&urn%3Aschemas%3Acontacts%3Amobile=234234&urn%3Aschemas%3Acontacts%3Atitle=dave&selPhoneSelector=Business+Fax&txtMiscPhone=&urn%3Aschemas%3Acontacts%3Ao=dave&urn%3Aschemas%3Acontacts%3Afileasid=1&selAddressSelector=Business+Address&selEmailSelector=E-mail&idMailCheck=on&txtEmailDisplay=asdf&txtStreet=asdf&txtEmailAddr=asdf&txtCity=asdf&txtState=asdf&txtZipCode=asdf&urn%3Aschemas%3Acontacts%3Abusinesshomepage=asdf&txtCountry=asdf&urn%3Aschemas%3Ahttpmail%3Atextdescription=asdf&contactFieldBaseIndex=__composeContactbasefind&urn%3Aschemas%3Acontacts%3Asecretaryphone=234234&urn%3Aschemas%3Acontacts%3Atelephonenumber2=&urn%3Aschemas%3Acontacts%3Afacsimiletelephonenumber=&urn%3Aschemas%3Acontacts%3Acallbackphone=&urn%3Aschemas%3Acontacts%3Aothermobile=&urn%3Aschemas%3Acontacts%3Aorganizationmainphone=&urn%3Aschemas%3Acontacts%3Ahomephone2=&urn%3Aschemas%3Acontacts%3Ahomefax=&urn%3Aschemas%3Acontacts%3Ainternationalisdnnumber=&urn%3Aschemas%3Acontacts%3AotherTelephone=&urn%3Aschemas%3Acontacts%3Aotherfax=&urn%3Aschemas%3Acontacts%3Apager=&http%3A%2F%2Fschemas.microsoft.com%2Fmapi%2Femail1originaldisplayname=asdf&http%3A%2F%2Fschemas.microsoft.com%2Fmapi%2Femail2originaldisplayname=&http%3A%2F%2Fschemas.microsoft.com%2Fmapi%2Femail3originaldisplayname=&Email1=asdf&Email2=&Email3=&urn%3Aschemas%3Acontacts%3AhomeStreet=&urn%3Aschemas%3Acontacts%3AhomeCity=&urn%3Aschemas%3Acontacts%3AhomeState=&urn%3Aschemas%3Acontacts%3AhomePostalCode=&urn%3Aschemas%3Acontacts%3AhomeCountry=&urn%3Aschemas%3Acontacts%3Astreet=asdf&urn%3Aschemas%3Acontacts%3Al=asdf&urn%3Aschemas%3Acontacts%3Ast=asdf&urn%3Aschemas%3Acontacts%3Apostalcode=asdf&urn%3Aschemas%3Acontacts%3Aco=asdf&urn%3Aschemas%3Acontacts%3Aotherstreet=&urn%3Aschemas%3Acontacts%3Aothercity=&urn%3Aschemas%3Acontacts%3Aotherstate=&urn%3Aschemas%3Acontacts%3Aotherpostalcode=&urn%3Aschemas%3Acontacts%3Aothercountry=&urn%3Aschemas%3Acontacts%3Amailingaddressid=2&WebPage=&Cmd=save&CmdReferring=new&MsgID=&Embedded=0&ReadForm=1&MsgClass=IPM.Contact&Index=&Action=Cancel

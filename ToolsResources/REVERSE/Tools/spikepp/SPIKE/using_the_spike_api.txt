@@ -1,0 +1,142 @@
+/*
+How to use the SPIKE API.
+Send your questions to the author for answering! :>
+-dave
+
+Q: spike_send_tcp() vs. spike_send()
+
+A:Keep in mind that spike_clear does not close open connections that you
+have created with spike_send_tcp() or spike_connect_tcp(). If you
+want to close them, you have to call spike_close_tcp(). Likewise,
+if you want to use the same connection over and over (which
+you likely do) use spike_send(). Make sure you do call
+spike_close_tcp(), since you don't want to run out of fds!
+
+Q: I have a new binary protocol I want to quickly reproduce,
+how do I go about that?
+
+A: Basically, the trivial case is you take the ethereal dump
+and for each packet you want to send out, you do:
+spike_clear(); /*nice clean spike*/
+s_binary("<cut and paste the payload of the packet here>");
+s_send();
+
+For each packet the server sends to you, do a read_packet() (steal
+from quake.c). That will print it out nicely so you can make sure you're
+doing things correctly. You can parse through it later, if you really
+feel like it. Or you can just do a s_fd_wait(); and then a read()
+call manually to just discard the packet. If spike isn't waiting long
+enough for you, just edit the constants in the #defines at the top
+of spike.c. Clumsy, but the default values REALLY are good enough
+for most people.
+
+Now that you've gotten the server and your really dumb packet pushing
+client talking to each other, you need to locate the "size" words
+that may be sprinkled through the protocol. Ethereal may
+already know about these, or they might be easy to pick out by
+eye.
+
+Use these "size" indexes to start splitting the packet up into blocks.
+Try to use s_ calls other than s_binary if possible (such as s_string,
+s_xdr_string, etc) A block may be the size of single string or a
+combination of a string and a bunch of s_binary() data, or whatever.
+
+Once you've gotten a reasonable approximation as to the rpc protocol
+actually being used, throw the whole thing into a "fuzzing framework"
+(cut and paste this from ./closed or some other automated fuzzer) or
+manually run, edit and rerun your spike program with various long strings
+(use s_string_repeat("A",5000) - just like perl -e 'print "A" x 5000') 
+
+Don't forget to attach a debugger to the other side and make
+sure you catch all the exceptions. :>
+
+
+Tips and Tricks:
+____________________________________________________________________
+Q: I want to quickly cut-and-paste the body of a POST into a spike. How
+would I go about that?
+
+Use the s_string_variables() function on any URL arguments. Example:
+s_string_variables('&',"username=bob&password=feet");
+
+This is equivalent to doing, "s_string("username="); 
+s_string_variable("bob"); s_string("&password="); s_string_varialbe("feet");
+
+_______________________________________________________________________
+
+Q: How do I use spike to do focused web server fuzzing, a. la. ./closed?
+
+Here is a sample loop that will send a http request to a server.
+*/
+
+
+signal (SIGPIPE, SIG_IGN);	/*ignore when the server closes the connection on us */
+our_spike = new_spike ();	/*does malloc fun */
+s_init_fuzzing ();		/*do some basic initialization in spike.c */
+setspike (our_spike);		/*points the spike.c internal current_spike pointer to this spike. All spike.c functions such as s_string(), s_binary(), etc. work on whatever spike was selected with setspike. You can keep multiple spikes around and use setspike() to switch between them */
+s_resetfuzzvariable ();		/*set the internal fuzz variable counter to 0. Each "variable" you push is "counted." The first s_string_variable() call you make will be variable number 0, the next, variable number 1. This way spike.c knows which variable we are fuzzing */
+
+while (!s_didlastvariable ())	/*true only if on the last path we fuzzed the last variable you set */
+  {
+    s_resetfuzzstring ();	/*fuzzstrings are the actual strings you fuzz with - longs trings of A's, long strings of 1's, etc. We iterate through them with s_increment calls. */
+    /*theorectically, the zeroth fuzz string is no change */
+
+/*similar to didlastvariable, but for fuzzstrings*/
+    while (!s_didlastfuzzstring ())
+      {
+
+/*spike_clear() is an odd beast - it clears out most of the state information
+of a spike - in particular, the buffer information is cleared. But some things
+don't get cleared, such as variable information*/
+	spike_clear ();
+/*setfirstvariable just has to get called. For some routines it
+tells SPIKE when to put a ? to separarate things. It's not
+that important really. :>*/
+	s_setfirstvariable ();
+
+/*PAYLOAD*/
+        push_your_HTTP_request_here(); /*See ./closed.c for a real example*/
+/*for custom work, you can use ./closed.c as a shell, and just
+change your payload to be s_push_variables('&',whateverstringyouwant); 
+*/
+
+/*spike_send_tcp does both a connect and a spike_send - target
+can be eithar "127.0.0.1" or "localhost"*/
+	if (spike_send_tcp (target, port) == 0)
+	  {
+	    printf ("Couldn't connect to host or send data!\r\n");
+	    /*exit(-1); */
+	  }
+/*fuzzstring = fuzzstring + 1 - we advance to the next string
+we use to fill in the fuzz variable*/
+	s_incrementfuzzstring ();
+/*some loop control variables*/
+	notfin = 1;
+	retval = 1;
+
+/*this next bit just reads back what the server sends to us - but
+if it takes too long, we just disconnect*/
+
+	while (retval && notfin)
+	  {
+
+	    memset (buffer, 0x00, sizeof (buffer));
+
+/*s_fd_wait() is a select() call basically. It returns 0 if it's time
+to close the connection*/
+	    notfin = s_fd_wait ();
+	    if (!notfin)
+	      {
+		printf ("Server didn't answer in time limit\n");
+		break;
+	      }
+	    retval = read (our_spike->fd, buffer, 2500);
+	    printf ("**%.2500s**\n", buffer);
+	  }
+/*send fins!*/
+	spike_close_tcp ();
+      }				/*end for each fuzz string */
+
+/*next variable*/
+    s_incrementfuzzvariable ();
+  }				/*end for each variable */

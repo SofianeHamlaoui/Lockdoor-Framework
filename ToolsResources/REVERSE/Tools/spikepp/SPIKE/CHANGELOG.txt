@@ -1,0 +1,398 @@
+Changelog.txt
+2.9
+Added UDP msrpcfuzzing
+Fixed TCP msrpcfuzzing quite a bit
+Added line_fuzz_tcp (which is used for all smtp-like protocols, and
+quite successfully so far.)
+
+
+
+
+Added a blockfuzzer, blockfuzz.py. (I have no idea what  this
+is anymore!)
+
+
+
+2.8
+Feb 4, 2003
+
+Thanks to Renaud Deraison for the big patch that fixed BSD
+compatability, among other things.
+
+Remotes in the package:
+
+ Port 445: lots of kernel bugs and fun things against Win2K SP2-3 (the
+ only versions I checked)
+
+   o Fill up kernel memory with netbios+smb null sessions! (any
+   non-passworded dceoversmb fuzz will do this)
+
+ Ah, it turns out the memory leak was in the netbios stack - set the
+ MAXSMBFRAGLENGTH to 5840 to demonstrate.
+ 
+I think netbios continuation packets are never freed or
+something. They eat up kernel's non-paged pool, which eventually
+causes the machine to become less than useful, when smb dies.
+
+   o Kill off services.exe (which causes a reboot) by fuzzing \wkssvc
+   (and using the wrong iface version)
+
+   o Kill off the licensing service and lsass as well. (same as above)
+     This is a nice local root, I think. (see plonk.c)
+
+Changes:
+
+ Updated SPIKE Proxy, of course. This version includes some fixes I've
+   been holding on to, such as the ability to filter out pages and
+   hosts. I use this version for the Immunity Security Certification
+   Tests.  Sites reported not to work, but tested to work: cruel.com
+   xgoogle.com unixpunx.org Please send me any sites you know dont
+   work with SPIKE Proxy!
+
+   
+ BSD compatability improved thanks to RD. He also sent in the code
+ that does passwords and usernames for smb.  dceoversmb.c added -
+ fuzzes port 445. You'll need to know the pipe name, the UUID of the
+ interface, and the major and minor versions to fuzz a service. This
+ took a total of 6 hours to write, but is fun for the whole family.
+
+
+ Some Oracle stuff was added in the audits directory as well. You may
+   have more luck with this than I did.
+
+
+ 
+   
+2.7
+Remotes in the package:
+  pptp kernel bug on Windows 2000 and XP (not originally found by SPIKE
+  but there is no other repro available)
+  Many fun IIS DoS's
+  Many fun MSRPC bugs
+  Many fun SunRPC bugs on Solaris (ttdb, cmsd, rpcbind, etc)
+
+
+Changes:
+  Updated SPIKE Proxy 1.3.2!
+    o Core engine fixed to work on 99.999% of all sites!
+    o SSL fixed (still not thread safe, but doesn't seem to matter)
+    o Single Field Password/SQL brute forcer added
+    o Configuration menu added
+    o Crawling, dirscan, filescan added
+    o Form scanning fixed (used by crawling)
+
+  SunRPC fuzzing
+    o Dominique Brezinski Updated tcpstuff.c to support low port grabbing
+    o Updated SunRPCFuzzer
+
+  msrpc Fuzzing
+    o Fixed many memory leaks
+    o Added nice delays when server is dieing
+
+  spike.c
+    o can now fuzz sizes with size_variable() routines! (see spike.h)
+    o other size support (intel words) added
+    o other sizes added, and additional small fixes to core engine
+
+  ./closed.c 
+    o no longer segfaults - just pauses and retries
+    o uses size fuzzer
+
+  ./msrpcfuzz
+    o memory leaks fixed
+
+  audits/
+     PPTP - crashes Win32 PPTP driver 
+
+  dcedump:
+    o Added additional data to exe database
+
+
+2.6
+
+Acknowledgements:
+  Justine Bone (many bugfixes and unicode input)
+  shax (autoconf and BSD port effort)
+  Dominique Brezinski (Sun RPC fuzzing support)
+
+Remotes in the package:
+  The audits directory will find the MSCS bug for you
+  (already patched) and some bugs in pre-sp4 SQL Server 7.
+
+FAQ:
+  If you are not able to use ./generic stuff, try typing . ./ld.sh
+  Yes, you need Python 2 or > to run SPIKE Proxy
+  To use SPIKE Proxy, browse to http://spike/
+  If multiple blocksize directives for the same block are returning 0
+     I'd really like to hear from you (I fixed this bug, but it
+     was really quirky - something to do with compilation?) If
+     this made no sense to you, just ignore it.
+
+Changes:
+
+o BSD port (thanks to shax)
+
+o ./configure port (thanks to shax)
+
+o SPIKE Proxy
+  o version 1.2 - fixes POST fuzzing, adds crawling!
+
+o Fixed some usage messages in ./generic fuzzers to be more correct
+
+o Fixed msrpcfuzz 
+  o Changed usage to not include UUID that never changed
+  o Added a few known types to the random types list
+    o SimpleStruct 
+    o Pointer
+  o Added a nice way to redo a fuzz after you've crashed a service, 
+    basically you just set the random initializer back to what it
+    was, then interate through the fuzz packets (see //i==2 line) 
+    and when it crashes, you know which packet did it, so you
+    can comment out the return 0 in pretty_print and there you go!
+  o added "sendmsrpc" to just send that one packet out, after
+    you've figured out what you want to send
+  o fixed a memory leak!
+  
+o spike.c additions
+  o Added "mult" blocksize directives, so you can multiply a size 
+    by an floating point value. You CANNOT CALL THESE from .spk files.
+  o Added prepending and appending fuzzstrings to the variable
+  o Added some unicode support (and support for s_unistring_variable())
+    note: like s_string, s_unistring does NOT NULL TERMINATE. Do this
+    manually if you need to.
+  o Added integer fuzzing routines - these take in similar constants
+    to the blocksize routines, and the s_push_int() function is
+    useful for when you want to push integers as bytes or backwards
+    words or halfwords or whatever
+    
+o dcedump
+  o Added ifids - prints out interfaces and versions given a TCP port
+  o Added mappings.txt
+  o Added mappings inside dcedump.c - now prints out what executable
+    an interface is running inside
+
+o dcerpc support
+  o Now supports major and minor versions 
+
+o sunrpc fuzzing support added! (Thanks to Dominique Brezinski)
+  o All sorts of fun stuff for doing Sun RPC fuzzing
+    
+
+2.5
+
+Remotes in this package:
+MS SQL Server 7.0
+Micrsoft Exchange 2K msrpc DoS/Remotes
+
+Added SPIKE Proxy 1.1i and dcedump to this menagerie!
+
+Added generic_chunked.c: finds that pesky Apache hole. (uses apachechunked.spk)
+
+Added generic_send_tcp.c: fun for the whole family!
+
+Fixed up msprcfuzz quite a bit - now sends real dce strings
+
+spike.c: doesn't core on spike_send() with fd==-1 anymore
+
+Added some alarm nonsense so when spike sends a packet that never gets
+swallowed you know about it
+
+Added mssql.spk - yay for remote SYSTEM!
+
+Added generic_webserverfuzz 1 and 2: 2 keeps the connection, 1 has
+a tendancy to exhaust IIS licences (see exchange2k Audit)
+
+Added audits directory and MSSQL and exhange2K directories under
+that
+
+httpwizard.py is the prefered way to make spike scripts now for
+web apps, unless using SPIKE Proxy
+
+
+
+
+2.4
+
+SPIKE_Console.py: Added. This python gui for SPIKE requires 
+wxWindows and wxPython, but it's worth it. See the webpage
+for screenshots. So far the only wizard is an HTTP wizard,
+but it works a lot better than the ./makewebfuzz.pl scripts.
+Eventually this will spider web sites as a proxy and do
+all sorts of wonderful things with binary protocols. For
+now, it's just a very useful demo.
+
+dlrpc and dlargs: These now work. They perform the functions of 
+a basic scripting language for SPIKE by using dlopen() and dlsym()
+to call into the SPIKE C implementation directly. This
+allows for "generic" SPIKE's to be created that read a
+file to determine exactly what to do. Just include
+dlrpc.h and use s_parse("filename.spk"); and it'll
+be as if you compiled it as C!
+
+generic_listen_tcp: This, plus the gopherd.spk is a good 
+demonstration of how to write a generic SPIKE.
+
+generic_web_server_fuzz: This replaces the webfuzz.c scripts
+in a clean way. Use the SPIKE Console to generate a script.
+
+2.3
+gopherd.c: Added this file. It demonstrates how to fuzz as a tcp deamon. It was intended to find the IE gopher:// overflow, but I failed to find it after a few hours of random testing. Possibly this is because I was testing with IE 5.0. See comments for more notes.
+
+makewebfuzz_cnp.pl: fixed a one-character bug (\r\n->\n). It should 
+recognize bodies correctly now. It's still a bit ugly, but it should
+work ok. I usually go into the webfuzz.c that it creates and
+double check.
+
+tcpstuff.c: Added functions to support tcp listening.
+
+spike.c: Added functions to support tcp listening. Added s_read_packet().
+
+dlrpc*: these don't work yet. For future release.
+
+Added SPIKElogo1.png to the data directory. Ah, scriptfu. :>
+
+
+
+2.2
+
+ntlm2.c: Added this file. It's like ntlm_brute, but it has a much better
+internal structure. Basically there is a "get ntlm page" call now, which
+does the entire thing for you. All you have to do is add the 
+s_string_variable() calls where indicated, in do_body(). It even
+does fuzzing, so you can fuzz things that require ntlm auth. 
+
+tcpstuff.c: Fixed lame bug in tcpwrite - another memory leak! Hopefully
+that function works ok now. :>
+
+webmitm.c: Fixed a few weird bugs. Should work better now with people
+sending Content-Length instead of Content-length and sending a length
+of 0.
+
+./closed: Added variable skipping - edit the 2 defines at the top
+to skip to a particular fuzz variable and fuzz string. Also
+tells you which fuzz variable and fuzz string it is currently on.
+A nice feature for when you want to c-C out of a fuzz, then restart near
+that position
+
+
+
+2.1
+April, 2002
+
+This is the release to the public of a version of SPIKE that finds the
+.htr problem, the .stm problem, and the shtml.dll problem, along
+with numerous other problems using ./closed_source_web_server_fuzz.
+
+Keep in mind when buying a fuzzer, that ./closed_source_web_server_fuzz
+took about a half a day to write, and found a few bugs, and is
+slowly getting better as I have time. webmitm is much nicer to
+use now as well; please give it a shot and let me know what
+you think.
+
+Of course, the webfuzz.c stuff finds a bunch of other bugs, and the
+msrpcfuzz hasn't been entirely useless. I used SPIKE on a number
+of engagements where the client was doing bizzare binary protocols
+over HTTP, or simply had a web application I wanted to quickly test
+for ODBC errors or quick overflow. It doesn't find everything, but
+with a little guidance, it finds a lot of stuff. 
+
+Documentation:
+o Added using_the_spike_api.txt - read this to figure out what's
+going on. :>
+
+spike.c
+o spike.c was missing a break; - erronously reported errors.
+o added a few random other fixes and documentation
+
+webmitm:
+o Fixed webmitm to do the Host: switching on the non .0 requests as well.
+o Added <stdarg.h> to work properly on RH 7.0. SSL can still be a huge
+pain in the ass - if it doesn't work for you (compiling-wise) just remove
+the -lssl and replace it with the path of your ssl .a files. 
+(libcrypto.a and libssl.a)
+o Updated odbc.sh to work properly
+o Fixed a missing memset(buf,0x00,size); which will hopefully fix
+a bug that resulted in the bodies of http_request files being
+messed up with old data. If you still see this bug, let me know.
+
+makewebfuzz.pl:
+o Updated the prelude and postlude some.
+
+post_fuzz.c:
+o added this file. It finds problems such as the one in mod_php. See the
+.c for #defines and things.
+
+closed.c:
+o added some additional shell escape characters
+o added a string that happens when the server closes the connection without
+sending any output. Like when it dies.
+
+quake.c, quakeserver.c:
+o updated udpstuff and spike.c to handle a new sendto() function. This is
+demoed quite well in quakeserver.c
+
+msrpcfuzz:
+I still want to figure out why I can't do multi-packet calls. Someone
+help me out here.
+
+
+2.0
+
+Added udpstuff.c and halflife.c to demo it - didn't find anything
+with halflife.c, in case you were wondering. You'd have to really
+mess with it to get past the authentication step and actually start
+playing. Maybe I'll work on it some more later.
+
+Readded msrpcfuzz as oldmsrpcfuzz, since it worked better
+
+Totally revamped webmitm. This needed urgent fixing. However, it is
+still not quite right in that it doesn't do anything more than 1 server
+at a time. This is actually really nice in some respects. To
+do anything else I'd have to write a real http proxy, which is
+not fun. 
+
+Also, chomp was messing with me, so I switched back to chop. If you are
+cutting and pasting (from a proxy of some kind, say) you can use
+./makewebfuzz_cnp.pl instead of makewebfuzz.pl. People have reported
+that makewebfuzz didn't work properly unless you redirected to a file.
+
+It's all really quite easy to use once you know how to use it. Feel
+free to experiment with the web fuzzing stuff and send me a note.
+
+
+1.9
+Added closed_source_web_fuzzer - found 2 bugs in IIS 5.0 and 1 bug in IIS 5.1.
+Found nothing in Apache or AOLServer, hence the name.
+Added a spike_free() call which does the right thing to free a spike to avoid
+all stupid memleaks in the new code. You can't just call free() on a spike,
+in case you were curious.
+
+Added src/teststorun.h which controls which SPIKE tests will run - so you
+can do a webfuzz and turn off all the buffer overflow and format string 
+tests, for example. You'll have to recompile for your changes to take effect,
+of course. If you didn't realize that, go use eEye's tool, or something.
+
+Fixed a retarded and awful memory leak in old tcpstuff.c version I used for
+SPIKE 1.8. 
+
+Broke msrpcfuzz while trying to make it do multi-pdu requests. If
+anyone can get this working, please let me know! <--pretty please
+with sugar on top! The old version is in "backups" in case you actually
+need it.
+
+Added some shell scripts to automate some things. Specificaly, webfuzzing
+is a lot easier. Does anyone know why some iPlanet 4.1 servers don't
+cooperate with the SSL part of webmitm? 
+
+1.8
+Added a working Citrix fuzzer! Good fun for the whole family.
+Fixed the whole "plus" bug where adding negative numbers didn't work. 
+Now it's a long instead of an unsigned long. (needed for Citrix Fuzzer)
+
+do_ntlm_brute.sh works a lot better now. You still have to pipe it through
+stunnel to do ssl connections. Gets about 9 guesses a second, which
+isn't too bad. 
+
+
+
+

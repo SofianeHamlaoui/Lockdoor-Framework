@@ -1,0 +1,415 @@
+DIRB CHANGELOG
+==============
+
+*2.2.2 (05/04/2014)
+------
+
+- FEATURE: Añadida wordlist de Jersey
+- FEATURE: Añadido mensaje de finalizacion 'END_TIME', contribucion de hyrumm
+
+
+2.2.1 (24/04/2013)
+------
+
+- FEATURE: Añadida hotkey 'r' que muestra las pruebas restantes
+- FEATURE: Añadida funcion count_words()
+- FEATURE: Añadido soporte para multiples cabeceras, parche de Pablo Catalina
+- FEATURE: Cambiada la ruta por defecto de las wordlists a /usr/share/dirb/wordlists, parche de Pablo Catalina
+- FEAUTRE: La carpeta de resume ahora va en el home y se crea si no existe, parche de Pablo Catalina
+
+
+2.2.0 (23/04/2013)
+-----
+
+- FEAUTRE: añadida funcion compare_str() que devuelve la posicion del primer caracter diferente
+- BUG: corregido el uso de finetunning para paginas de tipo 30x en lanza_ataque()
+- FEATURE: mejorada funcion location_clean()
+- CLEAN: limpieza de wordlists
+- BUG: corregida funcion location_clean(), se sobre-escribia parte del valor por si mismo
+- FEATURE: añadida wordlist hpsmh (hp system management homepage)
+- CLEAN: actualizada rutina para opcion -v en lanza_ataque()
+- BUG: corregido uso incorrecto de url_base en lanza_ataque()
+- FEATURE: ahora en caso de error subsanable se pasa al siguiente directorio en vez de salir
+- CLEAN: eliminado el uso de resuming en lanza_ataque()
+- CLEAN: unificado el uso de get_necs()
+- CLEAN: modificadas las funciones calcula_nec() y resume() para permitir la recuperacion en caso de error al calcular el NEC
+- CLEAN: corregidas algunas erratas en los mensajes en ingles
+- BUG: corregido uso erroneo de get_necs() en resume.c
+- FEATURE: añadida wordlist axis y ror (ruby on rails), ampliadas oas y tomcat
+
+
+2.1.0 (25/05/2011)
+-----
+
+- CLEAN: corregidas erratas en la documentacion
+- CLEAN: depuradas todas las llamadas a strncat()
+- CLEAN: optimizada funcion barra()
+- FEATURE: informacion de URLs probadas ajustado al ancho del terminal
+- BUG: cambiados los printf() que mostraban y borraban la URL en lanza_ataque() para evitar saltos de linea indebidos
+- FEATURE: cambio formato output (todo en 1 linea)
+- FEATURE: añadidas wordlists: wps (websphere portal server), sap (sap j2ee), domino (actualizacion)
+
+
+2.0.4 (06/04/2009)
+-----
+
+- BUG: opcion -R falla, fix por Hubert Seiwert
+- FEATURE: no forzamos la / final si hay parametros en la url
+- BUG: la deteccion de codigos 401, 403 y 500 recurrentes fallaba
+
+
+2.0.3 (27/01/2009)
+-----
+
+- CLEAN: mejoradas algunas wordlists
+- BUG: la deteccion de 301/302 con -f fallaba algunas veces con recursion
+- FEATURE: la opcion -N ahora en vez de fijar el NEC, hace que ignoremos las respuestas con ese codigo
+- CLEAN: eliminados y modificados varios puntos del menu de ayuda
+- CLEAN: mejoradas la funciones de analisis de codigo devuelto en lanza_ataque()
+- CLEAN: revisada funcion location_clean()
+- CLEAN: eliminadas comprobaciones innecesarias en if()s
+
+
+2.0.2 (21/10/2008)
+-----
+
+- CLEAN: modificados varios puntos del menu de ayuda para mejorar la legibilidad
+- CLEAN: en el menu de ayuda se ha sustituido el termino NEC por NOT_FOUND
+- BUG: funcion dump() podia ser invocada antes de estar definidas todas las variables a guardar
+
+
+2.0.1 (30/08/2007)
+-----
+
+- FEAUTRE: acutlizada wordlist cgis.txt
+- BUG: opcion CURLOPT_MUTE eliminado al haber pasado a deprecated en libcurl
+- CLEAN: wordlist medium.txt eliminada
+- FEATURE: wordlist common.txt ampliada
+
+
+2.0.0 (11/04/2007)
+-----
+
+- FEATURE: location_cmp() comprueba que lo que se le pasa es una url valida
+- BUG: corregido un bug que llevaba a detectar algunos mensajes 302 como directorios
+- CLEAN: eliminada funcion isdir() que no era usada
+
+
+1.99.0 (05/07/2006)
+------
+
+- FEATURE: Deteccion de directory listing en tomcat
+- BUG: corregido off-by-one en uri_decode()
+- FEATURE: Añadida wordlist de Sharepoint
+- BUG: Corregidos mogollon de bugs producidos por los cambios.
+- CLEAN: Eliminadas algunas funciones, para su revision.
+- FEATURE: NEC por directorio.
+- FEATURE: NEC por extension.
+- CLEAN: Recodificacion en profundidad de muchas funciones para soportar nuevas features.
+
+
+1.10.0 (25/04/2006)
+------
+
+- FEATURE: Añadido speedcontrol patch (opcion -z) de Sha0
+- CLEAN: Pequeños añadidos a algunas wordlists
+
+
+1.9.0 (23/11/2005)
+-----
+
+- BUG: Corregido bug en get_body() que calculaba mal el numero de palabras leidas.
+- FEATURE: Añadido fine_tuning por palabras en NEC=200.
+- FEATURE: Añadida seccion de examples en ayuda directa de dirb.c.
+- FEATURE: Ampliadas algunas wordlists.
+- FEATURE: Añadido directorio "others" para clasificar wordlists.
+- BUG: Si no existe el directorio de "resume" lo crea.
+- BUG: Si el servidor no devuelve server_banner no se muestra.
+- FEATURE: Añadido "Silent Mode" para terminales tontos.
+- FEATURE: Añadida descripcion del codigo HTTP.
+- CLEAN: Reformado el formato del output de informacion de las URLs encontradas.
+- FEATURE: Ampliados los juegos de caracteres disponibles en gendict.
+
+
+1.8.0 (28/06/2005)
+-----
+
+- FEATURE: Añadida rutina que vuelca dumps de estado cada 1000 palabras descargadas.
+- FEATURE: Ahora los ficheros de output no se sobre-escriben sino que se hace append al final.
+- FEATURE: Modificada la rutina de parseo de parametros por linea de comandos para ser mas versatil.
+- FEATURE: Incluida funcion de resume de escaneos cortados.
+- CLEAN: Limpieza de nombres de variables y de definicion de funciones.
+
+
+1.7.0 (17/06/2005)
+-----
+
+- CLEAN: Limpieza de codigo y variables para el paso a la 2.0.
+- FEATURE: Añadidas wordlists: jrun, coldfusion, tomcat. Pequeñas mejoras en otras.
+- DOCUMENTATION: Limpiado un poco el README.
+- FEATURE: Añadida herramienta web2dic (crea un diccionario a partir del output del wget).
+- CLEAN: Pulidos algunos mensajes de warning.
+
+
+1.6.0 (30/03/2005)
+-----
+
+- FEATURE: Añadida la salida de informacion tecnica adicional por defecto.
+- FEATURE: Añadido macro IMPRIME para centralizar el output de datos.
+- CLEAN: Renombradas algunas variables para facilitar la lectura del codigo.
+- FEATURE: Incluida opcion -H para poder añadir caberas HTTP.
+
+
+1.5.0 (22/03/2005)
+-----
+
+- FEATURE: Añadido checkeo que evita la sobre-escritura del fichero de output.
+- CLEAN: Unificado manejo de opciones en una macro-estructura.
+- BUG: Corregidos varios bugs en el escaneo con finetuning.
+- CLEAN: NEC ahora es una estrcutura.
+- CLEAN: Recodificada la funcion get_url().
+- FEATURE: Mejor rendimiento. A partir de ahora usamos por defecto para todas las peticiones la posibilidad de conexiones persistentes (keep-alive) de la libcurl.
+
+
+1.4.0 (28/12/2004)
+-----
+
+- FEATURE: Considerable aumento de las wordlists mas comunes.
+- CLEAN: Varios pequeños bugs corregidos.
+- NOTE: Sin tiempo para sacar la 2.0, os tendreis que conformar con una nueva release estable con pocos cambios.
+
+
+1.3.1 (06/09/2004)
+-----
+
+- FEATURE: Añadida wordlist para vulns de iAS.
+- FEATURE: Añadida opcion de fine-tinning generica (para cualquier codigo no reconocido).
+- CLEAN: Ordenado un poco el codigo de parseo del codigo devuelto.
+- FEATURE: Opcion -t para evitar el uso de '/' al final de la URL.
+- FEATURE: Al pulsar la tecla 'n' durante el escaneo, se pasa al siguiente directorio.
+- FEATURE: Añadida funcion kbhit() para sustituir a getchar() sin ser bloqueante.
+
+
+1.3.0 (31/05/2004)
+-----
+
+- FEATURE: Añadidas wordlists para vulns: domino, iis.
+- DOCUMENTATION: Actualizada manpage dirb.1.
+- FEATURE: Parametro -N que deja especificar un codigo de NEC alternativo.
+- CLEAN: Ligeras optimizaciones en velocidad en funcion crea_wordlist().
+- CLEAN: Modificada la funcion get_url() para ser mas resistente a posibles fallos.
+- FEATURE: Ahora el parametro wordlist es optativo, si no se le pasa usa common.txt.
+- CLEAN: Limitado el tamaño de los buffers de texto a 256 bytes para ganar velocidad y espacio.
+- CLEAN: Limpiadas algunas wordlists.
+- NOTE: Limpieza general, preparatoria para el paso a la version 2.0.
+
+
+1.2.0 (05/02/2004)
+-----
+
+- BUG: Corregidos un par de fallos/warnings del autoconf en plataformas no cygwin/linux.
+- DOCUMENTATION: Actualizado README.txt.
+- DOCUMENTATION: Actualizada manpage dirb.1.
+- NOTE: Cerrada la adicion de nuevas features. 1 semana de pruebas para una nueva release estable.
+
+
+1.1.3 (30/01/2004)
+-----
+
+- FEATURE: Añadidas varias wordlists nuevas para chequeo de vulnerabilidades.
+- FEATURE: Añadido chequeo de la version de libcurl en el autoconf.
+- CLEAN: Unificado el formato de los mensajes de WARNING.
+- FEATURE: Añadida funcion que detecta si un directorio es listable o no.
+- CLEAN: Simplificado aun mas el autoconf (total para lo que hace :)
+- FEATURE: Añadida funcion para mostrar la hora de inicio del escaneo.
+- NOTE: Esto va rapido, seguramente pasaremos a la nueva release estable 1.2.0 en breve.
+
+
+1.1.2 (28/01/2004)
+-----
+
+- CLEAN: Modificado el autoconf de nuevo.
+- CLEAN: Variable body_info pasa a ser body_size.
+- DOCUMENTATION: Añadida documentacion para gendict.
+- CLEAN: Variable murl pasa a ser url_inicial.
+- CLEAN: Variable nec_body pasa a ser nec_bodysize.
+- CLEAN: Variable nec_extra pasa a ser nec_location.
+- FEATURE: Añadida opcion -P para especificar un usuario:password para usar en el proxy.
+- CLEAN: Añadido fichero get_url.h
+- CLEAN: Separado dirb.h en 3: variables.h, funciones.h y estructuras.h
+- FEATURE: Incluidos mensajes descriptivos para todos los posibles errores de libcurl.
+
+
+1.1.1 (22/01/2004)
+-----
+
+- DOCUMENTATION: Retabulada la documentacion para poder ser leida mejor en editores de consola.
+- FEATURE: Añadida opcion -s que permite escanear hosts HTTPS con certificados no validos.
+- FEATURE: Añadido wordlist "cgis.txt" con un monton de vulnerabilidades para poder usar dirb como un scanner de CGIs clasico.
+- DOCUMENTATION: Remodelado el readme para intentar expresa mejor que hace la herramienta.
+- CLEAN: Ahora permite seguir escaneando con los WARNINGs por exceso de 401 y 403 con la opcion -w.
+- CLEAN: Aumentado el tamaño de BIGWORDLIST para permitir diccionarios mas grandes por defecto.
+- CLEAN: Modificados los mensajes de warning para informar de la opcion -w.
+
+
+1.1.0 (18/01/2004)
+-----
+
+- DOCUMENTATION: Movida toda la documentacion excepto el README al directorio /docs
+- CLEAN: Modificado el codigo de gendict para que compile sin warnings.
+- CLEAN: Trasteando de nuevo con la configuracion de autoconf. (Ya lo dejo por imposible)
+- FEATURE: Sustituida herramienta gendict por una ultra-mejorada programada por Jfs.
+- CLEAN: Separada herramienta gendict a su propio subdirectorio.
+- CLEAN: Redefinidas 2 funciones para evitar warnings al compilar.
+- CLEAN: Ampliado TIMEOUT y MAXFAILS para poder escanear algunos servidores que se bloquean cuando se escanean muy rapido (IIS sobre todo).
+- BUG: Error al aplicar location_clean() sobre un directorio.
+- NOTE: 7 dias de testing para liberar la nueva version estable.
+
+
+1.0.4 (11/01/2004)
+-----
+
+- BUG: Incorrecta deteccion de directorios en modo finetunning.
+- CLEAN: Unificado el tratamiento de los modos 301 y 302.
+- CLEAN: Unificado el mecanismo de control de errores. 
+- FEATURE: Añadida la opcion de recursion interactiva.
+- FEATURE: Añadida herramienta gendict -> Para generar diccionarios incrementales.
+- FEATURE: Ahora en el fichero de output guardamos tambien el banner del programa.
+- NOTE: La lista del TODO se ha reducido bastante, las features importantes ya estan añadidas, vamos a por la 1.1!!
+
+
+1.0.3 (09/01/2004)
+-----
+
+- FEATURE: Incluida funcion para desglosar por pantalla la lista de extensiones o mutaciones a usar.
+- CLEAN: Esta nueva funcion a obligado a pulir bastante codigo (No hay mal que por bien no venga :)
+- FEATURE: Añadido FineTuning para modos 301 y 302
+- CLEAN: Aumentados los valores por defecto de timeout y max_fails
+- BUG: Pulidos algunos pequeños bugs en lanza_ataque.c y calcula_nec.c
+- DOCUMENTATION: Ampliado ligeramente el README.txt
+- FEATURE: Añadido soporte para uso de cookies escogidas por el usuario.
+- FEATURE: Añadido soporte para autentificacion HTTP (usuario:password).
+- FEATURE: Añadidas wordlists para analisis de vulnerabilidades de algunos servidores concretos.
+- CLEAN: Iniciada la limpieza y ordenacion de las rutinas de debug.
+- NOTE: Año nuevo, a ver si sacamos una version estable nueva... (La 1.0.4==1.1.0?)
+ 
+
+1.0.2 (16/12/2003)
+-----
+
+- CLEAN: Limpiados un poco los Makefile.am (No me mola nada como funciona el autoconf)
+- FEATURE: Iniciado el proceso de migrar las funciones de debug manuales.
+- FEATURE: Añadida opcion de DEBUG.
+- CLEAN: Limpiado el codigo de la funcion calcula_nec().
+- FEATURE: Añadida wordlist para chequeo de weblogic.
+- FEATURE: Separadas las wordlists para mayor claridad.
+- BUG: El chequeo del NEC no estaba activado por defecto.
+- NOTE: Estamos temporalmente sin CVS...
+- CLEAN: Añadidas nuevas opciones al menu y repaso de las existentes.
+
+
+1.0.1 (23/09/2003)
+-----
+
+- NOTE: Estrenado nuevo CVS
+- CLEAN: Las wordlists siguen creciendo poco a poco... (hasta donde llegaremos?)
+- CLEAN: Ahora se guarda en el fichero de output toda la informacion (incluidas las opciones)
+- CLEAN: Separadas las rutinas de manejo de las opciones de usuario.
+- FEATURE: Añadido soporte para uso de proxy.
+- FEATURE: Opcion especificar cabecera virtual host.
+
+
+1.0.0 (17/08/2003)
+-----
+
+- BUG: El tamaño de la cadena agente estaba mal en algunos sitios (el bueno es 256)
+- FEATURE: Pequeña ampliacion de los wordlists.
+- BUG: Corregido un error al sacar por pantalla (-l) la cabecera Location.
+- BUG: Cuando se producia un timeout en la descarga de una pagina no se tenia en cuenta, esto provocaba errores
+al calcular la longitud de la pagina HTML recibida.
+- BUG: Corregido un error que hacia que get_url no calculase bien el numero de lineas HTML recibidas.
+- CLEAN: Separado el codigo de la rutina calcula_nec en un fichero independiente.
+- DOCUMENTATION: Añadidos varios ejemplos en el README.txt (ya es aceptable para la version publica)
+- CLEAN: Reducido tamaño del campo body_info.
+- NOTE: Primera version publica.
+- DOCUMENTATION: A partir de ahora el fichero de CHANGES.txt ira ordenado siguiendo la siguiente clasificacion:
+	BUG: Solucion de un problema en el codigo
+	FEATURE: Añadida alguna nueva funcionalidad
+	CLEAN: Limpieza del codigo por estica o eficiencia
+	DOCUMENTATION: Modificaciones en la documentacion del proyecto
+	NOTE: Comentario del autor
+
+
+0.0.9 (03/08/2003)
+-----
+
+- Añadido man-page dirb.1
+- Re-tabulado todo el codigo fuente
+- Version preliminar de autoconf cerrada
+- Eliminados varios warnings y errores de la nueva version autoconf
+- Añadido soporte para autoconf (by sage@t0s.org)
+- Añadido fichero LICENSE.txt (ahora somos GNU!)
+- Corregidos algunos fallos
+
+
+0.0.8 (29/07/2003)
+-----
+
+- Añadida funcion location_cmp()
+- Unificado formato de mensajes de WARNING Y FATAL
+- Añadida la posibilidad de especificar extensiones y mutaciones a traves de linea de comandos
+- Resumidas las opciones de command-line
+- Pulidas de nuevo las wordlists
+- Añadido fflush de outfile
+- Corregido un fallo en calcula_nec
+
+
+0.0.7 (25/07/2003)
+-----
+
+- Añadida opcion de parar en los warnings
+- Ahora por defecto siempre chequea el NEC
+- Reordenados los menus de opciones
+
+
+0.0.6 (24/07/2003)
+-----
+
+- Ahora detecta cuando un evento se repite mucho, y toma las medidas necesarias
+- Restringida la deteccion de directorios -> Ahora dejamos la decision al usuario
+- Mejorada la documentacion
+- Organizados los ficheros antiguos
+- Corregidos varios BUGs tontos
+- Corregidos un monton de fallos en el manejo y limpieza de duplicados de las listas
+- Incluida opcion de fine tunning en la deteccion de NEC = 200
+- Incluida opcion de guardar a fichero el output
+
+
+0.0.5 (23/07/2003)
+-----
+
+- Añadida funcion para obtecion del NEC
+- Separado campo info en body_info y location_info
+- Eliminados algunos warnings
+
+
+0.0.4 (22/07/2003)
+-----
+
+- Incluido borrado de elementos repetidos en la wordlist
+- Incluido soporte para multiples ficheros de wordlist
+- Incluido rutinas de gendict en el cuerpo del scanner
+- Ahora la wordlist se alamacena en memoria antes de ser usada
+
+
+0.0.3 (21/07/2003)
+-----
+
+- Solucionados un monton de overflows (aunque alguno queda... :)
+- Mejorada la limpieza de cadenas
+- Mejorada la deteccion de directorios
+- Reorganizado el codigo para hacerlo menos compacto
+- Ampliados y depurados la mayoria de wordlists
+- Añadido TIMEOUT para las peticiones de URLs
+- Añadido fichero changes.txt :)
+
