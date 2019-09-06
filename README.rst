@@ -44,10 +44,12 @@ Resources and cheatsheets:
 
 * **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
 
+=============
 Lockdoor Tools contents: 
---------------------------
+=============
 
-* **Information Gathering**:
+**Information Gathering**:
+--------------------------
    - Tools:
       - dirsearch : A Web path scanner
       - brut3k1t # security-oriented bruteforce framework
@@ -75,7 +77,8 @@ Lockdoor Tools contents:
       - TIDoS : Offensive Manual Web Application Penetration Testing Framework.
       - Dracnmap : Info Gathering Framework
 
-* **Web Hacking**:
+**Web Hacking**:
+--------------------------
    - Tools:
       - Spaghetti : Spaghetti - Web Application Security Scanner
       - HTTPoxyScan : HTTPoxy Exploit Scanner by 1N3
@@ -100,11 +103,8 @@ Lockdoor Tools contents:
       - Dzjecter # Server checking Tool
       - W3af # web application attack and audit framework
 
-* **Post Exploitation:**:
-   -Tools : 
-      - TheFatRat : massive exploiting tool
-
-* **Privilege Escalation**:
+**Privilege Escalation**:
+--------------------------
    - Tools:
       - Linux : 
          - Scripts : 
@@ -123,7 +123,8 @@ Lockdoor Tools contents:
          - raptor_udf.c
          - raptor_udf2.c
          
-* **Reverse Engineering**:
+**Reverse Engineering**:
+--------------------------
    - Radare2 # unix-like reverse engineering framework
    - VirtusTotal # VirusTotal tools
    - Miasm # Reverse engineering framework 
@@ -135,7 +136,8 @@ Lockdoor Tools contents:
    - Spike : a protocol fuzzer creation kit + audits
    - other : other scripts collected somewhere
 
-* **Exploitation**:
+**Exploitation**:
+--------------------------
    - Findsploit : Find exploits in local and online databases instantly
    - MassExpConsole : concurrent exploiting
    - Pompem : Exploit and Vulnerability Finder
@@ -144,22 +146,31 @@ Lockdoor Tools contents:
    - linux-exploit-suggester2 : Next-Generation Linux Kernel Exploit Suggester
    - other : other scripts I collected somewhere.
 
-* **SHELLS**:
+**Shells**:
+--------------------------
    - WebShells : Webshells Collection
    - ShellSum : A defense tool - detect web shells in local directories
    - Weevely # Weaponized web shell
    - python-pty-shells # Python PTY backdoors
 
-* **Password Attacks**:
+**Password Attacks**:
+--------------------------
    - crunch : a wordlist generator
    - CeWL : a Custom Word List Generator
    - patator : a multi-purpose brute-forcer, with a modular design and a flexible usage
  
-* **Encryption - Decryption**:
+**Encryption - Decryption**:
+--------------------------
    - Codetective # a tool to determine the crypto/encoding algorithm used
    - findmyhash # Python script to crack hashes using online services
    - hashID # Software to identify the different types of hashes
   
-* **Reverse Engineering**:
+**Post Exploitation:**:
+--------------------------
+   -Tools : 
+      - TheFatRat : massive exploiting tool
+
+**Reverse Engineering**:
+--------------------------
    - scythe : an accounts enumerator
    
