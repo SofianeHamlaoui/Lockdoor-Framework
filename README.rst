@@ -28,24 +28,24 @@ As pentesters, most of us has his personal ' /pentest/ ' directory so this Frame
 =============
 Features
 =============
-' * ' = Added values : (what makes it different from other frameworks).
+Added value : (what makes it different from other frameworks).
 
 Pentesting Tools Selection: 
 --------------------------
-   - **Tools ?**: **Lockdoor** doesn't contain all pentesting tools , let's be honest ! Who ever used all the used you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite and the most used tools by Pentesters. *
+   - **Tools ?**: **Lockdoor** doesn't contain all pentesting tools (Added value) , let's be honest ! Who ever used all the Tools you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite (Added value) and the most used toolsby Pentesters (Added value).
 
 
-   - **what Tools ?**: the tools contains **Lockdoor** are a collection from the best tools on Kali,Parrot Os and BlackArch. Also some private tools from some other hacking teams like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns. *
+   - **what Tools ?**: the tools contains **Lockdoor** are a collection from the best tools (Added value) on Kali,Parrot Os and BlackArch. Also some private tools (Added value) from some other hacking teams (Added value) like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns (Added value). 
 
 
-   - **Easy Customization**: Easily add/remove tools.
+   - **Easy Customization**: Easily add/remove tools. (Added value)
 
-Resources and cheatsheets: 
+Resources and cheatsheets: (Added value)
 --------------------------
-   - **Resources**: That's what makes **Lockdoor** Added value*, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates , Pentesting walkthrough examples and tempales and more.
+   - **Resources**: That's what makes **Lockdoor** Added value, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates (Added value) , Pentesting walkthrough examples and tempales (Added value) and more.
 
 
-   - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
+   - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
 
 =============
 Lockdoor Tools contents: 
@@ -202,4 +202,23 @@ Lockdoor Resources contents:
    - `smtp_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/smtp_enumeration.md>`_
    - `snmb_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/snmb_enumeration.md>`_
    - `vulnerability_scanning <ToolsResources/INFO-GATH/CHEATSHEETS/vulnerability_scanning.md>`_
+   
+**Crypto**:
+--------------------------
+   - `Crypto101.pdf <ToolsResources/ENCRYPTION/Crypto101.pdf>`_ 
+   
+**EXPLOITATION**:
+--------------------------
+   - `computer_network_exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/computer_network_exploits.md>`_ 
+   - `file_inclusion_vulnerabilities <ToolsResources/EXPLOITATION/CHEATSHEETS/file_inclusion_vulnerabilities.md>`_ 
+   - `File_Transfers <ToolsResources/EXPLOITATION/CHEATSHEETS/File_Transfers.md>`_ 
+   - `nc_transfers <ToolsResources/EXPLOITATION/CHEATSHEETS/nc_transfers.txt>`_ 
+   - `networking_pivoting_and_tunneling <ToolsResources/EXPLOITATION/CHEATSHEETS/networking_pivoting_and_tunneling.md>`_ 
+   - `network_pivoting_techniques <ToolsResources/EXPLOITATION/CHEATSHEETS/network_pivoting_techniques.md>`_ 
+   - `pivoting <ToolsResources/EXPLOITATION/CHEATSHEETS/pivoting.md>`_ 
+   - `pivoting_ <ToolsResources/EXPLOITATION/CHEATSHEETS/pivoting_.md>`_ 
+   - `Public Exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/Public Exploits.md>`_ 
+   - `reverse_shell_with_msfvenom <ToolsResources/EXPLOITATION/CHEATSHEETS/reverse_shell_with_msfvenom.md>`_ 
+
+
    
