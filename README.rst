@@ -177,3 +177,29 @@ Lockdoor Tools contents:
 --------------------------
    - scythe : an accounts enumerator
    
+=============
+Lockdoor Resources contents: 
+=============
+
+**Information Gathering**:
+--------------------------
+   - `Cheatsheet_SMBEnumeration <ToolsResources/INFO-GATH/CHEATSHEETS/Cheatsheet_SMBEnumeration.txt>`_ 
+   - `configuration_management <ToolsResources/INFO-GATH/CHEATSHEETS/configuration_management.md>`_ 
+   - `dns_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/dns_enumeration.md>`_
+   - `file_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/file_enumeration.md>`_
+   - `http_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/http_enumeration.md>`_
+   - `information_gathering_owasp_guide <ToolsResources/INFO-GATH/CHEATSHEETS/information_gathering_owasp_guide.md>`_
+   - `miniserv_webmin_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/miniserv_webmin_enumeration.md>`_
+   - `ms_sql_server_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/ms_sql_server_enumeration.md>`_
+   - `nfs_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/nfs_enumeration.md>`_
+   - `osint_recon_ng <ToolsResources/INFO-GATH/CHEATSHEETS/osint_recon_ng.md>`_
+   - `passive_information_gathering <ToolsResources/INFO-GATH/CHEATSHEETS/passive_information_gathering.md>`_
+   - `pop3_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/pop3_enumeration.md>`_
+   - `ports_emumeration <ToolsResources/INFO-GATH/CHEATSHEETS/ports_emumeration.md>`_
+   - `rpc_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/rpc_enumeration.md>`_
+   - `scanning <ToolsResources/INFO-GATH/CHEATSHEETS/scanning.md>`_
+   - `smb_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/smb_enumeration.md>`_
+   - `smtp_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/smtp_enumeration.md>`_
+   - `snmb_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/snmb_enumeration.md>`_
+   - `vulnerability_scanning <ToolsResources/INFO-GATH/CHEATSHEETS/vulnerability_scanning.md>`_
+   
