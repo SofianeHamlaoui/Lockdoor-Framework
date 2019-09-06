@@ -249,3 +249,11 @@ Lockdoor Resources contents:
    - `windows_priv_escalation <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation.md>`_
    - `windows_priv_escalation_practical <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation_practical.md>`_
    
+**Pentesting & Security Assessment Findings Report Templates**:
+--------------------------
+   - `Demo Company - Security Assessment Findings Report.docx <ToolsResources/REPORT/TEMPLATES/Demo Company - Security Assessment Findings Report.docx>`_
+   - `linux-template.md <ToolsResources/REPORT/TEMPLATES/linux-template.md>`_
+   - `PWKv1-REPORT.doc <ToolsResources/REPORT/TEMPLATES/PWKv1-REPORT.doc>`_
+   - `pwkv1_report.doc <ToolsResources/REPORT/TEMPLATES/pwkv1_report.doc>`_
+   - `template-penetration-testing-report-v03.pdf <ToolsResources/REPORT/TEMPLATES/template-penetration-testing-report-v03.pdf>`_
+   - `windows-template.md <ToolsResources/REPORT/TEMPLATES/windows-template.md>`_
