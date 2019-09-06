@@ -207,7 +207,7 @@ Lockdoor Resources contents:
 --------------------------
    - `Crypto101.pdf <ToolsResources/ENCRYPTION/Crypto101.pdf>`_ 
    
-**EXPLOITATION**:
+**Exploitation**:
 --------------------------
    - `computer_network_exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/computer_network_exploits.md>`_ 
    - `file_inclusion_vulnerabilities <ToolsResources/EXPLOITATION/CHEATSHEETS/file_inclusion_vulnerabilities.md>`_ 
@@ -220,5 +220,12 @@ Lockdoor Resources contents:
    - `Public Exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/Public Exploits.md>`_ 
    - `reverse_shell_with_msfvenom <ToolsResources/EXPLOITATION/CHEATSHEETS/reverse_shell_with_msfvenom.md>`_ 
 
-
+**Networking**:
+--------------------------
+   - `bpf_syntax <ToolsResources/NETWORKING/bpf_syntax.md>`_ 
+   - `Cheatsheet_Networking <ToolsResources/NETWORKING/Cheatsheet_Networking.txt>`_
+   - `Cheatsheet_Oracle <ToolsResources/NETWORKING/Cheatsheet_Oracle.txt>`_
+   - `networking_concept <ToolsResources/NETWORKING/networking_concept>`_
+   - `nmap_quick_reference_guide <ToolsResources/NETWORKING/nmap_quick_reference_guide.pdf>`_
+   - `tcpdump <ToolsResources/NETWORKING/tcpdump.pdf>`_
    
