@@ -55,8 +55,8 @@ Lockdoor Tools contents:
 --------------------------
    - Tools:
       - dirsearch : A Web path scanner
-      - brut3k1t # security-oriented bruteforce framework
-      - gobuster # DNS and VHost busting tool written in Go 
+      - brut3k1t : security-oriented bruteforce framework
+      - gobuster : DNS and VHost busting tool written in Go 
       - Enyx : an SNMP IPv6 Enumeration Tool
       - Goohak : Launchs Google Hacking Queries Against A Target Domain
       - Nasnum : The NAS Enumerator
@@ -128,11 +128,11 @@ Lockdoor Tools contents:
          
 **Reverse Engineering**:
 --------------------------
-   - Radare2 # unix-like reverse engineering framework
-   - VirtusTotal # VirusTotal tools
-   - Miasm # Reverse engineering framework 
-   - Mirror # reverses the bytes of a file
-   - DnSpy # .NET debugger and assembly
+   - Radare2 : unix-like reverse engineering framework
+   - VirtusTotal : VirusTotal tools
+   - Miasm : Reverse engineering framework 
+   - Mirror : reverses the bytes of a file
+   - DnSpy : .NET debugger and assembly
    - DLLRunner : a smart DLL execution script for malware analysis in sandbox systems. 
    - Fuzzy Server : a Program That Uses Pre-Made Spike Scripts to Attack VulnServer.
    - yara : a tool aimed at helping malware researchers toidentify and classify malware samples
@@ -153,7 +153,7 @@ Lockdoor Tools contents:
 --------------------------
    - WebShells : Webshells Collection
    - ShellSum : A defense tool - detect web shells in local directories
-   - Weevely # Weaponized web shell
+   - Weevely : Weaponized web shell
    - python-pty-shells # Python PTY backdoors
 
 **Password Attacks**:
@@ -164,9 +164,9 @@ Lockdoor Tools contents:
  
 **Encryption - Decryption**:
 --------------------------
-   - Codetective # a tool to determine the crypto/encoding algorithm used
-   - findmyhash # Python script to crack hashes using online services
-   - hashID # Software to identify the different types of hashes
+   - Codetective : a tool to determine the crypto/encoding algorithm used
+   - findmyhash : Python script to crack hashes using online services
+   - hashID : Software to identify the different types of hashes
   
 **Post Exploitation:**:
 --------------------------
