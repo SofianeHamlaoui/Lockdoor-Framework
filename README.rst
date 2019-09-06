@@ -28,24 +28,24 @@ As pentesters, most of us has his personal ' /pentest/ ' directory so this Frame
 =============
 Features
 =============
-' * ' = Added values : (what makes it different from other frameworks).
+Added value : (what makes it different from other frameworks).
 
 Pentesting Tools Selection: 
 --------------------------
-   - **Tools ?**: **Lockdoor** doesn't contain all pentesting tools , let's be honest ! Who ever used all the used you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite and the most used tools by Pentesters. *
+   - **Tools ?**: **Lockdoor** doesn't contain all pentesting tools (Added value) , let's be honest ! Who ever used all the Tools you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite (Added value) and the most used toolsby Pentesters (Added value).
 
 
-   - **what Tools ?**: the tools contains **Lockdoor** are a collection from the best tools on Kali,Parrot Os and BlackArch. Also some private tools from some other hacking teams like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns. *
+   - **what Tools ?**: the tools contains **Lockdoor** are a collection from the best tools (Added value) on Kali,Parrot Os and BlackArch. Also some private tools (Added value) from some other hacking teams (Added value) like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns (Added value). 
 
 
-   - **Easy Customization**: Easily add/remove tools.
+   - **Easy Customization**: Easily add/remove tools. (Added value)
 
-Resources and cheatsheets: 
+Resources and cheatsheets: (Added value)
 --------------------------
-   - **Resources**: That's what makes **Lockdoor** Added value*, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates , Pentesting walkthrough examples and tempales and more.
+   - **Resources**: That's what makes **Lockdoor** Added value, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates (Added value) , Pentesting walkthrough examples and tempales (Added value) and more.
 
 
-   - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
+   - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
 
 =============
 Lockdoor Tools contents: 
@@ -55,8 +55,8 @@ Lockdoor Tools contents:
 --------------------------
    - Tools:
       - dirsearch : A Web path scanner
-      - brut3k1t # security-oriented bruteforce framework
-      - gobuster # DNS and VHost busting tool written in Go 
+      - brut3k1t : security-oriented bruteforce framework
+      - gobuster : DNS and VHost busting tool written in Go 
       - Enyx : an SNMP IPv6 Enumeration Tool
       - Goohak : Launchs Google Hacking Queries Against A Target Domain
       - Nasnum : The NAS Enumerator
@@ -103,8 +103,8 @@ Lockdoor Tools contents:
       - XSStrike : Most advanced XSS scanner.
       - joomscan : Joomla Vulnerability Scanner Project
    - Frameworks:
-      - Dzjecter # Server checking Tool
-      - W3af # web application attack and audit framework
+      - Dzjecter : Server checking Tool
+      - W3af : web application attack and audit framework
 
 **Privilege Escalation**:
 --------------------------
@@ -128,11 +128,11 @@ Lockdoor Tools contents:
          
 **Reverse Engineering**:
 --------------------------
-   - Radare2 # unix-like reverse engineering framework
-   - VirtusTotal # VirusTotal tools
-   - Miasm # Reverse engineering framework 
-   - Mirror # reverses the bytes of a file
-   - DnSpy # .NET debugger and assembly
+   - Radare2 : unix-like reverse engineering framework
+   - VirtusTotal : VirusTotal tools
+   - Miasm : Reverse engineering framework 
+   - Mirror : reverses the bytes of a file
+   - DnSpy : .NET debugger and assembly
    - DLLRunner : a smart DLL execution script for malware analysis in sandbox systems. 
    - Fuzzy Server : a Program That Uses Pre-Made Spike Scripts to Attack VulnServer.
    - yara : a tool aimed at helping malware researchers toidentify and classify malware samples
@@ -153,8 +153,8 @@ Lockdoor Tools contents:
 --------------------------
    - WebShells : Webshells Collection
    - ShellSum : A defense tool - detect web shells in local directories
-   - Weevely # Weaponized web shell
-   - python-pty-shells # Python PTY backdoors
+   - Weevely : Weaponized web shell
+   - python-pty-shells : Python PTY backdoors
 
 **Password Attacks**:
 --------------------------
@@ -164,9 +164,9 @@ Lockdoor Tools contents:
  
 **Encryption - Decryption**:
 --------------------------
-   - Codetective # a tool to determine the crypto/encoding algorithm used
-   - findmyhash # Python script to crack hashes using online services
-   - hashID # Software to identify the different types of hashes
+   - Codetective : a tool to determine the crypto/encoding algorithm used
+   - findmyhash : Python script to crack hashes using online services
+   - hashID : Software to identify the different types of hashes
   
 **Post Exploitation:**:
 --------------------------
@@ -176,4 +176,101 @@ Lockdoor Tools contents:
 **Reverse Engineering**:
 --------------------------
    - scythe : an accounts enumerator
+   
+=============
+Lockdoor Resources contents: 
+=============
+
+**Information Gathering**:
+--------------------------
+   - `Cheatsheet_SMBEnumeration <ToolsResources/INFO-GATH/CHEATSHEETS/Cheatsheet_SMBEnumeration.txt>`_ 
+   - `configuration_management <ToolsResources/INFO-GATH/CHEATSHEETS/configuration_management.md>`_ 
+   - `dns_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/dns_enumeration.md>`_
+   - `file_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/file_enumeration.md>`_
+   - `http_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/http_enumeration.md>`_
+   - `information_gathering_owasp_guide <ToolsResources/INFO-GATH/CHEATSHEETS/information_gathering_owasp_guide.md>`_
+   - `miniserv_webmin_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/miniserv_webmin_enumeration.md>`_
+   - `ms_sql_server_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/ms_sql_server_enumeration.md>`_
+   - `nfs_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/nfs_enumeration.md>`_
+   - `osint_recon_ng <ToolsResources/INFO-GATH/CHEATSHEETS/osint_recon_ng.md>`_
+   - `passive_information_gathering <ToolsResources/INFO-GATH/CHEATSHEETS/passive_information_gathering.md>`_
+   - `pop3_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/pop3_enumeration.md>`_
+   - `ports_emumeration <ToolsResources/INFO-GATH/CHEATSHEETS/ports_emumeration.md>`_
+   - `rpc_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/rpc_enumeration.md>`_
+   - `scanning <ToolsResources/INFO-GATH/CHEATSHEETS/scanning.md>`_
+   - `smb_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/smb_enumeration.md>`_
+   - `smtp_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/smtp_enumeration.md>`_
+   - `snmb_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/snmb_enumeration.md>`_
+   - `vulnerability_scanning <ToolsResources/INFO-GATH/CHEATSHEETS/vulnerability_scanning.md>`_
+   
+**Crypto**:
+--------------------------
+   - `Crypto101.pdf <ToolsResources/ENCRYPTION/Crypto101.pdf>`_ 
+   
+**Exploitation**:
+--------------------------
+   - `computer_network_exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/computer_network_exploits.md>`_ 
+   - `file_inclusion_vulnerabilities <ToolsResources/EXPLOITATION/CHEATSHEETS/file_inclusion_vulnerabilities.md>`_ 
+   - `File_Transfers <ToolsResources/EXPLOITATION/CHEATSHEETS/File_Transfers.md>`_ 
+   - `nc_transfers <ToolsResources/EXPLOITATION/CHEATSHEETS/nc_transfers.txt>`_ 
+   - `networking_pivoting_and_tunneling <ToolsResources/EXPLOITATION/CHEATSHEETS/networking_pivoting_and_tunneling.md>`_ 
+   - `network_pivoting_techniques <ToolsResources/EXPLOITATION/CHEATSHEETS/network_pivoting_techniques.md>`_ 
+   - `pivoting <ToolsResources/EXPLOITATION/CHEATSHEETS/pivoting.md>`_ 
+   - `pivoting_ <ToolsResources/EXPLOITATION/CHEATSHEETS/pivoting_.md>`_ 
+   - `Public Exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/Public Exploits.md>`_ 
+   - `reverse_shell_with_msfvenom <ToolsResources/EXPLOITATION/CHEATSHEETS/reverse_shell_with_msfvenom.md>`_ 
+
+**Networking**:
+--------------------------
+   - `bpf_syntax <ToolsResources/NETWORKING/bpf_syntax.md>`_ 
+   - `Cheatsheet_Networking <ToolsResources/NETWORKING/Cheatsheet_Networking.txt>`_
+   - `Cheatsheet_Oracle <ToolsResources/NETWORKING/Cheatsheet_Oracle.txt>`_
+   - `networking_concept <ToolsResources/NETWORKING/networking_concept>`_
+   - `nmap_quick_reference_guide <ToolsResources/NETWORKING/nmap_quick_reference_guide.pdf>`_
+   - `tcpdump <ToolsResources/NETWORKING/tcpdump.pdf>`_
+   
+**Password Attacks**:
+--------------------------
+   - `password_attacks <ToolsResources/PASSWORD/CHEATSHEETS/password_attacks.md>`_
+   - `Some-Links-To-Wordlists <ToolsResources/PASSWORD/CHEATSHEETS/Some-Links-To-Wordlists.txt>`_
+  
+**Post Exploitation**:
+--------------------------
+   - `Cheatsheet_AVBypass <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_AVBypass.txt>`_
+   - `Cheatsheet_BuildReviews <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_BuildReviews.txt>`_
+   - `code-execution-reverse-shell-commands <ToolsResources/POST-EXPL/CHEATSHEETS/code-execution-reverse-shell-commands.txt>`_
+   - `important-linux-serv-files <ToolsResources/POST-EXPL/CHEATSHEETS/important-linux-serv-files.txt>`_
+   
+**Privilege Escalation**:
+--------------------------
+   - `Cheatsheet_LinuxPrivilegeEsc <ToolsResources/PrivEsc/CHEATSHEETS/Cheatsheet_LinuxPrivilegeEsc.txt>`_
+   - `linux_enumeration <ToolsResources/PrivEsc/CHEATSHEETS/linux_enumeration.md>`_
+   - `windows_enumeration <ToolsResources/PrivEsc/CHEATSHEETS/windows_enumeration.md>`_
+   - `windows_priv_escalation <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation.md>`_
+   - `windows_priv_escalation_practical <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation_practical.md>`_
+   
+**Pentesting & Security Assessment Findings Report Templates**:
+--------------------------
+   - `Demo Company - Security Assessment Findings Report.docx <ToolsResources/REPORT/TEMPLATES/Demo Company - Security Assessment Findings Report.docx>`_
+   - `linux-template.md <ToolsResources/REPORT/TEMPLATES/linux-template.md>`_
+   - `PWKv1-REPORT.doc <ToolsResources/REPORT/TEMPLATES/PWKv1-REPORT.doc>`_
+   - `pwkv1_report.doc <ToolsResources/REPORT/TEMPLATES/pwkv1_report.doc>`_
+   - `template-penetration-testing-report-v03.pdf <ToolsResources/REPORT/TEMPLATES/template-penetration-testing-report-v03.pdf>`_
+   - `windows-template.md <ToolsResources/REPORT/TEMPLATES/windows-template.md>`_
+   
+**Reverse Engineering**:
+--------------------------
+   - `Buffer_Overflow_Exploit <ToolsResources/REVERSE/CHEATSHEETS/Buffer_Overflow_Exploit.md>`_
+   - `buffer_overflows <ToolsResources/REVERSE/CHEATSHEETS/buffer_overflows.md>`_
+   - `gdb_cheat_sheet <ToolsResources/REVERSE/CHEATSHEETS/gdb_cheat_sheet.pdf>`_
+   - `r2_cheatsheet <ToolsResources/REVERSE/CHEATSHEETS/r2_cheatsheet.pdf>`_
+   - `win32_buffer_overflow_exploitation <ToolsResources/REVERSE/CHEATSHEETS/win32_buffer_overflow_exploitation.md>`_
+   - `64_ia_32_jmp_instructions <ToolsResources/REVERSE/CHEATSHEETS/assembly/64_ia_32_jmp_instructions.pdf>`_
+   - `course_notes <ToolsResources/REVERSE/CHEATSHEETS/assembly/course_notes.md>`_
+   - `debuging <ToolsResources/REVERSE/CHEATSHEETS/assembly/debuging.md>`_
+   - `IntelCodeTable_x86 <ToolsResources/REVERSE/CHEATSHEETS/assembly/IntelCodeTable_x86.pdf>`_
+   - `Radare2 cheat sheet <ToolsResources/REVERSE/CHEATSHEETS/assembly/Radare2 cheat sheet.txt>`_ 
+   - `x86_assembly_x86_architecture <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_assembly_x86_architecture.pdf>`_
+   - `x86_opcode_structure_and_instruction_overview <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_opcode_structure_and_instruction_overview.png>`_
+
    
