@@ -273,4 +273,6 @@ Lockdoor Resources contents:
    - `x86_assembly_x86_architecture <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_assembly_x86_architecture.pdf>`_
    - `x86_opcode_structure_and_instruction_overview <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_opcode_structure_and_instruction_overview.png>`_
 
-   
+**Social Engineering**:
+--------------------------
+   -  `social_engineering <ToolsResources/SOCIAL_ENGINEERING/CHEATSHEETS/social_engineering.md>`_
