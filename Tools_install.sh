@@ -26,9 +26,6 @@ wget -o ToolsResources/PASSWORD/wordlists/ https://gitlab.com/kalilinux/packages
 gunzip ToolsResources/PASSWORD/wordlists/rockyou.txt.gz #  extracting the file
 rm rockyou.txt.gz # removing the file
 
-## BRUTEFORCE
-
-
 ## EXPLOITATION
 git clone https://github.com/1N3/Findsploit.git ToolsResources/EXPLOITATION/Tools/Findsploit # Find exploits in local and online databases instantly
 git clone https://github.com/jm33-m0/mec.git ToolsResources/EXPLOITATION/Tools/MassExpConsole # concurrent exploiting
@@ -127,6 +124,8 @@ git clone https://github.com/slacknux/mirror.git ToolsResources/REVERSE/Tools/Mi
 git clone https://github.com/0xd4d/dnSpy.git ToolsResources/REVERSE/Tools/DnSpy # .NET debugger and assembly
 
 ## Other
+#Security
+git clone https://github.com/SofianeHamlaoui/Security-Cheatsheets.git ToolsResources/SECURITY/CHEATSHEETS/ # Security Cheatsheets Download
 # Peda python for gdb Installation
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
