@@ -32,17 +32,20 @@ Features
 
 Pentesting Tools Selection: 
 --------------------------
-* **Tools ?**: **Lockdoor** doesn't contain all pentesting tools , let's be honest ! Who ever used all the used you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite and the most used tools by Pentesters. *
+   - **Tools ?**: **Lockdoor** doesn't contain all pentesting tools , let's be honest ! Who ever used all the used you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite and the most used tools by Pentesters. *
 
-* **Which Tools ?**: the tools contains **Lockdoor** are a collection from the best tools on Kali,Parrot Os and BlackArch. Also some private tools from some other hacking teams like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns. *
 
-* **Easy Customization**: Easily add/remove tools.
+   - **what Tools ?**: the tools contains **Lockdoor** are a collection from the best tools on Kali,Parrot Os and BlackArch. Also some private tools from some other hacking teams like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns. *
+
+
+   - **Easy Customization**: Easily add/remove tools.
 
 Resources and cheatsheets: 
 --------------------------
-* **Resources**: That's what makes **Lockdoor** Added value*, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates , Pentesting walkthrough examples and tempales and more.
+   - **Resources**: That's what makes **Lockdoor** Added value*, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates , Pentesting walkthrough examples and tempales and more.
 
-* **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
+
+   - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
 
 =============
 Lockdoor Tools contents: 
