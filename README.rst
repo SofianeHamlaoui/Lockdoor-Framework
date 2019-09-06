@@ -277,7 +277,7 @@ Lockdoor Resources contents:
 --------------------------
    - `social_engineering <ToolsResources/SOCIAL_ENGINEERING/CHEATSHEETS/social_engineering.md>`_
 
-**walkthroughs**:
+**Walk Throughs**:
 --------------------------
    - `Cheatsheet_PenTesting.txt <ToolsResources/WALK/Cheatsheet_PenTesting.txt>`_
    - `OWASP Testing Guide v4 <ToolsResources/WALK/OTGv4.pdf>`_
@@ -306,3 +306,12 @@ Lockdoor Resources contents:
    - `xss_actionscript <ToolsResources/WEB/CHEATSHEETS/xss_actionscript>`_
    - `xxe <ToolsResources/WEB/CHEATSHEETS/xxe.md>`_
    
+**Other**:
+--------------------------
+   - Security
+      - `Best Version of BriskSec Security Cheatsheets : <https://sofianehamlaoui.github.io/Security-Cheatsheets/index.html>`_
+   - `Images (I'll let you discover that) <ToolsResources/IMAGES/>`_
+   
+   - `Google Hacking DataBase <ToolsResources/GHDB.pdf>`_
+   
+   - `Google Fu  <ToolsResources/Google FU.pdf>`_
