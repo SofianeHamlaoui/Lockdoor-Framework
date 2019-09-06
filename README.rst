@@ -241,3 +241,11 @@ Lockdoor Resources contents:
    - `code-execution-reverse-shell-commands <ToolsResources/POST-EXPL/CHEATSHEETS/code-execution-reverse-shell-commands.txt>`_
    - `important-linux-serv-files <ToolsResources/POST-EXPL/CHEATSHEETS/important-linux-serv-files.txt>`_
    
+**Privilege Escalation**:
+--------------------------
+   - `Cheatsheet_LinuxPrivilegeEsc <ToolsResources/PrivEsc/CHEATSHEETS/Cheatsheet_LinuxPrivilegeEsc.txt>`_
+   - `linux_enumeration <ToolsResources/PrivEsc/CHEATSHEETS/linux_enumeration.md>`_
+   - `windows_enumeration <ToolsResources/PrivEsc/CHEATSHEETS/windows_enumeration.md>`_
+   - `windows_priv_escalation <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation.md>`_
+   - `windows_priv_escalation_practical <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation_practical.md>`_
+   
