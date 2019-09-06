@@ -282,3 +282,27 @@ Lockdoor Resources contents:
    - `Cheatsheet_PenTesting.txt <ToolsResources/WALK/Cheatsheet_PenTesting.txt>`_
    - `OWASP Testing Guide v4 <ToolsResources/WALK/OTGv4.pdf>`_
    - `OWASPv4_Checklist.xlsx <ToolsResources/WALK/OWASPv4_Checklist.xlsx>`_
+   
+**Web Hacking**:
+--------------------------
+   - `auxiliary_info.md <ToolsResources/WEB/CHEATSHEETS/auxiliary_info.md>`_
+   - `Cheatsheet_ApacheSSL <ToolsResources/WEB/CHEATSHEETS/Cheatsheet_ApacheSSL.txt>`_
+   - `Cheatsheet_AttackingMSSQL <ToolsResources/WEB/CHEATSHEETS/Cheatsheet_AttackingMSSQL.txt>`_
+   - `Cheatsheet_DomainAdminExploitation <ToolsResources/WEB/CHEATSHEETS/Cheatsheet_DomainAdminExploitation.txt>`_
+   - `Cheatsheet_SQLInjection <ToolsResources/WEB/CHEATSHEETS/Cheatsheet_SQLInjection.txt>`_
+   - `Cheatsheet_VulnVerify.txt <ToolsResources/WEB/CHEATSHEETS/Cheatsheet_VulnVerify.txt>`_
+   - `code-execution-reverse-shell-commands <ToolsResources/WEB/CHEATSHEETS/code-execution-reverse-shell-commands.txt>`_
+   - `file_upload.md <ToolsResources/WEB/CHEATSHEETS/file_upload.md>`_
+   - `html5_cheat_sheet <ToolsResources/WEB/CHEATSHEETS/html5_cheat_sheet.pdf>`_
+   - `jquery_cheat_sheet_1.3.2 <ToolsResources/WEB/CHEATSHEETS/jquery_cheat_sheet_1.3.2.pdf>`_
+   - `sqli <ToolsResources/WEB/CHEATSHEETS/sqli.md>`_
+   - `sqli_cheatsheet <ToolsResources/WEB/CHEATSHEETS/sqli_cheatsheet.md>`_
+   - `sqli-quries <ToolsResources/WEB/CHEATSHEETS/sqli-quries.txt>`_
+   - `sqli-tips <ToolsResources/WEB/CHEATSHEETS/sqli-tips.txt>`_
+   - `web_app_security <ToolsResources/WEB/CHEATSHEETS/web_app_security.md>`_
+   - `web_app_vulns_Arabic <ToolsResources/WEB/CHEATSHEETS/web_app_vulns_Arabic.md>`_
+   - `Xss_1 <ToolsResources/WEB/CHEATSHEETS/xss.md>`_
+   - `Xss_2 <ToolsResources/WEB/CHEATSHEETS/xss.png>`_
+   - `xss_actionscript <ToolsResources/WEB/CHEATSHEETS/xss_actionscript>`_
+   - `xxe <ToolsResources/WEB/CHEATSHEETS/xxe.md>`_
+   
