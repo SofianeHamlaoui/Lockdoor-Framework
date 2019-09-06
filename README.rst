@@ -275,4 +275,10 @@ Lockdoor Resources contents:
 
 **Social Engineering**:
 --------------------------
-   -  `social_engineering <ToolsResources/SOCIAL_ENGINEERING/CHEATSHEETS/social_engineering.md>`_
+   - `social_engineering <ToolsResources/SOCIAL_ENGINEERING/CHEATSHEETS/social_engineering.md>`_
+
+**walkthroughs**:
+--------------------------
+   - `Cheatsheet_PenTesting.txt <ToolsResources/WALK/Cheatsheet_PenTesting.txt>`_
+   - `OWASP Testing Guide v4 <ToolsResources/WALK/OTGv4.pdf>`_
+   - `OWASPv4_Checklist.xlsx <ToolsResources/WALK/OWASPv4_Checklist.xlsx>`_
