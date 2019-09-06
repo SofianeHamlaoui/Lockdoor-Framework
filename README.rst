@@ -265,12 +265,12 @@ Lockdoor Resources contents:
    - `gdb_cheat_sheet <ToolsResources/REVERSE/CHEATSHEETS/gdb_cheat_sheet.pdf>`_
    - `r2_cheatsheet <ToolsResources/REVERSE/CHEATSHEETS/r2_cheatsheet.pdf>`_
    - `win32_buffer_overflow_exploitation <ToolsResources/REVERSE/CHEATSHEETS/win32_buffer_overflow_exploitation.md>`_
-   - `64_ia_32_jmp_instructions <ToolsResources/REVERSE/CHEATSHEETS/64_ia_32_jmp_instructions.pdf>`_
-   - `course_notes <ToolsResources/REVERSE/CHEATSHEETS/course_notes.md>`_
-   - `debuging <ToolsResources/REVERSE/CHEATSHEETS/debuging.md>`_
-   - `IntelCodeTable_x86 <ToolsResources/REVERSE/CHEATSHEETS/IntelCodeTable_x86.pdf>`_
-   - `Radare2 cheat sheet <ToolsResources/REVERSE/CHEATSHEETS/Radare2 cheat sheet.txt>`_ 
-   - `x86_assembly_x86_architecture <ToolsResources/REVERSE/CHEATSHEETS/x86_assembly_x86_architecture.pdf>`_
-   - `x86_opcode_structure_and_instruction_overview <ToolsResources/REVERSE/CHEATSHEETS/x86_opcode_structure_and_instruction_overview.png>`_
+   - `64_ia_32_jmp_instructions <ToolsResources/REVERSE/CHEATSHEETS/assembly/64_ia_32_jmp_instructions.pdf>`_
+   - `course_notes <ToolsResources/REVERSE/CHEATSHEETS/assembly/course_notes.md>`_
+   - `debuging <ToolsResources/REVERSE/CHEATSHEETS/dassembly/ebuging.md>`_
+   - `IntelCodeTable_x86 <ToolsResources/REVERSE/CHEATSHEETS/assembly/IntelCodeTable_x86.pdf>`_
+   - `Radare2 cheat sheet <ToolsResources/REVERSE/CHEATSHEETS/assembly/Radare2 cheat sheet.txt>`_ 
+   - `x86_assembly_x86_architecture <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_assembly_x86_architecture.pdf>`_
+   - `x86_opcode_structure_and_instruction_overview <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_opcode_structure_and_instruction_overview.png>`_
 
    
