@@ -64,7 +64,6 @@ Lockdoor Tools contents:
       - wafw00f : identify and fingerprint Web Application Firewall 
       - Photon : ncredibly fast crawler designed for OSINT.
       - Raccoon : offensive security tool for reconnaissance and vulnerability scanning 
-      - raven : raven is a Linkedin information gathering tool
       - DnsRecon : DNS Enumeration Script
       - Reconnoitre : multithreaded information gathering and service enumeratio tool
       - sherlock : Find usernames across social networks
