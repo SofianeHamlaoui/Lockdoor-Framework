@@ -86,7 +86,6 @@ Lockdoor Tools contents:
       - HTTPoxyScan : HTTPoxy Exploit Scanner by 1N3
       - CMSmap : CMS scanner 
       - BruteXSS : BruteXSS is a tool to find XSS vulnerabilities in web application
-      - PyFiScan : web-application vulnerability and version scanner 
       - J-dorker : Website List grabber from Bing
       - droopescan : scanner , identify , CMSs , Drupal , Silverstripe. 
       - ptiva : Web Application Scanne
