@@ -9,7 +9,7 @@
 .. raw:: html
 
    <br class="title">
-   Lockdoor Penetsting Framework
+   Lockdoor Pentesting Framework
    <br>
 .. raw:: html
 
