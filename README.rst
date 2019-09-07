@@ -46,7 +46,21 @@ Resources and cheatsheets: (Added value)
 
 
    - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
+   
+=============
+How It works:
+=============
 
+Resources: 
+--------------------------
+   - **Lockdoor** Downlaods Resources from this repo, so if there is any updates,new resources,files, or new cheatsheets you keep stay updated.
+   - Welcoming other pentesters and users pull requests for the tools optimization or adding new resources.
+ Tools: 
+--------------------------
+   - **Downloading Tools** : **Lockdoor** Downloads all the tools from Github , always too keep the tools updated and have the new releases. So At the end you'll have Resources and Tools Installed successfully
+   - **Installing Tools** : **Lockdoor** Installs Automaticly the downloaded tools.
+   - Welcoming other pentesters and users pull requests for the tools optimization, adding or suggesting other tools.
+   
 =============
 Lockdoor Tools contents: 
 =============
