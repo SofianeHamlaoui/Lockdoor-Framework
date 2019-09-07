@@ -93,7 +93,6 @@ Lockdoor Tools contents:
       - Priv8SqliTool : Find Sqli Targets v
       - SqliV : massive SQL injection vulnerability scanner
       - AtScan : Advanced dork Search & Mass Exploit Scanner 
-      - ToolB0x : penetration testing and information gathering!
       - WPSeku : Wordpress Security Scanner
       - WpBrute : Wordpress BruteForce Tools
       - Wpscan : A simple Wordpress scanner written in python
