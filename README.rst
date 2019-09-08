@@ -9,7 +9,7 @@
 .. raw:: html
 
    <br class="title">
-   Lockdoor Penetsting Framework
+   Lockdoor Pentesting Framework
    <br>
 .. raw:: html
 
@@ -46,7 +46,7 @@ Resources and cheatsheets: (Added value)
 
 
    - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
-
+    
 =============
 Lockdoor Tools contents: 
 =============
@@ -93,7 +93,6 @@ Lockdoor Tools contents:
       - Priv8SqliTool : Find Sqli Targets v
       - SqliV : massive SQL injection vulnerability scanner
       - AtScan : Advanced dork Search & Mass Exploit Scanner 
-      - ToolB0x : penetration testing and information gathering!
       - WPSeku : Wordpress Security Scanner
       - WpBrute : Wordpress BruteForce Tools
       - Wpscan : A simple Wordpress scanner written in python
