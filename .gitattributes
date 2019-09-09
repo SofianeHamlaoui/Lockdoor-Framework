@@ -1,3 +1,4 @@
 *.1 linguist-documentation
 *.y linguist-documentation
 *.c linguist-documentation
+*.h linguist-documentation
