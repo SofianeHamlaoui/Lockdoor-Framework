@@ -19,7 +19,7 @@ import queue
 import threading
 import atexit
 import requests
-#requests
+#req
 import base64
 from getpass import getpass
 from sys import argv
@@ -29,31 +29,22 @@ from xml.dom import minidom
 from optparse import OptionParser
 from time import sleep
 from pathlib import Path
-##########################
-###### Answers
+#################
+###Variables
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
-#Adding Lockdoor Logo
-###################################
-def exit_handler():
-    print ("")
-    print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-atexit.register(exit_handler)
-##################################
-# Variables
+cwd = os.getcwd()
+Version = "1.0_TEST"
+verbose = yes
 config = str(Path.home()) + "/.config/lockdoor"
-################DIRC
+###Directory
 f = open('lockdoor.conf')
 contents = f.read().rstrip('\n')
 f.close()
 installdirc = contents.replace('Location:', '')
-################
-cwd = os.getcwd()
-Version = "1.0_TEST"
-verbose = yes
-##############
-### REQ Functions
-# Print Logo
+#################
+###REQ Functions
+#Print Logo
 def printlogo():
     print("""
 \033[94m            ..',,,'..           \033[0m    
@@ -76,19 +67,20 @@ def printlogo():
 \033[94m       ..................\033[0m
 
 """)
-# Press Enter to Continue
+#Press Enter to Continue
 def oktocont():
     ans = input("\033[0;36mPress Enter to Continue...\033[0m")
-# ClearScreen
+#ClearScreen
 def clearscreen():
     os.system('clear')
-# Print Space
+#Print Space
 def Printspace():
     print("")
 #Check root
 def checkroot():
   if os.geteuid() != 0:
     exit("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+#Confirm location
 def confirmlocation():
     Printspace()
     confirm = input("\033[91m[!]\033[0m    \033[94mThe Installation directory is : " + "\033[92m" + installdirc + "\033[90m" + "\033[94m" + " Confirm ? (Y/N) : \033[91m")
@@ -102,8 +94,6 @@ def confirmlocation():
         Printspace()
         print("             Change the configuration file \033[90m(\033[92m lockdoor.conf \033[90m)")
         confirmlocation()
-
-#Show About 
 #Show About 
 def showabout():
     clearscreen()
@@ -131,12 +121,12 @@ def showabout():
     """)
     oktocont()
     menuprinc()
-# Updating Lockdoor
+#Updating Lockdoor
 def updatelockdoor():
     choiceupdate = input("            \033[92m[Confirmation]\033[90m\033[94m You want to update Lockdoor ? (Y / N) : \033[90m")
     if choiceupdate in yes:
         print("NOT SUPPORTED YET")
-        
+#Check network connection        
 def checkconnect():
     url='http://www.google.com/'
     try:
@@ -144,29 +134,32 @@ def checkconnect():
         return True
     except requests.ConnectionError:
         exit("          \033[1;33;40m-[!]- YOU NEED INTERNET CONNECTION TO RUN LOCKDOOR -[!]-\033[0m")
-    return False
-##############################################################################################
-################# INIT
-clearscreen()
-printlogo()
-checkroot()
-checkconnect()
-confirmlocation()
-Printspace()
-printlogo()
-######VERSION
-with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
-    resp = str(response.read())
-    if Version in resp:
-       print("                  \033[92m[\u2713]\033[0m \033[94m LOCKDOOR IS UP TO DATE \033[0m \033[92m[\u2713]\033[0m")
-    else:
-        ans = input("           \033[91m[!]\033[0m   \033[94mLOCKDOOR ISN'T UP TO DATE ! UPDATE IT ? (Y/N) : \033[0m")
-        Printspace()
-        if not ans in yes:
-            print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
+    return 
+def vercheck():
+    with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
+        resp = str(response.read())
+        if Version in resp:
+           print("                  \033[92m[\u2713]\033[0m \033[94m LOCKDOOR IS UP TO DATE \033[0m \033[92m[\u2713]\033[0m")
         else:
-            updatelockdoor() 
-Printspace()
+            ans = input("           \033[91m[!]\033[0m   \033[94mLOCKDOOR ISN'T UP TO DATE ! UPDATE IT ? (Y/N) : \033[0m")
+            Printspace()
+            if not ans in yes:
+                print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
+            else:
+                updatelockdoor()
+def init():
+    clearscreen()
+    printlogo()
+    checkroot()
+    checkconnect()
+    confirmlocation()
+    Printspace()
+    printlogo()
+    vercheck()
+    Printspace()
+################# 
+#INIT
+init()
 # Choosing Verbose mode 
 verbose = input("\033[91m[!]\033[0m    \033[94mUse Verbose mode for tools installation process  ? (Y/N) : \033[91m")
 if not verbose in yes:
@@ -1856,7 +1849,15 @@ def Dzjecter():
         Printspace()
         oktocont()
         webhack()
-        
+
 if __name__ == "__main__":
+    try:
+            menuprinc()
     
-    menuprinc()
+    except (KeyboardInterrupt):
+        Printspace()
+        ans = input("           \033[91m-[!]- SIGINT or CTRL-C detected. Are You sure to exit \033[92mLockdoor \033[90m\033[91m-[!] ? (Y/N)\033[0m : ")
+        if not ans in yes:
+            menuprinc()
+        else:
+            print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
