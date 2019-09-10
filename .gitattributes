@@ -1,2 +1,3 @@
 ToolsResources/* linguist-vendored
 *.y linguist-vendored
+*.sh  linguist-vendored=false
