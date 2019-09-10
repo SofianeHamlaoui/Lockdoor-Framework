@@ -1,36 +1,37 @@
+
 # Sources
-*.c     text diff=c
-*.cc    text diff=cpp
-*.cxx   text diff=cpp
-*.cpp   text diff=cpp
-*.c++   text diff=cpp
-*.hpp   text diff=cpp
-*.h     text diff=c
-*.h++   text diff=cpp
-*.hh    text diff=cpp
+*.c     linguist-vendored
+*.cc    linguist-vendored
+*.cxx   linguist-vendored
+*.cpp   linguist-vendored
+*.c++   linguist-vendored
+*.hpp   linguist-vendored
+*.h     linguist-vendored
+*.h++   linguist-vendored
+*.hh    linguist-vendored
 
 # Compiled Object files
-*.slo   binary
-*.lo    binary
-*.o     binary
-*.obj   binary
+*.slo   linguist-vendored
+*.lo    linguist-vendored
+*.o     linguist-vendored
+*.obj   linguist-vendored
 
 # Precompiled Headers
-*.gch   binary
-*.pch   binary
+*.gch   linguist-vendored
+*.pch   linguist-vendored
 
 # Compiled Dynamic libraries
-*.so    binary
-*.dylib binary
-*.dll   binary
+*.so    linguist-vendored
+*.dylib linguist-vendored
+*.dll   linguist-vendored
 
 # Compiled Static libraries
-*.lai   binary
-*.la    binary
-*.a     binary
-*.lib   binary
+*.lai   linguist-vendored
+*.la    linguist-vendored
+*.a     linguist-vendored
+*.lib   linguist-vendored
 
 # Executables
-*.exe   binary
-*.out   binary
-*.app   binary
+*.exe   linguist-vendored
+*.out   linguist-vendored
+*.app   linguist-vendored
