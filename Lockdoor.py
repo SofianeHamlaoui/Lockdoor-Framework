@@ -86,7 +86,7 @@ def confirmlocation():
     confirm = input("\033[91m[!]\033[0m    \033[94mThe Installation directory is : " + "\033[92m" + installdirc + "\033[90m" + "\033[94m" + " Confirm ? (Y/N) : \033[91m")
     if not confirm in no:
         Printspace()
-        print("        \033[92m[\u2713]\033[0m \033[94m Installation directory confirmed \033[0m" + "\033[92m" + installdirc + "\033[90m" + " \033[92m[\u2713]\033[0m")
+        print("          \033[94m Installation directory confirmed \033[0m" + "\033[92m" + installdirc + "\033[90m")
         Printspace()
         oktocont()
         clearscreen()
