@@ -178,12 +178,7 @@ def menuprinc():
 
     1)  Information Gathering
     2)  Web Hacking
-    3)  UNKOWN
-    4)  UNKOWN
-    5)  UNKOWN
-    6)  UNKOWN
-    7)  UNKOWN
-    8)  UNKOWN
+    3)  UNKOWN (Soon)
     ------------------------
     a)    About  Lockdoor
     u)    Update Lockdoor
@@ -196,16 +191,6 @@ def menuprinc():
     elif choice == "2":
         webhack()
     elif choice == "3":
-        print("UNKOWN")
-    elif choice == "4":
-        print("UNKOWN")
-    elif choice == "5":
-        print("UNKOWN")
-    elif choice == "6":
-        print("UNKOWN")
-    elif choice == "7":
-        print("UNKOWN")
-    elif choice == "8":
         print("UNKOWN")
     elif choice == "a":
         showabout()
