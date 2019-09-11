@@ -12,15 +12,24 @@
    Lockdoor Pentesting Framework <br>
    [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
    <br>
-.. raw:: html
 
-   </h1>
+=============
+Versions:
+=============
+
+09/2019 : 1.0_TEST
+--------------------------
+   - Information Gathring tools (20)
+   - Web Hacking Tools (14)
+   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
+   - Some bugs That I'm fixing with time so don't worry about that.
+   - Test : 
+      - .. raw:: html
 .. contents:: 
     :local:
     :depth: 3
     
 .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
-
 =============
 Check the Wiki Pages to know more about the tool.
 =============
