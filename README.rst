@@ -2,7 +2,7 @@
 
    <h1 align="center">
 
-.. image:: ./pictures/logo2.png
+.. image:: ./pictures/logos/logo_250x250.gif
    :height: 30px
    :width: 50 px
    
