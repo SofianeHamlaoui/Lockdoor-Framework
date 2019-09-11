@@ -37,7 +37,7 @@ no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
 Version = "1.0"
 verbose = yes
-config = str(Path.home()) + "/.config/lockdoor"
+config = str(Path.home()) + "/.config/lockdoor/"
 ###Directory
 f = open(config + 'lockdoor.conf')
 contents = f.read().rstrip('\n')
@@ -100,7 +100,7 @@ def confirmlocation():
         clearscreen()
     else:
         Printspace()
-        print("             Change the configuration file \033[90m(\033[92m lockdoor.conf \033[90m)")
+        print("             Change the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
 #Show About 
 def showabout():
@@ -147,7 +147,7 @@ def vercheck():
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
         resp = str(response.read())
         if Version in resp:
-           print("                   \033[94m LOCKDOOR IS UP TO DATE \033[0m")
+           print("                  \033[92m[!]\033[0m \033[94m LOCKDOOR IS UP TO DATE \033[0m \033[92m[!]\033[0m")
         else:
             ans = input("           \033[91m[!]\033[0m   \033[94mLOCKDOOR ISN'T UP TO DATE ! UPDATE IT ? (Y/N) : \033[0m")
             Printspace()
@@ -319,17 +319,16 @@ def webhack():
         4)  CMSmap
         5)  droopescan
         6)  Optiva
-        7)  dnsrecon
-        8)  V3n0M
-        9)  Atscan
-        10) WPSeku
-        11) XSStrike
-        12) Joomscan
-        13) WPscan
+        7)  V3n0M
+        8)  Atscan
+        9) WPSeku
+        10) XSStrike
+        11) Joomscan
+        12) WPscan
 
     -[!]----- FrameWorks ------[!]-
 
-        14) Dzjecter
+        13) Dzjecter
     ------------------------
     b)    Back to ROOT MENU
     q)    Leave  Lockdoor
@@ -349,20 +348,18 @@ def webhack():
     elif choice == "6":
       Optiva()
     elif choice == "7":
-      dnsrecon()
-    elif choice == "8":
       V3n0M()
-    elif choice == "9":
+    elif choice == "8":
       Atscan()
-    elif choice == "10":
+    elif choice == "9":
       WPSeku()
-    elif choice == "11":
+    elif choice == "10":
       XSStrike()
-    elif choice == "12":
+    elif choice == "11":
       Joomscan()
-    elif choice == "13":
+    elif choice == "12":
       WPscan()
-    elif choice == "14":
+    elif choice == "13":
       Dzjecter()
     elif choice == "b":
       menuprinc()
@@ -1817,7 +1814,7 @@ def Dzjecter():
         os.system("Dzjecter")
         Printspace()
         oktocont()
-        infogathering()
+        webhack()
     else:
         clearscreen()
         printlogo()
