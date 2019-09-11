@@ -35,11 +35,11 @@ from pathlib import Path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "1.0_TEST"
+Version = "1.0"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor"
 ###Directory
-f = open('lockdoor.conf')
+f = open(config + 'lockdoor.conf')
 contents = f.read().rstrip('\n')
 f.close()
 installdirc = contents.replace('Location:', '')
