@@ -59,11 +59,16 @@ Resources and cheatsheets: (Added value)
     
 =============
 Screenshots: 
-=============   
-   - [~] - First Step - [~] -
----------------------------
- .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/1.png 
+=============
+.. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
 
+
+   `- [~] - Check the screenshots on Lockdoor's wiki page - [~] - <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-|-1.0_TEST-|>`_
+=============
+Tests: 
+=============    
+   `- [~] - Lockdoor Tests (Kali,Arch,Ubuntu,Fedora,Opensuse) - [~] - <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Arch,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C>`_
+  
 =============
 Lockdoor Tools contents: 
 =============
