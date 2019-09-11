@@ -17,6 +17,8 @@
 .. contents:: 
     :local:
     :depth: 3
+    
+.. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
 
 =============
 Check the Wiki Pages to know more about the tool.
@@ -57,6 +59,16 @@ Resources and cheatsheets: (Added value)
 
    - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
     
+=============
+Screenshots: 
+=============
+   `- [~] - Check the screenshots on Lockdoor's wiki page - [~] - <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-|-1.0_TEST-|>`_
+   
+=============
+Tests: 
+============= 
+   `- [~] - Lockdoor Tests (Kali,Arch,Ubuntu,Fedora,Opensuse) - [~] - <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Arch,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C>`_
+  
 =============
 Lockdoor Tools contents: 
 =============
