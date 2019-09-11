@@ -2,8 +2,8 @@
 
    <h1 align="center">
 
-.. image:: ./pictures/logo.png 
-   :height: 50px
+.. image:: ./pictures/lockdoor.jpg
+   :height: 30px
    :width: 50 px
    
 .. raw:: html
