@@ -391,7 +391,7 @@ def dirsearch():
         extchoice = input("Select an extention (php,asp,aspx ..) : ")
         printlogo()
         Printspace()
-        os.system("dirsearch" + " -u " + choice + " -e " + extchoice)
+        os.system("python3 " + installdirc + tool_dir + "/dirsearch.py" + " -u " + choice + " -e " + extchoice)
         Printspace()
         oktocont()
         infogathering()
