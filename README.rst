@@ -2,7 +2,7 @@
 
    <h1 align="center">
 
-.. image:: ./pictures/lockdoor.jpg
+.. image:: ./pictures/logo2.png
    :height: 30px
    :width: 50 px
    
