@@ -23,6 +23,7 @@ import requests
 import base64
 from getpass import getpass
 from sys import argv
+from sys import platform
 from platform import system
 from urllib.parse import urlparse
 from xml.dom import minidom
@@ -78,8 +79,15 @@ def Printspace():
     print("")
 #Check root
 def checkroot():
-  if os.geteuid() != 0:
-    exit("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+    #Linux
+    if platform == "linux" or platform == "linux2":
+        if os.geteuid() != 0:
+            exit("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+        else:
+            print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
+    #Cygwin
+    elif platform == "cygwin":
+        print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
 #Confirm location
 def confirmlocation():
     Printspace()
