@@ -64,18 +64,6 @@ Screenshots:
 ---------------------------
  .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/1.png 
 
-   - [~] - Lockdoor Updating - [~] -
----------------------------
- .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/2.png
- 
-    - [~] - INFORMATION GATHRING - [~] -
----------------------------
- .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/4.png 
-  
-    - [~] - WEB HACKNIG - [~] -
----------------------------
-  .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/5.png 
-
 =============
 Lockdoor Tools contents: 
 =============
