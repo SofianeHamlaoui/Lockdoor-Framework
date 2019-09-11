@@ -139,7 +139,7 @@ def vercheck():
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
         resp = str(response.read())
         if Version in resp:
-           print("                  \033[92m[\u2713]\033[0m \033[94m LOCKDOOR IS UP TO DATE \033[0m \033[92m[\u2713]\033[0m")
+           print("                   \033[94m LOCKDOOR IS UP TO DATE \033[0m")
         else:
             ans = input("           \033[91m[!]\033[0m   \033[94mLOCKDOOR ISN'T UP TO DATE ! UPDATE IT ? (Y/N) : \033[0m")
             Printspace()
