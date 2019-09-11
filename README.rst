@@ -9,7 +9,8 @@
 .. raw:: html
 
    <br class="title">
-   Lockdoor Pentesting Framework
+   Lockdoor Pentesting Framework <br>
+   [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
    <br>
 .. raw:: html
 
