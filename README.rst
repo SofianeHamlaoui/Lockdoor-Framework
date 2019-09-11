@@ -58,6 +58,25 @@ Resources and cheatsheets: (Added value)
    - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
     
 =============
+Screenshots: 
+=============   
+   - [~] - First Step - [~] -
+---------------------------
+ .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/1.png 
+
+   - [~] - Lockdoor Updating - [~] -
+---------------------------
+ .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/2.png
+ 
+    - [~] - INFORMATION GATHRING - [~] -
+---------------------------
+ .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/4.png 
+  
+    - [~] - WEB HACKNIG - [~] -
+---------------------------
+  .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/5.png 
+
+=============
 Lockdoor Tools contents: 
 =============
 
