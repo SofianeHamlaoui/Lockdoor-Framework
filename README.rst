@@ -14,10 +14,14 @@
    <br>
    </h1>
    
+.. image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
+   :alt: Codacy Badge
+   :target: https://www.codacy.com/manual/SofianeHamlaoui/Lockdoor-Framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SofianeHamlaoui/Lockdoor-Framework&amp;utm_campaign=Badge_Grade
+  
 .. contents:: 
     :local:
     :depth: 3
-    
+
 =============
 Versions:
 =============
