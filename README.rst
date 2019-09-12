@@ -3,9 +3,7 @@
    <h1 align="center">
 
 .. image:: ./pictures/logos/logo205x250.gif
-   :height: 30px
-   :width: 50 px
-   
+
 .. raw:: html
 
    <br class="title">
@@ -48,7 +46,6 @@ Badges:
 |forthebadge made-with-python| |built-with-love|
 
 |made-with-bash| |code-quality| |Pypi| |GitHub release| |Last commit| |License| |Lines| |Twitter|
-
 
 =============
 Versions:
@@ -110,17 +107,46 @@ Resources and cheatsheets: (Added value)
 =============
 Screenshots: 
 =============
-   `- [~] - Check the screenshots on Lockdoor's wiki page - [~] - <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-|-1.0_TEST-|>`_
+
+.. |1st| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/1.png
+  
+.. |lockup| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/2.png 
+
+.. |root| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/3.png 
+
+.. |infogath| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/4.png 
+
+.. |web| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/5.png 
+
+.. |about| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/6.png 
+                        
++------------+-------------------+-----------+----------------------+-------------+---------+
+| First Step | Lockdoor Updating | ROOT MENU | INFORMATION GATHRING | WEB HACKNIG | About   |
++============+===================+===========+======================+=============+=========+
+| |1st|      | |lockup|          | |root|    | |infogath|           | |web|       | |about| |
++------------+-------------------+-----------+----------------------+-------------+---------+
    
 ============
 Demos
 ============
 
-+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
-| Kali Linux                                                                                                    | Ubuntu                                                                                                          | Arch Linux                                                                                                         | Fedora                                                                                                          | Opensuse                                                                                                          | Windows                                                                                                          |
-+===============================================================================================================+=================================================================================================================+====================================================================================================================+=================================================================================================================+===================================================================================================================+==================================================================================================================+
-| .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif | .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/ubuntu.gif | .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/archlinux.gif | .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/fedora.gif | .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/opensuse.gif | .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/windows.gif |
-+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+.. |Kali| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
+
+.. |Ubuntu| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/ubuntu.gif
+
+.. |Arch Linux| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/archlinux.gif
+
+.. |Fedora| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/fedora.gif
+
+.. |Opensuse| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/opensuse.gif
+
+.. |Windows| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/windows.gif
+
++------------+----------+--------------+----------+------------+------------------+
+| Kali Linux | Ubuntu   | Arch Linux   | Fedora   | Opensuse   | Windows (Cygwin) |
++============+==========+==============+==========+============+==================+
+| |Kali|     | |Ubuntu| | |Arch Linux| | |Fedora| | |Opensuse| | |Windows|        |
++------------+----------+--------------+----------+------------+------------------+
 
 =============
 Installation : 
