@@ -68,10 +68,8 @@ Check the Wiki Pages to know more about the tool.
 - The Wiki pages : 
 
    - `Lockdoor Wiki page Home  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki>`_
-   - `Lockdoor Resources contents  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Lockdoor-Resources-contents>`_
-   - `Lockdoor Tools contents  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Lockdoor-Tools-contents>`_
-   - `Lockdoor Tests  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C>`_
-   - `Lockdoor Screenshots <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-%7C-1.0_TEST-%7C>`_
+   - `Lockdoor Demos  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Demos>`_
+   - `Lockdoor Screenshots <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots>`_
    
 =============
 Overview
