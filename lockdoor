@@ -28,6 +28,7 @@ from platform import system
 from urllib.parse import urlparse
 from xml.dom import minidom
 from optparse import OptionParser
+from datetime import datetime
 from time import sleep
 from pathlib import Path
 #################
@@ -35,14 +36,9 @@ from pathlib import Path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "1.0"
+Version = "0.7"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
-###Directory
-f = open(config + 'lockdoor.conf')
-contents = f.read().rstrip('\n')
-f.close()
-installdirc = contents.replace('Location:', '')
 #################
 ###REQ Functions
 #Print Logo
@@ -155,18 +151,23 @@ def vercheck():
                 print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
             else:
                 updatelockdoor()
+           
+clearscreen()
+printlogo()
+checkroot()
+###Directory
+f = open(config + 'lockdoor.conf')
+contents = f.read().rstrip('\n')
+f.close()
+installdirc = contents.replace('Location:', '') 
+#INIT
 def init():
-    clearscreen()
-    printlogo()
-    checkroot()
     checkconnect()
     confirmlocation()
     Printspace()
     printlogo()
     vercheck()
     Printspace()
-################# 
-#INIT
 init()
 # Choosing Verbose mode 
 verbose = input("\033[91m[!]\033[0m    \033[94mUse Verbose mode for tools installation process  ? (Y/N) : \033[91m")
@@ -205,7 +206,14 @@ def menuprinc():
     elif choice == "u":
         updatelockdoor()
     elif choice == "q":
-        clearscreen(), sys.exit()
+        clearscreen()
+        printlogo()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        Printspace()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
     elif choice == "":
         menuprinc()
     else:
@@ -240,12 +248,12 @@ def infogathering():
         15) Photon
         16) Raccoon
         17) dnsrecon
-
+        18) Nmap
     -[!]----- FrameWorks ------[!]-
 
-        18) ReconDog
-        19) RED_HAWK
-        20) Dracnmap
+        19) ReconDog
+        20) RED_HAWK
+        21) Dracnmap
     ------------------------
     b)    Back to ROOT MENU
     q)    Leave  Lockdoor
@@ -287,15 +295,24 @@ def infogathering():
     elif choice == "17":
       dnsrecon()
     elif choice == "18":
-      ReconDog()
+      nmap()
     elif choice == "19":
-      RED_HAWK()
+      ReconDog()
     elif choice == "20":
+      RED_HAWK()
+    elif choice == "21":
       Dracnmap()
     elif choice == "b":
       menuprinc()
     elif choice == "q":
-      menuprinc()
+        clearscreen()
+        printlogo()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        Printspace()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
     elif choice == "":
       infogathering()
     else:
@@ -325,10 +342,10 @@ def webhack():
         10) XSStrike
         11) Joomscan
         12) WPscan
-
+        13) Sqlmap
     -[!]----- FrameWorks ------[!]-
 
-        13) Dzjecter
+        14) Dzjecter
     ------------------------
     b)    Back to ROOT MENU
     q)    Leave  Lockdoor
@@ -360,11 +377,20 @@ def webhack():
     elif choice == "12":
       WPscan()
     elif choice == "13":
+      sqlmap()
+    elif choice == "14":
       Dzjecter()
     elif choice == "b":
       menuprinc()
     elif choice == "q":
-      menuprinc()
+        clearscreen()
+        printlogo()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        Printspace()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
     elif choice == "":
       webhack()
     else:
@@ -386,6 +412,12 @@ def dirsearch():
         Printspace()
         choice = input("Select a Target : ")
         extchoice = input("Select an extention (php,asp,aspx ..) : ")
+        Printspace()
+        print("Cheatsheets that can help you with this :")
+        Printspace()
+        print("\033[92m" + installdirc + '/INFO-GATH/CHEATSHEETS/file_enumeration.md \033[92m')
+        Printspace()
+        oktocont()
         printlogo()
         Printspace()
         os.system("python3 " + installdirc + tool_dir + "/dirsearch.py" + " -u " + choice + " -e " + extchoice)
@@ -478,7 +510,7 @@ def gobuster():
         wordlist = input("Select the wordlist file : ")
         printlogo()
         Printspace()
-        os.system("gobuster -u " + choice + " -w " + wordlist)
+        os.system(installdirc + tool_dir + "/gobuster dir -u " + choice + " -w " + wordlist)
         Printspace()
         oktocont()
         infogathering()
@@ -524,7 +556,7 @@ def enyx():
         ipad = input("Whats the IP : ")
         printlogo()
         Printspace()
-        os.system("enyx " + snmpversion + " " + communitystring + " " + ipad)
+        os.system("python2 " + installdirc + tool_dir + "/enyx.py " + snmpversion + " " + communitystring + " " + ipad)
         Printspace()
         oktocont()
         infogathering()
@@ -542,8 +574,7 @@ def enyx():
         Printspace()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/enyx""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/enyx""")
-        os.system("echo cd "+ installdirc + tool_dir + " >> /usr/local/bin/enyx")
-        os.system("echo python2 enyx.py >> /usr/local/bin/enyx")
+        os.system("echo python2 " + installdirc + tool_dir + "/enyx.py >> /usr/local/bin/enyx")
         os.system("chmod +x /usr/local/bin/enyx")
         print(("You can now use " + "\033[91m" + enyx.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
         Printspace()
@@ -562,6 +593,11 @@ def Goohak():
         print("\033[92m           " + Goohak.title + "\033[90m")
         Printspace()
         domaine = input("Select a Target: ")
+        print("Cheatsheets that can help you with this :")
+        Printspace()
+        print("\033[92m" + installdirc + '/Google FU.pdf \033[92m')
+        print("\033[92m" + installdirc + '/GHDB.pdf \033[92m')
+        Printspace()
         user = input("what's the current user you are using ( whoami ) ? ")
         printlogo()
         Printspace()
@@ -605,6 +641,16 @@ def Nasnum():
         nsf = input("Want to grab Grab NFS info ? (Y/N) : ")
         csnmp = input("Want to Check SNMP for connection data ? (Y/N) : ")
         anonftp = input("Want to Check for anonymous FTP and enumerate dirs/files ? (Y/N) : ")
+        Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'nfs.*enum|nfs.*enum'")
+        os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'smb.*enum|smb.*enum'")
+        os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'ftp.*enum|ftp.*enum'")
+        print(" \033[90m")
+        Printspace()
+        oktocont()
+        Printspace()
         target = input("Select A Target : ")
         output = input("Select an output file : ")
         if not smb in no:
@@ -662,6 +708,16 @@ def Sublist3r():
         print("\033[92m           " + Sublist3r.title + "\033[90m")
         Printspace()
         domaine = input("Select a Target: ")
+        Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find " + installdirc + "/PASSWORD/wordlists/ -type f | grep domain")
+        os.system("find " + installdirc + "/IMAGES/ -type f | grep tcp")
+        os.system("find " + installdirc + "/NETWORKING/ -type f ")
+        print("\033[90m")
+        Printspace()
+        oktocont()
+        Printspace()
         bruteforce = input("Enable the subbrute bruteforce module ? (Y/N) : ")
         verbose = input("Enable the verbose mode and display results in realtime ? (Y/N) : ")
         ports = input("Specify tcp ports for subdomains finding : ")
@@ -693,7 +749,7 @@ def Sublist3r():
             verbose = ""
         printlogo()
         Printspace()
-        os.system("Sublist3r" + domaine + " " + bruteforce + " " + verbose + ports + engines + threads)
+        os.system("python3 " + installdirc + tool_dir + "/sublist3r.py" + domaine + " " + bruteforce + " " + verbose + ports + engines + threads)
         Printspace()
         oktocont()
         infogathering()
@@ -867,7 +923,15 @@ def Striker():
         printlogo()
         print("\033[92m           " + Striker.title + "\033[90m")
         Printspace()
-        target = input("Select a Target : ")
+        target = input("Select a Target: ")
+        Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep vulnerability")
+        print("\033[90m")
+        Printspace()
+        oktocont()
+        Printspace()
         printlogo()
         Printspace()
         os.system("python3 " + installdirc + tool_dir + "/striker.py " + target)
@@ -912,6 +976,12 @@ def theHarvester():
         print("\033[92m           " + theHarvester.title + "\033[90m")
         Printspace()
         target = input("Select a Target : ")
+        Printspace()
+        print("Cheatsheets that can help you with this :")
+        Printspace()
+        print("\033[92m" + installdirc + '/PASSWORD/wordlists/others/names.txt \033[90m')
+        Printspace()
+        oktocont()
         target = " -d " + target
         Printspace()
         print(""" Sources : 
@@ -1031,6 +1101,28 @@ def denumerator():
         Printspace()
 
 ##### INFO-GATHERING : Manual
+def nmap():
+    nmap.title = "Nmap : the Network Mapper "
+    if os.path.exists('/usr/bin/nmap'):
+        printlogo()
+        Printspace()
+        print("\033[92m           " + nmap.title + "\033[90m")
+        Printspace()
+        target = input("Select a Target : ")
+        Printspace()
+        print("Cheatsheets that can help you with this :")
+        Printspace()
+        print("\033[92m" + installdirc + '/INFO-GATH/CHEATSHEETS/Nmap-Cheat-Sheet.pdf \033[90m')
+        Printspace()
+        oktocont()
+        printlogo()
+        Printspace()
+        os.system("nmap " + target)
+        Printspace()
+        oktocont()
+        infogathering()
+    else:
+        print("Nmap Is not installed , Install it in your system")
 
 def Photon():
     Photon.title = "Photon : an incredibly fast crawler designed for OSINT."
@@ -1089,6 +1181,13 @@ def Raccoon():
         Printspace()
         target = input("Select a Target (use 'raccoon --help' for more options) :  ")
         Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep vulnerability")
+        print("\033[90m")
+        Printspace()
+        oktocont()
+        Printspace()
         os.system("raccoon " + target)
         Printspace()
         print("\033[92mFor more options, Use raccoon --help\033[0m")
@@ -1133,6 +1232,13 @@ def dnsrecon():
         print("\033[92m           " + dnsrecon.title + "\033[90m")
         Printspace()
         target = input("Select a Target (use 'dnsrecon --help' for more options) : ")
+        Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find  " + installdirc + " -type f | grep dns_")
+        print("\033[90m")
+        Printspace()
+        oktocont()
         Printspace()
         os.system("python3 " + installdirc + tool_dir + "/dnsrecon.py -d " + target)
         Printspace()
@@ -1380,6 +1486,12 @@ def BruteXSS():
         printlogo()
         print("\033[92m           " + BruteXSS.title + "\033[90m")
         Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find " + installdirc + "/WEB/CHEATSHEETS/ -type f | grep xss")
+        print("\033[90m")
+        Printspace()
+        oktocont()
         os.system("BruteXSS")
         oktocont()
         webhack()
@@ -1448,7 +1560,32 @@ def Jdorker():
         oktocont()
         webhack()
 
+
+
 ##### WEB HACKING : Manual
+
+def sqlmap():
+    sqlmap.title = "SQLmap : Automatic SQL injection and database takeover tool "
+    if os.path.exists('/usr/bin/sqlmap'):
+        printlogo()
+        Printspace()
+        print("\033[92m           " + sqlmap.title + "\033[90m")
+        Printspace()
+        target = input("Select a Target : ")
+        Printspace()
+        print("Check the sqli cheatsheets to know more")
+        Printspace()
+        os.system("find " + installdirc + "/WEB/CHEATSHEETS/ -type f | grep sqli")
+        Printspace()
+        oktocont()
+        printlogo()
+        Printspace()
+        os.system("sqlmap -u " + target)
+        Printspace()
+        oktocont()
+        webhack()
+    else:
+        print("sqlmap Is not installed , Install it in your system")
 
 def CMSmap():
     CMSmap.title = "CMSmap : A CMS scanner "
@@ -1700,6 +1837,13 @@ def XSStrike():
         printlogo()
         print("\033[92m           " + XSStrike.title + "\033[90m")
         Printspace()
+        Printspace()
+        print("\033[92mCheatsheets that can help you with this :")
+        Printspace()
+        os.system("find " + installdirc + "/WEB/CHEATSHEETS/ -type f | grep xss")
+        print("\033[90m")
+        Printspace()
+        oktocont()
         os.system("XSStrike")
         Printspace()
         oktocont()
@@ -1843,11 +1987,17 @@ def Dzjecter():
 if __name__ == "__main__":
     try:
             menuprinc()
-    
     except (KeyboardInterrupt):
         Printspace()
         ans = input("           \033[91m-[!]- SIGINT or CTRL-C detected. Are You sure to exit \033[92mLockdoor \033[90m\033[91m-[!] ? (Y/N)\033[0m : ")
         if not ans in yes:
             menuprinc()
         else:
+            clearscreen()
+            printlogo()
+            now = datetime.now()
+            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+            Printspace()
+            print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+            sys.exit()
