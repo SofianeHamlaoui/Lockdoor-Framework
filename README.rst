@@ -24,7 +24,7 @@
    :target: https://www.gnu.org/software/bash/
 
 .. |GitHub release| image:: https://badgen.net/github/release/SofianeHamlaoui/Lockdoor-Framework
-   :target: https://GitHub.com/Naereen/StrapDown.js/releases/
+   :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework/releases/
    
 .. |Last commit| image:: https://badgen.net/github/last-commit/SofianeHamlaoui/Lockdoor-Framework 
    :target: https://github.com/SofianeHamlaoui/Lockdoor-Framework/commits/master
@@ -33,7 +33,7 @@
    :target: https://pypi.org/project/lockdoor/
 .. |Lines| image:: https://badgen.net/codeclimate/loc/SofianeHamlaoui/Lockdoor-Framework
 .. |Twitter| image:: https://badgen.net/twitter/follow/S0fianeHamlaoui
-   :target: https://twitock.com/S0fianeHamlaoui
+   :target: https://twitter.com/S0fianeHamlaoui
 .. |built-with-love| image:: http://ForTheBadge.com/images/badges/built-with-love.svg
    :target: https://GitHub.com/SofianeHamlaoui/
  
