@@ -17,14 +17,13 @@
 Versions:
 =============
 
-09/2019 : 1.0_TEST
+09/2019 : 0.5
 --------------------------
    - Information Gathring tools (20)
    - Web Hacking Tools (14)
    - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
-   - Some bugs That I'm fixing with time so don't worry about that.
-   - Test : 
-      - .. raw:: html
+   - Some bugs That I'm fixing with time so don't worry about that. 
+    .. raw:: html
 .. contents:: 
     :local:
     :depth: 3
@@ -60,7 +59,9 @@ Pentesting Tools Selection:
    - **what Tools ?**: the tools contains **Lockdoor** are a collection from the best tools (Added value) on Kali,Parrot Os and BlackArch. Also some private tools (Added value) from some other hacking teams (Added value) like InurlBr, iran-cyber. Without forgeting some cool and amazing tools I found on Github made by some perfect human beigns (Added value). 
 
 
-   - **Easy Customization**: Easily add/remove tools. (Added value)
+   - **Easy customization**: Easily add/remove tools. (Added value)
+   
+   - **Installation**: You can install the tool automatically using the installer.sh or manually (Explanation Here :)
 
 Resources and cheatsheets: (Added value)
 --------------------------
@@ -78,7 +79,50 @@ Screenshots:
 Tests: 
 ============= 
    `- [~] - Lockdoor Tests (Kali,Arch,Ubuntu,Fedora,Opensuse) - [~] - <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Arch,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C>`_
+
+============
+Demos
+============
+
+COMING SOON
+
+=============
+Installation : 
+=============
+
+- Automatically 
   
+         .. code-block:: console
+
+                  git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && cd Lockdoor-Framework
+                  chmod +x ./install.sh 
+                  ./install.sh
+         
+- Manually
+
+   - Installing requirments
+   
+         .. code-block:: console
+         
+               python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl
+               
+   - Installing Lockdoor
+   
+         .. code-block:: console
+                  
+                  # Clonnig
+                  git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && cd Lockdoor-Framework
+                  # Create the config file 
+                  # INSTALLDIR = where you want to install Lockdoor (Ex : /opt/sofiane/pentest)
+                  echo "Location:"$installdir > $HOME"/.config/lockdoor/lockdoor.conf"
+                  # Moving the resources folder
+                  mv ToolsResources/* INSTALLDIR
+                  # Installing Lockdoor from PyPi
+                  pip3 install lockdoor
+                  
+- Docker Installation
+      COMING SOON
+
 =============
 Lockdoor Tools contents: 
 =============
