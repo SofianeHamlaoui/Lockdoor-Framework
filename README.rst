@@ -13,8 +13,7 @@
    [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
    <br>
    
-**WARNING: Project is still in version 0.6 BETA. It is still under active development 
-and bugs might be present.**
+
 
 .. contents:: 
     :local:
@@ -23,6 +22,8 @@ and bugs might be present.**
 =============
 Versions:
 =============
+**WARNING: Project is still in version 0.6 BETA. It is still under active development 
+and bugs might be present.**
 
 09/2019 : 0.6
 --------------------------
