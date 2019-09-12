@@ -14,13 +14,38 @@
    <br>
    </h1>
    
-.. image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
-   :alt: Codacy Badge
+.. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
    :target: https://www.codacy.com/manual/SofianeHamlaoui/Lockdoor-Framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SofianeHamlaoui/Lockdoor-Framework&amp;utm_campaign=Badge_Grade
-  
+
+.. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg
+   :target: https://www.python.org/
+ 
+.. |made-with-bash| image:: https://img.shields.io/badge/Made%20with-Bash-1f425f.svg
+   :target: https://www.gnu.org/software/bash/
+
+.. |GitHub release| image:: https://badgen.net/github/release/SofianeHamlaoui/Lockdoor-Framework
+   :target: https://GitHub.com/Naereen/StrapDown.js/releases/
+   
+.. |Last commit| image:: https://badgen.net/github/last-commit/SofianeHamlaoui/Lockdoor-Framework 
+.. |License| image:: https://badgen.net/pypi/license/lockdoor 
+.. |Pypi| image:: https://badgen.net/pypi/v/lockdoor 
+.. |Lines| image:: https://badgen.net/codeclimate/loc/SofianeHamlaoui/Lockdoor-Framework
+.. |Twitter| image:: https://badgen.net/twitter/follow/S0fianeHamlaoui
+.. |built-with-love| image:: http://ForTheBadge.com/images/badges/built-with-love.svg
+   :target: https://GitHub.com/SofianeHamlaoui/
+ 
 .. contents:: 
     :local:
-    :depth: 3
+    :depth: 3  
+   
+=============
+Badges:
+=============   
+
+|forthebadge made-with-python| |built-with-love|
+
+|made-with-bash| |code-quality| |Pypi| |GitHub release| |Last commit| |License| |Lines| |Twitter|
+
 
 =============
 Versions:
