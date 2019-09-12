@@ -50,7 +50,7 @@ function chkapt {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        apt install python python-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl
+        apt install python python-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl perl
     else
         echo -e "   ${g} [-] Skipping apt${endc}"
     fi
@@ -62,7 +62,7 @@ function chkpacman {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        pacman -S python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl 
+        pacman -S python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl perl
     else
         echo -e "   ${g} [-] Skipping pacman${endc}"
     fi
@@ -73,7 +73,7 @@ function chkzypper {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        zypper install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl
+        zypper install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl perl
     else
         echo -e "   ${g} [-] Skipping zypper${endc}"
     fi
@@ -85,7 +85,7 @@ function chkdnf {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        dnf install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl
+        dnf install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl perl
     else
         echo -e "   ${g} [-] Skipping dnf${endc}"
     fi
@@ -97,7 +97,7 @@ function chkyum {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        yum install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl
+        yum install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl perl
     else
         echo -e "   ${g} [-] Skipping yum${endc}"
     fi
