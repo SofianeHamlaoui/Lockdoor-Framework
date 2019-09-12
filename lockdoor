@@ -496,7 +496,7 @@ def gobuster():
         Printspace()
         print("\033[91mInstalling ...\033[0m")
         Printspace()
-        os.system("cd " + installdirc + tool_dir + " && make")
+        os.system("cd " + installdirc + tool_dir + " && go get && go build")
         clearscreen()
         printlogo()
         Printspace()
