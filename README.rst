@@ -12,22 +12,26 @@
    Lockdoor Pentesting Framework <br>
    [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
    <br>
+   
+**WARNING: Project is still in version 0.6 BETA. It is still under active development 
+and bugs might be present.**
 
+.. contents:: 
+    :local:
+    :depth: 3
+    
 =============
 Versions:
 =============
 
-09/2019 : 0.5
+09/2019 : 0.6
 --------------------------
    - Information Gathring tools (20)
    - Web Hacking Tools (14)
    - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
    - Some bugs That I'm fixing with time so don't worry about that. 
     .. raw:: html
-.. contents:: 
-    :local:
-    :depth: 3
-    
+   
 .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
 =============
 Check the Wiki Pages to know more about the tool.
@@ -39,6 +43,7 @@ Check the Wiki Pages to know more about the tool.
    - `Lockdoor Tools contents  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Lockdoor-Tools-contents>`_
    - `Lockdoor Tests  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C>`_
    - `Lockdoor Screenshots <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-%7C-1.0_TEST-%7C>`_
+   
 =============
 Overview
 =============
@@ -61,7 +66,7 @@ Pentesting Tools Selection:
 
    - **Easy customization**: Easily add/remove tools. (Added value)
    
-   - **Installation**: You can install the tool automatically using the installer.sh or manually (Explanation Here :)
+   - **Installation**: You can install the tool automatically using the installer.sh , Manually or on Docker [COMING SOON]
 
 Resources and cheatsheets: (Added value)
 --------------------------
