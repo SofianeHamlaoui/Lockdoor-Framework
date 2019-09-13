@@ -44,23 +44,23 @@ config = str(Path.home()) + "/.config/lockdoor/"
 #Print Logo
 def printlogo():
     print("""
-\033[94m            ..',,,'..           \033[0m    
-\033[94m         .',;;;;;;;;,'.         \033[0m    
-\033[94m      ..,;;;;;;;;;;;;;;,..      \033[0m    
-\033[94m     .,;;;,'..'''''.',;;;,.     \033[0m    
-\033[94m     .;;;;.  ..   .. .;;;;'     \033[0m\033[91m (                                         \033[0m    
-\033[94m     .,;;;.  ...     .;;;;.     \033[0m\033[91m )\ )               )  (                   \033[0m     
-\033[94m      ..,;,.  ...   .,;,..      \033[0m\033[91m (()/(            ( /(  )\ )           (   \033[0m    
-\033[94m        .';;'.    .',;'.        \033[0m\033[91m /(_))  (    (   )\())(()/(  (    (   )(   \033[0m    
-\033[94m    ..',,;;;;;,,,,;;;;;,,'..    \033[0m\033[91m (_))    )\   )\ ((_)\  ((_)) )\   )\ (()\ \033[0m    
-\033[94m  .','.....................''.  \033[0m\033[91m | |    ((_) ((_)| |(_) _| | ((_) ((_) ((_)\033[0m    
-\033[94m .',..',,,,,,,,,,,,,,,,,,,..,,. \033[0m\033[91m | |__ / _ \/ _| | / // _` |/ _ \/ _ \| '_|\033[0m    
-\033[94m .;,..,;;;;;;'....';;;;;;;..,;. \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m    
-\033[94m ';;..,;;;;;,..,,..';;;;;,..,;' \033[0m\033[92m           Sofiane Hamlaoui | 2019         \033[0m    
-\033[94m.';;..,;;;;,. .... .,;;;;,..;;,.\033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m   
-\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m   
+\033[94m            ..',,,'..           \033[0m
+\033[94m         .',;;;;;;;;,'.         \033[0m
+\033[94m      ..,;;;;;;;;;;;;;;,..      \033[0m
+\033[94m     .,;;;,'..'''''.',;;;,.     \033[0m
+\033[94m     .;;;;.  ..   .. .;;;;'     \033[0m\033[91m (                                         \033[0m
+\033[94m     .,;;;.  ...     .;;;;.     \033[0m\033[91m )\ )               )  (                   \033[0m
+\033[94m      ..,;,.  ...   .,;,..      \033[0m\033[91m (()/(            ( /(  )\ )           (   \033[0m
+\033[94m        .';;'.    .',;'.        \033[0m\033[91m /(_))  (    (   )\())(()/(  (    (   )(   \033[0m
+\033[94m    ..',,;;;;;,,,,;;;;;,,'..    \033[0m\033[91m (_))    )\   )\ ((_)\  ((_)) )\   )\ (()\ \033[0m
+\033[94m  .','.....................''.  \033[0m\033[91m | |    ((_) ((_)| |(_) _| | ((_) ((_) ((_)\033[0m
+\033[94m .',..',,,,,,,,,,,,,,,,,,,..,,. \033[0m\033[91m | |__ / _ \/ _| | / // _` |/ _ \/ _ \| '_|\033[0m
+\033[94m .;,..,;;;;;;'....';;;;;;;..,;. \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m
+\033[94m ';;..,;;;;;,..,,..';;;;;,..,;' \033[0m\033[92m           Sofiane Hamlaoui | 2019         \033[0m
+\033[94m.';;..,;;;;,. .... .,;;;;,..;;,.\033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m
+\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m
 \033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
-\033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m    
+\033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
 \033[94m       ..................\033[0m
 
 """)
@@ -98,12 +98,12 @@ def confirmlocation():
         Printspace()
         print("             Change the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
-#Show About 
+#Show About
 def showabout():
     clearscreen()
     printlogo()
     print("""
-    
+
     #############################################################
     #                   Lockdoor Framework                      #
     #  A Penetration Testing framework with CyberSec Resources  #
@@ -111,16 +111,16 @@ def showabout():
     #    -- Version: Test 0.2 07/09/2019                        #
     #    -- Developer: Sofiane Hamlaoui                         #
     #    -- Thanks: No One                                      #
-    #############################################################   
+    #############################################################
 
                         \033[94m-[!]-Description-[!]-\033[91m
-   LockDoor is a Framework aimed at helping penetration testers, 
-   bug bounty hunters And cyber security engineers. 
-   This tool is designed for Debian/Ubuntu/ArchLinux based 
-   distributions to create a similar and familiar distribution 
-   for Penetration Testing. But containing the favorite and the most used tools by 
-   Pentesters. 
-   As pentesters, most of us has his personal ' /pentest/ ' directory so this 
+   LockDoor is a Framework aimed at helping penetration testers,
+   bug bounty hunters And cyber security engineers.
+   This tool is designed for Debian/Ubuntu/ArchLinux based
+   distributions to create a similar and familiar distribution
+   for Penetration Testing. But containing the favorite and the most used tools by
+   Pentesters.
+   As pentesters, most of us has his personal ' /pentest/ ' directory so this
    Framework is helping you to build a perfect one.
     """)
     oktocont()
@@ -130,7 +130,7 @@ def updatelockdoor():
     choiceupdate = input("            \033[92m[Confirmation]\033[90m\033[94m You want to update Lockdoor ? (Y / N) : \033[90m")
     if choiceupdate in yes:
         print("NOT SUPPORTED YET")
-#Check network connection        
+#Check network connection
 def checkconnect():
     url='http://www.google.com/'
     try:
@@ -138,7 +138,7 @@ def checkconnect():
         return True
     except requests.ConnectionError:
         exit("          \033[1;33;40m-[!]- YOU NEED INTERNET CONNECTION TO RUN LOCKDOOR -[!]-\033[0m")
-    return 
+    return
 def vercheck():
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
         resp = str(response.read())
@@ -151,7 +151,7 @@ def vercheck():
                 print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
             else:
                 updatelockdoor()
-           
+
 clearscreen()
 printlogo()
 checkroot()
@@ -159,7 +159,7 @@ checkroot()
 f = open(config + 'lockdoor.conf')
 contents = f.read().rstrip('\n')
 f.close()
-installdirc = contents.replace('Location:', '') 
+installdirc = contents.replace('Location:', '')
 #INIT
 def init():
     checkconnect()
@@ -169,14 +169,14 @@ def init():
     vercheck()
     Printspace()
 init()
-# Choosing Verbose mode 
+# Choosing Verbose mode
 verbose = input("\033[91m[!]\033[0m    \033[94mUse Verbose mode for tools installation process  ? (Y/N) : \033[91m")
 if not verbose in yes:
     null = " >/dev/null"
 else:
     null = ""
 ####################################
-# ROOT Menu 
+# ROOT Menu
 def menuprinc():
     clearscreen()
     printlogo()
@@ -187,7 +187,7 @@ def menuprinc():
 
     1)  Information Gathering
     2)  Web Hacking
-    3)  UNKOWN (Soon)
+    3)  Exploitation
     ------------------------
     a)    About  Lockdoor
     u)    Update Lockdoor
@@ -200,7 +200,7 @@ def menuprinc():
     elif choice == "2":
         webhack()
     elif choice == "3":
-        print("UNKOWN")
+        exploitation()
     elif choice == "a":
         showabout()
     elif choice == "u":
@@ -343,9 +343,10 @@ def webhack():
         11) Joomscan
         12) WPscan
         13) Sqlmap
+        14) Whatweb
     -[!]----- FrameWorks ------[!]-
 
-        14) Dzjecter
+        15) Dzjecter
     ------------------------
     b)    Back to ROOT MENU
     q)    Leave  Lockdoor
@@ -379,6 +380,8 @@ def webhack():
     elif choice == "13":
       sqlmap()
     elif choice == "14":
+      whatweb()
+    elif choice == "15":
       Dzjecter()
     elif choice == "b":
       menuprinc()
@@ -395,6 +398,14 @@ def webhack():
       webhack()
     else:
       webhack()
+
+def exploitation():
+    #Findsploit()
+    #Pompem()
+    #rfix()
+    #inurlbr()
+    #linexpsug()
+    print("here")
 
 # Fonctions for tools
 ###### INFO-GATHERING : Auto
@@ -604,7 +615,7 @@ def Goohak():
         os.system("su -c " + "'goohak " + domaine + "' " + user)
         Printspace()
         oktocont()
-        infogathering()  
+        infogathering()
     else:
         clearscreen()
         printlogo()
@@ -984,7 +995,7 @@ def theHarvester():
         oktocont()
         target = " -d " + target
         Printspace()
-        print(""" Sources : 
+        print(""" Sources :
             baidu, bing, bingapi, censys, crtsh, dnsdumpster,
             dogpile, duckduckgo, exalead, github-code, google,
             hunter, intelx, linkedin, netcraft, securityTrails,
@@ -1096,13 +1107,14 @@ def denumerator():
         os.system("echo python2 " + installdirc + tool_dir + "/denumerator.py >> /usr/local/bin/denumerator")
         os.system("chmod +x /usr/local/bin/denumerator")
         print("You can now use " + "\033[91m" + denumerator.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        clearscreen()
-        printlogo()
         Printspace()
+        oktocont()
+        infogathering()
 
 ##### INFO-GATHERING : Manual
 def nmap():
     nmap.title = "Nmap : the Network Mapper "
+    tool_dir = "/INFO-GATH/Tools/nmap"
     if os.path.exists('/usr/bin/nmap'):
         printlogo()
         Printspace()
@@ -1122,7 +1134,24 @@ def nmap():
         oktocont()
         infogathering()
     else:
-        print("Nmap Is not installed , Install it in your system")
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + nmap.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("svn checkout https://svn.nmap.org/nmap/ " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + nmap.title + "\033[90m")
+        Printspace()
+        print("\033[91mInstalling ...\033[0m.")
+        os.system("cd " + installdirc + tool_dir + " && ./configure && make -j4 && make install && cd " + installdirc + tool_dir + "/ncat && ./configure && make -j4 && make install")
+        Printspace()
+        print("You can now use " + "\033[91m" + nmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
+        Printspace()
+        oktocont()
+        infogathering()
 
 def Photon():
     Photon.title = "Photon : an incredibly fast crawler designed for OSINT."
@@ -1166,7 +1195,7 @@ def Photon():
         Printspace()
         oktocont()
         infogathering()
-        
+
 def Raccoon():
     Raccoon.title = "Raccoon : an offensive security tool for reconnaissance and vulnerability scanning."
     tool_dir = "/INFO-GATH/Tools/Raccoon"
@@ -1218,7 +1247,7 @@ def Raccoon():
         print(("You can now use " + "\033[91m" + Raccoon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
         oktocont()
         infogathering()
-    
+
 def dnsrecon():
     dnsrecon.title = "DnsRecon : A DNS Enumeration Script"
     tool_dir = "/INFO-GATH/Tools/DnsRecon"
@@ -1353,7 +1382,7 @@ def RED_HAWK():
         print(("You can now use " + "\033[91m" + RED_HAWK.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
         oktocont()
         infogathering()
-        
+
 def Dracnmap():
     Dracnmap.title = "Dracnmap : Info Gathering Framework"
     tool_dir = "/INFO-GATH/Tools/Dracnmap"
@@ -1408,7 +1437,7 @@ def Spaghetti():
         Printspace()
         target = input("Select a Target: ")
         Printspace()
-        print("""Scan Options : 
+        print("""Scan Options :
             0:	Full Scan
             1:	Bruteforce (dirs,files,..)
             2:	Disclosure (ip,emails,..)
@@ -1437,7 +1466,7 @@ def Spaghetti():
         proxy = input("Set a proxy ? (Y/N) : ")
         if proxy in yes:
             proxy = input("Set the Proxy (host:port) : ")
-            proxy = " --proxy " + proxy 
+            proxy = " --proxy " + proxy
         verbose = input("Verbose output ? (Y/N) : ")
         if verbose in yes:
             verbose = "--verbose"
@@ -1560,13 +1589,59 @@ def Jdorker():
         oktocont()
         webhack()
 
-
-
 ##### WEB HACKING : Manual
+
+def whatweb():
+    whatweb.title = "whatweb : Next generation web scanner "
+    tool_dir= "/WEB/Tools/whatweb"
+    if os.path.exists('/usr/local/bin/whatweb'):
+        printlogo()
+        os.system("git clone  https://github.com/urbanadventurer/WhatWeb " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        Printspace()
+        Printspace()
+        print("\033[92m           " + whatweb.title + "\033[90m")
+        Printspace()
+        target = input("Select a Target : ")
+        printlogo()
+        Printspace()
+        os.system(installdirc + tool_dir + "/whatweb " + target)
+        Printspace()
+        oktocont()
+        webhack()
+    else:
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + whatweb.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/urbanadventurer/WhatWeb " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + whatweb.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        os.system("cd " + installdirc + tool_dir +" && gem install json && gem install rchardet")
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/whatweb""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/whatweb""")
+        os.system("echo " + installdirc + tool_dir + "/whatweb >> /usr/local/bin/whatweb")
+        os.system("chmod +x /usr/local/bin/whatweb")
+        Printspace()
+        print(("You can now use " + "\033[91m" + whatweb.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        oktocont()
+        webhack()
 
 def sqlmap():
     sqlmap.title = "SQLmap : Automatic SQL injection and database takeover tool "
+    tool_dir= "/WEB/Tools/sqlmap"
     if os.path.exists('/usr/bin/sqlmap'):
+        printlogo()
+        os.system("git clone  https://github.com/sqlmapproject/sqlmap " + installdirc + tool_dir + null)
+        clearscreen()
         printlogo()
         Printspace()
         print("\033[92m           " + sqlmap.title + "\033[90m")
@@ -1585,7 +1660,28 @@ def sqlmap():
         oktocont()
         webhack()
     else:
-        print("sqlmap Is not installed , Install it in your system")
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + sqlmap.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/sqlmapproject/sqlmap " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + sqlmap.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/sqlmap""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/sqlmap""")
+        os.system("echo python3 " + installdirc + tool_dir + "/sqlmap.py >> /usr/local/bin/sqlmap")
+        os.system("chmod +x /usr/local/bin/sqlmap")
+        Printspace()
+        print(("You can now use " + "\033[91m" + sqlmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        oktocont()
+        webhack()
 
 def CMSmap():
     CMSmap.title = "CMSmap : A CMS scanner "
@@ -1625,7 +1721,7 @@ def CMSmap():
         print(("You can now use " + "\033[91m" + CMSmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
         oktocont()
         webhack()
-  
+
 def droopescan():
     droopescan.title = "droopescan : scanner , identify , CMSs , Drupal , Silverstripe."
     tool_dir = "/WEB/Tools/droopescan"
@@ -1641,7 +1737,7 @@ def droopescan():
         Printspace()
         oktocont()
         webhack()
-    else:    
+    else:
         clearscreen()
         printlogo()
         print("\033[92m           " + droopescan.title + "\033[90m")
@@ -1820,7 +1916,7 @@ def WPSeku():
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/WPSeku""")
         os.system("echo python3 " + installdirc + tool_dir + "/wpseku.py >> /usr/local/bin/WPSeku")
         os.system("chmod +x /usr/local/bin/WPSeku")
-        Printspace()   
+        Printspace()
         print("You can now use " + "\033[91m" + WPSeku.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
         Printspace()
         oktocont()
@@ -1869,7 +1965,7 @@ def XSStrike():
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/XSStrike""")
         os.system("echo python3 " + installdirc + tool_dir + "/xsstrike.py >> /usr/local/bin/XSStrike")
         os.system("chmod +x /usr/local/bin/XSStrike")
-        Printspace()   
+        Printspace()
         print("You can now use " + "\033[91m" + XSStrike.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
         Printspace()
         oktocont()
@@ -1910,7 +2006,7 @@ def Joomscan():
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Joomscan""")
         os.system("echo perl " + installdirc + tool_dir + "/joomscan.pl >> /usr/local/bin/Joomscan")
         os.system("chmod +x /usr/local/bin/Joomscan")
-        Printspace()   
+        Printspace()
         print("You can now use " + "\033[91m" + Joomscan.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
         Printspace()
         oktocont()
@@ -1936,7 +2032,7 @@ def WPscan():
         user = input("With which user you want to install wpscan ? : ")
         os.system("gem install wpscan")
         os.system("su -c " + "'gem install wpscan' " + user)
-        Printspace()   
+        Printspace()
         print("You can now use " + "\033[91m" + WPscan.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
         Printspace()
         oktocont()
@@ -1983,6 +2079,246 @@ def Dzjecter():
         Printspace()
         oktocont()
         webhack()
+
+##### Exploitation
+def Findsploit():
+    Findsploit.title = "Findsploit : Find exploits in local and online databases instantly"
+    tool_dir = "/EXPLOITATION/Tools/Findsploit"
+    if os.path.exists('/usr/local/bin/Findsploit'):
+        printlogo()
+        Printspace()
+        os.system("git clone  https://github.com/1N3/Findsploit.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + Findsploit.title + "\033[90m")
+        Printspace()
+        ans = input("\033[92mWhat exploits are you looking  ? : \033[90m")
+        os.system("Findsploit " + ans)
+        Printspace()
+        oktocont()
+        webhack()
+    else:
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + Findsploit.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/1N3/Findsploit.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + Findsploit.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
+        os.system("sh " + installdirc + tool_dir + "/install.sh")
+        os.system("ln -s /usr/bin/findsploit /usr/local/bin/Findsploit")
+        Printspace()
+        print("You can now use " + "\033[91m" + Findsploit.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
+        Printspace()
+        oktocont()
+        webhack()
+
+def Pompem():
+    Pompem.title = "Pompem : an Exploit and Vulnerability Finder"
+    tool_dir = "/INFO-GATH/Tools/Pompem"
+    if os.path.exists('/usr/local/bin/Pompem'):
+        printlogo()
+        Printspace()
+        os.system("git clone https://github.com/rfunix/Pompem.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + Pompem.title + "\033[90m")
+        Printspace()
+        ans = input("\033[92mWhat exploits are you looking  ? : \033[90m")
+        os.system("python3 " + installdirc + tool_dir + "/pompem.py -s " + ans)
+        Printspace()
+        oktocont()
+        exploitation()
+    else:
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + Pompem.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/rfunix/Pompem.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + Pompem.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        Printspace()
+        os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/Pompem""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Pompem""")
+        os.system("echo python3 " + installdirc + tool_dir + "/pompem.py >> /usr/local/bin/Pompem")
+        os.system("chmod +x /usr/local/bin/Pompem")
+        print(("You can now use " + "\033[91m" + Pompem.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        Printspace()
+        oktocont()
+        exploitation()
+
+def rfix():
+    rfix.title = "Rfix : Python tool that helps RFI exploitation."
+    tool_dir = "/INFO-GATH/Tools/rfix"
+    if os.path.exists('/usr/local/bin/rfix'):
+        printlogo()
+        Printspace()
+        os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + rfix.title + "\033[90m")
+        Printspace()
+        print("\033[92m Usage: rfix target_url payload_path. \033[90m")
+        Printspace()
+        print("Example: rfix http://target_host/index.php?flawed_param= php.txt ")
+        Printspace()
+        target = input("\033[92m Choose a Target : \033[90m")
+        payload = input("\033[92m Choose the payload path : \033[90m")
+        os.system("python2 " + installdirc + tool_dir + "/rfix.py " + target + " " + payload)
+        Printspace()
+        oktocont()
+        exploitation()
+    else:
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + rfix.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + rfix.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        Printspace()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/rfix""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/rfix""")
+        os.system("echo python3 " + installdirc + tool_dir + "/rfix.py >> /usr/local/bin/rfix")
+        os.system("chmod +x /usr/local/bin/rfix")
+        print(("You can now use " + "\033[91m" + rfix.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        Printspace()
+        oktocont()
+        exploitation()
+
+def inurlbr():
+    inurlbr.title = "inurlbr : Python tool that helps RFI exploitation."
+    tool_dir = "/INFO-GATH/Tools/inurlbr"
+    if os.path.exists('/usr/local/bin/inurlbr'):
+        printlogo()
+        Printspace()
+        os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + inurlbr.title + "\033[90m")
+        Printspace()
+        print("type : inurlbr --help for more options ")
+        Printspace()
+        print("Cheatsheets that can help you with this :")
+        Printspace()
+        print("\033[92m" + installdirc + '/Google FU.pdf \033[92m')
+        print("\033[92m" + installdirc + '/GHDB.pdf \033[92m')
+        Printspace()
+        dork = input("\033[92m Choose a Dork : \033[90m")
+        savefile = input("\033[92m output file ? (Ex : results.txt) : \033[90m")
+        os.system("php " + installdirc + tool_dir + "/inurlbr.php --dork " + dork + " -s " + savefile)
+        Printspace()
+        oktocont()
+        exploitation()
+    else:
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + inurlbr.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + inurlbr.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        Printspace()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/inurlbr""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/inurlbr""")
+        os.system("echo php " + installdirc + tool_dir + "/inurlbr.php >> /usr/local/bin/inurlbr")
+        os.system("chmod +x /usr/local/bin/inurlbr")
+        print(("You can now use " + "\033[91m" + inurlbr.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        Printspace()
+        oktocont()
+        exploitation()
+
+def burp():
+    burp.title = "BurpSuite : Web vulnerability scanner."
+    tool_dir = "/INFO-GATH/Tools/burp"
+    if os.path.exists('/usr/local/bin/burp'):
+        printlogo()
+        Printspace()
+        os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + rfix.title + "\033[90m")
+        Printspace()
+        print("\033[92m Usage: rfix target_url payload_path. \033[90m")
+        Printspace()
+        print("Example: rfix http://target_host/index.php?flawed_param= php.txt ")
+        Printspace()
+        target = input("\033[92m Choose a Target : \033[90m")
+        payload = input("\033[92m Choose the payload path : \033[90m")
+        os.system("python2 " + installdirc + tool_dir + "/rfix.py " + target + " " + payload)
+        Printspace()
+        oktocont()
+        exploitation()
+    else:
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + rfix.title + "\033[90m")
+        Printspace()
+        print("\033[91mDownloading ...\033[0m")
+        Printspace()
+        os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
+        clearscreen()
+        printlogo()
+        print("\033[92m           " + rfix.title + "\033[90m")
+        Printspace()
+        clearscreen()
+        printlogo()
+        print("\033[91mInstalling ...\033[0m.")
+        Printspace()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/rfix""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/rfix""")
+        os.system("echo python3 " + installdirc + tool_dir + "/rfix.py >> /usr/local/bin/rfix")
+        os.system("chmod +x /usr/local/bin/rfix")
+        print(("You can now use " + "\033[91m" + rfix.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        Printspace()
+        oktocont()
+        exploitation()
+
+### More :
+def linexpsug():
+    linexpsug.title = "linux-exploit-suggester2 : A perl Linux exploit suggester script"
+    tool_dir = "/INFO-GATH/Tools/linux-exploit-suggester"
+    printlogo()
+    Printspace()
+    os.system("git clone https://github.com/jondonas/linux-exploit-suggester-2.git " + installdirc + tool_dir + null)
+    clearscreen()
+    printlogo()
+    print("\033[92m           linux-exploit-suggester2 Downlaoded successfully \033[90m")
+    Printspace()
+    print("\033[92m           Check " + installdirc + tool_dir +" Folder\033[90m")
+    oktocont()
+    exploitation()
+
 
 if __name__ == "__main__":
     try:
