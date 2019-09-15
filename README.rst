@@ -14,19 +14,7 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Version 1.0Beta IS OUT !! <br>
-   
-   <br>[~] 21 Information Gathering tools <br>
-   <br>[~] 15 Web Hacking tools  <br>
-   <br>[~] 8 Reverse Engineering Tools <br>
-   <br>[~] 6 Exploitation Tools <br>
-   <br>[~] 6 Pentesting & Security Assessment Findings Report Templates <br>
-   <br>[~] 4 Password Attack Tools  <br>
-   <br>[~] 4 Shell Tools + Blackarch's Webshells Collection  <br>
-   <br>[~] 3 Walk Throughs & Pentest Processing Helpers <br>
-   <br>[~] 2 Encryption/Decryption Tools <br>
-   <br>[~] 1 Social Engineering tool <br>
-   <br>[~] All you need as Privilege Escalation scripts and exploits  <br>
+   [~] Version 1.0 Beta IS OUT !!<br>
    </h3>
    
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
@@ -72,12 +60,23 @@ and bugs might be present.**
 
 09/2019 : 1.0Beta
 --------------------------
-
-
+   - Information Gathring Tools (21)
+   - Web Hacking Tools(15)
+   - Reverse Engineering Tools (15)
+   - Exploitation Tools (6)
+   - Pentesting & Security Assessment Findings Report Templates (6)
+   - Password Attack Tools (4)
+   - Shell Tools + Blackarch's Webshells Collection (4)
+   - Walk Throughs & Pentest Processing Helpers (3)
+   - Encryption/Decryption Tools (2)
+   - Social Engineering tools (1)
+   - All you need as Privilege Escalation scripts and exploits 
+   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
+   
 09/2019 : 0.6
 --------------------------
-   - Information Gathring tools (20)
-   - Web Hacking Tools (14)
+   - Information Gathring tools (13)
+   - Web Hacking Tools (9)
    - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
    - Some bugs That I'm fixing with time so don't worry about that. 
     .. raw:: html
@@ -457,3 +456,10 @@ Lockdoor Resources contents:
    - `Google Hacking DataBase <ToolsResources/GHDB.pdf>`_
    
    - `Google Fu  <ToolsResources/Google FU.pdf>`_
+**Contributing**
+-----------------------
+   1. Fork it ( https://github.com/SofianeHamlaoui/Lockdoor-Framework/fork )
+   2. Create your feature branch
+   3. Commit your changes 
+   4. Push to the branch 
+   5. Create a new Pull Request
