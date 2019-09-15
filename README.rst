@@ -55,7 +55,7 @@ Badges:
 =============
 Versions:
 =============
-**WARNING: Project is still in version 0.6 BETA. It is still under active development 
+**WARNING: Project is still in version 1.0 BETA. It is still under active development 
 and bugs might be present.**
 
 09/2019 : 1.0Beta
