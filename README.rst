@@ -11,6 +11,23 @@
    </h1><h2>
    [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
    </h2>
+   <h1 align="center">
+   !NEWS!</h1>
+   <h3 align="center">
+   [~] Version 1.0Beta IS OUT !! <br>
+   
+   <br>[~] 21 Information Gathering tools <br>
+   <br>[~] 15 Web Hacking tools  <br>
+   <br>[~] 8 Reverse Engineering Tools <br>
+   <br>[~] 6 Exploitation Tools <br>
+   <br>[~] 6 Pentesting & Security Assessment Findings Report Templates <br>
+   <br>[~] 4 Password Attack Tools  <br>
+   <br>[~] 4 Shell Tools + Blackarch's Webshells Collection  <br>
+   <br>[~] 3 Walk Throughs & Pentest Processing Helpers <br>
+   <br>[~] 2 Encryption/Decryption Tools <br>
+   <br>[~] 1 Social Engineering tool <br>
+   <br>[~] All you need as Privilege Escalation scripts and exploits  <br>
+   </h3>
    
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
    :target: https://www.codacy.com/manual/SofianeHamlaoui/Lockdoor-Framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SofianeHamlaoui/Lockdoor-Framework&amp;utm_campaign=Badge_Grade
@@ -52,6 +69,10 @@ Versions:
 =============
 **WARNING: Project is still in version 0.6 BETA. It is still under active development 
 and bugs might be present.**
+
+09/2019 : 1.0Beta
+--------------------------
+
 
 09/2019 : 0.6
 --------------------------
