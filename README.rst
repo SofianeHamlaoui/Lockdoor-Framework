@@ -98,6 +98,8 @@ Overview
 *LockDoor* is a Framework aimed at **helping penetration testers, bug bounty hunters And cyber security engineers**. 
 This tool is designed for Debian/Ubuntu/ArchLinux based distributions to create a similar and familiar distribution for Penetration Testing. But containing the favorite and the most used tools by Pentesters.
 As pentesters, most of us has his personal ' /pentest/ ' directory so this Framework is helping you to build a perfect one.
+With all of that ! It automates the Pentesting process to help you do the job more quickly and 
+easily.
 
 =============
 Features
