@@ -201,7 +201,7 @@ Lockdoor Tools contents:
       - Photon : ncredibly fast crawler designed for OSINT.
       - Raccoon : offensive security tool for reconnaissance and vulnerability scanning 
       - DnsRecon : DNS Enumeration Script
-      - Reconnoitre : multithreaded information gathering and service enumeratio tool
+      - Nmap : The famous security Scanner, Port Scanner, & Network Exploration Tool
       - sherlock : Find usernames across social networks
       - snmpwn : An SNMPv3 User Enumerator and Attack tool
       - Striker :  an offensive information and vulnerability scanner.
@@ -212,33 +212,26 @@ Lockdoor Tools contents:
    - Frameworks:
       - ReconDog : Reconnaissance Swiss Army Knife
       - RED_HAWK : All in one tool for Information Gathering, Vulnerability Scanning and Crawling
-      - TIDoS : Offensive Manual Web Application Penetration Testing Framework.
       - Dracnmap : Info Gathering Framework
 
 **Web Hacking**:
 --------------------------
    - Tools:
       - Spaghetti : Spaghetti - Web Application Security Scanner
-      - HTTPoxyScan : HTTPoxy Exploit Scanner by 1N3
       - CMSmap : CMS scanner 
       - BruteXSS : BruteXSS is a tool to find XSS vulnerabilities in web application
       - J-dorker : Website List grabber from Bing
       - droopescan : scanner , identify , CMSs , Drupal , Silverstripe. 
-      - ptiva : Web Application Scanne
+      - Optiva : Web Application Scanne
       - V3n0M : Pentesting scanner in Python3.6 for SQLi/XSS/LFI/RFI and other Vulns 
-      - Priv8SqliTool : Find Sqli Targets v
-      - SqliV : massive SQL injection vulnerability scanner
       - AtScan : Advanced dork Search & Mass Exploit Scanner 
       - WPSeku : Wordpress Security Scanner
-      - WpBrute : Wordpress BruteForce Tools
       - Wpscan : A simple Wordpress scanner written in python
-      - B7S-ToolB0x : Wordpress vulnerability scanner
       - XSStrike : Most advanced XSS scanner.
       - joomscan : Joomla Vulnerability Scanner Project
    - Frameworks:
       - Dzjecter : Server checking Tool
-      - W3af : web application attack and audit framework
-
+      
 **Privilege Escalation**:
 --------------------------
    - Tools:
@@ -266,6 +259,7 @@ Lockdoor Tools contents:
    - Miasm : Reverse engineering framework 
    - Mirror : reverses the bytes of a file
    - DnSpy : .NET debugger and assembly
+   - AngrIo :  A python framework for analyzing binaries ( Suggested by @Hamz-a )
    - DLLRunner : a smart DLL execution script for malware analysis in sandbox systems. 
    - Fuzzy Server : a Program That Uses Pre-Made Spike Scripts to Attack VulnServer.
    - yara : a tool aimed at helping malware researchers toidentify and classify malware samples
@@ -275,16 +269,16 @@ Lockdoor Tools contents:
 **Exploitation**:
 --------------------------
    - Findsploit : Find exploits in local and online databases instantly
-   - MassExpConsole : concurrent exploiting
    - Pompem : Exploit and Vulnerability Finder
    - rfix : Python tool that helps RFI exploitation.
    - InUrlBr : Advanced search in search engines
+   - Burpsuite : Burp Suite for security testing & scanning.
    - linux-exploit-suggester2 : Next-Generation Linux Kernel Exploit Suggester
    - other : other scripts I collected somewhere.
 
 **Shells**:
 --------------------------
-   - WebShells : Webshells Collection
+   - WebShells : BlackArch's Webshells Collection
    - ShellSum : A defense tool - detect web shells in local directories
    - Weevely : Weaponized web shell
    - python-pty-shells : Python PTY backdoors
@@ -299,13 +293,7 @@ Lockdoor Tools contents:
 --------------------------
    - Codetective : a tool to determine the crypto/encoding algorithm used
    - findmyhash : Python script to crack hashes using online services
-   - hashID : Software to identify the different types of hashes
   
-**Post Exploitation:**:
---------------------------
-   -Tools : 
-      - TheFatRat : massive exploiting tool
-
 **Social Engineering**:
 --------------------------
    - scythe : an accounts enumerator
