@@ -262,6 +262,8 @@ Lockdoor Tools contents:
       - WPSeku : Wordpress Security Scanner
       - Wpscan : A simple Wordpress scanner written in python
       - XSStrike : Most advanced XSS scanner.
+      - Sqlmap : automatic SQL injection and database takeover tool
+      - WhatWeb : the Next generation web scanner
       - joomscan : Joomla Vulnerability Scanner Project
    - Frameworks:
       - Dzjecter : Server checking Tool
