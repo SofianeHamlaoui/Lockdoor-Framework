@@ -116,12 +116,11 @@ function install {
     echo ""
     echo -e "\e[32m[-] : Where do you want to install the script [/opt/sofiane/Pentest] !\e[0m"
     read installdir
-    #mkdir -p $installdir
     : ${installdir:=/opt/sofiane/Pentest}
     mkdir -p $installdir
     mkdir -p $HOME"/.config/lockdoor"
     echo "Location:"$installdir > $HOME"/.config/lockdoor/lockdoor.conf"
-    mv ToolsResources/* $installdir
+    rsync -a ToolsResources/* $installdir
     pip3 install lockdoor
     # Installing Go
     wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
