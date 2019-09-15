@@ -3,12 +3,34 @@
 </p>
 <h1 align="center">
 <br class="title">
-Lockdoor Pentesting Framework <br>
-[~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
-<br>
+Lockdoor Pentesting Framework <br><h2>
+   [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
+   </h2>
+   <h1 align="center">
+   !NEWS!</h1>
+   <h3 align="center">
+   [~] Version 1.0 Beta IS OUT !!<br>
+   </h3>
 
 Versions:
 =========
+09/2019 : 1.0Beta
+-----------------
+
+> -   Information Gathring Tools (21)
+> -   Web Hacking Tools(15)
+> -   Reverse Engineering Tools (15)
+> -   Exploitation Tools (6)
+> -   Pentesting & Security Assessment Findings Report Templates (6)
+> -   Password Attack Tools (4)
+> -   Shell Tools + Blackarch's Webshells Collection (4)
+> -   Walk Throughs & Pentest Processing Helpers (3)
+> -   Encryption/Decryption Tools (2)
+> -   Social Engineering tools (1)
+> -   All you need as Privilege Escalation scripts and exploits
+> -   Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
+
+![image](https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/test.gif)
 
 09/2019 : 1.0_TEST
 -------------------
@@ -24,10 +46,8 @@ Versions:
   ------------
   - The Wiki pages :
   - [Lockdoor Wiki page Home](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki)
-  - [Lockdoor Resources contents](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Lockdoor-Resources-contents)
-  - [Lockdoor Tools contents](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Lockdoor-Tools-contents)
-  - [Lockdoor Tests](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C)
-  - [Lockdoor Screenshots](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-%7C-1.0_TEST-%7C)
+  - [Lockdoor Demos](ttps://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Demos
+  - [Lockdoor Screenshots](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots)
 
   Overview
   ----------
@@ -55,25 +75,14 @@ Versions:
   - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
   
 
-  Screenshots:
-  -----------
-
-  [- [\~] - Check the screenshots on Lockdoor's wiki page - [\~] -](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots-|-1.0_TEST-|)
-  
-  Tests:
-----------------
-
-  [- [\~] - Lockdoor Tests (Kali,Arch,Ubuntu,Fedora,Opensuse) - [\~] -](https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Testing-Lockdoor-on-various-operation-systems-%5BKali,Arch,Ubuntu,Fedora,Opensuse%5D-%7C-1.0_TEST-%7C)
-  
-
 Lockdoor Tools contents:
 ------------------------
 
 **Information Gathering**:
 
 > Tools:
-> - dirsearch : A Web path scanner
-> - brut3k1t : security-oriented bruteforce framework
+> -  dirsearch : A Web path scanner
+> -  brut3k1t : security-oriented bruteforce framework
 > -  gobuster : DNS and VHost busting tool written in Go
 > -  Enyx : an SNMP IPv6 Enumeration Tool
 > -  Goohak : Launchs Google Hacking Queries Against A Target Domain 
@@ -83,7 +92,6 @@ Lockdoor Tools contents:
 > -  Photon : ncredibly fast crawler designed for OSINT.
 > -  Raccoon : offensive security tool for reconnaissance and vulnerability scanning    
 > -  DnsRecon : DNS Enumeration Script
-> -  Reconnoitre : multithreaded information gathering and service enumeratio tool     
 > -  sherlock : Find usernames across social networks
 > -  snmpwn : An SNMPv3 User Enumerator and Attack tool
 > -  Striker : an offensive information and vulnerability scanner.
