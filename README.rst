@@ -41,7 +41,9 @@
    :target: https://twitter.com/S0fianeHamlaoui
 .. |built-with-love| image:: http://ForTheBadge.com/images/badges/built-with-love.svg
    :target: https://GitHub.com/SofianeHamlaoui/
- 
+.. |Tested-on| image:: https://img.shields.io/badge/Tested%20on-Linux%2COSX%20and%20Windows-blue
+   :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework
+
 .. contents:: 
     :local:
     :depth: 3  
@@ -57,7 +59,7 @@ Badges:
 
 |forthebadge made-with-python| |built-with-love|
 
-|made-with-bash| |code-quality| |Pypi| |GitHub release| |Last commit| |License| |Lines| |Twitter|
+|made-with-bash| |code-quality| |Pypi| |GitHub release| |Tested-on| |Last commit| |License| |Lines| |Twitter|
 
 =============
 Versions:
