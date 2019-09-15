@@ -36,7 +36,7 @@ from pathlib import Path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "0.7"
+Version = "1.0Beta"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
 #################
@@ -68,10 +68,10 @@ def printlogo():
 def oktocont():
     ans = input("\033[0;36mPress Enter to Continue...\033[0m")
 #ClearScreen
-def clearscreen():
+def clr():
     os.system('clear')
 #Print Space
-def Printspace():
+def spc():
     print("")
 #Check root
 def checkroot():
@@ -86,22 +86,21 @@ def checkroot():
         print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
 #Confirm location
 def confirmlocation():
-    Printspace()
+    spc()
     confirm = input("\033[91m[!]\033[0m    \033[94mThe Installation directory is : " + "\033[92m" + installdirc + "\033[90m" + "\033[94m" + " Confirm ? (Y/N) : \033[91m")
     if not confirm in no:
-        Printspace()
+        spc()
         print("          \033[94m Installation directory confirmed \033[0m" + "\033[92m" + installdirc + "\033[90m")
-        Printspace()
+        spc()
         oktocont()
-        clearscreen()
+        clr()
     else:
-        Printspace()
+        spc()
         print("             Change the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
 #Show About
 def showabout():
-    clearscreen()
-    printlogo()
+    clscprilo()
     print("""
 
     #############################################################
@@ -139,6 +138,7 @@ def checkconnect():
     except requests.ConnectionError:
         exit("          \033[1;33;40m-[!]- YOU NEED INTERNET CONNECTION TO RUN LOCKDOOR -[!]-\033[0m")
     return
+
 def vercheck():
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
         resp = str(response.read())
@@ -146,13 +146,78 @@ def vercheck():
            print("                  \033[92m[!]\033[0m \033[94m LOCKDOOR IS UP TO DATE \033[0m \033[92m[!]\033[0m")
         else:
             ans = input("           \033[91m[!]\033[0m   \033[94mLOCKDOOR ISN'T UP TO DATE ! UPDATE IT ? (Y/N) : \033[0m")
-            Printspace()
+            spc()
             if not ans in yes:
                 print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
             else:
                 updatelockdoor()
 
-clearscreen()
+##########SHRT
+def prilogspc():
+    printlogo()
+    spc()
+
+def clscprilo():
+    clr()
+    printlogo()
+
+def popp():
+    spc()
+    oktocont()
+    printlogo()
+    spc()
+
+def okinf():
+    spc()
+    oktocont()
+    infogathering()
+
+def okwe():
+    spc()
+    oktocont()
+    webhack()
+
+def okex():
+    spc()
+    oktocont()
+    exploitation()
+
+def okrev():
+    spc()
+    oktocont()
+    reverse()
+
+def okenc():
+    spc()
+    oktocont()
+    encdyc()
+
+def okpa():
+    spc()
+    oktocont()
+    passattack()
+
+def oksh():
+    spc()
+    oktocont()
+    shells()
+
+def okpr():
+    spc()
+    oktocont()
+    PrivEsc()
+
+def okso():
+    spc()
+    oktocont()
+    soceng()
+
+def pop():
+    spc()
+    oktocont()
+    spc()
+############
+clr()
 printlogo()
 checkroot()
 ###Directory
@@ -164,10 +229,10 @@ installdirc = contents.replace('Location:', '')
 def init():
     checkconnect()
     confirmlocation()
-    Printspace()
+    spc()
     printlogo()
     vercheck()
-    Printspace()
+    spc()
 init()
 # Choosing Verbose mode
 verbose = input("\033[91m[!]\033[0m    \033[94mUse Verbose mode for tools installation process  ? (Y/N) : \033[91m")
@@ -178,20 +243,27 @@ else:
 ####################################
 # ROOT Menu
 def menuprinc():
-    clearscreen()
-    printlogo()
+    clscprilo()
     print("""
-\033[94m         [ R00T MENU ] \033[0m
+\033[94m         [ R00T MENU ]
 
-        Make A Choice :
+        Make A Choice :\033[0m
 
-    1)  Information Gathering
+    \033[93m1)  Information Gathering
     2)  Web Hacking
     3)  Exploitation
+    4)  Reverse Engineering
+    5)  Encryption/Decryption
+    6)  Password Attacks
+    7)  Shells
+    8)  Privilege Escalation
+    9)  Social Engineering
+    10) Pentesting & Security Assessment Findings Report Templates
+    11) Help with Walk Throughs & Pentest Processing\033[0m
     ------------------------
-    a)    About  Lockdoor
+    \033[94ma)    About  Lockdoor
     u)    Update Lockdoor
-    q)    Leave  Lockdoor
+    q)    Leave  Lockdoor\033[90m
        """)
     choice = input("\033[92mLockdoor~# \033[0m")
     os.system('clear')
@@ -201,17 +273,32 @@ def menuprinc():
         webhack()
     elif choice == "3":
         exploitation()
+    elif choice == "4":
+        reverse()
+    elif choice == "5":
+        encdyc()
+    elif choice == "6":
+        passattack()
+    elif choice == "7":
+        shells()
+    elif choice == "8":
+        PrivEsc()
+    elif choice == "9":
+        soceng()
+    elif choice == "10":
+        psafrt()
+    elif choice == "11":
+        wtpp()
     elif choice == "a":
         showabout()
     elif choice == "u":
         updatelockdoor()
     elif choice == "q":
-        clearscreen()
-        printlogo()
+        prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        Printspace()
+        spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
@@ -219,46 +306,53 @@ def menuprinc():
     else:
         menuprinc()
 
+# MENUS
+
 def infogathering():
-    clearscreen()
-    printlogo()
-    print("""
+    clscprilo()
+    print("""\033[94m
     [ INFORMATION GATHERING ]
 
-        Make A Choice :
-    -[!]----- Auto ------[!]-
+        Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
 
-        1)  DirSearch
-        2)  brut3k1t
-        3)  Gobuster
-        4)  Enyx
-        5)  Goohak
-        6)  Nasnum
-        7)  Sublist3r
-        8)  Wafw00f
-        9)  Sherlock
-        10) Snmpwn
-        11) Striker
-        12) TheHarvester
-        13) URLextractor
-        14) Denumerator
+        \033[93m-[!]----- Auto ------[!]-
 
-    -[!]----- Manual ------[!]-
+            1)  DirSearch
+            2)  brut3k1t
+            3)  Gobuster
+            4)  Enyx
+            5)  Goohak
+            6)  Nasnum
+            7)  Sublist3r
+            8)  Wafw00f
+            9)  Sherlock
+            10) Snmpwn
+            11) Striker
+            12) TheHarvester
+            13) URLextractor
+            14) Denumerator
 
-        15) Photon
-        16) Raccoon
-        17) dnsrecon
-        18) Nmap
-    -[!]----- FrameWorks ------[!]-
+        -[!]----- Manual ------[!]-
 
-        19) ReconDog
-        20) RED_HAWK
-        21) Dracnmap
+            15) Photon
+            16) Raccoon
+            17) dnsrecon
+            18) Nmap
+        -[!]----- FrameWorks ------[!]-
+
+            19) ReconDog
+            20) RED_HAWK
+            21) Dracnmap\033[90m
+
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+        \033[93m    22) Information Gathering Cheatsheets\033[90m
     ------------------------
-    b)    Back to ROOT MENU
-    q)    Leave  Lockdoor
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
        """)
-    choice = input("\033[92mLockdoor@Enum~# \033[0m")
+    choice = input("\033[92mLockdoor@EnumInfoGathering~# \033[0m")
     os.system('clear')
     if choice == "1":
       dirsearch()
@@ -302,15 +396,16 @@ def infogathering():
       RED_HAWK()
     elif choice == "21":
       Dracnmap()
+    elif choice == "22":
+      infgathsh()
     elif choice == "b":
       menuprinc()
     elif choice == "q":
-        clearscreen()
-        printlogo()
+        prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        Printspace()
+        spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
@@ -319,37 +414,42 @@ def infogathering():
       infogathering()
 
 def webhack():
-    clearscreen()
-    printlogo()
-    print("""
+    clscprilo()
+    print("""\033[94m
         [ WEB HACKING  ]
 
-        Make A Choice :
-    -[!]----- Auto ------[!]-
+        Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
 
-        1)  Spaghetti
-        2)  BruteXSS
-        3)  Jdorker
+        \033[93m-[!]----- Auto ------[!]-
 
-    -[!]----- Manual ------[!]-
+            1)  Spaghetti
+            2)  BruteXSS
+            3)  Jdorker
 
-        4)  CMSmap
-        5)  droopescan
-        6)  Optiva
-        7)  V3n0M
-        8)  Atscan
-        9) WPSeku
-        10) XSStrike
-        11) Joomscan
-        12) WPscan
-        13) Sqlmap
-        14) Whatweb
-    -[!]----- FrameWorks ------[!]-
+        -[!]----- Manual ------[!]-
 
-        15) Dzjecter
+            4)  CMSmap
+            5)  droopescan
+            6)  Optiva
+            7)  V3n0M
+            8)  Atscan
+            9)  WPSeku
+            10) XSStrike
+            11) Joomscan
+            12) WPscan
+            13) Sqlmap
+            14) Whatweb
+        -[!]----- FrameWorks ------[!]-
+
+            15) Dzjecter\033[90m
+
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+            \033[93m16) Web Hacking Cheatsheets\033[90m
     ------------------------
-    b)    Back to ROOT MENU
-    q)    Leave  Lockdoor
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[90m
        """)
     choice = input("\033[92mLockdoor@Web~# \033[0m")
     os.system('clear')
@@ -383,15 +483,16 @@ def webhack():
       whatweb()
     elif choice == "15":
       Dzjecter()
+    elif choice == "16":
+        webhsh()
     elif choice == "b":
       menuprinc()
     elif choice == "q":
-        clearscreen()
-        printlogo()
+        prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        Printspace()
+        spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
@@ -400,13 +501,400 @@ def webhack():
       webhack()
 
 def exploitation():
-    #Findsploit()
-    #Pompem()
-    #rfix()
-    #inurlbr()
-    #linexpsug()
-    print("here")
+    clscprilo()
+    print("""\033[94m
+        [ EXPLOITATION ]
 
+        Make A Choice :\033[90m
+        \033[91m -[!]----- Tools ------[!]-\033[90m
+            \033[93m1)  Findsploit
+            2)  Pompem
+            3)  Ffix
+            4)  Inurlbr
+            5)  BurpSuite
+            6)  Linux exploit suggester2\033[90m
+
+        \033[91m -[!]----- Cheatsheets ------[!]-\033[90m
+            \033[93m7) Exploitation Cheatsheets\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[90m
+       """)
+    choice = input("\033[92mLockdoor@Exploitation~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      Findsploit()
+    elif choice == "2":
+      Pompem()
+    elif choice == "3":
+      rfix()
+    elif choice == "4":
+      inurlbr()
+    elif choice == "5":
+      burp()
+    elif choice == "6":
+      linexpsug()
+    elif choice =="7":
+        expsh()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      exploitation()
+    else:
+      exploitation()
+
+def reverse():
+    clscprilo()
+    print("""\033[94m
+    [ REVERSE ENGINEERING  ]
+
+        Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
+
+            \033[93m1)  Radar2
+            2)  Virustotal
+            3)  Miasm
+            4)  Mirror
+            5)  Dnspy
+            6)  Angrio
+            7)  DLLRunner
+            8)  Yara\033[90m
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+        \033[93m    9) Reverse Engineering Cheatsheets\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
+       """)
+    choice = input("\033[92mLockdoor@ReverseEngineering~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      radar2()
+    elif choice == "2":
+      virustotal()
+    elif choice == "3":
+      miasm()
+    elif choice == "4":
+      mirror()
+    elif choice == "5":
+      Dnspy()
+    elif choice == "6":
+      angrio()
+    elif choice == "7":
+      dllrunner()
+    elif choice == "8":
+      yara()
+    elif choice == "9":
+      revsh()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      reverse()
+    else:
+      reverse()
+
+def encdyc():
+    clscprilo()
+    print("""\033[94m
+    [ ENCRYPTION/DECRYPTION ]
+
+        Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
+
+            \033[93m1)  Codetective
+            2)  findmyhash\033[90m
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+        \033[93m    3) Crypto Cheatsheets\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
+       """)
+    choice = input("\033[92mLockdoor@EncDec~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      Codetective()
+    elif choice == "2":
+      findmyhash()
+    elif choice == "3":
+        encsh()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      encdyc()
+    else:
+      encdyc()
+
+def passattack():
+    clscprilo()
+    print("""\033[94m
+    [ PASSWORD ATTACKS ]
+
+        Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
+
+            \033[93m1)  Crunch
+            2)  CeWl
+            3)  Patator
+            4)  Download Rockyou.txt\033[90m
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+        \033[93m    5) Password Attacks Cheatsheets Cheatsheets\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
+       """)
+    choice = input("\033[92mLockdoor@PassAttacks~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      crunch()
+    elif choice == "2":
+      Cewl()
+    elif choice == "3":
+      patator()
+    elif choice == "4":
+      dlrockyou()
+    elif choice == "5":
+        passsh()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      passattack()
+    else:
+      passattack()
+
+def shells():
+    clscprilo()
+    print("""\033[94m
+           [ SHELLS ]
+
+         Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
+
+            \033[93m1)  BlackArch's Webshells Collection
+            2)  Shellnum
+            3)  Weevely
+            4)  Python PTY Shells\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
+       """)
+    choice = input("\033[92mLockdoor@Shells~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      webshells()
+    elif choice == "2":
+      Shellnum()
+    elif choice == "3":
+      Weevely()
+    elif choice == "4":
+      ptyshells()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      shells()
+    else:
+      shells()
+
+def PrivEsc():
+    clscprilo()
+    print("""\033[94m
+       [ PRIVILEGE ESCALATION ]
+
+         Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
+
+        \033[93m1)  All you need as Privilege Escalation scripts and exploits\033[90m
+
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+    \033[93m    2) Privilege Escalation Cheatsheets\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
+       """)
+    choice = input("\033[92mLockdoor@PrivEsc~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      priivesc()
+    elif choice == "2":
+        privesh()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      PrivEsc()
+    else:
+      PrivEsc()
+
+def soceng():
+    clscprilo()
+    print("""\033[94m
+       [ SOCIAL ENGINEERING ]
+
+         Make A Choice :\033[90m
+    \033[91m -[!]----- Tools ------[!]-\033[90m
+
+            \033[93m1)  Scythe\033[90m
+
+    \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
+
+        \033[93m    2) Social Engineering Cheatsheets\033[90m
+    ------------------------
+    \033[94mb)    Back to ROOT MENU
+    q)    Leave  Lockdoor\033[94m
+       """)
+    choice = input("\033[92mLockdoor@SocEng~# \033[0m")
+    os.system('clear')
+    if choice == "1":
+      scythe()
+    elif choice == "2":
+        socsh()
+    elif choice == "b":
+      menuprinc()
+    elif choice == "q":
+        prilogspc()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
+        spc()
+        print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
+        sys.exit()
+    elif choice == "":
+      soceng()
+    else:
+      soceng()
+
+###Cheatsheets
+
+def infgathsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f")
+    print("\033[90m")
+    okinf()
+
+def webhsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/WEB/CHEATSHEETS/ -type f")
+    print("\033[90m")
+    okwe()
+def expsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/EXPLOITATION/CHEATSHEETS/ -type f")
+    print("\033[90m")
+    okex()
+def revsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/REVERSE/CHEATSHEETS/ -type f")
+    print("\033[90m")
+    okrev()
+
+def encsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/ENCRYPTION/CHEATSHEETS -type f")
+    print("\033[90m")
+    okenc()
+
+def passsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/PASSWORD/CHEATSHEETS -type f")
+    print("\033[90m")
+    okpa()
+
+def privesh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/PrivEsc/CHEATSHEETS -type f")
+    print("\033[90m")
+    okpr()
+
+def socsh():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/SOCIAL_ENGINEERING/CHEATSHEETS -type f")
+    print("\033[90m")
+    okso()
+
+def psafrt():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/REPORT/TEMPLATES/ -type f")
+    print("\033[90m")
+    spc()
+    oktocont()
+    menuprinc()
+
+def wtpp():
+    clscprilo()
+    print("\033[91mHere is the list of the files :\033[90m")
+    print("\033[92m")
+    os.system("     find " + installdirc + "/WALK -type f")
+    print("\033[90m")
+    spc()
+    oktocont()
+    menuprinc()
 # Fonctions for tools
 ###### INFO-GATHERING : Auto
 
@@ -414,254 +902,201 @@ def dirsearch():
     tool_dir = "/INFO-GATH/Tools/dirsearch"
     dirsearch.title = "DirSearch : Web path scanner "
     if os.path.exists('/usr/local/bin/DirSearch'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/maurosoria/dirsearch.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + dirsearch.title + "\033[90m")
-        Printspace()
+        spc()
         choice = input("Select a Target : ")
         extchoice = input("Select an extention (php,asp,aspx ..) : ")
-        Printspace()
+        spc()
         print("Cheatsheets that can help you with this :")
-        Printspace()
+        spc()
         print("\033[92m" + installdirc + '/INFO-GATH/CHEATSHEETS/file_enumeration.md \033[92m')
-        Printspace()
-        oktocont()
-        printlogo()
-        Printspace()
+        popp()
         os.system("python3 " + installdirc + tool_dir + "/dirsearch.py" + " -u " + choice + " -e " + extchoice)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + dirsearch.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/maurosoria/dirsearch.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + dirsearch.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/DirSearch""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/DirSearch""")
         os.system("echo python3 " + installdirc + tool_dir + "/dirsearch.py >> /usr/local/bin/DirSearch")
         os.system("chmod +x /usr/local/bin/DirSearch")
         print("You can now use " + "\033[91m" + dirsearch.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def brut3k1t():
     tool_dir = "/INFO-GATH/Tools/brut3k1t"
     brut3k1t.title = "brut3k1t : A security-oriented bruteforce framework"
     if os.path.exists('/usr/bin/brut3k1t'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/ex0dus-0x/brut3k1t.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + brut3k1t.title + "\033[90m")
-        Printspace()
+        spc()
         service = input("Select a service (ssh,smtp,xmpp,facebook,instagram,twitter,md5):")
         user = input("Choose a user : ")
         address = input("Enter an address : ")
-        Printspace()
+        spc()
         print("      \033[92m    Check files on " + installdirc + "/PASSWORD/wordlists/\033[90m")
-        Printspace()
+        spc()
         wordlist = input("Select the wordlist file : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("brut3k1t -s"  + service + " -a " + address + " -u " + user + " -w " + wordlist)
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + brut3k1t.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/ex0dus-0x/brut3k1t.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + brut3k1t.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91m\033[91mInstalling ...\033[0m\033[0m")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && python2 setup.py install" + null)
         os.system("ln -s /usr/bin/brut3k1t /usr/local/bin/brut3k1t")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + brut3k1t.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 def gobuster():
     tool_dir = "/INFO-GATH/Tools/gobuster"
     gobuster.title = "gobuster : A DNS and VHost busting tool written in Go "
     if os.path.exists('/usr/local/bin/gobuster'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/OJ/gobuster.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + gobuster.title + "\033[90m")
-        Printspace()
+        spc()
         choice = input("Select a Target : ")
-        Printspace()
+        spc()
         print("      \033[92m    Check files on " + installdirc + "/PASSWORD/wordlists/\033[90m")
-        Printspace()
+        spc()
         wordlist = input("Select the wordlist file : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system(installdirc + tool_dir + "/gobuster dir -u " + choice + " -w " + wordlist)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + gobuster.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/OJ/gobuster.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + gobuster.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && go get && go build")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/gobuster""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/gobuster""")
         os.system("echo " + installdirc + tool_dir + "/gobuster >> /usr/local/bin/gobuster")
         os.system("chmod +x /usr/local/bin/gobuster")
         print(("You can now use " + "\033[91m" + gobuster.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 def enyx():
     enyx.title = "Enyx : An SNMP IPv6 Enumeration Tool"
     tool_dir = "/INFO-GATH/Tools/Enyx"
     if os.path.exists('/usr/local/bin/enyx'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/trickster0/Enyx.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + enyx.title + "\033[90m")
-        Printspace()
+        spc()
         snmpversion = input("Whats the snmp Version (1 or 2c) : ")
         communitystring = input("Whats the Community string (public or private) : ")
         ipad = input("Whats the IP : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("python2 " + installdirc + tool_dir + "/enyx.py " + snmpversion + " " + communitystring + " " + ipad)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + enyx.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/trickster0/Enyx.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + enyx.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/enyx""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/enyx""")
         os.system("echo python2 " + installdirc + tool_dir + "/enyx.py >> /usr/local/bin/enyx")
         os.system("chmod +x /usr/local/bin/enyx")
         print(("You can now use " + "\033[91m" + enyx.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def Goohak():
     Goohak.title = "Goohak : Launch Google Hacking Queries Against A Target Domain (Dork)"
     tool_dir = "/INFO-GATH/Tools/Goohak"
     if os.path.exists('/usr/local/bin/Goohak'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/1N3/Goohak.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Goohak.title + "\033[90m")
-        Printspace()
+        spc()
         domaine = input("Select a Target: ")
         print("Cheatsheets that can help you with this :")
-        Printspace()
+        spc()
         print("\033[92m" + installdirc + '/Google FU.pdf \033[92m')
         print("\033[92m" + installdirc + '/GHDB.pdf \033[92m')
-        Printspace()
+        spc()
         user = input("what's the current user you are using ( whoami ) ? ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("su -c " + "'goohak " + domaine + "' " + user)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Goohak.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/1N3/Goohak.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Goohak.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Goohak""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Goohak""")
         os.system("echo " + installdirc + tool_dir + "/goohak >> /usr/local/bin/Goohak")
         os.system("chmod +x " + installdirc + tool_dir + "/goohak")
         os.system("chmod +x /usr/local/bin/Goohak")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def Nasnum():
     Nasnum.title = "Nasnum : The NAS Enumerator"
     tool_dir = "/INFO-GATH/Tools/Nasnum"
     if os.path.exists('/usr/local/bin/Nasnum'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/tcstool/Nasnum.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Nasnum.title + "\033[90m")
-        Printspace()
+        spc()
         smb = input("Want to grab Grab SMB info ? (Y/N) : ")
         nsf = input("Want to grab Grab NFS info ? (Y/N) : ")
         csnmp = input("Want to Check SNMP for connection data ? (Y/N) : ")
         anonftp = input("Want to Check for anonymous FTP and enumerate dirs/files ? (Y/N) : ")
-        Printspace()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'nfs.*enum|nfs.*enum'")
         os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'smb.*enum|smb.*enum'")
         os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'ftp.*enum|ftp.*enum'")
         print(" \033[90m")
-        Printspace()
-        oktocont()
-        Printspace()
+        pop()
         target = input("Select A Target : ")
         output = input("Select an output file : ")
         if not smb in no:
@@ -680,55 +1115,44 @@ def Nasnum():
             anonftp = "-f"
         else:
             anonftp = ""
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("Nasnum " + output + target + " " + smb + " " + nsf + " " + csnmp + " " + anonftp)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Nasnum.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/tcstool/Nasnum.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Nasnum.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Nasnum""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Nasnum""")
         os.system("echo sh " + installdirc + tool_dir + "/nasnum.sh >> /usr/local/bin/Nasnum")
         os.system("chmod +x /usr/local/bin/Nasnum")
         print(("You can now use " + "\033[91m" + Nasnum.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def Sublist3r():
     Sublist3r.title = "Sublist3r : Fast subdomains enumeration tool for penetration testers"
     tool_dir = "/INFO-GATH/Tools/Sublist3r"
     if os.path.exists('/usr/local/bin/Sublist3r'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/aboul3la/Sublist3r.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Sublist3r.title + "\033[90m")
-        Printspace()
+        spc()
         domaine = input("Select a Target: ")
-        Printspace()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/PASSWORD/wordlists/ -type f | grep domain")
         os.system("find " + installdirc + "/IMAGES/ -type f | grep tcp")
         os.system("find " + installdirc + "/NETWORKING/ -type f ")
         print("\033[90m")
-        Printspace()
-        oktocont()
-        Printspace()
+        pop()
         bruteforce = input("Enable the subbrute bruteforce module ? (Y/N) : ")
         verbose = input("Enable the verbose mode and display results in realtime ? (Y/N) : ")
         ports = input("Specify tcp ports for subdomains finding : ")
@@ -758,128 +1182,101 @@ def Sublist3r():
             verbose = " -v "
         else:
             verbose = ""
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("python3 " + installdirc + tool_dir + "/sublist3r.py" + domaine + " " + bruteforce + " " + verbose + ports + engines + threads)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Sublist3r.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/aboul3la/Sublist3r.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Sublist3r.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m")
-        Printspace()
+        spc()
         os.system("pip install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Sublist3r""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Sublist3r""")
         os.system("echo python3 " + installdirc + tool_dir + "/sublist3r.py >> /usr/local/bin/Sublist3r")
         os.system("chmod +x /usr/local/bin/Sublist3r")
         print(("You can now use " + "\033[91m" + Sublist3r.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 def wafw00f():
     wafw00f.title = "wafw00f : identify and fingerprint Web Application Firewall "
     tool_dir = "/INFO-GATH/Tools/wafw00f"
     if os.path.exists('/usr/local/bin/wafw00f'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/EnableSecurity/wafw00f.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + wafw00f.title + "\033[90m")
-        Printspace()
+        spc()
         domaine = input("Select a Target: ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("wafw00f "  + domaine)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + wafw00f.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/EnableSecurity/wafw00f.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + wafw00f.title + "\033[90m")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m")
         os.system("cd " + installdirc + tool_dir + " && python setup.py install" + null)
         os.system("ln -s /usr/bin/wafw00f /usr/local/bin/wafw00f")
         print(("You can now use " + "\033[91m" + wafw00f.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def sherlock():
 
     sherlock.title = "sherlock : Find usernames across social networks"
     tool_dir = "/INFO-GATH/Tools/sherlock"
     if os.path.exists('/usr/local/bin/sherlock'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/sherlock-project/sherlock.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + sherlock.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Enter the target username : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("python " + installdirc + tool_dir + "/sherlock.py " + target)
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + sherlock.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/sherlock-project/sherlock.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + sherlock.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install --upgrade setuptools && pip3 install -r requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/sherlock""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/sherlock""")
         os.system("echo python " + installdirc + tool_dir + "/sherlock.py >> /usr/local/bin/sherlock")
         os.system("chmod +x /usr/local/bin/sherlock")
         print(("You can now use " + "\033[91m" + sherlock.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def snmpwn():
     snmpwn.title = "snmpwn : An SNMPv3 User Enumerator and Attack tool"
     tool_dir = "/INFO-GATH/Tools/snmpwn"
     if os.path.exists('/usr/local/bin/snmpwn'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/hatlord/snmpwn.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + snmpwn.title + "\033[90m")
-        Printspace()
+        spc()
         hosts = input("Enter the targets hosts file : ")
         users = input("List of users you want to try : ")
         passlist = input("Password list for attacks : ")
@@ -888,418 +1285,327 @@ def snmpwn():
         users = "--users " + users
         passlist = "--passlist " + passlist
         enclist = "--enclist " + enclist
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("snmpwn " + hosts + " " + users + " " + passlist + " " + enclist)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + snmpwn.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/hatlord/snmpwn.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + snmpwn.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         print("\033[91m-[!]-\033[90m    \033[94mTo install this tool you need a non-root user, Please choose one !\033[90m \033[91m-[!] \033[90m")
         user = input("\033[91m-[!]-\033[90m        \033[94mEnter the non-root user username\033[90m  : ")
-        Printspace()
+        spc()
         os.system("su -c " + "'cd " + installdirc + tool_dir + " && gem install bundler && bundle install' " + user + null)
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/snmpwn""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/snmpwn""")
         os.system("echo ruby " + installdirc + tool_dir + "/snmpwn.rb >> /usr/local/bin/snmpwn")
         os.system("chmod +x /usr/local/bin/snmpwn")
         print(("You can now use " + "\033[91m" + snmpwn.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def Striker():
     Striker.title = "Striker : an offensive information and vulnerability scanner."
     tool_dir = "/INFO-GATH/Tools/Striker"
     if os.path.exists('/usr/local/bin/Striker'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/s0md3v/Striker.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Striker.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target: ")
-        Printspace()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep vulnerability")
         print("\033[90m")
-        Printspace()
-        oktocont()
-        Printspace()
-        printlogo()
-        Printspace()
+        pop()
+        prilogspc()
         os.system("python3 " + installdirc + tool_dir + "/striker.py " + target)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Striker.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/s0md3v/Striker.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Striker.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Striker""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Striker""")
         os.system("echo python3 " + installdirc + tool_dir + "/striker.py >> /usr/local/bin/Striker")
         os.system("chmod +x /usr/local/bin/Striker")
         print(("You can now use " + "\033[91m" + Striker.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def theHarvester():
     theHarvester.title = "theHarvester : E-mails, subdomains and names Harvester "
     tool_dir = "/INFO-GATH/Tools/theHarvester"
     if os.path.exists('/usr/local/bin/theHarvester'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/laramies/theHarvester.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + theHarvester.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target : ")
-        Printspace()
+        spc()
         print("Cheatsheets that can help you with this :")
-        Printspace()
+        spc()
         print("\033[92m" + installdirc + '/PASSWORD/wordlists/others/names.txt \033[90m')
-        Printspace()
+        spc()
         oktocont()
         target = " -d " + target
-        Printspace()
+        spc()
         print(""" Sources :
             baidu, bing, bingapi, censys, crtsh, dnsdumpster,
             dogpile, duckduckgo, exalead, github-code, google,
             hunter, intelx, linkedin, netcraft, securityTrails,
             threatcrowd, trello, twitter, vhost, virustotal, yahoo
             """)
-        Printspace()
+        spc()
         source = input("Select a Soruce (Ex : bing,google,baidu) : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("theHarvester" + target + " -l 500 -b " + source)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + theHarvester.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/laramies/theHarvester.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + theHarvester.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("cd " + installdirc + tool_dir + " && python3 " + installdirc + tool_dir + "/setup.py install" + null)
         os.system("ln -s /usr/bin/theHarvester /usr/local/bin/theHarvester")
         print("You can now use " + "\033[91m" + theHarvester.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def URLextractor():
     URLextractor.title = "URLextractor : an  Information gathering & website reconnaissance tool"
     tool_dir = "/INFO-GATH/Tools/URLextractor"
     if os.path.exists('/usr/local/bin/URLextractor'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/SofianeHamlaoui/URLextractor.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + URLextractor.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system(installdirc + tool_dir + "/extractor.sh "+ target)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + URLextractor.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/SofianeHamlaoui/URLextractor.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + URLextractor.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/URLextractor""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/URLextractor""")
         os.system("echo sh " + installdirc + tool_dir + "/extractor.sh >> /usr/local/bin/URLextractor")
         os.system("chmod +x /usr/local/bin/URLextractor")
         print("You can now use " + "\033[91m" + URLextractor.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def denumerator():
     denumerator.title = "denumerator.py : Enumerates list of subdomains"
     tool_dir = "/INFO-GATH/Tools/"
     if os.path.exists('/usr/local/bin/denumerator'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("wget -O " + installdirc + tool_dir + "denumerator.py https://raw.githubusercontent.com/bl4de/security-tools/master/denumerator/denumerator.py" + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + denumerator.title + "\033[90m")
-        Printspace()
+        spc()
         targetlist = input("Enter the Targets list: ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("denumerator -f " + targetlist + " -t 10")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + denumerator.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("wget -O " + installdirc + tool_dir + "denumerator.py https://raw.githubusercontent.com/bl4de/security-tools/master/denumerator/denumerator.py" + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + denumerator.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/denumerator""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/denumerator""")
         os.system("echo python2 " + installdirc + tool_dir + "/denumerator.py >> /usr/local/bin/denumerator")
         os.system("chmod +x /usr/local/bin/denumerator")
         print("You can now use " + "\033[91m" + denumerator.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 ##### INFO-GATHERING : Manual
 def nmap():
     nmap.title = "Nmap : the Network Mapper "
     tool_dir = "/INFO-GATH/Tools/nmap"
     if os.path.exists('/usr/bin/nmap'):
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + nmap.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target : ")
-        Printspace()
+        spc()
         print("Cheatsheets that can help you with this :")
-        Printspace()
+        spc()
         print("\033[92m" + installdirc + '/INFO-GATH/CHEATSHEETS/Nmap-Cheat-Sheet.pdf \033[90m')
-        Printspace()
-        oktocont()
-        printlogo()
-        Printspace()
+        popp()
         os.system("nmap " + target)
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + nmap.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("svn checkout https://svn.nmap.org/nmap/ " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + nmap.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("cd " + installdirc + tool_dir + " && ./configure && make -j4 && make install && cd " + installdirc + tool_dir + "/ncat && ./configure && make -j4 && make install")
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + nmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def Photon():
     Photon.title = "Photon : an incredibly fast crawler designed for OSINT."
     tool_dir = "/INFO-GATH/Tools/Photon"
     if os.path.exists('/usr/local/bin/Photon'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/s0md3v/Photon.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + Photon.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("Photon")
-        Printspace()
+        spc()
         print("\033[92mFor more options, Use Photon --help\033[0m")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Photon.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/s0md3v/Photon.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Photon.title + "\033[90m")
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Photon""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Photon""")
         os.system("echo python3 " + installdirc + tool_dir + "/photon.py >> /usr/local/bin/Photon")
         os.system("chmod +x /usr/local/bin/Photon")
         print("You can now use " + "\033[91m" + Photon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
 
 def Raccoon():
     Raccoon.title = "Raccoon : an offensive security tool for reconnaissance and vulnerability scanning."
     tool_dir = "/INFO-GATH/Tools/Raccoon"
     if os.path.exists('/usr/local/bin/Raccoon'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/evyatarmeged/Raccoon.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + Raccoon.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target (use 'raccoon --help' for more options) :  ")
-        Printspace()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/INFO-GATH/CHEATSHEETS/ -type f | grep vulnerability")
         print("\033[90m")
-        Printspace()
-        oktocont()
-        Printspace()
+        pop()
         os.system("raccoon " + target)
-        Printspace()
+        spc()
         print("\033[92mFor more options, Use raccoon --help\033[0m")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Raccoon.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/evyatarmeged/Raccoon.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Raccoon.title + "\033[90m")
-        Printspace()
+        spc()
         printlogo()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("cd " + installdirc + tool_dir + " && python3 setup.py install" + null)
         os.system("ln -s /usr/bin/raccoon /usr/local/bin/Raccoon")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + Raccoon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 def dnsrecon():
     dnsrecon.title = "DnsRecon : A DNS Enumeration Script"
     tool_dir = "/INFO-GATH/Tools/DnsRecon"
     if os.path.exists('/usr/local/bin/dnsrecon'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/darkoperator/dnsrecon.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + dnsrecon.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target (use 'dnsrecon --help' for more options) : ")
-        Printspace()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find  " + installdirc + " -type f | grep dns_")
         print("\033[90m")
-        Printspace()
-        oktocont()
-        Printspace()
+        pop()
         os.system("python3 " + installdirc + tool_dir + "/dnsrecon.py -d " + target)
-        Printspace()
+        spc()
         print("\033[92mFor more options, Use dnsrecon --help\033[0m")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + dnsrecon.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/darkoperator/dnsrecon.git " + installdirc + tool_dir + null)
-        clearscreen()
+        clr()
         print("\033[92m           " + dnsrecon.title + "\033[90m")
-        Printspace()
+        spc()
         printlogo()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/dnsrecon""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/dnsrecon""")
         os.system("echo python3 " + installdirc + tool_dir + "/dnsrecon.py >> /usr/local/bin/dnsrecon")
         os.system("chmod +x /usr/local/bin/dnsrecon")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + dnsrecon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 ##### INFO-GATHERING : FrameWorks
 
@@ -1307,120 +1613,96 @@ def ReconDog():
     ReconDog.title = "ReconDog # Reconnaissance Swiss Army Knife"
     tool_dir = "/INFO-GATH/Tools/ReconDog"
     if os.path.exists('/usr/local/bin/ReconDog'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/s0md3v/ReconDog.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + ReconDog.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("ReconDog")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + ReconDog.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/s0md3v/ReconDog.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + ReconDog.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("chmod +x " + installdirc + tool_dir + "/dog")
         os.system("""echo "#!/bin/bash" > /usr/local/bin/ReconDog""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/ReconDog""")
         os.system("echo " + installdirc + tool_dir + "/dog >> /usr/local/bin/ReconDog")
         os.system("chmod +x /usr/local/bin/ReconDog")
-        Printspace()
+        spc()
         print(("You can now use " + "\033[91m" + ReconDog.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 def RED_HAWK():
     RED_HAWK.title = "RED_HAWK : All in one tool for Information Gathering, Vulnerability Scanning and Crawling"
     tool_dir = "/INFO-GATH/Tools/RED_HAWK"
     if os.path.exists('/usr/local/bin/RED_HAWK'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/Tuhinshubhra/RED_HAWK.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + RED_HAWK.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("RED_HAWK")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + RED_HAWK.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/Tuhinshubhra/RED_HAWK.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + RED_HAWK.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/RED_HAWK""")
         os.system("echo php " + installdirc + tool_dir + "/rhawk.php >> /usr/local/bin/RED_HAWK")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/RED_HAWK""")
         os.system("chmod +x /usr/local/bin/RED_HAWK")
-        Printspace()
+        spc()
         print(("You can now use " + "\033[91m" + RED_HAWK.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 def Dracnmap():
     Dracnmap.title = "Dracnmap : Info Gathering Framework"
     tool_dir = "/INFO-GATH/Tools/Dracnmap"
     if os.path.exists('/usr/local/bin/Dracnmap'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/Screetsec/Dracnmap.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + Dracnmap.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("Dracnmap")
-        Printspace()
-        oktocont()
-        infogathering()
+        okinf()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Dracnmap.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/Screetsec/Dracnmap.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Dracnmap.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("chmod +x " + installdirc + tool_dir + "/dracnmap-v2.2.sh")
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Dracnmap""")
         os.system("echo " + installdirc + tool_dir + "/dracnmap-v2.2.sh >> /usr/local/bin/Dracnmap")
         os.system("chmod +x /usr/local/bin/Dracnmap")
-        Printspace()
+        spc()
         print(("You can now use " + "\033[91m" + Dracnmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        infogathering()
+        okinf()
 
 ##### WEB HACKING : Auto
 
@@ -1428,15 +1710,13 @@ def Spaghetti():
     Spaghetti.title = "Spaghetti - Web Application Security Scanner"
     tool_dir = "/WEB/Tools/Spaghetti"
     if os.path.exists('/usr/local/bin/Spaghetti'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/c0ll3cti0n/Spaghetti.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Spaghetti.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target: ")
-        Printspace()
+        spc()
         print("""Scan Options :
             0:	Full Scan
             1:	Bruteforce (dirs,files,..)
@@ -1472,122 +1752,97 @@ def Spaghetti():
             verbose = "--verbose"
         else:
             verbose = ""
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("cd  " + installdirc + tool_dir + " && python2 spaghetti.py -u " + target + " -s " + scoption + crawler + ranagent + agent + proxy + verbose)
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Spaghetti.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/c0ll3cti0n/Spaghetti.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Spaghetti.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip2 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Spaghetti""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Spaghetti""")
         os.system("echo python2 " + installdirc + tool_dir + "/spaghetti.py >> /usr/local/bin/Spaghetti")
         os.system("chmod +x /usr/local/bin/Spaghetti")
         print(("You can now use " + "\033[91m" + Spaghetti.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 def BruteXSS():
     BruteXSS.title = "BruteXSS :  BruteXSS is a tool to find XSS vulnerabilities in web application "
     tool_dir = "/WEB/Tools/BruteXSS"
     if os.path.exists('/usr/local/bin/BruteXSS'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/rajeshmajumdar/BruteXSS " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + BruteXSS.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/WEB/CHEATSHEETS/ -type f | grep xss")
         print("\033[90m")
-        Printspace()
+        spc()
         oktocont()
         os.system("BruteXSS")
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + BruteXSS.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/rajeshmajumdar/BruteXSS " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + BruteXSS.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/BruteXSS""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/BruteXSS""")
         os.system("echo python2 " + installdirc + tool_dir + "/brutexss.py >> /usr/local/bin/BruteXSS")
         os.system("chmod +x /usr/local/bin/BruteXSS")
         print(("You can now use " + "\033[91m" + BruteXSS.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 def Jdorker():
     Jdorker.title = "J-dorker : a Website List grabber from Bing"
     tool_dir = "/WEB/Tools/Jdorker"
     if os.path.exists('/usr/local/bin/Jdorker'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/04x/J-dorker.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Jdorker.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("Jdorker")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Jdorker.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/04x/J-dorker.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Jdorker.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Jdorker""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Jdorker""")
         os.system("echo python2 " + installdirc + tool_dir + "/priv8dorker.py >> /usr/local/bin/Jdorker")
         os.system("chmod +x /usr/local/bin/Jdorker")
         print(("You can now use " + "\033[91m" + Jdorker.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 ##### WEB HACKING : Manual
 
@@ -1597,43 +1852,34 @@ def whatweb():
     if os.path.exists('/usr/local/bin/whatweb'):
         printlogo()
         os.system("git clone  https://github.com/urbanadventurer/WhatWeb " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
-        Printspace()
+        prilogspc()
+        spc()
         print("\033[92m           " + whatweb.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target : ")
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system(installdirc + tool_dir + "/whatweb " + target)
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + whatweb.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/urbanadventurer/WhatWeb " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + whatweb.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("cd " + installdirc + tool_dir +" && gem install json && gem install rchardet")
         os.system("""echo "#!/bin/bash" > /usr/local/bin/whatweb""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/whatweb""")
         os.system("echo " + installdirc + tool_dir + "/whatweb >> /usr/local/bin/whatweb")
         os.system("chmod +x /usr/local/bin/whatweb")
-        Printspace()
+        spc()
         print(("You can now use " + "\033[91m" + whatweb.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        webhack()
+        okwe()
 
 def sqlmap():
     sqlmap.title = "SQLmap : Automatic SQL injection and database takeover tool "
@@ -1641,699 +1887,980 @@ def sqlmap():
     if os.path.exists('/usr/bin/sqlmap'):
         printlogo()
         os.system("git clone  https://github.com/sqlmapproject/sqlmap " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + sqlmap.title + "\033[90m")
-        Printspace()
+        spc()
         target = input("Select a Target : ")
-        Printspace()
+        spc()
         print("Check the sqli cheatsheets to know more")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/WEB/CHEATSHEETS/ -type f | grep sqli")
-        Printspace()
-        oktocont()
-        printlogo()
-        Printspace()
+        popp()
         os.system("sqlmap -u " + target)
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + sqlmap.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/sqlmapproject/sqlmap " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + sqlmap.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("""echo "#!/bin/bash" > /usr/local/bin/sqlmap""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/sqlmap""")
         os.system("echo python3 " + installdirc + tool_dir + "/sqlmap.py >> /usr/local/bin/sqlmap")
         os.system("chmod +x /usr/local/bin/sqlmap")
-        Printspace()
+        spc()
         print(("You can now use " + "\033[91m" + sqlmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        webhack()
+        okwe()
 
 def CMSmap():
     CMSmap.title = "CMSmap : A CMS scanner "
     tool_dir = "/WEB/Tools/CMSmap"
     if os.path.exists('/usr/local/bin/CMSmap'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/04x/J-dorker.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + CMSmap.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("cmsmap")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + CMSmap.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/Dionach/CMSmap.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + CMSmap.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("cd " + installdirc + tool_dir + " && python3 setup.py install >/dev/null")
         os.system("ln -s /usr/bin/cmsmap /usr/local/bin/CMSmap")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + CMSmap.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        webhack()
+        okwe()
 
 def droopescan():
     droopescan.title = "droopescan : scanner , identify , CMSs , Drupal , Silverstripe."
     tool_dir = "/WEB/Tools/droopescan"
     if os.path.exists('/usr/local/bin/droopescan'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/droope/droopescan.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + droopescan.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("droopescan")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + droopescan.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/droope/droopescan.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + droopescan.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("cd " + installdirc + tool_dir + " && pip install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("cd " + installdirc + tool_dir + " && python setup.py install " + null)
         os.system("ln -s /usr/bin/droopescan /usr/local/bin/droopescan")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + droopescan.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        webhack()
+        okwe()
 
 def Optiva():
     Optiva.title = "Optiva-Framework : a  Web Application Scanner"
     tool_dir = "/WEB/Tools/Optiva"
     if os.path.exists('/usr/local/bin/Optiva'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/joker25000/Optiva-Framework " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Optiva.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("optiva")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Optiva.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/joker25000/Optiva-Framework " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Optiva.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("chmod +x " + installdirc + tool_dir + "/installer.sh")
         os.system("cd " + installdirc + tool_dir + " && sh installer.sh")
         os.system("ln -s /usr/bin/optiva /usr/local/bin/Optiva")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + Optiva.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        webhack()
+        okwe()
 
 def V3n0M():
     V3n0M.title = "V3n0M : Pentesting scanner in Python3.6 for SQLi/XSS/LFI/RFI and other Vulns "
     tool_dir = "/WEB/Tools/V3n0M"
     if os.path.exists('/usr/local/bin/V3n0M'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/v3n0m-Scanner/V3n0M-Scanner.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + V3n0M.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("V3n0M")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + V3n0M.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/v3n0m-Scanner/V3n0M-Scanner.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + V3n0M.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("python3 " + installdirc + tool_dir + "/setup.py install" + null)
         os.system("ln -s /usr/bin/v3n0m /usr/local/bin/V3n0M")
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print(("You can now use " + "\033[91m" + V3n0M.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        oktocont()
-        webhack()
+        okwe()
 
 def Atscan():
     Atscan.title = "Atscan : Advanced dork Search & Mass Exploit Scanner "
     tool_dir = "/WEB/Tools/Atscan"
     if os.path.exists('/usr/local/bin/Atscan'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/AlisamTechnology/ATSCAN.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Atscan.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("Atscan")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Atscan.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/AlisamTechnology/ATSCAN.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Atscan.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Atscan""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Atscan""")
         os.system("echo perl " + installdirc + tool_dir + "/atscan.pl >> /usr/local/bin/Atscan")
         os.system("chmod +x /usr/local/bin/Atscan")
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + Atscan.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 def WPSeku():
     WPSeku.title = "WPSeku : Advanced dork Search & Mass Exploit Scanner "
     tool_dir = "/WEB/Tools/WPSeku"
     if os.path.exists('/usr/local/bin/WPSeku'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/m4ll0k/WPSeku.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + WPSeku.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("WPSeku")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + WPSeku.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/m4ll0k/WPSeku.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + WPSeku.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/WPSeku""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/WPSeku""")
         os.system("echo python3 " + installdirc + tool_dir + "/wpseku.py >> /usr/local/bin/WPSeku")
         os.system("chmod +x /usr/local/bin/WPSeku")
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + WPSeku.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 def XSStrike():
     XSStrike.title = "XSStrike : The Most advanced XSS scanner."
     tool_dir = "/WEB/Tools/XSStrike"
     if os.path.exists('/usr/local/bin/XSStrike'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/s0md3v/XSStrike.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + XSStrike.title + "\033[90m")
-        Printspace()
-        Printspace()
+        spc()
+        spc()
         print("\033[92mCheatsheets that can help you with this :")
-        Printspace()
+        spc()
         os.system("find " + installdirc + "/WEB/CHEATSHEETS/ -type f | grep xss")
         print("\033[90m")
-        Printspace()
+        spc()
         oktocont()
         os.system("XSStrike")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + XSStrike.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/s0md3v/XSStrike.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + XSStrike.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/XSStrike""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/XSStrike""")
         os.system("echo python3 " + installdirc + tool_dir + "/xsstrike.py >> /usr/local/bin/XSStrike")
         os.system("chmod +x /usr/local/bin/XSStrike")
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + XSStrike.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 def Joomscan():
     Joomscan.title = "Joomscan : Advanced dork Search & Mass Exploit Scanner "
     tool_dir = "/WEB/Tools/Joomscan"
     if os.path.exists('/usr/local/bin/Joomscan'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/rezasp/joomscan.git  " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Joomscan.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("Joomscan")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Joomscan.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/rezasp/joomscan.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Joomscan.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Joomscan""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Joomscan""")
         os.system("echo perl " + installdirc + tool_dir + "/joomscan.pl >> /usr/local/bin/Joomscan")
         os.system("chmod +x /usr/local/bin/Joomscan")
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + Joomscan.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 def WPscan():
     WPscan.title = "WPscan : WordPress Vulnerability Scanner "
     tool_dir = "/WEB/Tools/WPscan"
     if os.path.exists('/usr/bin/wpscan'):
         print("\033[92m           " + WPscan.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("wpscan")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + WPscan.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         user = input("With which user you want to install wpscan ? : ")
         os.system("gem install wpscan")
         os.system("su -c " + "'gem install wpscan' " + user)
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + WPscan.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 ##### WEB HACKING : Framework
 def Dzjecter():
     Dzjecter.title = "Dzjecter : a Server checking Tool."
     tool_dir = "/WEB/Tools/Dzjecter"
     if os.path.exists('/usr/local/bin/Dzjecter'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/joker25000/Dzjecter " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        Printspace()
+        prilogspc()
         print("\033[92m           " + Dzjecter.title + "\033[90m")
-        Printspace()
+        spc()
         os.system("Dzjecter")
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Dzjecter.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/joker25000/Dzjecter " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Dzjecter.title + "\033[90m")
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Dzjecter""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Dzjecter""")
         os.system("echo python2 " + installdirc + tool_dir + "/Dzjecter.py >> /usr/local/bin/Dzjecter")
         os.system("chmod +x /usr/local/bin/Dzjecter")
         print("You can now use " + "\033[91m" + Dzjecter.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okwe()
 
 ##### Exploitation
 def Findsploit():
     Findsploit.title = "Findsploit : Find exploits in local and online databases instantly"
     tool_dir = "/EXPLOITATION/Tools/Findsploit"
     if os.path.exists('/usr/local/bin/Findsploit'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone  https://github.com/1N3/Findsploit.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Findsploit.title + "\033[90m")
-        Printspace()
+        spc()
         ans = input("\033[92mWhat exploits are you looking  ? : \033[90m")
         os.system("Findsploit " + ans)
-        Printspace()
-        oktocont()
-        webhack()
+        okex()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Findsploit.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/1N3/Findsploit.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Findsploit.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("sh " + installdirc + tool_dir + "/install.sh")
         os.system("ln -s /usr/bin/findsploit /usr/local/bin/Findsploit")
-        Printspace()
+        spc()
         print("You can now use " + "\033[91m" + Findsploit.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
-        Printspace()
-        oktocont()
-        webhack()
+        okex()
 
 def Pompem():
     Pompem.title = "Pompem : an Exploit and Vulnerability Finder"
-    tool_dir = "/INFO-GATH/Tools/Pompem"
+    tool_dir = "/EXPLOITATION/Tools/Pompem"
     if os.path.exists('/usr/local/bin/Pompem'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/rfunix/Pompem.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Pompem.title + "\033[90m")
-        Printspace()
+        spc()
         ans = input("\033[92mWhat exploits are you looking  ? : \033[90m")
         os.system("python3 " + installdirc + tool_dir + "/pompem.py -s " + ans)
-        Printspace()
-        oktocont()
-        exploitation()
+        spc()
+        okex()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Pompem.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/rfunix/Pompem.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + Pompem.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Pompem""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Pompem""")
         os.system("echo python3 " + installdirc + tool_dir + "/pompem.py >> /usr/local/bin/Pompem")
         os.system("chmod +x /usr/local/bin/Pompem")
         print(("You can now use " + "\033[91m" + Pompem.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        exploitation()
+        spc()
+        okex()
 
 def rfix():
     rfix.title = "Rfix : Python tool that helps RFI exploitation."
-    tool_dir = "/INFO-GATH/Tools/rfix"
+    tool_dir = "/EXPLOITATION/Tools//rfix"
     if os.path.exists('/usr/local/bin/rfix'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + rfix.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[92m Usage: rfix target_url payload_path. \033[90m")
-        Printspace()
+        spc()
         print("Example: rfix http://target_host/index.php?flawed_param= php.txt ")
-        Printspace()
+        spc()
         target = input("\033[92m Choose a Target : \033[90m")
         payload = input("\033[92m Choose the payload path : \033[90m")
         os.system("python2 " + installdirc + tool_dir + "/rfix.py " + target + " " + payload)
-        Printspace()
-        oktocont()
-        exploitation()
+        spc()
+        okex()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + rfix.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + rfix.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/rfix""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/rfix""")
         os.system("echo python3 " + installdirc + tool_dir + "/rfix.py >> /usr/local/bin/rfix")
         os.system("chmod +x /usr/local/bin/rfix")
         print(("You can now use " + "\033[91m" + rfix.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        exploitation()
+        spc()
+        okex()
 
 def inurlbr():
     inurlbr.title = "inurlbr : Python tool that helps RFI exploitation."
-    tool_dir = "/INFO-GATH/Tools/inurlbr"
+    tool_dir = "/EXPLOITATION/Tools/inurlbr"
     if os.path.exists('/usr/local/bin/inurlbr'):
-        printlogo()
-        Printspace()
+        prilogspc()
         os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + inurlbr.title + "\033[90m")
-        Printspace()
+        spc()
         print("type : inurlbr --help for more options ")
-        Printspace()
+        spc()
         print("Cheatsheets that can help you with this :")
-        Printspace()
+        spc()
         print("\033[92m" + installdirc + '/Google FU.pdf \033[92m')
         print("\033[92m" + installdirc + '/GHDB.pdf \033[92m')
-        Printspace()
+        spc()
         dork = input("\033[92m Choose a Dork : \033[90m")
         savefile = input("\033[92m output file ? (Ex : results.txt) : \033[90m")
         os.system("php " + installdirc + tool_dir + "/inurlbr.php --dork " + dork + " -s " + savefile)
-        Printspace()
-        oktocont()
-        exploitation()
+        okex()
     else:
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + inurlbr.title + "\033[90m")
-        Printspace()
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
+        spc()
         os.system("git clone https://github.com/googleinurl/SCANNER-INURLBR.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
+        prilogspc()
         print("\033[92m           " + inurlbr.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
+        spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/inurlbr""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/inurlbr""")
         os.system("echo php " + installdirc + tool_dir + "/inurlbr.php >> /usr/local/bin/inurlbr")
         os.system("chmod +x /usr/local/bin/inurlbr")
         print(("You can now use " + "\033[91m" + inurlbr.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        exploitation()
+        okex()
 
 def burp():
     burp.title = "BurpSuite : Web vulnerability scanner."
-    tool_dir = "/INFO-GATH/Tools/burp"
+    tool_dir = "/EXPLOITATION/Tools/burp"
     if os.path.exists('/usr/local/bin/burp'):
-        printlogo()
-        Printspace()
-        os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        print("\033[92m           " + rfix.title + "\033[90m")
-        Printspace()
-        print("\033[92m Usage: rfix target_url payload_path. \033[90m")
-        Printspace()
-        print("Example: rfix http://target_host/index.php?flawed_param= php.txt ")
-        Printspace()
-        target = input("\033[92m Choose a Target : \033[90m")
-        payload = input("\033[92m Choose the payload path : \033[90m")
-        os.system("python2 " + installdirc + tool_dir + "/rfix.py " + target + " " + payload)
-        Printspace()
-        oktocont()
-        exploitation()
+        prilogspc()
+        prilogspc()
+        print("\033[92m           " + burp.title + "\033[90m")
+        spc()
+        os.system("burpsuite")
+        okex()
     else:
-        clearscreen()
-        printlogo()
-        print("\033[92m           " + rfix.title + "\033[90m")
-        Printspace()
+        prilogspc()
+        print("\033[92m           " + burp.title + "\033[90m")
+        spc()
         print("\033[91mDownloading ...\033[0m")
-        Printspace()
-        os.system("git clone https://github.com/joaogmauricio/rfix.git " + installdirc + tool_dir + null)
-        clearscreen()
-        printlogo()
-        print("\033[92m           " + rfix.title + "\033[90m")
-        Printspace()
-        clearscreen()
-        printlogo()
+        spc()
+        os.system("mkdir " + installdirc + tool_dir)
+        os.system("wget -O " + installdirc + tool_dir + "/burp.jar https://portswigger.net/DownloadUpdate.ashx\?Product\=Free")
+        prilogspc()
+        print("\033[92m           " + burp.title + "\033[90m")
+        spc()
+        prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        Printspace()
-        os.system("""echo "#!/bin/bash" > /usr/local/bin/rfix""")
-        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/rfix""")
-        os.system("echo python3 " + installdirc + tool_dir + "/rfix.py >> /usr/local/bin/rfix")
-        os.system("chmod +x /usr/local/bin/rfix")
-        print(("You can now use " + "\033[91m" + rfix.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        Printspace()
-        oktocont()
-        exploitation()
+        spc()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/burp""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/burp""")
+        os.system("echo java -jar " + installdirc + tool_dir + "/burp.jar >> /usr/local/bin/burp")
+        os.system("chmod +x /usr/local/bin/burp")
+        print(("You can now use " + "\033[91m" + burp.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        okex()
 
-### More :
+# More :
 def linexpsug():
     linexpsug.title = "linux-exploit-suggester2 : A perl Linux exploit suggester script"
-    tool_dir = "/INFO-GATH/Tools/linux-exploit-suggester"
-    printlogo()
-    Printspace()
+    tool_dir = "/EXPLOITATION/linux-exploit-suggester"
+    prilogspc()
     os.system("git clone https://github.com/jondonas/linux-exploit-suggester-2.git " + installdirc + tool_dir + null)
-    clearscreen()
-    printlogo()
+    clscprilo()
     print("\033[92m           linux-exploit-suggester2 Downlaoded successfully \033[90m")
-    Printspace()
+    spc()
     print("\033[92m           Check " + installdirc + tool_dir +" Folder\033[90m")
-    oktocont()
-    exploitation()
+    okex()
+
+##### REVERSE ENGINEERING
+
+def radar2():
+    radar2.title = "Radar 2 : unix-like reverse engineering framework"
+    tool_dir = "/REVERSE/Tools/radar2"
+    prilogspc()
+    os.system("git clone https://github.com/radare/radare2.git " + installdirc + tool_dir + null)
+    clscprilo()
+    print("\033[92m           Radar2 Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check " + installdirc + tool_dir +" Folder\033[90m")
+    okrev()
+
+def virustotal():
+    virustotal.title = "VirusTotal tools"
+    tool_dir = "/REVERSE/Tools/virustotal"
+    if os.path.exists('/usr/local/bin/virustotal'):
+        prilogspc()
+        os.system("git clone https://github.com/botherder/virustotal.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + virustotal.title + "\033[90m")
+        spc()
+        key = input("\033[92mEnter the Virtustoal Api  ? : \033[90m")
+        outp = input("\033[92mEnter directory containing files to scan ? : \033[90m")
+        os.system("python2 " + installdirc + tool_dir + "/vt.py --key "+key+" " +outp)
+        okrev()
+    else:
+        prilogspc()
+        print("\033[92m           " + virustotal.title + "\033[90m")
+        spc()
+        print("\033[91mDownloading ...\033[0m")
+        spc()
+        os.system("git clone  https://github.com/botherder/virustotal.git  " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + virustotal.title + "\033[90m")
+        spc()
+        prilogspc()
+        print("\033[91mInstalling ...\033[0m.")
+        spc()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/virustotal""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/virustotal""")
+        os.system("echo python2 " + installdirc + tool_dir + "/vt.py >> /usr/local/bin/virustotal")
+        os.system("chmod +x /usr/local/bin/virustotal")
+        print(("You can now use " + "\033[91m" + virustotal.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        okrev()
+
+def miasm():
+    miasm.title = "miasm : Reverse engineering framework"
+    tool_dir = "/REVERSE/Tools/miasm"
+    prilogspc()
+    os.system("git clone https://github.com/cea-sec/miasm.git " + installdirc + tool_dir + null)
+    prilogspc()
+    os.system("cd " +installdirc + tool_dir + " && python2 setup.py build")
+    os.system("cd " +installdirc + tool_dir + " && python2 setup.py install")
+    spc()
+    print("\033[92m           Miasm Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check " + installdirc + tool_dir +" Folder\033[90m")
+    okrev()
+
+def mirror():
+    mirror.title = "mirror : reverses the bytes of a file"
+    tool_dir = "/REVERSE/Tools/mirror"
+    prilogspc()
+    os.system("git clone https://github.com/guelfoweb/mirror.git " + installdirc + tool_dir + null)
+    clr()
+    prilogspc()
+    print("\033[92m           Mirror Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check " + installdirc + tool_dir +" Folder\033[90m")
+    okrev()
+
+def Dnspy():
+    Dnspy.title = "Dnspy : reverses the bytes of a file"
+    tool_dir = "/REVERSE/Tools/Dnspy"
+    prilogspc()
+    os.system("git clone https://github.com/0xd4d/dnSpy.git " + installdirc + tool_dir + null)
+    clr()
+    prilogspc()
+    print("\033[92m           Dnspy Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check " + installdirc + tool_dir +" Folder\033[90m")
+    okrev()
+
+def angrio():
+    angrio.title = "angrio : a python framework for analyzing binaries"
+    tool_dir = "/REVERSE/Tools/angrio"
+    prilogspc()
+    print("\033[92m           Installing \033[90m")
+    spc()
+    os.system("pip install angr ")
+    clr()
+    prilogspc()
+    print("\033[92m           Dnspy Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check Angr.io docs to learn more about the tool \033[90m")
+    print("\033[92m           https://github.com/angr/angr-doc \033[90m")
+    okrev()
+
+def dllrunner():
+    dllrunner.title = "Dllrunner : a smart DLL execution script for malware analysis"
+    tool_dir = "/REVERSE/Tools/dllrunner"
+    prilogspc()
+    os.system("git clone https://github.com/Neo23x0/DLLRunner " + installdirc + tool_dir + null)
+    clr()
+    prilogspc()
+    print("\033[92m           Dllrunner Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check "+ installdirc + tool_dir + " Folder\033[90m")
+    okrev()
+
+def yara():
+    yara.title = "YARA :  a tool to identify and classify malwares "
+    tool_dir = "/REVERSE/Tools/yara"
+    prilogspc()
+    print("\033[92m           Installing \033[90m")
+    spc()
+    os.system("pip install yara-python")
+    clr()
+    prilogspc()
+    print("\033[92m           YARA Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Check YARA Docs to learn more about the tool\033[90m")
+    print("\033[92m           https://yara.readthedocs.io/en/latest/\033[90m")
+    okrev()
+
+######### Encryption - Decryption
+
+def Codetective():
+    Codetective.title = "Codetective : a tool to determine the crypto/encoding algorithm used"
+    tool_dir = "/ENCRYPTION/Tools/Codetective"
+    if os.path.exists('/usr/local/bin/Codetective'):
+        prilogspc()
+        os.system("git clone https://github.com/blackthorne/Codetective.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + Codetective.title + "\033[90m")
+        spc()
+        os.system("Codetective")
+        okenc()
+    else:
+        prilogspc()
+        print("\033[92m           " + Codetective.title + "\033[90m")
+        spc()
+        print("\033[91mDownloading ...\033[0m")
+        spc()
+        os.system("git clone https://github.com/blackthorne/Codetective.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + Codetective.title + "\033[90m")
+        spc()
+        prilogspc()
+        print("\033[91mInstalling ...\033[0m.")
+        spc()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/Codetective""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Codetective""")
+        os.system("echo python2 " + installdirc + tool_dir + "/codetective.py >> /usr/local/bin/Codetective")
+        os.system("chmod +x /usr/local/bin/Codetective")
+        print(("You can now use " + "\033[91m" + Codetective.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        print("Type Codetective to run the tool from Terminal")
+        okenc()
+
+def findmyhash():
+    findmyhash.title = "findmyhash : Python script to crack hashes using online services"
+    tool_dir = "/ENCRYPTION/Tools/Findmyhash"
+    if os.path.exists('/usr/local/bin/Findmyhash'):
+        prilogspc()
+        os.system("git clone https://github.com/frdmn/findmyhash.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + findmyhash.title + "\033[90m")
+        spc()
+        print("""
+              MD4       - RFC 1320
+              MD5       - RFC 1321
+              SHA1      - RFC 3174 (FIPS 180-3)
+              SHA224    - RFC 3874 (FIPS 180-3)
+              SHA256    - FIPS 180-3
+              SHA384    - FIPS 180-3
+              SHA512    - FIPS 180-3
+              RMD160    - RFC 2857
+              GOST      - RFC 5831
+              WHIRLPOOL - ISO/IEC 10118-3:2004
+              LM        - Microsoft Windows hash
+              NTLM      - Microsoft Windows hash
+              MYSQL     - MySQL 3, 4, 5 hash
+              CISCO7    - Cisco IOS type 7 encrypted passwords
+              JUNIPER   - Juniper Networks $9$ encrypted passwords
+              LDAP_MD5  - MD5 Base64 encoded
+              LDAP_SHA1 - SHA1 Base64 encoded
+        """)
+        algo = input("What Algo you want to use ? : ")
+        hash = input("Enter the hash : ")
+        os.system("python2 " + installdirc + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
+        okenc()
+    else:
+        prilogspc()
+        print("\033[92m           " + findmyhash.title + "\033[90m")
+        spc()
+        print("\033[91mDownloading ...\033[0m")
+        spc()
+        os.system("git clone https://github.com/frdmn/findmyhash.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + findmyhash.title + "\033[90m")
+        spc()
+        prilogspc()
+        print("\033[91mInstalling ...\033[0m.")
+        spc()
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/Findmyhash""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Findmyhash""")
+        os.system("echo python2 " + installdirc + tool_dir + "/findmyhash.py >> /usr/local/bin/Findmyhash")
+        os.system("chmod +x /usr/local/bin/Findmyhash")
+        print(("You can now use " + "\033[91m" + findmyhash.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        okenc()
+
+
+######## Password Attacks
+
+def crunch():
+    crunch.title = "Crunch : a wordlist generator"
+    tool_dir = "/PASSWORD/Tools/crunch"
+    prilogspc()
+    os.system("git clone https://github.com/crunchsec/crunch.git " + installdirc + tool_dir + null)
+    clr()
+    prilogspc()
+    print("\033[92m           Crunch Downlaoded successfully \033[90m")
+    spc()
+    print("\033[92m           Installig..... \033[90m")
+    clr()
+    spc()
+    os.system("cd " + installdirc + tool_dir + " && make -j4 && make install")
+    spc()
+    print("\033[92m           Crunch Installed successfully \033[90m")
+    spc()
+    print("\033[92m           use the command 'crunch' on terminal\033[90m")
+    print("\033[92m           use 'man crunch to know more about the tool'\033[90m")
+    okpa()
+
+def Cewl():
+    Cewl.title = "Cewl : a Custom Word List Generator."
+    tool_dir = "/PASSWORD/Tools/Cewl"
+    if os.path.exists('/usr/local/bin/Cewl'):
+        prilogspc()
+        prilogspc()
+        print("\033[92m           " + Cewl.title + "\033[90m")
+        spc()
+        os.system("Cewl -h")
+        spc()
+        print("Use Cewl from terminal [Cewl -h]")
+        okpa()
+    else:
+        prilogspc()
+        print("\033[92m           " + Cewl.title + "\033[90m")
+        spc()
+        print("\033[91mDownloading ...\033[0m")
+        spc()
+        os.system("git clone https://github.com/digininja/CeWL.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + Cewl.title + "\033[90m")
+        spc()
+        prilogspc()
+        print("\033[91mInstalling ...\033[0m.")
+        spc()
+        os.system("cd " + installdirc + tool_dir +" && bundle install")
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/Cewl""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Cewl""")
+        os.system("echo ruby " + installdirc + tool_dir + "/cewl.rb >> /usr/local/bin/Cewl")
+        os.system("chmod +x /usr/local/bin/Cewl")
+        spc()
+        print(("You can now use " + "\033[91m" + Cewl.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        okpa()
+
+def patator():
+    patator.title = "Patator : a multi-purpose brute-forcer, with a modular design and a flexible usage"
+    tool_dir = "/PASSWORD/Tools/patator"
+    if os.path.exists('/usr/local/bin/Patator'):
+        prilogspc()
+        os.system("git clone  https://github.com/lanjelot/patator.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + patator.title + "\033[90m")
+        spc()
+        os.system("Patator")
+        print("You can always use Patator from Terminal [ \033[91mPatator\033[90m ]")
+        okpa()
+    else:
+        prilogspc()
+        print("\033[92m           " + patator.title + "\033[90m")
+        spc()
+        print("\033[91mDownloading ...\033[0m")
+        spc()
+        os.system("git clone https://github.com/lanjelot/patator.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + patator.title + "\033[90m")
+        spc()
+        prilogspc()
+        print("\033[91mInstalling ...\033[0m.")
+        os.system("cd " + installdirc + tool_dir + " && pip2 install -r requirements.txt" + null)
+        os.system("python2 " + installdirc + tool_dir + "/setup.py install" + null)
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/Patator""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Patator""")
+        os.system("echo python2 " + installdirc + tool_dir + "/patator.py >> /usr/local/bin/Patator")
+        os.system("chmod +x /usr/local/bin/Patator")
+        prilogspc()
+        print(("You can now use " + "\033[91m" + patator.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        okpa()
+
+def dlrockyou():
+    printlogo()
+    print("\033[91mDownloading ...\033[0m")
+    spc()
+    os.system("wget -O " + installdirc+ "/PASSWORD/wordlists/rockyou.gz https://gitlab.com/kalilinux/packages/wordlists/raw/kali/master/rockyou.txt.gz")
+    spc()
+    print("\033[91mExtracting ...\033[0m")
+    os.system("gunzip " + installdirc+ "/PASSWORD/wordlists/rockyou.gz")
+    os.system("rm "+ installdirc + "/PASSWORD/wordlists/rockyou.txt.gz")
+    spc()
+    print("Rockyou Password list downloaded successfully , you can use it from here " + installdirc + "/PASSWORD/wordlists/")
+    okpa()
+
+####### Shells
+
+def webshells():
+    printlogo()
+    print("\033[91mDownloading ...\033[0m")
+    spc()
+    os.system("git clone https://github.com/BlackArch/webshells.git " + installdirc + "/SHELLS/WebShells")
+    spc()
+    print("BlackArch Webshells collection downloaded successfully , you can use them from " + installdirc + "/SHELLS/WebShells")
+    oksh()
+
+def Shellnum():
+    Shellnum.title = "Shellnum : A defense tool thay detect web shells in local directories"
+    tool_dir = "/SHELLS/Shellnum"
+    if os.path.exists('/usr/local/bin/Shellnum'):
+        prilogspc()
+        os.system("git clone https://github.com/ManhNho/shellsum.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + Shellnum.title + "\033[90m")
+        os.system("python2 " + installdirc + tool_dir + "/shellsum.py ")
+        oksh()
+    else:
+        prilogspc()
+        print("\033[92m           " + Shellnum.title + "\033[90m")
+        spc()
+        print("\033[91mDownloading ...\033[0m")
+        spc()
+        os.system("git clone https://github.com/ManhNho/shellsum.git " + installdirc + tool_dir + null)
+        prilogspc()
+        print("\033[92m           " + Shellnum.title + "\033[90m")
+        spc()
+        prilogspc()
+        print("\033[91mInstalling ...\033[0m.")
+        spc()
+        os.system("cd " + installdirc + tool_dir + " && pip2 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
+        os.system("""echo "#!/bin/bash" > /usr/local/bin/Shellnum""")
+        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Shellnum""")
+        os.system("echo python2 " + installdirc + tool_dir + "/shellsum.py >> /usr/local/bin/Shellnum")
+        os.system("chmod +x /usr/local/bin/Shellnum")
+        print(("You can now use " + "\033[91m" + Shellnum.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+        oksh()
+
+def Weevely():
+        Weevely.title = "Weevely : a multi-purpose brute-forcer, with a modular design and a flexible usage"
+        tool_dir = "/SHELLS/Tools/Weevely"
+        if os.path.exists('/usr/local/bin/Weevely'):
+            prilogspc()
+            os.system("git clone  https://github.com/epinna/weevely3.git " + installdirc + tool_dir + null)
+            prilogspc()
+            print("\033[92m           " + Weevely.title + "\033[90m")
+            spc()
+            os.system("Weevely")
+            print("You can always use Weevely from Terminal [ \033[91mWeevely\033[90m ]")
+            oksh()
+        else:
+            prilogspc()
+            print("\033[92m           " + Weevely.title + "\033[90m")
+            spc()
+            print("\033[91mDownloading ...\033[0m")
+            spc()
+            os.system("git clone https://github.com/epinna/weevely3.git " + installdirc + tool_dir + null)
+            prilogspc()
+            print("\033[92m           " + Weevely.title + "\033[90m")
+            spc()
+            prilogspc()
+            print("\033[91mInstalling ...\033[0m.")
+            os.system("cd " + installdirc + tool_dir + " && pip2 install -r requirements.txt" + null)
+            os.system("""echo "#!/bin/bash" > /usr/local/bin/Weevely""")
+            os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Weevely""")
+            os.system("echo python2 " + installdirc + tool_dir + "/weevely.py >> /usr/local/bin/Weevely")
+            os.system("chmod +x /usr/local/bin/Weevely")
+            prilogspc()
+            print(("You can now use " + "\033[91m" + Weevely.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+            oksh()
+
+def ptyshells():
+    printlogo()
+    print("\033[91mDownloading ...\033[0m")
+    spc()
+    os.system("git clone https://github.com/infodox/python-pty-shells " + installdirc + "/SHELLS/python-pty-shells")
+    spc()
+    print("The Python PTY backdoors collection downloaded successfully , you can use them from " + installdirc + "/SHELLS/python-pty-shells")
+    oksh()
+
+######### PRIV ESC
+
+def priivesc():
+    priivesc.title=("A collection of Windows, Linux and MySQL privilege escalation scripts and exploits")
+    printlogo()
+    print("\033[92m" + priivesc.title + "\033[90m")
+    print()
+    print("\033[91mDownloading ...\033[0m")
+    spc()
+    os.system("git clone https://github.com/1N3/PrivEsc.git " + installdirc + "/PrivEsc/Scripts")
+    spc()
+    print("\033[91m" + """\033[91mThe collection of Windows, Linux and MySQL privilege
+    escalation scripts and exploits is downloaded successfully , you can check
+    it here : """ + "\033[90m" + installdirc + "/PrivEsc/Scripts")
+    okpr()
+
+
+######### SOCIAL ENGINEERING
+
+def scythe():
+    scythe.title = "Cewl : an accounts enumerator"
+    tool_dir = "/SOCIAL_ENGINEERING/Tools/scythe"
+    prilogspc()
+    prilogspc()
+    print("\033[92m           " + scythe.title + "\033[90m")
+    spc()
+    print("\033[92m" + "Change " + installdirc + tool_dir + "/accountfile.txt" + """ with
+    your targes""" + "\033[90m")
+    spc()
+    os.system("python2 " + installdirc + tool_dir + "/scythe.py")
+    okso()
+
 
 
 if __name__ == "__main__":
     try:
             menuprinc()
     except (KeyboardInterrupt):
-        Printspace()
+        spc()
         ans = input("           \033[91m-[!]- SIGINT or CTRL-C detected. Are You sure to exit \033[92mLockdoor \033[90m\033[91m-[!] ? (Y/N)\033[0m : ")
         if not ans in yes:
             menuprinc()
         else:
-            clearscreen()
+            clr()
             printlogo()
             now = datetime.now()
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-            Printspace()
+            spc()
             print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
             sys.exit()
