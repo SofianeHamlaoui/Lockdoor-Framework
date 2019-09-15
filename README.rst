@@ -185,7 +185,18 @@ Installation :
    
          .. code-block:: console
          
-               python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl
+               python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip
+    
+   - Installing Go 
+   
+         .. code-block:: console
+         
+               wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+               tar -xvf go1.13.linux-amd64.tar.gz
+               mv go /usr/local
+               export GOROOT=/usr/local/go
+               export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+               rm go1.13.linux-amd64.tar.gz
                
    - Installing Lockdoor
    
