@@ -17,6 +17,9 @@
    [~] Version 1.0 Beta IS OUT !!<br>
    <br> 1.0 Beta POSSTED 15/09/2019 10:26AM GMT+2 <br>
    <br> 30 stars on 5 hours <br>
+   <br> 50 starts on 24hours <br>
+   <br> Bugs Fixing for 4 tools <br>
+   <br> fixing (apt) package manager problems <br>
    </h3>
    
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
