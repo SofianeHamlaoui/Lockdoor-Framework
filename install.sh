@@ -119,6 +119,7 @@ function install {
     : ${installdir:=/opt/sofiane/Pentest}
     mkdir -p $installdir
     mkdir -p $HOME"/.config/lockdoor"
+    rm /usr/local/bin/*
     echo "Location:"$installdir > $HOME"/.config/lockdoor/lockdoor.conf"
     rsync -a ToolsResources/* $installdir
     pip3 install lockdoor
@@ -128,7 +129,7 @@ function install {
     mv go /usr/local
     export GOROOT=/usr/local/go
     export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-    rm go1.13.linux-amd64.tar.gz
+    rm -rf go*
     # Cleaning
     rm -rf build dist lockdoor.egg* pictures ToolsResources
     rm lockdoor README.rst install.sh

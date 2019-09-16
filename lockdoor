@@ -96,6 +96,8 @@ def confirmlocation():
         clr()
     else:
         spc()
+        print("             remove all files on \033[94m'/usr/local/bin\033[90m \033[92m(sudo rm /usr/local/bin/*)\033[90m")
+        spc()
         print("             Change the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
 #Show About
