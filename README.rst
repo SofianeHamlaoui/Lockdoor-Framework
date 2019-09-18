@@ -210,9 +210,9 @@ Demos
 +------------+----------+--------------+----------+------------+------------------+
 
 .. |Windows| image:: http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/16/Folders-OS-Windows-8-Metro-icon.png
-.. |reports| image:: http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/16/Reports-icon.png
-.. |Walk| image:: http://icons.iconarchive.com/icons/glyphish/glyphish/24/102-walk-icon.png
+
 .. |Security| image:: http://icons.iconarchive.com/icons/aha-soft/free-large-boss/24/Security-Guard-icon.png
+
 =============
 Installation : 
 =============
@@ -450,7 +450,7 @@ Lockdoor Resources contents:
    - `windows_priv_escalation <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation.md>`_
    - `windows_priv_escalation_practical <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation_practical.md>`_
    
-**Pentesting & Security Assessment Findings Report Templates** |reports| :
+**Pentesting & Security Assessment Findings Report Templates** 📝 :
 --------------------------
    - `Demo Company - Security Assessment Findings Report.docx <ToolsResources/REPORT/TEMPLATES/Demo Company - Security Assessment Findings Report.docx>`_
    - `linux-template.md <ToolsResources/REPORT/TEMPLATES/linux-template.md>`_
@@ -478,7 +478,7 @@ Lockdoor Resources contents:
 --------------------------
    - `social_engineering <ToolsResources/SOCIAL_ENGINEERING/CHEATSHEETS/social_engineering.md>`_
 
-**Walk Throughs** |Walk| :
+**Walk Throughs** 🚶 :
 --------------------------
    - `Cheatsheet_PenTesting.txt <ToolsResources/WALK/Cheatsheet_PenTesting.txt>`_
    - `OWASP Testing Guide v4 <ToolsResources/WALK/OTGv4.pdf>`_
