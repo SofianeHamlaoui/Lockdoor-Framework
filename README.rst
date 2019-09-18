@@ -51,6 +51,33 @@
     :local:
     :depth: 3  
    
+=============   
+   Blogs & Articles : 
+=============  
+      * Reddit : https://www.reddit.com/r/cybersecurity/comments/d4hthh/lockdoor_a_penetration_testing_framework_with/
+      * Medium.com : https://medium.com/@SofianeHamlaoui/lockdoor-framework-a-penetration-testing-framework-with-cyber-security-resources-sofiane-22fbb7942378
+      * Xploit Lab : https://xploitlab.com/lockdoor-framework-penetration-testing-framework-with-cyber-security-resources/
+      * Kelvin Security : https://blog.kelvinsecurity.com/2019/09/12/lookdoor-framework-a-penetration-testing-framework-with-cyber-security-resources/
+      * All About hacking : https://www.allabouthack.com/2019/09/lookdoor-framework-penetration-testing.html
+      * Wired Intel : http://wiredintel.bravehost.com/wired/2019/09/15/%F0%9F%94%90-lockdoor-a-penetration-testing-framework-with-cyber-security-resources
+      
+            * Social networks : 
+                  * LinkedIn :
+                        * By Nermin S. : https://www.linkedin.com/posts/nsmajic_sofianehamlaouilockdoor-framework-activity-6578952540564529152-B-0P
+                  * Twitter : 
+                        * By Me :D : https://twitter.com/S0fianeHamlaoui/status/1173079963567820801
+                        * National Cyber Security Services : https://twitter.com/NationalCyberS1/status/1173917454151475202
+                        * Xploit Lab : https://twitter.com/xploit_lab/status/1173990273644261376
+                        * More : https://twitter.com/search?q=Lockdoor%20Framework
+                        * More : https://twitter.com/search?q=Lookdoor%20Framework
+                  * Facebook :
+                        * By ME :D : https://www.facebook.com/S0fianeHamlaoui/posts/678704759315090
+                        * National Cyber Security Services : https://www.facebook.com/ncybersec/posts/1273735519463836
+                        * Xploit Lab : https://www.facebook.com/XploitLab/posts/2098443780463126
+                        * Root Developers : https://www.facebook.com/root.deve/posts/1181412315364265
+                        * More : https://www.facebook.com/search/top/?q=Lockdoor%20Framework
+            * Youtube : 
+                  * https://www.youtube.com/watch?v=_agvb29FQrs
 =============
 Support me :
 =============
