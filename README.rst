@@ -209,6 +209,10 @@ Demos
 | |Kali|     | |Ubuntu| | |Arch Linux| | |Fedora| | |Opensuse| | |Windows|        |
 +------------+----------+--------------+----------+------------+------------------+
 
+.. |Windows| image:: http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/16/Folders-OS-Windows-8-Metro-icon.png
+.. |reports| image:: http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/16/Reports-icon.png
+.. |Walk| image:: http://icons.iconarchive.com/icons/glyphish/glyphish/24/102-walk-icon.png
+.. |Security| image:: http://icons.iconarchive.com/icons/aha-soft/free-large-boss/24/Security-Guard-icon.png
 =============
 Installation : 
 =============
@@ -261,7 +265,7 @@ Installation :
 Lockdoor Tools contents: 
 =============
 
-**Information Gathering**:
+**Information Gathering** :mag_right: :
 --------------------------
    - Tools:
       - dirsearch : A Web path scanner
@@ -288,7 +292,7 @@ Lockdoor Tools contents:
       - RED_HAWK : All in one tool for Information Gathering, Vulnerability Scanning and Crawling
       - Dracnmap : Info Gathering Framework
 
-**Web Hacking**:
+**Web Hacking** 🌐 :
 --------------------------
    - Tools:
       - Spaghetti : Spaghetti - Web Application Security Scanner
@@ -308,10 +312,10 @@ Lockdoor Tools contents:
    - Frameworks:
       - Dzjecter : Server checking Tool
       
-**Privilege Escalation**:
+**Privilege Escalation** ⚠️ :
 --------------------------
    - Tools:
-      - Linux : 
+      - Linux  🐧 : 
          - Scripts : 
             - linux_checksec.sh
             - linux_enum.sh
@@ -321,14 +325,14 @@ Lockdoor Tools contents:
             - linux_privesc.sh
             - linux_security_test
          - Linux_exploits folder
-      - Windows :
+      - Windows |Windows| :
          - windows-privesc-check.py
          - windows-privesc-check.exe
       - MySql :
          - raptor_udf.c
          - raptor_udf2.c
          
-**Reverse Engineering**:
+**Reverse Engineering** ⚡:
 --------------------------
    - Radare2 : unix-like reverse engineering framework
    - VirtusTotal : VirusTotal tools
@@ -342,7 +346,7 @@ Lockdoor Tools contents:
    - Spike : a protocol fuzzer creation kit + audits
    - other : other scripts collected somewhere
 
-**Exploitation**:
+**Exploitation** ❗:
 --------------------------
    - Findsploit : Find exploits in local and online databases instantly
    - Pompem : Exploit and Vulnerability Finder
@@ -352,25 +356,25 @@ Lockdoor Tools contents:
    - linux-exploit-suggester2 : Next-Generation Linux Kernel Exploit Suggester
    - other : other scripts I collected somewhere.
 
-**Shells**:
+**Shells** 🐚:
 --------------------------
    - WebShells : BlackArch's Webshells Collection
    - ShellSum : A defense tool - detect web shells in local directories
    - Weevely : Weaponized web shell
    - python-pty-shells : Python PTY backdoors
 
-**Password Attacks**:
+**Password Attacks** ✳️:
 --------------------------
    - crunch : a wordlist generator
    - CeWL : a Custom Word List Generator
    - patator : a multi-purpose brute-forcer, with a modular design and a flexible usage
  
-**Encryption - Decryption**:
+**Encryption - Decryption** 🛡️:
 --------------------------
    - Codetective : a tool to determine the crypto/encoding algorithm used
    - findmyhash : Python script to crack hashes using online services
   
-**Social Engineering**:
+**Social Engineering** 🎭:
 --------------------------
    - scythe : an accounts enumerator
    
@@ -378,7 +382,7 @@ Lockdoor Tools contents:
 Lockdoor Resources contents: 
 =============
 
-**Information Gathering**:
+**Information Gathering** :mag_right: :
 --------------------------
    - `Cheatsheet_SMBEnumeration <ToolsResources/INFO-GATH/CHEATSHEETS/Cheatsheet_SMBEnumeration.txt>`_ 
    - `configuration_management <ToolsResources/INFO-GATH/CHEATSHEETS/configuration_management.md>`_ 
@@ -400,11 +404,11 @@ Lockdoor Resources contents:
    - `snmb_enumeration <ToolsResources/INFO-GATH/CHEATSHEETS/snmb_enumeration.md>`_
    - `vulnerability_scanning <ToolsResources/INFO-GATH/CHEATSHEETS/vulnerability_scanning.md>`_
    
-**Crypto**:
+**Crypto** 🛡️:
 --------------------------
    - `Crypto101.pdf <ToolsResources/ENCRYPTION/Crypto101.pdf>`_ 
    
-**Exploitation**:
+**Exploitation** ❗:
 --------------------------
    - `computer_network_exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/computer_network_exploits.md>`_ 
    - `file_inclusion_vulnerabilities <ToolsResources/EXPLOITATION/CHEATSHEETS/file_inclusion_vulnerabilities.md>`_ 
@@ -417,7 +421,7 @@ Lockdoor Resources contents:
    - `Public Exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/Public Exploits.md>`_ 
    - `reverse_shell_with_msfvenom <ToolsResources/EXPLOITATION/CHEATSHEETS/reverse_shell_with_msfvenom.md>`_ 
 
-**Networking**:
+**Networking** 🖧 :
 --------------------------
    - `bpf_syntax <ToolsResources/NETWORKING/bpf_syntax.md>`_ 
    - `Cheatsheet_Networking <ToolsResources/NETWORKING/Cheatsheet_Networking.txt>`_
@@ -426,19 +430,19 @@ Lockdoor Resources contents:
    - `nmap_quick_reference_guide <ToolsResources/NETWORKING/nmap_quick_reference_guide.pdf>`_
    - `tcpdump <ToolsResources/NETWORKING/tcpdump.pdf>`_
    
-**Password Attacks**:
+**Password Attacks** ✳️:
 --------------------------
    - `password_attacks <ToolsResources/PASSWORD/CHEATSHEETS/password_attacks.md>`_
    - `Some-Links-To-Wordlists <ToolsResources/PASSWORD/CHEATSHEETS/Some-Links-To-Wordlists.txt>`_
   
-**Post Exploitation**:
+**Post Exploitation** ❗❗:
 --------------------------
    - `Cheatsheet_AVBypass <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_AVBypass.txt>`_
    - `Cheatsheet_BuildReviews <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_BuildReviews.txt>`_
    - `code-execution-reverse-shell-commands <ToolsResources/POST-EXPL/CHEATSHEETS/code-execution-reverse-shell-commands.txt>`_
    - `important-linux-serv-files <ToolsResources/POST-EXPL/CHEATSHEETS/important-linux-serv-files.txt>`_
    
-**Privilege Escalation**:
+**Privilege Escalation** ⚠️:
 --------------------------
    - `Cheatsheet_LinuxPrivilegeEsc <ToolsResources/PrivEsc/CHEATSHEETS/Cheatsheet_LinuxPrivilegeEsc.txt>`_
    - `linux_enumeration <ToolsResources/PrivEsc/CHEATSHEETS/linux_enumeration.md>`_
@@ -446,7 +450,7 @@ Lockdoor Resources contents:
    - `windows_priv_escalation <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation.md>`_
    - `windows_priv_escalation_practical <ToolsResources/PrivEsc/CHEATSHEETS/windows_priv_escalation_practical.md>`_
    
-**Pentesting & Security Assessment Findings Report Templates**:
+**Pentesting & Security Assessment Findings Report Templates** |reports| :
 --------------------------
    - `Demo Company - Security Assessment Findings Report.docx <ToolsResources/REPORT/TEMPLATES/Demo Company - Security Assessment Findings Report.docx>`_
    - `linux-template.md <ToolsResources/REPORT/TEMPLATES/linux-template.md>`_
@@ -455,7 +459,7 @@ Lockdoor Resources contents:
    - `template-penetration-testing-report-v03.pdf <ToolsResources/REPORT/TEMPLATES/template-penetration-testing-report-v03.pdf>`_
    - `windows-template.md <ToolsResources/REPORT/TEMPLATES/windows-template.md>`_
    
-**Reverse Engineering**:
+**Reverse Engineering** ⚡ :
 --------------------------
    - `Buffer_Overflow_Exploit <ToolsResources/REVERSE/CHEATSHEETS/Buffer_Overflow_Exploit.md>`_
    - `buffer_overflows <ToolsResources/REVERSE/CHEATSHEETS/buffer_overflows.md>`_
@@ -470,17 +474,17 @@ Lockdoor Resources contents:
    - `x86_assembly_x86_architecture <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_assembly_x86_architecture.pdf>`_
    - `x86_opcode_structure_and_instruction_overview <ToolsResources/REVERSE/CHEATSHEETS/assembly/x86_opcode_structure_and_instruction_overview.png>`_
 
-**Social Engineering**:
+**Social Engineering** 🎭:
 --------------------------
    - `social_engineering <ToolsResources/SOCIAL_ENGINEERING/CHEATSHEETS/social_engineering.md>`_
 
-**Walk Throughs**:
+**Walk Throughs** |Walk| :
 --------------------------
    - `Cheatsheet_PenTesting.txt <ToolsResources/WALK/Cheatsheet_PenTesting.txt>`_
    - `OWASP Testing Guide v4 <ToolsResources/WALK/OTGv4.pdf>`_
    - `OWASPv4_Checklist.xlsx <ToolsResources/WALK/OWASPv4_Checklist.xlsx>`_
    
-**Web Hacking**:
+**Web Hacking** 🌐 :
 --------------------------
    - `auxiliary_info.md <ToolsResources/WEB/CHEATSHEETS/auxiliary_info.md>`_
    - `Cheatsheet_ApacheSSL <ToolsResources/WEB/CHEATSHEETS/Cheatsheet_ApacheSSL.txt>`_
@@ -505,7 +509,7 @@ Lockdoor Resources contents:
    
 **Other**:
 --------------------------
-   - Security
+   - Security |Security| 
       - `Best Version of BriskSec Security Cheatsheets : <https://sofianehamlaoui.github.io/Security-Cheatsheets/index.html>`_
    - `Images (I'll let you discover that) <ToolsResources/IMAGES/>`_
    
