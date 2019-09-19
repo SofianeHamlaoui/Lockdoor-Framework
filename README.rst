@@ -177,17 +177,35 @@ Screenshots 💻 :
 
 .. |root| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/3.png 
 
-.. |infogath| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/4.png 
+.. |infogath| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/4.png
 
-.. |web| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/5.png 
+.. |web| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/5.png
 
-.. |about| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/6.png 
+.. |expl| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/6.png 
+
+.. |Revers| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/7.png
+
+.. |Enc| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/8.png
+
+.. |passwd| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/9.png
+
+.. |shells| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/10.png
+
+.. |Privesc| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/11.png
+
+.. |SE| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/12.png
+
+.. |psafrt| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/13.png
+
+.. |help| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/14.png
+
+.. |about| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/15.png
                         
-+------------+-------------------+-----------+----------------------+-------------+---------+
-| First Step | Lockdoor Updating | ROOT MENU | INFORMATION GATHRING | WEB HACKNIG | About   |
-+============+===================+===========+======================+=============+=========+
-| |1st|      | |lockup|          | |root|    | |infogath|           | |web|       | |about| |
-+------------+-------------------+-----------+----------------------+-------------+---------+
++------------+-----------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+---------+
+| First Step | Lockdoor update | ROOT Menu | Information Gathering | Web Hacking | Exploitation | Reverse Engineering | Enc/Dec | Password Attacks | Shells   | PrivEsc   | Social Engineering | PSAFRT   | Walkthroughs | About   |
++============+=================+===========+=======================+=============+==============+=====================+=========+==================+==========+===========+====================+==========+==============+=========+
+| |1st|      | |lockup|        | |root|    | |infogath|            | |web|       | |expl|       | |Revers|            | |Enc|   | |passwd|         | |shells| | |Privesc| | |SE|               | |psafrt| | |help|       | |about| |
++------------+-----------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+---------+
    
 ============
 Demos 💻 :
@@ -203,13 +221,13 @@ Demos 💻 :
 
 .. |Opensuse| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/opensuse.gif
 
-.. |Windows| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/windows.gif
+.. |Windows1| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/windows.gif
 
-+------------+----------+--------------+----------+------------+------------------+
-| Kali Linux | Ubuntu   | Arch Linux   | Fedora   | Opensuse   | Windows (Cygwin) |
-+============+==========+==============+==========+============+==================+
-| |Kali|     | |Ubuntu| | |Arch Linux| | |Fedora| | |Opensuse| | |Windows|        |
-+------------+----------+--------------+----------+------------+------------------+
++------------+----------+--------------+----------+------------+-------------------+
+| Kali Linux | Ubuntu   | Arch Linux   | Fedora   | Opensuse   | Windows (Cygwin)  |
++============+==========+==============+==========+============+===================+
+| |Kali|     | |Ubuntu| | |Arch Linux| | |Fedora| | |Opensuse| | |Windows1|        |
++------------+----------+--------------+----------+------------+-------------------+
 
 .. |Windows| image:: http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/16/Folders-OS-Windows-8-Metro-icon.png
 
