@@ -117,12 +117,18 @@ function install {
     echo -e "\e[32m[-] : Where do you want to install the script [/opt/sofiane/Pentest] !\e[0m"
     read installdir
     : ${installdir:=/opt/sofiane/Pentest}
+    echo ""
+    echo -e "\e[32m[-] Installing .... !\e[0m"
+    echo ""
     mkdir -p $installdir
     mkdir -p $HOME"/.config/lockdoor"
     rm /usr/local/bin/*
     echo "Location:"$installdir > $HOME"/.config/lockdoor/lockdoor.conf"
     rsync -a ToolsResources/* $installdir
     pip3 install lockdoor
+    clear
+    echo -e "\e[32m[-] Installing Go !\e[0m"
+    echo ""
     # Installing Go
     wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
     tar -xvf go1.13.linux-amd64.tar.gz
