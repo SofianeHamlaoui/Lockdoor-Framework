@@ -46,13 +46,14 @@
    :target: https://GitHub.com/SofianeHamlaoui/
 .. |Tested-on| image:: https://img.shields.io/badge/Tested%20on-Linux%2COSX%20and%20Windows-blue
    :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework
+   
 
 .. contents:: 
     :local:
     :depth: 3  
    
 =============   
-   Blogs & Articles : 
+Blogs & Articles 📰 : 
 =============  
       * Reddit : https://www.reddit.com/r/cybersecurity/comments/d4hthh/lockdoor_a_penetration_testing_framework_with/
       * Medium.com : https://medium.com/@SofianeHamlaoui/lockdoor-framework-a-penetration-testing-framework-with-cyber-security-resources-sofiane-22fbb7942378
@@ -79,12 +80,12 @@
             * Youtube : 
                   * https://www.youtube.com/watch?v=_agvb29FQrs
 =============
-Support me :
+Support me 💰 :
 =============
    - On Paypal : https://www.paypal.com/paypalme2/SofianeHamlaoui
    - BTC Addresse : 1NR2oqsuevvWJwzCyhBXmqEA5eYAaSoJFk
 =============
-Badges:
+Badges 📌 :
 =============   
 
 |forthebadge made-with-python| |built-with-love|
@@ -92,7 +93,7 @@ Badges:
 |made-with-bash| |code-quality| |Pypi| |GitHub release| |Tested-on| |Last commit| |License| |Lines| |Twitter|
 
 =============
-Versions:
+Versions :closed_lock_with_key: :
 =============
 **WARNING: Project is still in version 1.0 BETA. It is still under active development 
 and bugs might be present.**
@@ -123,8 +124,9 @@ and bugs might be present.**
    - Some bugs That I'm fixing with time so don't worry about that. 
 
 .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
+
 =============
-Check the Wiki Pages to know more about the tool.
+Check the Wiki Pages to know more about the tool. 📙 :
 =============
 - The Wiki pages : 
 
@@ -133,7 +135,7 @@ Check the Wiki Pages to know more about the tool.
    - `Lockdoor Screenshots <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots>`_
    
 =============
-Overview
+Overview 📙 :
 =============
 *LockDoor* is a Framework aimed at **helping penetration testers, bug bounty hunters And cyber security engineers**. 
 This tool is designed for Debian/Ubuntu/ArchLinux based distributions to create a similar and familiar distribution for Penetration Testing. But containing the favorite and the most used tools by Pentesters.
@@ -142,11 +144,11 @@ With all of that ! It automates the Pentesting process to help you do the job mo
 easily.
 
 =============
-Features
+Features 📙 :
 =============
 Added value : (what makes it different from other frameworks).
 
-Pentesting Tools Selection: 
+Pentesting Tools Selection 📙 : 
 --------------------------
    - **Tools ?**: **Lockdoor** doesn't contain all pentesting tools (Added value) , let's be honest ! Who ever used all the Tools you find on all those Penetration Testing distributions ? Lockdoor contains only the favorite (Added value) and the most used toolsby Pentesters (Added value).
 
@@ -158,7 +160,7 @@ Pentesting Tools Selection:
    
    - **Installation**: You can install the tool automatically using the installer.sh , Manually or on Docker [COMING SOON]
 
-Resources and cheatsheets: (Added value)
+Resources and cheatsheets 📙 : (Added value)
 --------------------------
    - **Resources**: That's what makes **Lockdoor** Added value, Lockdoor Doesn't contain only tools ! Pentesing and Security Assessment Findings Reports templates (Added value) , Pentesting walkthrough examples and tempales (Added value) and more.
 
@@ -166,7 +168,7 @@ Resources and cheatsheets: (Added value)
    - **Cheatsheets**: Everyone can forget something on processing or a tool use, or even some trciks. Here comes the Cheatsheets (Added value) role ! there are cheatsheets about everything, every tool on the framework and any enumeration,exploitation and post-exploitation techniques.
     
 =============
-Screenshots: 
+Screenshots 💻 : 
 =============
 
 .. |1st| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/1.png
@@ -188,7 +190,7 @@ Screenshots:
 +------------+-------------------+-----------+----------------------+-------------+---------+
    
 ============
-Demos
+Demos 💻 :
 ============
 
 .. |Kali| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
@@ -214,7 +216,7 @@ Demos
 .. |Security| image:: http://icons.iconarchive.com/icons/aha-soft/free-large-boss/24/Security-Guard-icon.png
 
 =============
-Installation : 
+Installation 🛠️ : 
 =============
 
 - Automatically 
@@ -262,7 +264,7 @@ Installation :
       COMING SOON
 
 =============
-Lockdoor Tools contents: 
+Lockdoor Tools contents 🛠️ : 
 =============
 
 **Information Gathering** :mag_right: :
@@ -379,7 +381,7 @@ Lockdoor Tools contents:
    - scythe : an accounts enumerator
    
 =============
-Lockdoor Resources contents: 
+Lockdoor Resources contents 📚 : 
 =============
 
 **Information Gathering** :mag_right: :
@@ -507,7 +509,7 @@ Lockdoor Resources contents:
    - `xss_actionscript <ToolsResources/WEB/CHEATSHEETS/xss_actionscript>`_
    - `xxe <ToolsResources/WEB/CHEATSHEETS/xxe.md>`_
    
-**Other**:
+**Other** 📚 :
 --------------------------
    - Security |Security| 
       - `Best Version of BriskSec Security Cheatsheets : <https://sofianehamlaoui.github.io/Security-Cheatsheets/index.html>`_
@@ -516,7 +518,7 @@ Lockdoor Resources contents:
    - `Google Hacking DataBase <ToolsResources/GHDB.pdf>`_
    
    - `Google Fu  <ToolsResources/Google FU.pdf>`_
-**Contributing**
+**Contributing** ℹ️ :
 -----------------------
    1. Fork it ( https://github.com/SofianeHamlaoui/Lockdoor-Framework/fork )
    2. Create your feature branch
