@@ -50,7 +50,7 @@ function chkapt {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        apt install python python-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl netcat subversion openjdk-11-jre make automake gcc gzip
+        apt install python python-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl netcat subversion openjdk-11-jre make automake gcc gzip rsync
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping apt${endc}"
@@ -63,7 +63,7 @@ function chkpacman {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        pacman -S python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip
+        pacman -S python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping pacman${endc}"
@@ -75,7 +75,7 @@ function chkzypper {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        zypper install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip
+        zypper install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping zypper${endc}"
@@ -88,7 +88,7 @@ function chkdnf {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        dnf install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip
+        dnf install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping dnf${endc}"
@@ -101,7 +101,7 @@ function chkyum {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        yum install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip
+        yum install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping yum${endc}"
