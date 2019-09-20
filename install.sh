@@ -122,7 +122,7 @@ function install {
     echo ""
     mkdir -p $installdir
     mkdir -p $HOME"/.config/lockdoor"
-    rm /usr/local/bin/*
+    grep -l Sofiane /usr/local/bin/* | xargs rm
     echo "Location:"$installdir > $HOME"/.config/lockdoor/lockdoor.conf"
     rsync -a ToolsResources/* $installdir
     pip3 install lockdoor
