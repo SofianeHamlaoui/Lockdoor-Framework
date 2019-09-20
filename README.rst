@@ -478,6 +478,8 @@ Lockdoor Resources contents 📚 :
    - `pwkv1_report.doc <ToolsResources/REPORT/TEMPLATES/pwkv1_report.doc>`_
    - `template-penetration-testing-report-v03.pdf <ToolsResources/REPORT/TEMPLATES/template-penetration-testing-report-v03.pdf>`_
    - `windows-template.md <ToolsResources/REPORT/TEMPLATES/windows-template.md>`_
+   - `OSCP-OS-XXXXX-Lab-Report_Template3.2.docx <ToolsResources/REPORT/TEMPLATES/OSCP-OS-XXXXX-Lab-Report_Template3.2.docx>`_
+   - `OSCP-OS-XXXXX-Exam-Report_Template3.2.docx <ToolsResources/REPORT/TEMPLATES/OSCP-OS-XXXXX-Exam-Report_Template3.2.docx>`_
    
 **Reverse Engineering** ⚡ :
 --------------------------
