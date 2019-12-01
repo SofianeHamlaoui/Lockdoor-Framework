@@ -14,10 +14,9 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Version 1.0 Beta IS OUT !!<br>
-   <br> 1.0 Beta POSSTED 15/09/2019 10:26AM GMT+2 <br>
-   <br> 30 stars on 5 hours <br>
-   <br> 50 starts on 24hours <br>
+   [~] Version 1.8 IS OUT !!<br>
+   <br> 1.8 POSTED 22/10/2019 10:26AM GMT+2 <br>
+   <br> 62 starts on 24hours <br>
    <br> Bugs Fixing for 7 tools <br>
    <br> fixing (apt) package manager problems <br>
    </h3>
