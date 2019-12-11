@@ -1,4 +1,0 @@
-The generic routines need a library path to be set. Try doing . ./ld.sh
-or try exporting the variable manually before use.
-
-
