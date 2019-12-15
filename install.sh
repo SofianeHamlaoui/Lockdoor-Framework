@@ -136,9 +136,6 @@ function install {
     export GOROOT=/usr/local/go
     export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
     rm -rf go*
-    # Cleaning
-    rm -rf build dist lockdoor.egg* pictures ToolsResources
-    rm lockdoor README.rst install.sh
     # RUN
     lockdoor
 }

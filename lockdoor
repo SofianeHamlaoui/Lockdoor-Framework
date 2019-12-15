@@ -36,7 +36,7 @@ from pathlib import Path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "1.0Beta"
+Version = "2.0"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
 #################
@@ -96,7 +96,7 @@ def confirmlocation():
         clr()
     else:
         spc()
-        print("             remove all files on \033[94m'/usr/local/bin\033[90m \033[92m(sudo rm /usr/local/bin/*)\033[90m")
+        print("             remove all files on \033[94m'/usr/local/bin\033[90m \033[92m(grep -l Sofiane /usr/local/bin/* | xargs sudo rm)\033[90m")
         spc()
         print("             Change the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
@@ -109,7 +109,7 @@ def showabout():
     #                   Lockdoor Framework                      #
     #  A Penetration Testing framework with CyberSec Resources  #
     #############################################################
-    #    -- Version: v2.0 12/12/2019                        #
+    #    -- Version: v2.0 12/12/2019                            #
     #    -- Developer: Sofiane Hamlaoui                         #
     #    -- Thanks: No One                                      #
     #############################################################
@@ -324,28 +324,27 @@ def infogathering():
             2)  brut3k1t
             3)  Gobuster
             4)  Enyx
-            5)  Goohak
-            6)  Nasnum
-            7)  Sublist3r
-            8)  Wafw00f
-            9)  Sherlock
-            10) Snmpwn
-            11) Striker
-            12) TheHarvester
-            13) URLextractor
-            14) Denumerator
+            5)  Nasnum
+            6)  Sublist3r
+            7)  Wafw00f
+            8)  Sherlock
+            9)  Snmpwn
+            10) Striker
+            11) TheHarvester
+            12) URLextractor
+            13) Denumerator
 
         -[!]----- Manual ------[!]-
 
-            15) Photon
-            16) Raccoon
-            17) dnsrecon
-            18) Nmap
+            14) Photon
+            15) Raccoon
+            16) dnsrecon
+            17) Nmap
         -[!]----- FrameWorks ------[!]-
 
-            19) ReconDog
-            20) RED_HAWK
-            21) Dracnmap\033[90m
+            18) ReconDog
+            19) RED_HAWK
+            20) Dracnmap\033[90m
 
     \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
 
@@ -365,40 +364,38 @@ def infogathering():
     elif choice == "4":
       enyx()
     elif choice == "5":
-      Goohak()
-    elif choice == "6":
       Nasnum()
-    elif choice == "7":
+    elif choice == "6":
       Sublist3r()
-    elif choice == "8":
+    elif choice == "7":
       wafw00f()
-    elif choice == "9":
+    elif choice == "8":
       sherlock()
-    elif choice == "10":
+    elif choice == "9":
       snmpwn()
-    elif choice == "11":
+    elif choice == "10":
       Striker()
-    elif choice == "12":
+    elif choice == "11":
       theHarvester()
-    elif choice == "13":
+    elif choice == "12":
       URLextractor()
-    elif choice == "14":
+    elif choice == "13":
       denumerator()
-    elif choice == "15":
+    elif choice == "14":
       Photon()
-    elif choice == "16":
+    elif choice == "15":
       Raccoon()
-    elif choice == "17":
+    elif choice == "16":
       dnsrecon()
-    elif choice == "18":
+    elif choice == "17":
       nmap()
-    elif choice == "19":
+    elif choice == "18":
       ReconDog()
-    elif choice == "20":
+    elif choice == "19":
       RED_HAWK()
-    elif choice == "21":
+    elif choice == "20":
       Dracnmap()
-    elif choice == "22":
+    elif choice == "21":
       infgathsh()
     elif choice == "b":
       menuprinc()
@@ -1040,42 +1037,6 @@ def enyx():
         os.system("echo python2 " + installdirc + tool_dir + "/enyx.py >> /usr/local/bin/enyx")
         os.system("chmod +x /usr/local/bin/enyx")
         print(("You can now use " + "\033[91m" + enyx.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        okinf()
-
-def Goohak():
-    Goohak.title = "Goohak : Launch Google Hacking Queries Against A Target Domain (Dork)"
-    tool_dir = "/INFO-GATH/Tools/Goohak"
-    if os.path.exists('/usr/local/bin/Goohak'):
-        prilogspc()
-        os.system("git clone https://github.com/1N3/Goohak.git " + installdirc + tool_dir + null)
-        prilogspc()
-        print("\033[92m           " + Goohak.title + "\033[90m")
-        spc()
-        domaine = input("Select a Target: ")
-        print("Cheatsheets that can help you with this :")
-        spc()
-        print("\033[92m" + installdirc + '/Google FU.pdf \033[92m')
-        print("\033[92m" + installdirc + '/GHDB.pdf \033[92m')
-        spc()
-        user = input("what's the current user you are using ( whoami ) ? ")
-        prilogspc()
-        os.system("su -c " + "'goohak " + domaine + "' " + user)
-        okinf()
-    else:
-        prilogspc()
-        print("\033[92m           " + Goohak.title + "\033[90m")
-        spc()
-        print("\033[91mDownloading ...\033[0m")
-        spc()
-        os.system("git clone https://github.com/1N3/Goohak.git " + installdirc + tool_dir + null)
-        prilogspc()
-        print("\033[92m           " + Goohak.title + "\033[90m")
-        spc()
-        os.system("""echo "#!/bin/bash" > /usr/local/bin/Goohak""")
-        os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Goohak""")
-        os.system("echo " + installdirc + tool_dir + "/goohak >> /usr/local/bin/Goohak")
-        os.system("chmod +x " + installdirc + tool_dir + "/goohak")
-        os.system("chmod +x /usr/local/bin/Goohak")
         okinf()
 
 def Nasnum():
