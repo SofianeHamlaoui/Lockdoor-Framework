@@ -14,9 +14,7 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Version 1.8 IS OUT !!<br>
-   <br> 1.8 POSTED 22/10/2019 10:26AM GMT+2 <br>
-   <br> 62 starts on 24hours <br>
+   [~] Version 1.8 IS OUT !! | 22/10/2019 10:26AM GMT+2 | <br>
    <br> Bugs Fixing for 7 tools <br>
    <br> fixing (apt) package manager problems <br>
    </h3>
@@ -98,7 +96,7 @@ Versions :closed_lock_with_key: :
 **WARNING: Project is still in version 1.0 BETA. It is still under active development
 and bugs might be present.**
 
-09/2019 : 1.0Beta
+10/2019 : 1.8
 --------------------------
    - Information Gathring Tools (21)
    - Web Hacking Tools(15)
@@ -237,6 +235,52 @@ Demos 💻 :
 Installation 🛠️ :
 =============
 
+**The recommended way to use Lockdoor is by pulling the Docker Image so you will not have 
+to worry about dependencies issues.**
+
+**A Docker image is available on Docker Hub and automatically re-built at each update: 
+https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on official Kali
+Linux Docker image (kalilinux/kali).**
+
+- Docker Installation
+   
+      - Installing requirments
+
+            .. code-block:: console
+      
+                     sudo apt install docker < Debian-based distributions 
+                     sudo dnf install docker < RPM-based distributions 
+                     sudo pacman -S docker < Arch-based distributions 
+                     sudo zypper install docker < OS-based distributions
+                     sudo yum install docker < RH-based distributions
+                     
+      - Using lockdoor's docker version 
+      
+                  1. *Pull lockdoor Docker Image:*
+
+                              .. code-block:: console
+
+                                       sudo docker pull sofianehamlaoui/lockdoor
+                                       
+                  2. *Run fresh Docker container:*
+                  
+                              .. code-block:: console
+
+                                       sudo docker run -it --name lockdoor-container -w /home/Lockdoor-Framework --net=host sofianehamlaoui/lockdoor
+               
+                  3. *To re-run a stopped container:*
+
+                              .. code-block:: console
+
+                                       sudo docker start -i sofianehamlaoui/lockdoor
+
+
+                  4. *To open multiple shells inside the container:*
+
+                              .. code-block:: console
+
+                                       sudo docker exec -it lockdoor-container bash
+      
 - Automatically
 
          .. code-block:: console
@@ -278,8 +322,6 @@ Installation 🛠️ :
                   # Installing Lockdoor from PyPi
                   pip3 install lockdoor
 
-- Docker Installation
-      COMING SOON
 
 =============
 Lockdoor Tools contents 🛠️ :
