@@ -14,8 +14,8 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   <br> Lockdoor is now available on Docker <br>
    [~] Version 1.8 IS OUT !! | 22/10/2019 10:26AM GMT+2 | <br>
+   <br> Lockdoor is now available on Docker <br>
    <br> Bugs Fixing for 7 tools <br>
    <br> fixing (apt) package manager problems <br>
    </h3>
