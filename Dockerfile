@@ -1,5 +1,4 @@
-FROM sofianehamlaoui/lockdoor
-
+FROM kalilinux/kali
 MAINTAINER Sofiane Hamlaoui <s0fianehaml40u1@gmail.com> <https://Github.com/SofianeHamlaoui>
 
 LABEL org.label-schema.name="sofianehamlaoui/lockdoor"
@@ -10,6 +9,20 @@ LABEL org.label-schema.docker.cmd="docker run -it --name lockdoor-container -w /
 
 
 
-WORKDIR /home/Lockdoor-Framework
+WORKDIR /root
+RUN apt-get update && \
+    apt-get install -y git wget curl && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    echo 'export LANG="en_US.UTF-8"' >> .bashrc && \
+    curl -L https://gist.githubusercontent.com/SofianeHamlaoui/a95285afd01523f7d7531b002fa669db/raw/0dc9cb9084158aafd0dc3eb3481824242d408fb9/bashrc >> .bashrc && \
+    git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git 
 
-RUN lockdoor
+
+ENV PYTHONIOENCODING utf-8
+
+WORKDIR /root/Lockdoor-Framework
+
+RUN ./install.sh
+
+
