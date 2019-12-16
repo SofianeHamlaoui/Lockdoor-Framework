@@ -137,7 +137,9 @@ function install {
     export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
     rm -rf go*
     # RUN
-    lockdoor
+    showlogo
+    echo -e "                   ${y}Lockdoor Installed Succesfully !${endc}
+                ${y}Type ${g}lockdoor${endc}${y} in ${r} Terminl${endc}${y} to use it${endc}"
 }
 
 #main
