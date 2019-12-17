@@ -44,6 +44,12 @@
 .. |Docker|  image:: https://img.shields.io/docker/pulls/sofianehamlaoui/lockdoor
    :target: https://hub.docker.com/r/sofianehamlaoui/lockdoor
 
+
+.. contents::
+    :local:
+    :depth: 3
+    
+=============    
 Badges 📌 :
 =============
 
@@ -51,11 +57,12 @@ Badges 📌 :
 
 |code-quality| |Pypi| |GitHub release|  |Docker| |Tested-on| |Last commit| |License| |Twitter|
 
+=============
 Support me 💰 :
 =============
    - On Paypal : https://www.paypal.com/paypalme2/SofianeHamlaoui
    - BTC Addresse : 1NR2oqsuevvWJwzCyhBXmqEA5eYAaSoJFk
-
+   
 =============
 Versions :closed_lock_with_key: :
 =============
@@ -87,9 +94,6 @@ Versions :closed_lock_with_key: :
 
 .. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
 
-.. contents::
-    :local:
-    :depth: 3
 
 =============
 Blogs & Articles 📰 :
