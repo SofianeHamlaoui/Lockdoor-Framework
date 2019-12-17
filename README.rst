@@ -45,6 +45,48 @@
 .. |Tested-on| image:: https://img.shields.io/badge/Tested%20on-Linux%2COSX%20and%20Windows-blue
    :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework
 
+Badges 📌 :
+=============
+
+|forthebadge made-with-python| |built-with-love|
+
+|made-with-bash| |code-quality| |Pypi| |GitHub release| |Tested-on| |Last commit| |License| |Lines| |Twitter|
+
+Support me 💰 :
+=============
+   - On Paypal : https://www.paypal.com/paypalme2/SofianeHamlaoui
+   - BTC Addresse : 1NR2oqsuevvWJwzCyhBXmqEA5eYAaSoJFk
+
+=============
+Versions :closed_lock_with_key: :
+=============
+
+10/2019 : 1.8
+--------------------------
+   - Information Gathring Tools (21)
+   - Web Hacking Tools(15)
+   - Reverse Engineering Tools (15)
+   - Exploitation Tools (6)
+   - Pentesting & Security Assessment Findings Report Templates (6)
+   - Password Attack Tools (4)
+   - Shell Tools + Blackarch's Webshells Collection (4)
+   - Walk Throughs & Pentest Processing Helpers (3)
+   - Encryption/Decryption Tools (2)
+   - Social Engineering tools (1)
+   - All you need as Privilege Escalation scripts and exploits
+   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
+
+.. image:: https://img.youtube.com/vi/_agvb29FQrs/maxresdefault.jpg
+   :target: https://www.youtube.com/watch?v=_agvb29FQrs
+
+09/2019 : 0.6
+--------------------------
+   - Information Gathring tools (13)
+   - Web Hacking Tools (9)
+   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
+   - Some bugs That I'm fixing with time so don't worry about that.
+
+.. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
 
 .. contents::
     :local:
@@ -77,61 +119,8 @@ Blogs & Articles 📰 :
                         * Root Developers : https://www.facebook.com/root.deve/posts/1181412315364265
                         * More : https://www.facebook.com/search/top/?q=Lockdoor%20Framework
             * Youtube :
-                  * https://www.youtube.com/watch?v=_agvb29FQrs
-=============
-Support me 💰 :
-=============
-   - On Paypal : https://www.paypal.com/paypalme2/SofianeHamlaoui
-   - BTC Addresse : 1NR2oqsuevvWJwzCyhBXmqEA5eYAaSoJFk
-=============
-Badges 📌 :
-=============
-
-|forthebadge made-with-python| |built-with-love|
-
-|made-with-bash| |code-quality| |Pypi| |GitHub release| |Tested-on| |Last commit| |License| |Lines| |Twitter|
-
-=============
-Versions :closed_lock_with_key: :
-=============
-**WARNING: Project is still in version 1.0 BETA. It is still under active development
-and bugs might be present.**
-
-10/2019 : 1.8
---------------------------
-   - Information Gathring Tools (21)
-   - Web Hacking Tools(15)
-   - Reverse Engineering Tools (15)
-   - Exploitation Tools (6)
-   - Pentesting & Security Assessment Findings Report Templates (6)
-   - Password Attack Tools (4)
-   - Shell Tools + Blackarch's Webshells Collection (4)
-   - Walk Throughs & Pentest Processing Helpers (3)
-   - Encryption/Decryption Tools (2)
-   - Social Engineering tools (1)
-   - All you need as Privilege Escalation scripts and exploits
-   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
-
-.. image:: https://img.youtube.com/vi/_agvb29FQrs/maxresdefault.jpg
-   :target: https://www.youtube.com/watch?v=_agvb29FQrs
-
-09/2019 : 0.6
---------------------------
-   - Information Gathring tools (13)
-   - Web Hacking Tools (9)
-   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
-   - Some bugs That I'm fixing with time so don't worry about that.
-
-.. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
-
-=============
-Check the Wiki Pages to know more about the tool. 📙 :
-=============
-- The Wiki pages :
-
-   - `Lockdoor Wiki page Home  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki>`_
-   - `Lockdoor Demos  <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Demos>`_
-   - `Lockdoor Screenshots <https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/Screenshots>`_
+                  * My youtube video : https://www.youtube.com/watch?v=_agvb29FQrs
+                  * The Shadow Brokers video : https://www.youtube.com/watch?v=6njKRrKQtow
 
 =============
 Overview 📙 :
