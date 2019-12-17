@@ -26,9 +26,6 @@
 .. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg
    :target: https://www.python.org/
 
-.. |made-with-bash| image:: https://img.shields.io/badge/Made%20with-Bash-1f425f.svg
-   :target: https://www.gnu.org/software/bash/
-
 .. |GitHub release| image:: https://badgen.net/github/release/SofianeHamlaoui/Lockdoor-Framework
    :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework/releases/
 
@@ -37,20 +34,22 @@
 .. |License| image:: https://badgen.net/pypi/license/lockdoor
 .. |Pypi| image:: https://badgen.net/pypi/v/lockdoor
    :target: https://pypi.org/project/lockdoor/
-.. |Lines| image:: https://badgen.net/codeclimate/loc/SofianeHamlaoui/Lockdoor-Framework
 .. |Twitter| image:: https://badgen.net/twitter/follow/S0fianeHamlaoui
    :target: https://twitter.com/S0fianeHamlaoui
 .. |built-with-love| image:: http://ForTheBadge.com/images/badges/built-with-love.svg
    :target: https://GitHub.com/SofianeHamlaoui/
-.. |Tested-on| image:: https://img.shields.io/badge/Tested%20on-Linux%2COSX%20and%20Windows-blue
+.. |Tested-on| image:: https://img.shields.io/badge/Tested%20on%20%20-Linux%20%26%20Windows-blue
    :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework
+
+.. |Docker|  image:: https://img.shields.io/docker/pulls/sofianehamlaoui/lockdoor
+   :target: https://hub.docker.com/r/sofianehamlaoui/lockdoor
 
 Badges 📌 :
 =============
 
 |forthebadge made-with-python| |built-with-love|
 
-|made-with-bash| |code-quality| |Pypi| |GitHub release| |Tested-on| |Last commit| |License| |Lines| |Twitter|
+|code-quality| |Pypi| |GitHub release|  |Docker| |Tested-on| |Last commit| |License| |Twitter|
 
 Support me 💰 :
 =============
