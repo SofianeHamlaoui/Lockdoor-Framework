@@ -1,5 +1,0 @@
-see INSTALL
-
-use aclocal && automake; ./configure; make 
-
-

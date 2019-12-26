@@ -1,1 +1,0 @@
-printf("test %d\n",0x1);
