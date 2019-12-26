@@ -1,0 +1,4 @@
+
+run:
+  automake && autoheader && autoconf && ./configure
+

@@ -1,0 +1,105 @@
+s_string_variable("0000");
+s_string(" ");
+s_string_variable("CAPABILITY");
+s_string("\r\n");
+
+s_string("0001 LOGIN \"");
+s_string_variable("Administrator");
+s_string("\" \"");
+s_string_variable("jbone");
+s_string("\"\r\n");
+
+s_string("0002 EXAMINE \"");
+s_string_variable("aaa");
+s_string("\"\r\n");
+
+s_string("0003 SELECT \"");
+s_string_variable("Inbox");
+s_string("\"\r\n");
+
+s_string("A003 CREATE ");
+s_string_variable("owatagusiam/");
+s_string("\r\n");
+
+//s_string("A004 LIST \"");
+//s_string_variable("");
+//s_string("\" ");
+//s_string_variable("*");
+//s_string("\r\n");
+
+s_string("A005 RENAME ");
+s_string_variable("INBOX");
+s_string(" ");
+s_string_variable("OLD-MAIL");
+s_string("\r\n");
+
+s_string("A006 SUBSCRIBE #");
+s_string_variable("news.comp.mail.mime");
+s_string("\r\n");
+
+s_string("A007 UNSUBSCRIBE #");
+s_string_variable("news.comp.mail.mime");
+s_string("\r\n");
+
+s_string("A008 LIST ~");
+s_string_variable("");
+s_string(" ");
+s_string("%");
+s_string("\r\n");
+
+s_string("A009 LSUB \"");
+s_string_variable("");
+s_string("\" \"");
+s_string_variable("bob.*");
+s_string("\"");
+s_string("\r\n");
+
+s_string("A010 STATUS ");
+s_string_variable("blurdybloop");
+s_string(" (");
+s_string_variable("UIDNEXT");
+s_string(" MESSAGES)");
+s_string("\r\n");
+
+s_string("A011 APPEND ");
+s_string_variable("blurdybloop");
+s_string(" (\\");
+s_string_variable("Seen");
+s_string(")");
+s_string(" {");
+s_string_variable("0");
+s_string("}");
+s_string("\r\n");
+
+//A654 FETCH 2:4 (FLAGS BODY[HEADER.FIELDS (DATE FROM)])
+s_string("A012 FETCH ");
+s_string_variable("2");
+s_string(":");
+s_string_variable("2");
+s_string(" (");
+s_string_variable("FLAGS");
+s_string(" ");
+s_string_variable("BODY");
+s_string("[");
+s_string_variable("HEADER");
+s_string(".");
+s_string_variable("FIELDS");
+s_string(" (");
+s_string_variable("DATE");
+s_string(" FROM)])");
+s_string("\r\n");
+
+s_string("A013 UID ");
+s_string_variable("FETCH");
+s_string(" ");
+s_string_variable("4827313");
+s_string(":");
+s_string_variable("4827313");
+s_string(" ");
+s_string_variable("FLAGS");
+s_string("\r\n");
+
+
+
+
+

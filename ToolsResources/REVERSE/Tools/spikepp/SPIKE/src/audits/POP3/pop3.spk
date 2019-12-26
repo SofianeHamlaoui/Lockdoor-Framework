@@ -1,0 +1,33 @@
+s_string_variable("USER");
+s_string(" ");
+s_string_variable("Administrator");
+s_string("\r\n");
+s_string("PASS ");
+s_string_variable("jbone");
+s_string_variable("\r\n");
+
+//s_string_variable("APOP "); 
+//s_string(" ");
+//s_string_variable("Administrator");
+//s_string(" ");
+//s_string_variable("jbone");
+//s_string("\r\n");
+
+s_string_variable("STAT");
+s_string("\r\n");
+
+s_string("LIST ");
+s_string_variable("1");
+s_string("\r\n");
+
+s_string("RETR ");
+s_string_variable("1"); 
+s_string("\r\n"); 
+
+s_string("DELE "); 
+s_string_variable("1");  
+s_string("\r\n");  
+
+s_string_variable("NOOP\r\n");
+s_string_variable("RSET\r\n");
+s_string_variable("QUIT\r\n");

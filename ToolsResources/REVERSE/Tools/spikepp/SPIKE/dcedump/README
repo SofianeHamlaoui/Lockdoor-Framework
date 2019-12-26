@@ -1,0 +1,17 @@
+New Version!
+
+New version with lots of new code from jmccown@trusecure.com, Renaud Deraison and Pasi Eronen (big rewrite of major code blocks - he actually went and read the spec instead of doing everything blind :>) has made dcetest into a decent replacement for rpcdump! Thanks everyone!
+
+Oct 1, 2001
+Dave Aitel
+
+
+This program is "dcetest" - basically a reproduction of rpcdump from microsoft,
+but without the use of any dce libraries or API of any sort. It should be
+fairly easy to use and understand, but if you have any problems, please
+send them to daitel@atstake.com.
+
+
+August 20th, 2001
+Dave Aitel
+

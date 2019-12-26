@@ -1,0 +1,87 @@
+//start control request
+s_block_start("PPTP");
+s_binary_block_size_halfword_bigendian("PPTP");
+//message type 1 -  control request
+s_int_variable(0x0001,5);
+//cookie
+s_binary("1a 2b  3c 4d");
+//type 1 -  start control request
+//5 is big endian halfword
+s_int_variable(0x0001,5);
+//reserved
+s_binary("0000");
+//version 1.0
+s_int_variable(0x0100,5);
+//reserved
+s_binary("0000");
+//Framing: Ethernet
+s_binary("00000003");
+//Bearer: Digital
+s_binary("00000002");
+//maximum channels
+s_binary("ffff");
+//firmware revision
+s_int_variable(0x0001,5);
+
+//hostname
+s_string_variable("A");
+s_binary_repeat("00",63);
+
+//vendor
+s_string_variable("A");
+s_binary_repeat("00",63);
+
+s_block_end("PPTP");
+
+
+///
+/// NEXT PACKET
+///
+///
+
+//start outgoing call request
+s_block_start("PPTP2");
+s_binary_block_size_halfword_bigendian("PPTP2");
+//message type 1 -  control request
+s_int_variable(0x0001,5);
+
+//cookie
+s_binary("1a 2b  3c 4d");
+//type 1 -  outgoing call request
+//5 is big endian halfword
+s_int_variable(0x0007,5);
+//reserved
+s_binary("0000");
+
+//call id
+s_binary("0000");
+
+//serial number
+s_binary("0000");
+
+//min bps
+s_binary("00000960");
+//max bps
+s_binary("00989680");
+//bearer capabilities
+s_binary("00000002");
+//framing
+s_binary("00000003");
+//recieve window size
+s_binary("0003");
+//processing delay
+s_binary("0000");
+
+s_binary_block_size_halfword_bigendian("PHONENUMBER");
+//reserved
+s_binary("0000");
+s_block_start("PHONENUMBER");
+s_string_variable("");
+s_block_end("PHONENUMBER");
+//subaddress
+s_string_variable("");
+s_block_end("PPTP2");
+
+
+
+

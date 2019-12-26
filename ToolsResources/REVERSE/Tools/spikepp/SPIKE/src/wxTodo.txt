@@ -1,0 +1,3 @@
+What to do to make the GUI not suck:
+1. highlight and "spikeify" in the spkEdit
+2. add run window and all sorts of run options in spkEdit

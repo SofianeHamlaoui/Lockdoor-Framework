@@ -1,0 +1,83 @@
+//MSSQL7.SPK fuzzes MSSQL 7.0 SP 4 login packet!
+//Dave Aitel
+//License: GPL v 2.0
+//BUGS FOUND: (pre SP4, crashes all over the place)
+
+//type 3 is a one byte variable
+s_int_variable(2,3);
+s_binary("00");
+s_int_variable(2,3);
+s_binary(" 00 00 00 02 00  00 00 00 00 00 00 00 00  ");
+s_binary("00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00");
+s_binary("00 00 00 00 00 00 00 ");
+s_string_variable("sa");
+s_binary("  00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00");
+s_int_variable(2,3);
+s_string_variable("ASDF");
+s_binary("  00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 ");
+//s_string_variable("00000790");
+s_string_variable("000009b4");
+s_binary("00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 ");
+s_int_variable(0x50da,5);
+s_binary("  31 b5 5f 08 03 01 06 0a  09 01 01 00 00 00 00 00 ");
+s_binary("  00 00 00 00 ");
+s_string_variable("Microsoft ISQL/w");
+s_binary("  00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 10 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 ");
+
+s_binary_block_size_byte("pass2");
+s_block_start("pass2");
+s_string_variable("ASDF");
+s_block_end("pass2");
+
+s_binary("  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00");
+s_int_variable(0x02,3);
+s_int_variable(0x04,3);
+s_int_variable(0x02,3);
+
+s_binary(" 00 00 ");
+s_string_variable("MSDBLIB");
+s_binary(" 00 00 00 ");
+//binarybigendianhalfword is 5
+s_int_variable(0x706,5);
+s_binary("  00 00 00 00 ");
+s_int_variable(0x0d11,5);
+s_binary(" 00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_int_variable(02,3);
+s_int_variable( 01,3);
+s_int_variable( 0x004c,5);
+s_binary(" 00 00 ");
+s_int_variable(03,3);
+s_binary(" 00  00 00 00 00 00 00 00");
+s_int_variable(0x01,3);
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 ");
+s_binary("  00 00 00 00 00 00 00 00  00 00 00 00 00 ");
+s_string_variable("000");
+s_binary("  00 00 00");
+s_int_variable( 0x03,3);
+s_binary(" 00 00 00 00  00 00 00 00");

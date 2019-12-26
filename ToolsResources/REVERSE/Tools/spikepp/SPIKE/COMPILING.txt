@@ -1,0 +1,10 @@
+
+Use ./configure; make
+
+RH 7.0, as reported by _j_j
+webmitm: webmitm.o buf.o
+        $(CC) -ggdb -o webmitm webmitm.o buf.o -lssl -lcrypto -DP_SSL -I/usr/include/openssl
+
+On Mandrake 8.1 don't forget to install the openssl-devel rpms.
+
+Others, please e-mail me if you have problems.

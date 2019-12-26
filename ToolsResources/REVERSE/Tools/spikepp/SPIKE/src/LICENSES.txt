@@ -1,0 +1,8 @@
+buf.c and webmitm were originally published in dsniff by Dug Song
+under the license in DUGSONGLICENSE.txt. Various other things here and
+there were cut and pasted from various GPL v 2.0 projects - TCP
+connectivity and such. 
+
+Everything else is GPL v 2.0. The whole collection is released under
+the GPL v 2.0. If you did not recieve a copy of the GPL, try
+http://www.gnu.org/.

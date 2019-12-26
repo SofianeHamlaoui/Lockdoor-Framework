@@ -1,0 +1,5 @@
+//apachechunked.spk
+
+s_string_repeat("A",0x100000);
+//s_string("4\r\nAAAA\r\n");
+
