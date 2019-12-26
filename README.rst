@@ -14,8 +14,11 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Version 1.8 IS OUT !! | 22/10/2019 10:26AM GMT+2 | <br>
+   [~] Version 2.0 IS OUT !! | 26/12/2019 06:57AM GMT+2 | <br>
+   <br> Lockdoor v2.0 is OUT! <br>
    <br> Lockdoor is now available on Docker <br>
+   <br> Lockdoor is now optimized for quick execution<br>
+   <br> Lockdoor availabe on Redcould ( Soon )<br>
    <br> Bugs Fixing for 7 tools <br>
    <br> fixing (apt) package manager problems <br>
    </h3>
@@ -67,7 +70,7 @@ Support me 💰 :
 Versions :closed_lock_with_key: :
 =============
 
-10/2019 : 1.8
+12/2019 : 2.0
 --------------------------
    - Information Gathring Tools (21)
    - Web Hacking Tools(15)
