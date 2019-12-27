@@ -17,6 +17,7 @@
    [~] Version 2.0 IS OUT !! | 26/12/2019 06:57AM GMT+2 | <br>
    <br> Lockdoor v2.0 is OUT! <br>
    <br> Lockdoor is now available on Docker <br>
+   <br> Fixing Docker issue <br>
    <br> Lockdoor is now optimized for quick execution<br>
    <br> Lockdoor availabe on Redcould ( Soon )<br>
    <br> Bugs Fixing for 7 tools <br>
