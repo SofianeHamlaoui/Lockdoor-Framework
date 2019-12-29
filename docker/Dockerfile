@@ -16,7 +16,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     echo 'export LANG="en_US.UTF-8"' >> .bashrc && \
     curl -L https://gist.githubusercontent.com/SofianeHamlaoui/a95285afd01523f7d7531b002fa669db/raw/0dc9cb9084158aafd0dc3eb3481824242d408fb9/bashrc >> .bashrc && \
-    git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git 
+    git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && \
+    apt update && apt upgrade
 
 
 ENV PYTHONIOENCODING utf-8
@@ -24,5 +25,3 @@ ENV PYTHONIOENCODING utf-8
 WORKDIR /root/Lockdoor-Framework
 
 RUN ./install.sh
-
-
