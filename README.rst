@@ -19,7 +19,7 @@
    <br> Lockdoor is now available on Docker <br>
    <br> Fixing Docker issue <br>
    <br> Lockdoor is now optimized for quick execution<br>
-   <br> Lockdoor availabe on Redcould ( Soon )<br>
+   <br> Lockdoor is now availabe on Redcould<br>
    <br> Bugs Fixing for 7 tools <br>
    <br> fixing (apt) package manager problems <br>
    </h3>
@@ -264,15 +264,21 @@ Linux Docker image (kalilinux/kali).**
                               .. code-block:: console
 
                                        sudo docker run -it --name lockdoor-container -w /home/Lockdoor-Framework --net=host sofianehamlaoui/lockdoor
-               
-                  3. *To re-run a stopped container:*
+                                       
+                  3. *Run Lockdoor Framework*
+
+                              .. code-block:: console
+
+                                       lockdoor
+                                       
+                  4. *To re-run a stopped container:*
 
                               .. code-block:: console
 
                                        sudo docker start -i sofianehamlaoui/lockdoor
 
 
-                  4. *To open multiple shells inside the container:*
+                  5. *To open multiple shells inside the container:*
 
                               .. code-block:: console
 
