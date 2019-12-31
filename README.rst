@@ -236,8 +236,7 @@ Installation 🛠️ :
 to worry about dependencies issues.**
 
 **A Docker image is available on Docker Hub and automatically re-built at each update: 
-https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on official Kali
-Linux Docker image (kalilinux/kali).**
+https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on the official debian docker image (debian).**
 
 - Docker Installation
    
