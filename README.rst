@@ -262,7 +262,7 @@ https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on the 
                   
                               .. code-block:: console
 
-                                       sudo docker run -it --name lockdoor-container -w /home/Lockdoor-Framework --net=host sofianehamlaoui/lockdoor
+                                       sudo docker run -it --name lockdoor-container -w /Lockdoor-Framework --net=host sofianehamlaoui/lockdoor
                                        
                   3. *Run Lockdoor Framework*
 
