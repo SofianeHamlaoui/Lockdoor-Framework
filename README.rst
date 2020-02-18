@@ -478,7 +478,7 @@ Lockdoor Resources contents 📚 :
 
 **Crypto** 🛡️:
 --------------------------
-   - `Crypto101.pdf <ToolsResources/ENCRYPTION/Crypto101.pdf>`_
+   - `Crypto101.pdf <ToolsResources/ENCRYPTION/CHEATSHEETS/Crypto101.pdf>`_
 
 **Exploitation** ❗:
 --------------------------
@@ -490,7 +490,7 @@ Lockdoor Resources contents 📚 :
    - `network_pivoting_techniques <ToolsResources/EXPLOITATION/CHEATSHEETS/network_pivoting_techniques.md>`_
    - `pivoting <ToolsResources/EXPLOITATION/CHEATSHEETS/pivoting.md>`_
    - `pivoting_ <ToolsResources/EXPLOITATION/CHEATSHEETS/pivoting_.md>`_
-   - `Public Exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/Public Exploits.md>`_
+   - `Public Exploits <ToolsResources/EXPLOITATION/CHEATSHEETS/Public%20Exploits.md>`_
    - `reverse_shell_with_msfvenom <ToolsResources/EXPLOITATION/CHEATSHEETS/reverse_shell_with_msfvenom.md>`_
 
 **Networking** 🖧 :
@@ -498,7 +498,7 @@ Lockdoor Resources contents 📚 :
    - `bpf_syntax <ToolsResources/NETWORKING/bpf_syntax.md>`_
    - `Cheatsheet_Networking <ToolsResources/NETWORKING/Cheatsheet_Networking.txt>`_
    - `Cheatsheet_Oracle <ToolsResources/NETWORKING/Cheatsheet_Oracle.txt>`_
-   - `networking_concept <ToolsResources/NETWORKING/networking_concept>`_
+   - `networking_concept <ToolsResources/NETWORKING/networking_concept.md>`_
    - `nmap_quick_reference_guide <ToolsResources/NETWORKING/nmap_quick_reference_guide.pdf>`_
    - `tcpdump <ToolsResources/NETWORKING/tcpdump.pdf>`_
 
@@ -512,7 +512,6 @@ Lockdoor Resources contents 📚 :
    - `Cheatsheet_AVBypass <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_AVBypass.txt>`_
    - `Cheatsheet_BuildReviews <ToolsResources/POST-EXPL/CHEATSHEETS/Cheatsheet_BuildReviews.txt>`_
    - `code-execution-reverse-shell-commands <ToolsResources/POST-EXPL/CHEATSHEETS/code-execution-reverse-shell-commands.txt>`_
-   - `important-linux-serv-files <ToolsResources/POST-EXPL/CHEATSHEETS/important-linux-serv-files.txt>`_
 
 **Privilege Escalation** ⚠️:
 --------------------------
@@ -524,7 +523,7 @@ Lockdoor Resources contents 📚 :
 
 **Pentesting & Security Assessment Findings Report Templates** 📝 :
 --------------------------
-   - `Demo Company - Security Assessment Findings Report.docx <ToolsResources/REPORT/TEMPLATES/Demo Company - Security Assessment Findings Report.docx>`_
+   - `Demo Company - Security Assessment Findings Report.docx <ToolsResources/REPORT/TEMPLATES/Demo-Company-Security-Asses-Findings-Report.docx>`_
    - `linux-template.md <ToolsResources/REPORT/TEMPLATES/linux-template.md>`_
    - `PWKv1-REPORT.doc <ToolsResources/REPORT/TEMPLATES/PWKv1-REPORT.doc>`_
    - `pwkv1_report.doc <ToolsResources/REPORT/TEMPLATES/pwkv1_report.doc>`_
