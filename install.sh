@@ -1,7 +1,6 @@
 #!/bin/bash
 #Let's Begin ::
 # Colors
-
 b='\033[1m'
 u='\033[4m'
 bl='\E[30m'
