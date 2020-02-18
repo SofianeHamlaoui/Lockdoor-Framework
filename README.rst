@@ -2,7 +2,7 @@
 
    <h1 align="center">
 
-.. image:: ./pictures/logos/logo205x250.gif
+.. image:: http://up.sofianehamlaoui.me/lockdoor/logos/logo205x250.gif
 
 .. raw:: html
 
@@ -52,8 +52,8 @@
 .. contents::
     :local:
     :depth: 3
-    
-=============    
+
+=============
 Badges 📌 :
 =============
 
@@ -66,7 +66,7 @@ Support me 💰 :
 =============
    - On Paypal : https://www.paypal.com/paypalme2/SofianeHamlaoui
    - BTC Addresse : 1NR2oqsuevvWJwzCyhBXmqEA5eYAaSoJFk
-   
+
 =============
 Versions :closed_lock_with_key: :
 =============
@@ -166,41 +166,43 @@ Resources and cheatsheets 📙 : (Added value)
 Screenshots 💻 :
 =============
 
-.. |1st| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/1.png
+.. |1st| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/installation-dir-1.png
 
-.. |lockup| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/2.png
+.. |lockup| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/verbosemode.png
 
-.. |root| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/3.png
+.. |root| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/RootMenu.png
 
-.. |infogath| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/4.png
+.. |infogath| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/infogath.png
 
-.. |web| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/5.png
+.. |web| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/webhack.png
 
-.. |expl| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/6.png
+.. |expl| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/exploitation.png
 
-.. |Revers| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/7.png
+.. |Revers| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/reverseeng.png
 
-.. |Enc| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/8.png
+.. |Enc| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/encdec.png
 
-.. |passwd| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/9.png
+.. |passwd| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/passattack.png
 
-.. |shells| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/10.png
+.. |shells| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/shells.png
 
-.. |Privesc| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/11.png
+.. |Privesc| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/privesc.png
 
-.. |SE| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/12.png
+.. |SE| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/socialengin.png
 
-.. |psafrt| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/13.png
+.. |psafrt| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/reporttemplates.png
 
-.. |help| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/14.png
+.. |help| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/walkth.png
 
-.. |about| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/screenshots/15.png
+.. |update| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/update.png
 
-+------------+-----------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+---------+
-| First Step | Lockdoor update | ROOT Menu | Information Gathering | Web Hacking | Exploitation | Reverse Engineering | Enc/Dec | Password Attacks | Shells   | PrivEsc   | Social Engineering | PSAFRT   | Walkthroughs | About   |
-+============+=================+===========+=======================+=============+==============+=====================+=========+==================+==========+===========+====================+==========+==============+=========+
-| |1st|      | |lockup|        | |root|    | |infogath|            | |web|       | |expl|       | |Revers|            | |Enc|   | |passwd|         | |shells| | |Privesc| | |SE|               | |psafrt| | |help|       | |about| |
-+------------+-----------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+---------+
+.. |about| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/about.png
+
++------------+--------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+-----------------+---------+
+| First Step | Verbose mode | R00T menu | Information Gathering | Web Hacking | Exploitation | Reverse Engineering | Enc/Dec | Password Attacks | Shells   | PrivEsc   | Social Engineering | PSAFRT   | Walkthroughs | Update lockdoor | About   |
++------------+--------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+-----------------+---------+
+| |1st|      | |lockup|     | |root|    | |infogath|            | |web|       | |expl|       | |Revers|            | |Enc|   | |passwd|         | |shells| | |Privesc| | |SE|               | |psafrt| | |help|       | |update|        | |about| |
++------------+--------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+-----------------+---------+
 
 ============
 Demos 💻 :
@@ -232,44 +234,44 @@ Demos 💻 :
 Installation 🛠️ :
 =============
 
-**The recommended way to use Lockdoor is by pulling the Docker Image so you will not have 
+**The recommended way to use Lockdoor is by pulling the Docker Image so you will not have
 to worry about dependencies issues.**
 
-**A Docker image is available on Docker Hub and automatically re-built at each update: 
+**A Docker image is available on Docker Hub and automatically re-built at each update:
 https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on the official debian docker image (debian).**
 
 - Docker Installation
-   
+
       - Installing requirments
 
             .. code-block:: console
-      
-                     sudo apt install docker < Debian-based distributions 
-                     sudo dnf install docker < RPM-based distributions 
-                     sudo pacman -S docker < Arch-based distributions 
+
+                     sudo apt install docker < Debian-based distributions
+                     sudo dnf install docker < RPM-based distributions
+                     sudo pacman -S docker < Arch-based distributions
                      sudo zypper install docker < OS-based distributions
                      sudo yum install docker < RH-based distributions
-                     
-      - Using lockdoor's docker version 
-      
+
+      - Using lockdoor's docker version
+
                   1. *Pull lockdoor Docker Image:*
 
                               .. code-block:: console
 
                                        sudo docker pull sofianehamlaoui/lockdoor
-                                       
+
                   2. *Run fresh Docker container:*
-                  
+
                               .. code-block:: console
 
                                        sudo docker run -it --name lockdoor-container -w /Lockdoor-Framework --net=host sofianehamlaoui/lockdoor
-                                       
+
                   3. *Run Lockdoor Framework*
 
                               .. code-block:: console
 
                                        lockdoor
-                                       
+
                   4. *To re-run a stopped container:*
 
                               .. code-block:: console
@@ -282,20 +284,20 @@ https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on the 
                               .. code-block:: console
 
                                        sudo docker exec -it lockdoor-container bash
-      
+
 - Automatically
 
          .. code-block:: console
-         
-                  1) Automatically(x2) installation :
-                  
-                     bash <(wget -qO- https://lockdoor.sofianehamlaoui.me/lock.html)
-                  
-                  2) Automatically(x1) installation :
-                  
-                     git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && cd Lockdoor-Framework
-                     chmod +x ./install.sh
-                     ./install.sh
+
+                   1) Automatically(x2) installation :
+
+                      bash <(wget -qO- https://lockdoor.sofianehamlaoui.me/lock.html)
+
+                   2) Automatically(x1) installation :
+
+                      git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && cd Lockdoor-Framework
+                      chmod +x ./install.sh
+                      ./install.sh
 
 - Manually
 
