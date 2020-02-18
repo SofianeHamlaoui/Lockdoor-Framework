@@ -1,5 +1,5 @@
 <p align="center">
-  <img  src="https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/logos/logo205x250.gif">
+  <img  src="https://up.sofianehamlaoui.me/lockdoor/logos/logo205x250.gif">
 </p>
 <h1 align="center">
 <br class="title">
