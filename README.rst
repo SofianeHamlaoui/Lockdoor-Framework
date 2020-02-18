@@ -588,7 +588,7 @@ Lockdoor Resources contents 📚 :
 
    - `Google Hacking DataBase <ToolsResources/GHDB.pdf>`_
 
-   - `Google Fu  <ToolsResources/Google_FU.pdf>`_
+   - `Google Fu  <ToolsResources/GoogleFU.pdf>`_
 **Contributing** ℹ️ :
 -----------------------
    1. Fork it ( https://github.com/SofianeHamlaoui/Lockdoor-Framework/fork )
