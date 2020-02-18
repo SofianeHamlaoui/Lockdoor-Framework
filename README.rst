@@ -199,7 +199,7 @@ Screenshots 💻 :
 .. |about| image:: https://up.sofianehamlaoui.me/lockdoor/screenshots/about.png
 
 +------------+--------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+-----------------+---------+
-| First Step | Verbose mode | R00T menu | Information Gathering | Web Hacking | Exploitation | Reverse Engineering | Enc/Dec | Password Attacks | Shells   | PrivEsc   | Social Engineering | PSAFRT   | Walkthroughs | Update lockdoor | About   |
+| First Step | Verbose mode | R00T menu | Information Gathering | Web Hacking | Exploitation | Reverse Engineering | Enc/Dec | Password Attacks | Shells   | PrivEsc   | Social Engineering | PSAFRT   | Walkthroughs | Update Lockdoor | About   |
 +------------+--------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+-----------------+---------+
 | |1st|      | |lockup|     | |root|    | |infogath|            | |web|       | |expl|       | |Revers|            | |Enc|   | |passwd|         | |shells| | |Privesc| | |SE|               | |psafrt| | |help|       | |update|        | |about| |
 +------------+--------------+-----------+-----------------------+-------------+--------------+---------------------+---------+------------------+----------+-----------+--------------------+----------+--------------+-----------------+---------+
