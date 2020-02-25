@@ -2,7 +2,7 @@
 
    <h1 align="center">
 
-.. image:: http://up.sofianehamlaoui.me/lockdoor/logos/logo205x250.gif
+.. image:: https://up.sofianehamlaoui.me/lockdoor/logos/logo205x250.gif
 
 .. raw:: html
 
@@ -44,11 +44,6 @@
    :target: https://GitHub.com/SofianeHamlaoui/
 .. |Tested-on| image:: https://img.shields.io/badge/Tested%20on%20%20-Linux%20%26%20Windows-blue
    :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework
-
-.. |Docker|  image:: https://img.shields.io/docker/pulls/sofianehamlaoui/lockdoor
-   :target: https://hub.docker.com/r/sofianehamlaoui/lockdoor
-
-
 .. contents::
     :local:
     :depth: 3
@@ -59,7 +54,7 @@ Badges 📌 :
 
 |forthebadge made-with-python| |built-with-love|
 
-|code-quality| |Pypi| |GitHub release|  |Docker| |Tested-on| |Last commit| |License| |Twitter|
+|code-quality| |Pypi| |GitHub release| |Tested-on| |Last commit| |License| |Twitter|
 
 =============
 Support me 💰 :
@@ -96,7 +91,7 @@ Versions :closed_lock_with_key: :
    - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
    - Some bugs That I'm fixing with time so don't worry about that.
 
-.. image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
+.. image:: https://up.sofianehamlaoui.me/lockdoor/gifs/kali.gif
 
 
 =============
@@ -208,17 +203,17 @@ Screenshots 💻 :
 Demos 💻 :
 ============
 
-.. |Kali| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/kali.gif
+.. |Kali| image:: https://up.sofianehamlaoui.me/lockdoor/gifs/kali.gif
 
-.. |Ubuntu| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/ubuntu.gif
+.. |Ubuntu| image:: https://up.sofianehamlaoui.me/lockdoor/gifs/ubuntu.gif
 
-.. |Arch Linux| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/archlinux.gif
+.. |Arch Linux| image:: https://up.sofianehamlaoui.me/lockdoor/gifs/archlinux.gif
 
-.. |Fedora| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/fedora.gif
+.. |Fedora| image:: https://up.sofianehamlaoui.me/lockdoor/gifs/fedora.gif
 
-.. |Opensuse| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/opensuse.gif
+.. |Opensuse| image:: https://up.sofianehamlaoui.me/lockdoor/gifs/opensuse.gif
 
-.. |Windows1| image:: https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/pictures/gifs/windows.gif
+.. |Windows1| image:: https://up.sofianehamlaoui.me/lockdoor/gifs/windows.gif
 
 +------------+----------+--------------+----------+------------+-------------------+
 | Kali Linux | Ubuntu   | Arch Linux   | Fedora   | Opensuse   | Windows (Cygwin)  |
@@ -588,7 +583,7 @@ Lockdoor Resources contents 📚 :
 
    - `Google Hacking DataBase <ToolsResources/GHDB.pdf>`_
 
-   - `Google Fu  <ToolsResources/GoogleFU.pdf>`_
+   - `Google Fu  <ToolsResources/GoogleFu.pdf>`_
 **Contributing** ℹ️ :
 -----------------------
    1. Fork it ( https://github.com/SofianeHamlaoui/Lockdoor-Framework/fork )
