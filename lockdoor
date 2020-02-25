@@ -100,6 +100,18 @@ def vercheck():
                 print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
             else:
                 update.lockdoor()
+def updatingtools():
+    spc()
+    printlogo()
+    confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to update the installed tools  ?: " + "\033[94m(Y/N) : \033[91m")
+    if not confirm in no:
+        print("\033[92mUpdating The Tools...\033[90m")
+        spc()
+        os.system('sudo find ' + installdirc + ' -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull origin master" \;')
+        spc()
+        oktocont()
+        clr()
+
 #INIT1
 clr()
 printlogo()
@@ -112,6 +124,7 @@ installdirc = contents.replace('Location:', '')
 def init():
     checkconnect()
     confirmlocation()
+    updatingtools()
     spc()
     printlogo()
     vercheck()
