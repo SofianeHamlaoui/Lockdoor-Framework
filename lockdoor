@@ -24,7 +24,7 @@ from pathlib import Path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "2.0"
+Version = "2.2"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
 #Print Logo
@@ -49,6 +49,7 @@ def printlogo():
 \033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
 \033[94m       ..................\033[0m
 """)
+
 def oktocont():
     ans = input("\033[0;36mPress Enter to Continue...\033[0m")
 def clr():
@@ -59,7 +60,8 @@ def checkroot():
     #Linux
     if platform == "linux" or platform == "linux2":
         if os.geteuid() != 0:
-            exit("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+            print("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+            sys.exit()
         else:
             print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
     #Cygwin
@@ -86,7 +88,8 @@ def checkconnect():
         _ = requests.get(url, timeout=1)
         return True
     except requests.ConnectionError:
-        exit("          \033[1;33;40m-[!]- YOU NEED INTERNET CONNECTION TO RUN LOCKDOOR -[!]-\033[0m")
+        print("          \033[1;33;40m-[!]- YOU NEED INTERNET CONNECTION TO RUN LOCKDOOR -[!]-\033[0m")
+        sys.exit()
     return
 def vercheck():
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
@@ -113,6 +116,7 @@ def updatingtools():
         clr()
 
 #INIT1
+#Lockdoor Config file isn't set, run the install.sh file from Github to install requirments and set the config
 clr()
 printlogo()
 checkroot()
