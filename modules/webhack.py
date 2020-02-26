@@ -3,6 +3,10 @@ import main
 from pathlib import Path
 from datetime import datetime
 from time import sleep
+from os import path
+import sys
+from sys import platform
+from platform import system
 def printlogo():
     print("""
 \033[94m            ..',,,'..           \033[0m
@@ -29,11 +33,6 @@ yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
 null = ""
-#Config
-f = open(config + 'lockdoor.conf')
-contents = f.read().rstrip('\n')
-f.close()
-installdirc = contents.replace('Location:', '')
 ##########SHRT
 def oktocont():
     ans = input("\033[0;36mPress Enter to Continue...\033[0m")
@@ -60,7 +59,50 @@ def pop():
     spc()
     oktocont()
     spc()
+def checkroot():
+    #Linux
+    if platform == "linux" or platform == "linux2":
+        if os.geteuid() != 0:
+            print("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+            sys.exit()
+        else:
+            print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
+    #Cygwin
+    elif platform == "cygwin":
+        print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
 ############
+#Config
+if str(path.exists('/root/.config/lockdoor/lockdoor.conf')) == "False":
+    prilogspc()
+    checkroot()
+    spc()
+    print("\033[91m                     Lockdoor Config not file found!\033[0m")
+    spc()
+    confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to run the installation script  ?: " + "\033[94m(Y/N) : \033[91m")
+    if not confirm in no:
+        spc()
+        print("\033[92mInstalling Lockdoor with requirments...\033[90m")
+        spc()
+        os.system("wget -qO- https://lockdoor.sofianehamlaoui.me/install.sh > install.sh")
+        os.system("chmod +x install.sh && ./install.sh")
+        spc()
+        oktocont()
+        clr()
+    else:
+        spc()
+        print("NO? so you have to download lockdoor from Github and run the install script [\033[94mhttps://git.io/JeDay\033[91m]")
+        sys.exit()
+else:
+    clr()
+    prilogspc()
+    print("\033[92m                                Lockdoor Config file found!\033[91m")
+    spc()
+    oktocont()
+    clr()
+f = open(config + 'lockdoor.conf')
+contents = f.read().rstrip('\n')
+f.close()
+installdirc = contents.replace('Location:', '')
 ###Cheatsheets
 def webhsh():
     clscprilo()
