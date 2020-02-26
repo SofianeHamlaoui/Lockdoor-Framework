@@ -46,7 +46,7 @@ def show():
     #                   Lockdoor Framework                      #
     #  A Penetration Testing framework with CyberSec Resources  #
     #############################################################
-    #    -- Version: v2.0 12/12/2019                            #
+    #    -- Version: v2.2 01/01/2020                            #
     #    -- Developer: Sofiane Hamlaoui                         #
     #    -- Thanks: No One                                      #
     #############################################################
