@@ -13,7 +13,18 @@ c='\E[36m'
 w='\E[37m'
 endc='\E[0m'
 enda='\033[0m'
-
+trap ctrl_c INT
+function ctrl_c() {
+    echo ""
+    echo -e "                   ${r} Do you want to leave installation ?${endc}"
+    read -p "                                (Y/N) :  "   yn
+    case $yn in
+        [Yy]* ) exit;;
+        [Nn]* ) install;;
+        * ) install;;
+    esac
+    echo ""
+}
 function showlogo {
     clear
 echo """
