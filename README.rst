@@ -520,6 +520,7 @@ Lockdoor Resources contents 📚 :
    - `OSCP-OS-XXXXX-Lab-Report_Template3.2.docx <ToolsResources/REPORT/TEMPLATES/OSCP-OS-XXXXX-Lab-Report_Template3.2.docx>`_
    - `OSCP-OS-XXXXX-Exam-Report_Template3.2.docx <ToolsResources/REPORT/TEMPLATES/OSCP-OS-XXXXX-Exam-Report_Template3.2.docx>`_
    - `CherryTree_template.ctb <ToolsResources/REPORT/TEMPLATES/CherryTree_template.ctb>`_
+   - `eventory-sample-pentest-report.pdf <ToolsResources/REPORT/TEMPLATES/eventory-sample-pentest-report.pdf>`_
 **Reverse Engineering** ⚡ :
 --------------------------
    - `Buffer_Overflow_Exploit <ToolsResources/REVERSE/CHEATSHEETS/Buffer_Overflow_Exploit.md>`_
