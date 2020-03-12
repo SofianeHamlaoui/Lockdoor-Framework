@@ -1,5 +1,5 @@
 FROM kalilinux/kali
-MAINTAINER Sofiane Hamlaoui <s0fianehaml40u1@gmail.com> <https://Github.com/SofianeHamlaoui>
+MAINTAINER Sofiane Hamlaoui <s0fianehaml40u1@gmail.com> <https://github.com/SofianeHamlaoui>
 
 LABEL org.label-schema.name="sofianehamlaoui/lockdoor"
 LABEL org.label-schema.description="Lockdoor Framework : A Penetration Testing framework with Cyber Security Resources"

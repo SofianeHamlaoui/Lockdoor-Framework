@@ -1,6 +1,6 @@
 import os
 import sys
-import main
+from lockdoors import main
 from pathlib import Path
 from datetime import datetime
 from time import sleep
@@ -53,7 +53,7 @@ def popp():
     oktocont()
     printlogo()
     spc()
-def okso():
+def okpr():
     spc()
     oktocont()
     menu()
@@ -63,50 +63,51 @@ def pop():
     spc()
 ############
 ###Cheatsheets
-def socsh():
+def privesh():
     clscprilo()
     print("\033[91mHere is the list of the files :\033[90m")
     print("\033[92m")
-    os.system("     find " + installdirc + "/SOCIAL_ENGINEERING/CHEATSHEETS -type f")
+    os.system("     find " + installdirc + "/PrivEsc/CHEATSHEETS -type f")
     print("\033[90m")
-    okso()
+    okpr()
 #Tools
-def scythe():
-    scythe.title = "Cewl : an accounts enumerator"
-    tool_dir = "/SOCIAL_ENGINEERING/Tools/scythe"
-    prilogspc()
-    prilogspc()
-    print("\033[92m           " + scythe.title + "\033[90m")
+def priivesc():
+    priivesc.title=("A collection of Windows, Linux and MySQL privilege escalation scripts and exploits")
+    printlogo()
+    print("\033[92m" + priivesc.title + "\033[90m")
+    print()
+    print("\033[91mDownloading ...\033[0m")
     spc()
-    print("\033[92m" + "Change " + installdirc + tool_dir + "/accountfile.txt" + """ with
-    your targes""" + "\033[90m")
+    os.system("git clone https://github.com/1N3/PrivEsc.git " + installdirc + "/PrivEsc/Scripts")
     spc()
-    os.system("python2 " + installdirc + tool_dir + "/scythe.py")
-    okso()
+    print("\033[91m" + """\033[91mThe collection of Windows, Linux and MySQL privilege
+    escalation scripts and exploits is downloaded successfully , you can check
+    it here : """ + "\033[90m" + installdirc + "/PrivEsc/Scripts")
+    okpr()
 #Menu
 def menu():
     clscprilo()
     print("""\033[94m
-       [ SOCIAL ENGINEERING ]
+       [ PRIVILEGE ESCALATION ]
 
          Make A Choice :\033[90m
     \033[91m -[!]----- Tools ------[!]-\033[90m
 
-            \033[93m1)  Scythe\033[90m
+        \033[93m1)  All you need as Privilege Escalation scripts and exploits\033[90m
 
     \033[91m-[!]----- Cheatsheets ------[!]-\033[90m
 
-        \033[93m    2) Social Engineering Cheatsheets\033[90m
+    \033[93m    2) Privilege Escalation Cheatsheets\033[90m
     ------------------------
     \033[94mb)    Back to ROOT MENU
     q)    Leave  Lockdoor\033[94m
        """)
-    choice = input("\033[92mLockdoor@SocEng~# \033[0m")
+    choice = input("\033[92mLockdoor@PrivEsc~# \033[0m")
     os.system('clear')
     if choice == "1":
-      scythe()
+      priivesc()
     elif choice == "2":
-        socsh()
+        privesh()
     elif choice == "b":
       main.menu()
     elif choice == "q":

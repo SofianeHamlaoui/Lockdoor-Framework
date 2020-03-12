@@ -1,6 +1,6 @@
 import os
 import sys
-import main
+from lockdoors import main
 from pathlib import Path
 from datetime import datetime
 from time import sleep
@@ -24,17 +24,6 @@ def printlogo():
 \033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
 \033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
 \033[94m       ..................\033[0m""")
-#VAR
-config = str(Path.home()) + "/.config/lockdoor/"
-yes = set(['yes', 'y', 'ye', 'Y'])
-no = set(['no', 'n', 'nop', 'N'])
-cwd = os.getcwd()
-null = ""
-#Config
-f = open(config + 'lockdoor.conf')
-contents = f.read().rstrip('\n')
-f.close()
-installdirc = contents.replace('Location:', '')
 ##########SHRT
 def oktocont():
     ans = input("\033[0;36mPress Enter to Continue...\033[0m")
@@ -42,17 +31,35 @@ def clr():
     os.system('clear')
 def spc():
     print("")
+def prilogspc():
+    printlogo()
+    spc()
 def clscprilo():
     clr()
-    printlogo()   
+    printlogo()
 ############
-###Fonc
-def psafrt():
+def show():
     clscprilo()
-    print("\033[91mHere is the list of the files :\033[90m")
-    print("\033[92m")
-    os.system("     find " + installdirc + "/REPORT/TEMPLATES/ -type f")
-    print("\033[90m")
-    spc()
+    print("""
+
+    #############################################################
+    #                   Lockdoor Framework                      #
+    #  A Penetration Testing framework with CyberSec Resources  #
+    #############################################################
+    #    -- Version: v2.2 01/01/2020                            #
+    #    -- Developer: Sofiane Hamlaoui                         #
+    #    -- Thanks: No One                                      #
+    #############################################################
+
+                        \033[94m-[!]-Description-[!]-\033[91m
+   LockDoor is a Framework aimed at helping penetration testers,
+   bug bounty hunters And cyber security engineers.
+   This tool is designed for Debian/Ubuntu/ArchLinux based
+   distributions to create a similar and familiar distribution
+   for Penetration Testing. But containing the favorite and the most used tools by
+   Pentesters.
+   As pentesters, most of us has his personal ' /pentest/ ' directory so this
+   Framework is helping you to build a perfect one.
+    """)
     oktocont()
     main.menu()

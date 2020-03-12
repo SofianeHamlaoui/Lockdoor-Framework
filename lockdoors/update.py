@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-import main
+from lockdoors import main
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 def printlogo():

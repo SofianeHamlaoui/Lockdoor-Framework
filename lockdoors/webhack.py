@@ -1,5 +1,5 @@
 import os
-import main
+from lockdoors import main
 from pathlib import Path
 from datetime import datetime
 from time import sleep

@@ -1,18 +1,18 @@
 import os
 import sys
-import infogathering
-import webhack
-import exploitation
-import reverse
-import encdyc
-import passattack
-import shells
-import privesc
-import soceng
-import psafrt
-import wtpp
-import about
-import update
+from lockdoors import infogathering
+from lockdoors import webhack
+from lockdoors import exploitation
+from lockdoors import reverse
+from lockdoors import encdyc
+from lockdoors import passattack
+from lockdoors import shells
+from lockdoors import privesc
+from lockdoors import soceng
+from lockdoors import psafrt
+from lockdoors import wtpp
+from lockdoors import about
+from lockdoors import update
 from datetime import datetime
 from time import sleep
 def printlogo():
