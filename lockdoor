@@ -9,12 +9,8 @@ import urllib.request, urllib.parse, urllib.error
 import atexit
 import requests
 from pathlib import Path
-if path.isdir('/usr/lib/python3.8/site-packages/lockdoors') == 'True':
-    sys.path.insert(0, '/usr/lib/python3.8/site-packages/lockdoors')
-else:
-    sys.path.insert(0, str(Path.home()) + '/.local/lib/python3.8/site-packages/lockdoors')
-import main
-import update as update
+from lockdoors import main
+from lockdoors import update
 #req
 import base64
 from sys import argv
