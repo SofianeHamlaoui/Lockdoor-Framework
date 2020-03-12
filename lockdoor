@@ -2,14 +2,19 @@
 #Bismillah <3 
 import sys
 import os
+from os import path
 import time
 import socket
 import urllib.request, urllib.parse, urllib.error
 import atexit
 import requests
-sys.path.insert(1, 'modules')
-from modules import main as main
-from modules import update as update
+from pathlib import Path
+if path.isdir('/usr/lib/python3.8/site-packages/lockdoors') == 'True':
+    sys.path.insert(0, '/usr/lib/python3.8/site-packages/lockdoors')
+else:
+    sys.path.insert(0, str(Path.home()) + '/.local/lib/python3.8/site-packages/lockdoors')
+import main
+import update as update
 #req
 import base64
 from sys import argv
@@ -18,13 +23,12 @@ from platform import system
 from urllib.parse import urlparse
 from time import sleep
 from datetime import datetime
-from pathlib import Path
 from os import path
 ###Variables
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "2.2"
+Version = "2.2.2"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
 #Print Logo
