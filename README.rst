@@ -14,7 +14,7 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Version 2.2.2 IS OUT !! | 13/03/2020 00:27PM GMT+2 | <br>
+   [~] Version 2.2.3 IS OUT !! | 13/03/2020 00:43PM GMT+2 | <br>
    </h3>
 
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
