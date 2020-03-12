@@ -8,7 +8,7 @@
 
    <br class="title">
    Lockdoor Pentesting Framework <br>
-   </h1><h2>
+   </h1><h2 align="center">
    [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows [~]
    </h2>
    <h1 align="center">
