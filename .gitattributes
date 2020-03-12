@@ -4,3 +4,4 @@ ToolsResources/* linguist-vendored
 *.sh linguist-vendored=false
 *.py linguist-vendored=false
 *.pl linguist-vendored=false
+*.test linguist-vendored
