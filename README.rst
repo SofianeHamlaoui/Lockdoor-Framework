@@ -9,19 +9,12 @@
    <br class="title">
    Lockdoor Pentesting Framework <br>
    </h1><h2>
-   [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin) [~]
+   [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows [~]
    </h2>
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Version 2.0 IS OUT !! | 26/12/2019 06:57AM GMT+2 | <br>
-   <br> Lockdoor v2.0 is OUT! <br>
-   <br> Lockdoor is now available on Docker <br>
-   <br> Fixing Docker issue <br>
-   <br> Lockdoor is now optimized for quick execution<br>
-   <br> Lockdoor is now availabe on Redcould<br>
-   <br> Bugs Fixing for 7 tools <br>
-   <br> fixing (apt) package manager problems <br>
+   [~] Version 2.2 IS OUT !! | 02/02/2020 08:24PM GMT+2 | <br>
    </h3>
 
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
