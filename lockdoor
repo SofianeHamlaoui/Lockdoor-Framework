@@ -24,7 +24,7 @@ from os import path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "2.2.2"
+Version = "2.2.3"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
 #Print Logo
