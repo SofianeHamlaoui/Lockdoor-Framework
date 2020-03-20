@@ -1,9 +1,13 @@
 import os
 import sys
+from pathlib import Path
 from lockdoors import main
 from pathlib import Path
 from datetime import datetime
+from sys import platform
+from platform import system
 from time import sleep
+import urllib.request, urllib.parse, urllib.error
 def printlogo():
     print("""
 \033[94m            ..',,,'..           \033[0m
@@ -30,6 +34,59 @@ yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
 null = ""
+def clr():
+    os.system('clear')
+def spc():
+    print("")
+def prilogspc():
+    printlogo()
+    spc()
+def checkroot():
+    #Linux
+    if platform == "linux" or platform == "linux2":
+        if os.geteuid() != 0:
+            print("              \033[1;33;40m-[!]- This Tool Must Run As ROOT -[!]-\033[0m")
+            sys.exit()
+        else:
+            print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
+    #Cygwin
+    elif platform == "cygwin":
+        print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
+if (" ".join(sys.argv[1:]) == "--version") or (" ".join(sys.argv[1:]) == "-v"):
+    with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
+        resp = str(response.read().decode('utf-8'))
+        prilogspc()
+        print("\033[94m                        This Version of Lockdoor is V" + resp +"\033[91m")
+        sys.exit()
+
+if os.path.isfile('/root/.config/lockdoor/lockdoor.conf') == False:
+    prilogspc()
+    checkroot()
+    spc()
+    print("\033[91m                     Lockdoor Config not file found!\033[0m")
+    spc()
+    confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to run the installation script  ?: " + "\033[94m(Y/N) : \033[91m")
+    if not confirm in no:
+        spc()
+        print("\033[92mInstalling Lockdoor with requirments...\033[90m")
+        spc()
+        os.system("wget -qO- https://lockdoor.sofianehamlaoui.me/install.sh > install.sh")
+        os.system("chmod +x install.sh && ./install.sh")
+        spc()
+        oktocont()
+        clr()
+    else:
+        spc()
+        print("NO? so you have to download lockdoor from Github and run the install script [\033[94mhttps://git.io/JeDay\033[91m]")
+        sys.exit()
+else:
+    clr()
+    prilogspc()
+    print("\033[92m                                Lockdoor Config file found!\033[91m")
+    spc()
+    oktocont()
+    clr()
+
 #Config
 f = open(config + 'lockdoor.conf')
 contents = f.read().rstrip('\n')
