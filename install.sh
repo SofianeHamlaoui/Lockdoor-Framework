@@ -1,5 +1,4 @@
 #!/bin/bash
-#V2.2.3
 #Let's Begin ::
 # Colors
 b='\033[1m'

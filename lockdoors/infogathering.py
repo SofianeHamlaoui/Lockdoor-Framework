@@ -34,6 +34,8 @@ yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
 null = ""
+def oktocont():
+    ans = input("\033[0;36mPress Enter to Continue...\033[0m")
 def clr():
     os.system('clear')
 def spc():
