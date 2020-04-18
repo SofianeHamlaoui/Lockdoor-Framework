@@ -658,6 +658,6 @@ def menu():
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
-      webhack()
+      menu()
     else:
-      webhack()
+      menu()
