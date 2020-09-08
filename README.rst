@@ -14,6 +14,7 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
+   [~] Lockdoor isn't on his best shape, so I'll make it better as soon as I get free time for that.
    [~] Version 2.2.3 IS OUT !! | 13/03/2020 00:43PM GMT+2 | <br>
    </h3>
 
