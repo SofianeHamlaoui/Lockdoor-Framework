@@ -8,26 +8,6 @@ from sys import platform
 from platform import system
 from time import sleep
 import urllib.request, urllib.parse, urllib.error
-def printlogo():
-    print("""
-\033[94m            ..',,,'..           \033[0m
-\033[94m         .',;;;;;;;;,'.         \033[0m
-\033[94m      ..,;;;;;;;;;;;;;;,..      \033[0m
-\033[94m     .,;;;,'..'''''.',;;;,.     \033[0m
-\033[94m     .;;;;.  ..   .. .;;;;'     \033[0m\033[91m (                                         \033[0m
-\033[94m     .,;;;.  ...     .;;;;.     \033[0m\033[91m )\ )               )  (                   \033[0m
-\033[94m      ..,;,.  ...   .,;,..      \033[0m\033[91m (()/(            ( /(  )\ )           (   \033[0m
-\033[94m        .';;'.    .',;'.        \033[0m\033[91m /(_))  (    (   )\())(()/(  (    (   )(   \033[0m
-\033[94m    ..',,;;;;;,,,,;;;;;,,'..    \033[0m\033[91m (_))    )\   )\ ((_)\  ((_)) )\   )\ (()\ \033[0m
-\033[94m  .','.....................''.  \033[0m\033[91m | |    ((_) ((_)| |(_) _| | ((_) ((_) ((_)\033[0m
-\033[94m .',..',,,,,,,,,,,,,,,,,,,..,,. \033[0m\033[91m | |__ / _ \/ _| | / // _` |/ _ \/ _ \| '_|\033[0m
-\033[94m .;,..,;;;;;;'....';;;;;;;..,;. \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m
-\033[94m ';;..,;;;;;,..,,..';;;;;,..,;' \033[0m\033[92m           Sofiane Hamlaoui | 2019         \033[0m
-\033[94m.';;..,;;;;,. .... .,;;;;,..;;,.\033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m
-\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m
-\033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
-\033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
-\033[94m       ..................\033[0m""")
 #VAR
 config = str(Path.home()) + "/.config/lockdoor/"
 yes = set(['yes', 'y', 'ye', 'Y'])
@@ -41,7 +21,7 @@ def clr():
 def spc():
     print("")
 def prilogspc():
-    printlogo()
+    main.printlogo()
     spc()
 def checkroot():
     #Linux
@@ -54,46 +34,7 @@ def checkroot():
     #Cygwin
     elif platform == "cygwin":
         print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
-if (" ".join(sys.argv[1:]) == "--version") or (" ".join(sys.argv[1:]) == "-v"):
-    with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
-        resp = str(response.read().decode('utf-8'))
-        prilogspc()
-        print("\033[94m                        This Version of Lockdoor is V" + resp +"\033[91m")
-        sys.exit()
 
-if os.path.isfile('/root/.config/lockdoor/lockdoor.conf') == False:
-    prilogspc()
-    checkroot()
-    spc()
-    print("\033[91m                     Lockdoor Config not file found!\033[0m")
-    spc()
-    confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to run the installation script  ?: " + "\033[94m(Y/N) : \033[91m")
-    if not confirm in no:
-        spc()
-        print("\033[92mInstalling Lockdoor with requirments...\033[90m")
-        spc()
-        os.system("wget -qO- https://lockdoor.sofianehamlaoui.me/install.sh > install.sh")
-        os.system("chmod +x install.sh && ./install.sh")
-        spc()
-        oktocont()
-        clr()
-    else:
-        spc()
-        print("NO? so you have to download lockdoor from Github and run the install script [\033[94mhttps://git.io/JeDay\033[91m]")
-        sys.exit()
-else:
-    clr()
-    prilogspc()
-    print("\033[92m                                Lockdoor Config file found!\033[91m")
-    spc()
-    oktocont()
-    clr()
-
-#Config
-f = open(config + 'lockdoor.conf')
-contents = f.read().rstrip('\n')
-f.close()
-installdirc = contents.replace('Location:', '')
 ##########SHRT
 def oktocont():
     ans = input("\033[0;36mPress Enter to Continue...\033[0m")
@@ -102,15 +43,15 @@ def clr():
 def spc():
     print("")
 def prilogspc():
-    printlogo()
+    main.printlogo()
     spc()
 def clscprilo():
     clr()
-    printlogo()
+    main.printlogo()
 def popp():
     spc()
     oktocont()
-    printlogo()
+    main.printlogo()
     spc()
 def okinf():
     spc()
@@ -736,7 +677,7 @@ def Raccoon():
         prilogspc()
         print("\033[92m           " + Raccoon.title + "\033[90m")
         spc()
-        printlogo()
+        main.printlogo()
         print("\033[91mInstalling ...\033[0m.")
         spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
@@ -775,7 +716,7 @@ def dnsrecon():
         clr()
         print("\033[92m           " + dnsrecon.title + "\033[90m")
         spc()
-        printlogo()
+        main.printlogo()
         print("\033[91mInstalling ...\033[0m.")
         spc()
         os.system("cd " + installdirc + tool_dir + " && pip3 install -r " + installdirc + tool_dir + "/requirements.txt" + null)
