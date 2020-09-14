@@ -16,7 +16,7 @@
    <h3 align="center">
    [~] Lockdoor isn't on his best shape, so I'll make it better as soon as I get free time for that.
 
-   [~] Version 2.2.3 IS OUT !! | 13/03/2020 00:43PM GMT+2 | <br>
+   [~] Version v2.2.4 IS OUT !! | 13/03/2020 00:43PM GMT+2 | <br>
    </h3>
 
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
