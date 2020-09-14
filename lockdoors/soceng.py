@@ -1,6 +1,7 @@
 import os
 import sys
 from lockdoors import main
+from lockdoors import shrts
 from pathlib import Path
 from datetime import datetime
 from time import sleep
@@ -11,28 +12,28 @@ cwd = os.getcwd()
 null = ""
 ###Cheatsheets
 def socsh():
-    main.clscprilo()
+    shrts.clscprilo()
     print("\033[91mHere is the list of the files :\033[90m")
     print("\033[92m")
-    os.system("     find " + main.getinstalldir() + "/SOCIAL_ENGINEERING/CHEATSHEETS -type f")
+    os.system("     find " + shrts.getinstalldir() + "/SOCIAL_ENGINEERING/CHEATSHEETS -type f")
     print("\033[90m")
-    main.okso()
+    shrts.okso()
 #Tools
 def scythe():
     scythe.title = "Cewl : an accounts enumerator"
     tool_dir = "/SOCIAL_ENGINEERING/Tools/scythe"
-    main.prilogspc()
-    main.prilogspc()
+    shrts.prilogspc()
+    shrts.prilogspc()
     print("\033[92m           " + scythe.title + "\033[90m")
-    main.spc()
-    print("\033[92m" + "Change " + main.getinstalldir() + tool_dir + "/accountfile.txt" + """ with
+    shrts.spc()
+    print("\033[92m" + "Change " + shrts.getinstalldir() + tool_dir + "/accountfile.txt" + """ with
     your targes""" + "\033[90m")
-    main.spc()
-    os.system("python2 " + main.getinstalldir() + tool_dir + "/scythe.py")
-    main.okso()
+    shrts.spc()
+    os.system("python2 " + shrts.getinstalldir() + tool_dir + "/scythe.py")
+    shrts.okso()
 #Menu
 def menu():
-    main.clscprilo()
+    shrts.clscprilo()
     print("""\033[94m
        [ SOCIAL ENGINEERING ]
 
@@ -57,11 +58,11 @@ def menu():
     elif choice == "b":
       main.menu()
     elif choice == "q":
-        main.prilogspc()
+        shrts.prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        main.spc()
+        shrts.spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
