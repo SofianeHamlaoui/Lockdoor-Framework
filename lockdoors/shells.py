@@ -1,6 +1,7 @@
 import os
 import sys
 from lockdoors import main
+from lockdoors import shrts
 from pathlib import Path
 from datetime import datetime
 from time import sleep
@@ -12,86 +13,86 @@ null = ""
 ############
 ##Tools
 def webshells():
-    main.printlogo()
+    shrts.printlogo()
     print("\033[91mDownloading ...\033[0m")
-    main.spc()
-    os.system("git clone https://github.com/BlackArch/webshells.git " + main.getinstalldir() + "/SHELLS/WebShells")
-    main.spc()
-    print("BlackArch Webshells collection downloaded successfully , you can use them from " + main.getinstalldir() + "/SHELLS/WebShells")
-    main.oksh()
+    shrts.spc()
+    os.system("git clone https://github.com/BlackArch/webshells.git " + shrts.getinstalldir() + "/SHELLS/WebShells")
+    shrts.spc()
+    print("BlackArch Webshells collection downloaded successfully , you can use them from " + shrts.getinstalldir() + "/SHELLS/WebShells")
+    shrts.oksh()
 def Shellnum():
     Shellnum.title = "Shellnum : A defense tool thay detect web shells in local directories"
     tool_dir = "/SHELLS/Shellnum"
     if os.path.exists('/usr/local/bin/Shellnum'):
-        main.prilogspc()
-        os.system("git clone https://github.com/ManhNho/shellsum.git " + main.getinstalldir() + tool_dir + null)
-        main.prilogspc()
+        shrts.prilogspc()
+        os.system("git clone https://github.com/ManhNho/shellsum.git " + shrts.getinstalldir() + tool_dir + null)
+        shrts.prilogspc()
         print("\033[92m           " + Shellnum.title + "\033[90m")
-        os.system("python2 " + main.getinstalldir() + tool_dir + "/shellsum.py ")
-        main.oksh()
+        os.system("python2 " + shrts.getinstalldir() + tool_dir + "/shellsum.py ")
+        shrts.oksh()
     else:
-        main.prilogspc()
+        shrts.prilogspc()
         print("\033[92m           " + Shellnum.title + "\033[90m")
-        main.spc()
+        shrts.spc()
         print("\033[91mDownloading ...\033[0m")
-        main.spc()
-        os.system("git clone https://github.com/ManhNho/shellsum.git " + main.getinstalldir() + tool_dir + null)
-        main.prilogspc()
+        shrts.spc()
+        os.system("git clone https://github.com/ManhNho/shellsum.git " + shrts.getinstalldir() + tool_dir + null)
+        shrts.prilogspc()
         print("\033[92m           " + Shellnum.title + "\033[90m")
-        main.spc()
-        main.prilogspc()
+        shrts.spc()
+        shrts.prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        main.spc()
-        os.system("cd " + main.getinstalldir() + tool_dir + " && pip2 install -r " + main.getinstalldir() + tool_dir + "/requirements.txt" + null)
+        shrts.spc()
+        os.system("cd " + shrts.getinstalldir() + tool_dir + " && pip2 install -r " + shrts.getinstalldir() + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Shellnum""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Shellnum""")
-        os.system("echo python2 " + main.getinstalldir() + tool_dir + "/shellsum.py >> /usr/local/bin/Shellnum")
+        os.system("echo python2 " + shrts.getinstalldir() + tool_dir + "/shellsum.py >> /usr/local/bin/Shellnum")
         os.system("chmod +x /usr/local/bin/Shellnum")
         print(("You can now use " + "\033[91m" + Shellnum.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        main.oksh()
+        shrts.oksh()
 def Weevely():
         Weevely.title = "Weevely : a multi-purpose brute-forcer, with a modular design and a flexible usage"
         tool_dir = "/SHELLS/Tools/Weevely"
         if os.path.exists('/usr/local/bin/Weevely'):
-            main.prilogspc()
-            os.system("git clone  https://github.com/epinna/weevely3.git " + main.getinstalldir() + tool_dir + null)
-            main.prilogspc()
+            shrts.prilogspc()
+            os.system("git clone  https://github.com/epinna/weevely3.git " + shrts.getinstalldir() + tool_dir + null)
+            shrts.prilogspc()
             print("\033[92m           " + Weevely.title + "\033[90m")
-            main.spc()
+            shrts.spc()
             os.system("Weevely")
             print("You can always use Weevely from Terminal [ \033[91mWeevely\033[90m ]")
-            main.oksh()
+            shrts.oksh()
         else:
-            main.prilogspc()
+            shrts.prilogspc()
             print("\033[92m           " + Weevely.title + "\033[90m")
-            main.spc()
+            shrts.spc()
             print("\033[91mDownloading ...\033[0m")
-            main.spc()
-            os.system("git clone https://github.com/epinna/weevely3.git " + main.getinstalldir() + tool_dir + null)
-            main.prilogspc()
+            shrts.spc()
+            os.system("git clone https://github.com/epinna/weevely3.git " + shrts.getinstalldir() + tool_dir + null)
+            shrts.prilogspc()
             print("\033[92m           " + Weevely.title + "\033[90m")
-            main.spc()
-            main.prilogspc()
+            shrts.spc()
+            shrts.prilogspc()
             print("\033[91mInstalling ...\033[0m.")
-            os.system("cd " + main.getinstalldir() + tool_dir + " && pip2 install -r requirements.txt" + null)
+            os.system("cd " + shrts.getinstalldir() + tool_dir + " && pip2 install -r requirements.txt" + null)
             os.system("""echo "#!/bin/bash" > /usr/local/bin/Weevely""")
             os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Weevely""")
-            os.system("echo python2 " + main.getinstalldir() + tool_dir + "/weevely.py >> /usr/local/bin/Weevely")
+            os.system("echo python2 " + shrts.getinstalldir() + tool_dir + "/weevely.py >> /usr/local/bin/Weevely")
             os.system("chmod +x /usr/local/bin/Weevely")
-            main.prilogspc()
+            shrts.prilogspc()
             print(("You can now use " + "\033[91m" + Weevely.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-            main.oksh()
+            shrts.oksh()
 def ptyshells():
-    main.printlogo()
+    shrts.printlogo()
     print("\033[91mDownloading ...\033[0m")
-    main.spc()
-    os.system("git clone https://github.com/infodox/python-pty-shells " + main.getinstalldir() + "/SHELLS/python-pty-shells")
-    main.spc()
-    print("The Python PTY backdoors collection downloaded successfully , you can use them from " + main.getinstalldir() + "/SHELLS/python-pty-shells")
-    main.oksh()
+    shrts.spc()
+    os.system("git clone https://github.com/infodox/python-pty-shells " + shrts.getinstalldir() + "/SHELLS/python-pty-shells")
+    shrts.spc()
+    print("The Python PTY backdoors collection downloaded successfully , you can use them from " + shrts.getinstalldir() + "/SHELLS/python-pty-shells")
+    shrts.oksh()
 #Menu
 def menu():
-    main.clscprilo()
+    shrts.clscprilo()
     print("""\033[94m
            [ SHELLS ]
 
@@ -119,11 +120,11 @@ def menu():
     elif choice == "b":
       main.menu()
     elif choice == "q":
-        main.prilogspc()
+        shrts.prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        main.spc()
+        shrts.spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
