@@ -14,95 +14,13 @@ from lockdoors import psafrt
 from lockdoors import wtpp
 from lockdoors import about
 from lockdoors import update
+from lockdoors import shrts
 from datetime import datetime
 from time import sleep
-def printlogo():
-    print("""
-\033[94m            ..',,,'..           \033[0m
-\033[94m         .',;;;;;;;;,'.         \033[0m
-\033[94m      ..,;;;;;;;;;;;;;;,..      \033[0m
-\033[94m     .,;;;,'..'''''.',;;;,.     \033[0m
-\033[94m     .;;;;.  ..   .. .;;;;'     \033[0m\033[91m (                                         \033[0m
-\033[94m     .,;;;.  ...     .;;;;.     \033[0m\033[91m )\ )               )  (                   \033[0m
-\033[94m      ..,;,.  ...   .,;,..      \033[0m\033[91m (()/(            ( /(  )\ )           (   \033[0m
-\033[94m        .';;'.    .',;'.        \033[0m\033[91m /(_))  (    (   )\())(()/(  (    (   )(   \033[0m
-\033[94m    ..',,;;;;;,,,,;;;;;,,'..    \033[0m\033[91m (_))    )\   )\ ((_)\  ((_)) )\   )\ (()\ \033[0m
-\033[94m  .','.....................''.  \033[0m\033[91m | |    ((_) ((_)| |(_) _| | ((_) ((_) ((_)\033[0m
-\033[94m .',..',,,,,,,,,,,,,,,,,,,..,,. \033[0m\033[91m | |__ / _ \/ _| | / // _` |/ _ \/ _ \| '_|\033[0m
-\033[94m .;,..,;;;;;;'....';;;;;;;..,;. \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m
-\033[94m ';;..,;;;;;,..,,..';;;;;,..,;' \033[0m\033[92m           © Sofiane Hamlaoui | 2020       \033[0m
-\033[94m.';;..,;;;;,. .... .,;;;;,..;;,.\033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m
-\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m\033[92m                 v2.2.4           \033[0m
-\033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
-\033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
-\033[94m       ..................\033[0m""")
-config = str(Path.home()) + "/.config/lockdoor/"
-def oktocont():
-    ans = input("\033[0;36mPress Enter to Continue...\033[0m")
-def clr():
-    os.system('clear')
-def spc():
-    print("")
-def prilogspc():
-    printlogo()
-    spc()
-def clscprilo():
-    clr()
-    printlogo()
-def popp():
-    spc()
-    oktocont()
-    printlogo()
-    spc()
-def okenc():
-    spc()
-    oktocont()
-    menu()
-def pop():
-    spc()
-    oktocont()
-    spc()
-def okex():
-    spc()
-    oktocont()
-    menu()
-def okinf():
-    spc()
-    oktocont()
-    menu()
-def okpa():
-    spc()
-    oktocont()
-    menu()
-def okpr():
-    spc()
-    oktocont()
-    menu()
-def okrev():
-    spc()
-    oktocont()
-    menu()
-def oksh():
-    spc()
-    oktocont()
-    menu()
-def okso():
-    spc()
-    oktocont()
-    menu()
-def okwe():
-    spc()
-    oktocont()
-    menu()
-def getinstalldir():
-    f = open(config + 'lockdoor.conf')
-    contents = f.read().rstrip('\n')
-    f.close()
-    installdirc = contents.replace('Location:', '')
-    return installdirc
+
 def menu():
     os.system('clear')
-    printlogo()
+    shrts.printlogo()
     print("""
     \033[94m         [ R00T MENU ]
 
@@ -153,7 +71,7 @@ def menu():
     elif choice == "u":
         update.lockdoor()
     elif choice == "q":
-        printlogo()
+        shrts.printlogo()
         print("")
         now = datetime.now()
         date = now.strftime("%d/%m/%Y %H:%M:%S")
