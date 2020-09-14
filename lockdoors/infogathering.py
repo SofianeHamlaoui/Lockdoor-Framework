@@ -9,7 +9,6 @@ from platform import system
 from time import sleep
 import urllib.request, urllib.parse, urllib.error
 #VAR
-config = str(Path.home()) + "/.config/lockdoor/"
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
