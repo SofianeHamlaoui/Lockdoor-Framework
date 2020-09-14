@@ -6,7 +6,6 @@ from time import sleep
 from os import path
 import sys
 #VAR
-config = str(Path.home()) + "/.config/lockdoor/"
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
