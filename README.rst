@@ -14,8 +14,6 @@
    <h1 align="center">
    !NEWS!</h1>
    <h3 align="center">
-   [~] Lockdoor isn't on his best shape, so I'll make it better as soon as I get free time for that.
-
    [~] Version v2.2.4 IS OUT !! | 13/03/2020 00:43PM GMT+2 | <br>
    </h3>
 
@@ -61,6 +59,28 @@ Support me 💰 :
 Versions :closed_lock_with_key: :
 =============
 
+08/2020 : 2.2.4
+--------------------------
+- Config file checking.
+- Updating the tools.
+- Showing the current version of Lockdoor by -v arg.
+- checking the version and asking for possible update.
+- Making it easier to customize.
+- No added tools for the moment.
+- Fixing the docker misconfiguration, the docker version now works perfectly.
+
+    - Information Gathring Tools (21)
+    - Web Hacking Tools(15)
+    - Reverse Engineering Tools (15)
+    - Exploitation Tools (6)
+    - Pentesting & Security Assessment Findings Report Templates (6)
+    - Password Attack Tools (4)
+    - Shell Tools + Blackarch's Webshells Collection (4)
+    - Walk Throughs & Pentest Processing Helpers (3)
+    - Encryption/Decryption Tools (2)
+    - Social Engineering tools (1)
+    - All you need as Privilege Escalation scripts and exploits
+
 03/2020 : 2.2.3
 --------------------------
    - Information Gathring Tools (21)
@@ -78,15 +98,6 @@ Versions :closed_lock_with_key: :
 
 .. image:: https://img.youtube.com/vi/_agvb29FQrs/maxresdefault.jpg
    :target: https://www.youtube.com/watch?v=_agvb29FQrs
-
-09/2019 : 0.6
---------------------------
-   - Information Gathring tools (13)
-   - Web Hacking Tools (9)
-   - Working on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows (Cygwin)
-   - Some bugs That I'm fixing with time so don't worry about that.
-
-.. image:: https://up.sofianehamlaoui.me/lockdoor/gifs/kali.gif
 
 
 =============
