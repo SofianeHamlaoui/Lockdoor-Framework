@@ -22,7 +22,7 @@ from os import path
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
-Version = "2.2.3"
+Version = "2.2.4"
 verbose = yes
 config = str(Path.home()) + "/.config/lockdoor/"
 #Print Logo
@@ -42,7 +42,7 @@ def printlogo():
 \033[94m .;,..,;;;;;;'....';;;;;;;..,;.  \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m
 \033[94m ';;..,;;;;;,..,,..';;;;;,..,;'  \033[0m\033[92m           © Sofiane Hamlaoui | 2020       \033[0m
 \033[94m.';;..,;;;;,. .... .,;;;;,..;;,. \033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m
-\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m\033[92m                    v2.2.3                 \033[0m
+\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m\033[92m                    v2.2.4                 \033[0m
 \033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
 \033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
 \033[94m       ..................        \033[0m
@@ -147,6 +147,13 @@ def checkconf():
     else:
         spc()
         print("\033[92m                  -[!]- Lockdoor Config file found!-[!]- \033[91m")
+# incase brk ak chayef :v 
+if (" ".join(sys.argv[1:]) == "--version") or (" ".join(sys.argv[1:]) == "-v"):
+    with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
+        resp = str(response.read().decode('utf-8'))
+        prilogspc()
+        print("\033[94m                        This version of Lockdoor is v" + resp +"\033[91m")
+        sys.exit()
 #INIT
 def init():
     checkroot()
