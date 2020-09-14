@@ -9,8 +9,6 @@ import urllib.request, urllib.parse, urllib.error
 import atexit
 import requests
 from pathlib import Path
-from lockdoors import main
-from lockdoors import update
 #req
 import base64
 from sys import argv
@@ -30,24 +28,24 @@ config = str(Path.home()) + "/.config/lockdoor/"
 #Print Logo
 def printlogo():
     print("""
-\033[94m            ..',,,'..           \033[0m
-\033[94m         .',;;;;;;;;,'.         \033[0m
-\033[94m      ..,;;;;;;;;;;;;;;,..      \033[0m
-\033[94m     .,;;;,'..'''''.',;;;,.     \033[0m
-\033[94m     .;;;;.  ..   .. .;;;;'     \033[0m\033[91m (                                         \033[0m
-\033[94m     .,;;;.  ...     .;;;;.     \033[0m\033[91m )\ )               )  (                   \033[0m
-\033[94m      ..,;,.  ...   .,;,..      \033[0m\033[91m (()/(            ( /(  )\ )           (   \033[0m
-\033[94m        .';;'.    .',;'.        \033[0m\033[91m /(_))  (    (   )\())(()/(  (    (   )(   \033[0m
-\033[94m    ..',,;;;;;,,,,;;;;;,,'..    \033[0m\033[91m (_))    )\   )\ ((_)\  ((_)) )\   )\ (()\ \033[0m
-\033[94m  .','.....................''.  \033[0m\033[91m | |    ((_) ((_)| |(_) _| | ((_) ((_) ((_)\033[0m
-\033[94m .',..',,,,,,,,,,,,,,,,,,,..,,. \033[0m\033[91m | |__ / _ \/ _| | / // _` |/ _ \/ _ \| '_|\033[0m
-\033[94m .;,..,;;;;;;'....';;;;;;;..,;. \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m
-\033[94m ';;..,;;;;;,..,,..';;;;;,..,;' \033[0m\033[92m           Sofiane Hamlaoui | 2019         \033[0m
-\033[94m.';;..,;;;;,. .... .,;;;;,..;;,.\033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m
-\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m
+\033[94m            ..',,,'..            \033[0m
+\033[94m         .',;;;;;;;;,'.          \033[0m
+\033[94m      ..,;;;;;;;;;;;;;;,..       \033[0m
+\033[94m     .,;;;,'..'''''.',;;;,.      \033[0m
+\033[94m     .;;;;.  ..   .. .;;;;'      \033[0m\033[91m (                                         \033[0m
+\033[94m     .,;;;.  ...     .;;;;.      \033[0m\033[91m )\ )               )  (                   \033[0m
+\033[94m      ..,;,.  ...   .,;,..       \033[0m\033[91m (()/(            ( /(  )\ )           (   \033[0m
+\033[94m        .';;'.    .',;'.         \033[0m\033[91m /(_))  (    (   )\())(()/(  (    (   )(   \033[0m
+\033[94m    ..',,;;;;;,,,,;;;;;,,'..     \033[0m\033[91m (_))    )\   )\ ((_)\  ((_)) )\   )\ (()\ \033[0m
+\033[94m  .','.....................''.   \033[0m\033[91m | |    ((_) ((_)| |(_) _| | ((_) ((_) ((_)\033[0m
+\033[94m .',..',,,,,,,,,,,,,,,,,,,..,,.  \033[0m\033[91m | |__ / _ \/ _| | / // _` |/ _ \/ _ \| '_|\033[0m
+\033[94m .;,..,;;;;;;'....';;;;;;;..,;.  \033[0m\033[91m |____|\___/\__| |_\_\\__,_|\___/\___/|_|  \033[0m
+\033[94m ';;..,;;;;;,..,,..';;;;;,..,;'  \033[0m\033[92m           © Sofiane Hamlaoui | 2020       \033[0m
+\033[94m.';;..,;;;;,. .... .,;;;;,..;;,. \033[0m\033[92m Lockdoor : A Penetration Testing framework\033[0m
+\033[94m ';;..,;;;;'  ....  .;;;;,..;;,. \033[0m\033[92m                    v2.2.3                 \033[0m
 \033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
 \033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
-\033[94m       ..................\033[0m
+\033[94m       ..................        \033[0m
 """)
 
 def oktocont():
@@ -105,6 +103,7 @@ def vercheck():
             if not ans in yes:
                 print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
             else:
+                from lockdoors import update
                 update.lockdoor()
 def updatingtools():
     spc()
@@ -117,13 +116,25 @@ def updatingtools():
         spc()
         oktocont()
         clr()
+def checkconffile():
+    if path.exists(config + 'lockdoor.conf'):
+        f = open(config + 'lockdoor.conf')
+        contents = f.read().rstrip('\n')
+        f.close()
+        installdirc = contents.replace('Location:', '')
+    else:
+        print("File doesn't exist ya zeh")
+
+
 #INIT1
 clr()
 printlogo()
-f = open(config + 'lockdoor.conf')
-contents = f.read().rstrip('\n')
-f.close()
-installdirc = contents.replace('Location:', '')
+checkroot()
+checkconffile()
+#f = open(config + 'lockdoor.conf')
+#contents = f.read().rstrip('\n')
+#f.close()
+#installdirc = contents.replace('Location:', '')
 #INIT2
 def init():
     checkconnect()
@@ -135,12 +146,14 @@ def init():
     spc()
 init()
 if __name__ == "__main__":
-    try:
-            main.menu()
+    try:    
+            init()
     except (KeyboardInterrupt):
         spc()
         ans = input("           \033[91m-[!]- SIGINT or CTRL-C detected. Are You sure to exit \033[92mLockdoor \033[90m\033[91m-[!] ? (Y/N)\033[0m : ")
         if not ans in yes:
+            init()
+            from lockdoors import main
             main.menu()
         else:
             clr()
