@@ -1,5 +1,6 @@
 import os
 import sys
+from pathlib import Path
 from lockdoors import infogathering
 from lockdoors import webhack
 from lockdoors import exploitation
@@ -36,6 +37,72 @@ def printlogo():
 \033[94m .,;'.';;;;'.  ..  .';;;;,.';,.  \033[0m
 \033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
 \033[94m       ..................\033[0m""")
+config = str(Path.home()) + "/.config/lockdoor/"
+def oktocont():
+    ans = input("\033[0;36mPress Enter to Continue...\033[0m")
+def clr():
+    os.system('clear')
+def spc():
+    print("")
+def prilogspc():
+    printlogo()
+    spc()
+def clscprilo():
+    clr()
+    printlogo()
+def popp():
+    spc()
+    oktocont()
+    printlogo()
+    spc()
+def okenc():
+    spc()
+    oktocont()
+    menu()
+def pop():
+    spc()
+    oktocont()
+    spc()
+def okex():
+    spc()
+    oktocont()
+    menu()
+def okinf():
+    spc()
+    oktocont()
+    menu()
+def okpa():
+    spc()
+    oktocont()
+    menu()
+def okpr():
+    spc()
+    oktocont()
+    menu()
+def okrev():
+    spc()
+    oktocont()
+    menu()
+def oksh():
+    spc()
+    oktocont()
+    menu()
+def okso():
+    spc()
+    oktocont()
+    menu()
+def okwe():
+    spc()
+    oktocont()
+    menu()
+
+def getinstalldir():
+    f = open(config + 'lockdoor.conf')
+    contents = f.read().rstrip('\n')
+    f.close()
+    installdirc = contents.replace('Location:', '')
+    return installdirc
+
 
 def menu():
     os.system('clear')
