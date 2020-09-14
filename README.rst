@@ -8,11 +8,11 @@
 
    <br class="title">
    Lockdoor Pentesting Framework <br>
-   </h1><h2 align="center">
-   [~] Tested on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows [~]
-   </h2>
-   <h1 align="center">
-   !NEWS!</h1>
+   </h1><h3 align="center">
+   [~] Works perfectly on Kali,Ubuntu,Arch,Fedora,Opensuse and Windows [~]
+   </h3>
+   <h2 align="center">
+   !NEWS!</h2>
    <h3 align="center">
    [~] Version v2.2.4 IS OUT !! | 13/03/2020 00:43PM GMT+2 | <br>
    </h3>
