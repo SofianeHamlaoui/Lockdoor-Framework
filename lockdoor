@@ -57,7 +57,13 @@ def spc():
 def prilogspc():
     printlogo()
     spc()
+def getinstalldir():
+    f = open(config + 'lockdoor.conf')
+    contents = f.read().rstrip('\n')
+    f.close()
+    getinstalldir.installdirc = contents.replace('Location:', '')
 def checkroot():
+    prilogspc()
     #Linux
     if platform == "linux" or platform == "linux2":
         if os.geteuid() != 0:
@@ -69,11 +75,11 @@ def checkroot():
     elif platform == "cygwin":
         print("                        \033[1;33;40m-[!]- Running As ROOT -[!]-\033[0m")
 def confirmlocation():
-    prilogspc()
-    confirm = input("\033[91m[!]\033[0m    \033[94mThe Installation directory is : " + "\033[92m" + installdirc + "\033[90m" + "\033[94m" + " Confirm ? (Y/N) : \033[91m")
+    getinstalldir()
+    confirm = input("\033[91m[!]\033[0m    \033[94mThe Installation directory is : " + "\033[92m" + getinstalldir.installdirc + "\033[90m" + "\033[94m" + " Confirm ? (Y/N) : \033[91m")
     if not confirm in no:
         spc()
-        print("          \033[94m Installation directory confirmed \033[0m" + "\033[92m" + installdirc + "\033[90m")
+        print("          \033[94m Installation directory confirmed \033[0m" + "\033[92m" + getinstalldir.installdirc + "\033[90m")
         spc()
         oktocont()
         clr()
@@ -81,9 +87,10 @@ def confirmlocation():
         spc()
         print("             remove all files on \033[94m'/usr/local/bin\033[90m \033[92m(grep -l Sofiane /usr/local/bin/* | xargs sudo rm)\033[90m")
         spc()
-        print("             Change the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
+        print("             Change the installation directory from the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
 def checkconnect():
+    spc()
     url='http://www.google.com/'
     try:
         _ = requests.get(url, timeout=1)
@@ -112,31 +119,38 @@ def updatingtools():
     if not confirm in no:
         print("\033[92mUpdating The Tools...\033[90m")
         spc()
-        os.system('sudo find ' + installdirc + ' -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull origin master" \;')
+        getinstalldir()
+        os.system('sudo find ' + getinstalldir.installdirc + ' -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull origin master" \;')
         spc()
         oktocont()
         clr()
-def checkconffile():
-    if path.exists(config + 'lockdoor.conf'):
-        f = open(config + 'lockdoor.conf')
-        contents = f.read().rstrip('\n')
-        f.close()
-        installdirc = contents.replace('Location:', '')
+
+def checkconf():
+    if os.path.isfile('/root/.config/lockdoor/lockdoor.conf') == False:
+        spc()
+        print("\033[91m                     Lockdoor Config not file found!\033[0m")
+        spc()
+        confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to run the installation script  ?: " + "\033[94m(Y/N) : \033[91m")
+        if not confirm in no:
+            spc()
+            print("\033[92mInstalling Lockdoor with requirments...\033[90m")
+            spc()
+            os.system("wget -qO- https://lockdoor.sofianehamlaoui.me/install.sh > install.sh")
+            os.system("chmod +x install.sh && ./install.sh")
+            spc()
+            oktocont()
+            clr()
+        else:
+            spc()
+            print("NO? so you have to download lockdoor from Github and run the install script [\033[94mhttps://git.io/JeDay\033[91m]")
+            sys.exit()
     else:
-        print("File doesn't exist ya zeh")
-
-
-#INIT1
-clr()
-printlogo()
-checkroot()
-checkconffile()
-#f = open(config + 'lockdoor.conf')
-#contents = f.read().rstrip('\n')
-#f.close()
-#installdirc = contents.replace('Location:', '')
-#INIT2
+        spc()
+        print("\033[92m                  -[!]- Lockdoor Config file found!-[!]- \033[91m")
+#INIT
 def init():
+    checkroot()
+    checkconf()
     checkconnect()
     confirmlocation()
     updatingtools()
@@ -144,15 +158,16 @@ def init():
     printlogo()
     vercheck()
     spc()
-init()
 if __name__ == "__main__":
     try:    
             init()
+            from lockdoors import main
+            main.menu()
     except (KeyboardInterrupt):
+        spc()
         spc()
         ans = input("           \033[91m-[!]- SIGINT or CTRL-C detected. Are You sure to exit \033[92mLockdoor \033[90m\033[91m-[!] ? (Y/N)\033[0m : ")
         if not ans in yes:
-            init()
             from lockdoors import main
             main.menu()
         else:
