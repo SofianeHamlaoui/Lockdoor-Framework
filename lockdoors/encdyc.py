@@ -1,6 +1,7 @@
 import os
 import sys
 from lockdoors import main
+from lockdoors import shrts
 from pathlib import Path
 from datetime import datetime
 from time import sleep
@@ -11,53 +12,53 @@ cwd = os.getcwd()
 null = ""
 ###Cheatsheets
 def encsh():
-    main.clscprilo()
+    shrts.clscprilo()
     print("\033[91mHere is the list of the files :\033[90m")
     print("\033[92m")
-    os.system("     find " + main.getinstalldir() + "/ENCRYPTION/CHEATSHEETS -type f")
+    os.system("     find " + shrts.getinstalldir() + "/ENCRYPTION/CHEATSHEETS -type f")
     print("\033[90m")
-    main.okenc()
+    shrts.okenc()
 #Tools
 def Codetective():
     Codetective.title = "Codetective : a tool to determine the crypto/encoding algorithm used"
     tool_dir = "/ENCRYPTION/Tools/Codetective"
     if os.path.exists('/usr/local/bin/Codetective'):
-        main.prilogspc()
-        os.system("git clone https://github.com/blackthorne/Codetective.git " + main.getinstalldir() + tool_dir + null)
-        main.prilogspc()
+        shrts.prilogspc()
+        os.system("git clone https://github.com/blackthorne/Codetective.git " + shrts.getinstalldir() + tool_dir + null)
+        shrts.prilogspc()
         print("\033[92m           " + Codetective.title + "\033[90m")
-        main.spc()
+        shrts.spc()
         os.system("Codetective")
-        main.okenc()
+        shrts.okenc()
     else:
-        main.prilogspc()
+        shrts.prilogspc()
         print("\033[92m           " + Codetective.title + "\033[90m")
-        main.spc()
+        shrts.spc()
         print("\033[91mDownloading ...\033[0m")
-        main.spc()
-        os.system("git clone https://github.com/blackthorne/Codetective.git " + main.getinstalldir() + tool_dir + null)
-        main.prilogspc()
+        shrts.spc()
+        os.system("git clone https://github.com/blackthorne/Codetective.git " + shrts.getinstalldir() + tool_dir + null)
+        shrts.prilogspc()
         print("\033[92m           " + Codetective.title + "\033[90m")
-        main.spc()
-        main.prilogspc()
+        shrts.spc()
+        shrts.prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        main.spc()
+        shrts.spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Codetective""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Codetective""")
-        os.system("echo python2 " + main.getinstalldir() + tool_dir + "/codetective.py >> /usr/local/bin/Codetective")
+        os.system("echo python2 " + shrts.getinstalldir() + tool_dir + "/codetective.py >> /usr/local/bin/Codetective")
         os.system("chmod +x /usr/local/bin/Codetective")
         print(("You can now use " + "\033[91m" + Codetective.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
         print("Type Codetective to run the tool from Terminal")
-        main.okenc()
+        shrts.okenc()
 def findmyhash():
     findmyhash.title = "findmyhash : Python script to crack hashes using online services"
     tool_dir = "/ENCRYPTION/Tools/Findmyhash"
     if os.path.exists('/usr/local/bin/Findmyhash'):
-        main.prilogspc()
-        os.system("git clone https://github.com/frdmn/findmyhash.git " + main.getinstalldir() + tool_dir + null)
-        main.prilogspc()
+        shrts.prilogspc()
+        os.system("git clone https://github.com/frdmn/findmyhash.git " + shrts.getinstalldir() + tool_dir + null)
+        shrts.prilogspc()
         print("\033[92m           " + findmyhash.title + "\033[90m")
-        main.spc()
+        shrts.spc()
         print("""
               MD4       - RFC 1320
               MD5       - RFC 1321
@@ -79,30 +80,30 @@ def findmyhash():
         """)
         algo = input("What Algo you want to use ? : ")
         hash = input("Enter the hash : ")
-        os.system("python2 " + main.getinstalldir() + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
-        main.okenc()
+        os.system("python2 " + shrts.getinstalldir() + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
+        shrts.okenc()
     else:
-        main.prilogspc()
+        shrts.prilogspc()
         print("\033[92m           " + findmyhash.title + "\033[90m")
-        main.spc()
+        shrts.spc()
         print("\033[91mDownloading ...\033[0m")
-        main.spc()
-        os.system("git clone https://github.com/frdmn/findmyhash.git " + main.getinstalldir() + tool_dir + null)
-        main.prilogspc()
+        shrts.spc()
+        os.system("git clone https://github.com/frdmn/findmyhash.git " + shrts.getinstalldir() + tool_dir + null)
+        shrts.prilogspc()
         print("\033[92m           " + findmyhash.title + "\033[90m")
-        main.spc()
-        main.prilogspc()
+        shrts.spc()
+        shrts.prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        main.spc()
+        shrts.spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Findmyhash""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Findmyhash""")
-        os.system("echo python2 " + main.getinstalldir() + tool_dir + "/findmyhash.py >> /usr/local/bin/Findmyhash")
+        os.system("echo python2 " + shrts.getinstalldir() + tool_dir + "/findmyhash.py >> /usr/local/bin/Findmyhash")
         os.system("chmod +x /usr/local/bin/Findmyhash")
         print(("You can now use " + "\033[91m" + findmyhash.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        main.okenc()
+        shrts.okenc()
 #Menu
 def menu():
-    main.clscprilo()
+    shrts.clscprilo()
     print("""\033[94m
     [ ENCRYPTION/DECRYPTION ]
 
@@ -129,11 +130,11 @@ def menu():
     elif choice == "b":
       main.menu()
     elif choice == "q":
-        main.prilogspc()
+        shrts.prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        main.spc()
+        shrts.spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
