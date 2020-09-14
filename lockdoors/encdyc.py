@@ -10,87 +10,55 @@ yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
 null = ""
-#Config
-f = open(config + 'lockdoor.conf')
-contents = f.read().rstrip('\n')
-f.close()
-installdirc = contents.replace('Location:', '')
-##########SHRT
-def oktocont():
-    ans = input("\033[0;36mPress Enter to Continue...\033[0m")
-def clr():
-    os.system('clear')
-def spc():
-    print("")
-def prilogspc():
-    main.printlogo()
-    spc()
-def clscprilo():
-    clr()
-    main.printlogo()
-def popp():
-    spc()
-    oktocont()
-    main.printlogo()
-    spc()
-def okenc():
-    spc()
-    oktocont()
-    menu()
-def pop():
-    spc()
-    oktocont()
-    spc()
-############
 ###Cheatsheets
 def encsh():
-    clscprilo()
+    main.clscprilo()
     print("\033[91mHere is the list of the files :\033[90m")
     print("\033[92m")
-    os.system("     find " + installdirc + "/ENCRYPTION/CHEATSHEETS -type f")
+    os.system("     find " + main.getinstalldir() + "/ENCRYPTION/CHEATSHEETS -type f")
     print("\033[90m")
-    okenc()
+    main.okenc()
 #Tools
 def Codetective():
     Codetective.title = "Codetective : a tool to determine the crypto/encoding algorithm used"
     tool_dir = "/ENCRYPTION/Tools/Codetective"
     if os.path.exists('/usr/local/bin/Codetective'):
-        prilogspc()
-        os.system("git clone https://github.com/blackthorne/Codetective.git " + installdirc + tool_dir + null)
-        prilogspc()
+        main.prilogspc()
+        os.system("git clone https://github.com/blackthorne/Codetective.git " + main.getinstalldir() + tool_dir + null)
+        main.prilogspc()
         print("\033[92m           " + Codetective.title + "\033[90m")
-        spc()
+        main.spc()
         os.system("Codetective")
-        okenc()
+        main.okenc()
     else:
-        prilogspc()
+        main.prilogspc()
         print("\033[92m           " + Codetective.title + "\033[90m")
-        spc()
+        main.spc()
         print("\033[91mDownloading ...\033[0m")
-        spc()
-        os.system("git clone https://github.com/blackthorne/Codetective.git " + installdirc + tool_dir + null)
-        prilogspc()
+        main.spc()
+        os.system("git clone https://github.com/blackthorne/Codetective.git " + main.getinstalldir() + tool_dir + null)
+        main.prilogspc()
         print("\033[92m           " + Codetective.title + "\033[90m")
-        spc()
-        prilogspc()
+        main.spc()
+        main.prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        spc()
+        main.spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Codetective""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Codetective""")
-        os.system("echo python2 " + installdirc + tool_dir + "/codetective.py >> /usr/local/bin/Codetective")
+        os.system("echo python2 " + main.getinstalldir() + tool_dir + "/codetective.py >> /usr/local/bin/Codetective")
         os.system("chmod +x /usr/local/bin/Codetective")
         print(("You can now use " + "\033[91m" + Codetective.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
         print("Type Codetective to run the tool from Terminal")
-        okenc()
+        main.okenc()
 def findmyhash():
     findmyhash.title = "findmyhash : Python script to crack hashes using online services"
     tool_dir = "/ENCRYPTION/Tools/Findmyhash"
     if os.path.exists('/usr/local/bin/Findmyhash'):
-        prilogspc()
-        os.system("git clone https://github.com/frdmn/findmyhash.git " + installdirc + tool_dir + null)
-        prilogspc()
+        main.prilogspc()
+        os.system("git clone https://github.com/frdmn/findmyhash.git " + main.getinstalldir() + tool_dir + null)
+        main.prilogspc()
         print("\033[92m           " + findmyhash.title + "\033[90m")
-        spc()
+        main.spc()
         print("""
               MD4       - RFC 1320
               MD5       - RFC 1321
@@ -112,30 +80,30 @@ def findmyhash():
         """)
         algo = input("What Algo you want to use ? : ")
         hash = input("Enter the hash : ")
-        os.system("python2 " + installdirc + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
-        okenc()
+        os.system("python2 " + main.getinstalldir() + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
+        main.okenc()
     else:
-        prilogspc()
+        main.prilogspc()
         print("\033[92m           " + findmyhash.title + "\033[90m")
-        spc()
+        main.spc()
         print("\033[91mDownloading ...\033[0m")
-        spc()
-        os.system("git clone https://github.com/frdmn/findmyhash.git " + installdirc + tool_dir + null)
-        prilogspc()
+        main.spc()
+        os.system("git clone https://github.com/frdmn/findmyhash.git " + main.getinstalldir() + tool_dir + null)
+        main.prilogspc()
         print("\033[92m           " + findmyhash.title + "\033[90m")
-        spc()
-        prilogspc()
+        main.spc()
+        main.prilogspc()
         print("\033[91mInstalling ...\033[0m.")
-        spc()
+        main.spc()
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Findmyhash""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Findmyhash""")
-        os.system("echo python2 " + installdirc + tool_dir + "/findmyhash.py >> /usr/local/bin/Findmyhash")
+        os.system("echo python2 " + main.getinstalldir() + tool_dir + "/findmyhash.py >> /usr/local/bin/Findmyhash")
         os.system("chmod +x /usr/local/bin/Findmyhash")
         print(("You can now use " + "\033[91m" + findmyhash.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        okenc()
+        main.okenc()
 #Menu
 def menu():
-    clscprilo()
+    main.clscprilo()
     print("""\033[94m
     [ ENCRYPTION/DECRYPTION ]
 
@@ -162,11 +130,11 @@ def menu():
     elif choice == "b":
       main.menu()
     elif choice == "q":
-        prilogspc()
+        main.prilogspc()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-        spc()
+        main.spc()
         print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
         sys.exit()
     elif choice == "":
