@@ -17,6 +17,7 @@ from platform import system
 from urllib.parse import urlparse
 from time import sleep
 from datetime import datetime
+from lockdoors import shrts
 ###Variables
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
@@ -46,23 +47,13 @@ def printlogo():
 \033[94m   ....;;;;;,'''''',;;;;;'...    \033[0m
 \033[94m       ..................        \033[0m
 """)
-
-def oktocont():
-    ans = input("\033[0;36mPress Enter to Continue...\033[0m")
-def clr():
-    os.system('clear')
-def spc():
-    print("")
-def prilogspc():
-    printlogo()
-    spc()
 def getinstalldir():
     f = open(config + 'lockdoor.conf')
     contents = f.read().rstrip('\n')
     f.close()
     getinstalldir.installdirc = contents.replace('Location:', '')
 def checkroot():
-    prilogspc()
+    shrts.prilogspc()
     #Linux
     if platform == "linux" or platform == "linux2":
         if os.geteuid() != 0:
@@ -77,19 +68,19 @@ def confirmlocation():
     getinstalldir()
     confirm = input("\033[91m[!]\033[0m    \033[94mThe Installation directory is : " + "\033[92m" + getinstalldir.installdirc + "\033[90m" + "\033[94m" + " Confirm ? (Y/N) : \033[91m")
     if not confirm in no:
-        spc()
+        shrts.spc()
         print("          \033[94m Installation directory confirmed \033[0m" + "\033[92m" + getinstalldir.installdirc + "\033[90m")
-        spc()
-        oktocont()
-        clr()
+        shrts.spc()
+        shrts.oktocont()
+        shrts.clr()
     else:
-        spc()
+        shrts.spc()
         print("             remove all files on \033[94m'/usr/local/bin\033[90m \033[92m(grep -l Sofiane /usr/local/bin/* | xargs sudo rm)\033[90m")
-        spc()
+        shrts.spc()
         print("             Change the installation directory from the configuration file \033[90m(\033[92m" + config + "lockdoor.conf \033[90m)")
         confirmlocation()
 def checkconnect():
-    spc()
+    shrts.spc()
     url='http://www.google.com/'
     try:
         _ = requests.get(url, timeout=1)
@@ -105,53 +96,53 @@ def vercheck():
            print("                  \033[92m[!]\033[0m \033[94m LOCKDOOR IS UP TO DATE \033[0m \033[92m[!]\033[0m")
         else:
             ans = input("           \033[91m[!]\033[0m   \033[94mLOCKDOOR ISN'T UP TO DATE ! UPDATE IT ? (Y/N) : \033[0m")
-            spc()
+            shrts.spc()
             if not ans in yes:
                 print("                 \033[91m[!]\033[0m   \033[94mLOCKDOOR IS OUTDATED \033[0m")
             else:
                 from lockdoors import update
                 update.lockdoor()
 def updatingtools():
-    spc()
+    shrts.spc()
     printlogo()
     confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to update the installed tools  ?: " + "\033[94m(Y/N) : \033[91m")
     if not confirm in no:
         print("\033[92mUpdating The Tools...\033[90m")
-        spc()
+        shrts.spc()
         getinstalldir()
         os.system('sudo find ' + getinstalldir.installdirc + ' -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull origin master" \;')
-        spc()
-        oktocont()
-        clr()
+        shrts.spc()
+        shrts.oktocont()
+        shrts.clr()
 
 def checkconf():
     if os.path.isfile('/root/.config/lockdoor/lockdoor.conf') == False:
-        spc()
+        shrts.spc()
         print("\033[91m                     Lockdoor Config not file found!\033[0m")
-        spc()
+        shrts.spc()
         confirm = input("\033[91m[!]\033[0m    \033[94mDo you want to run the installation script  ?: " + "\033[94m(Y/N) : \033[91m")
         if not confirm in no:
-            spc()
+            shrts.spc()
             print("\033[92mInstalling Lockdoor with requirments...\033[90m")
-            spc()
+            shrts.spc()
             os.system("wget -qO- https://lockdoor.sofianehamlaoui.me/install.sh > install.sh")
             os.system("chmod +x install.sh && ./install.sh")
-            spc()
-            oktocont()
-            clr()
+            shrts.spc()
+            shrts.oktocont()
+            shrts.clr()
         else:
-            spc()
+            shrts.spc()
             print("NO? so you have to download lockdoor from Github and run the install script [\033[94mhttps://git.io/JeDay\033[91m]")
             sys.exit()
     else:
-        spc()
+        shrts.spc()
         print("\033[92m                  -[!]- Lockdoor Config file found!-[!]- \033[91m")
 
 # incase brk ak chayef :v 
 if (" ".join(sys.argv[1:]) == "--version") or (" ".join(sys.argv[1:]) == "-v"):
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
         resp = str(response.read().decode('utf-8'))
-        prilogspc()
+        shrts.prilogspc()
         print("\033[94m                        This version of Lockdoor is v" + resp +"\033[91m")
         sys.exit()
 #INIT
@@ -161,28 +152,28 @@ def init():
     checkconnect()
     confirmlocation()
     updatingtools()
-    spc()
+    shrts.spc()
     printlogo()
     vercheck()
-    spc()
+    shrts.spc()
 if __name__ == "__main__":
     try:    
             init()
             from lockdoors import main
             main.menu()
     except (KeyboardInterrupt):
-        spc()
-        spc()
+        shrts.spc()
+        shrts.spc()
         ans = input("           \033[91m-[!]- SIGINT or CTRL-C detected. Are You sure to exit \033[92mLockdoor \033[90m\033[91m-[!] ? (Y/N)\033[0m : ")
         if not ans in yes:
             from lockdoors import main
             main.menu()
         else:
-            clr()
+            shrts.clr()
             printlogo()
             now = datetime.now()
             dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
             print("                 \033[91m-[!]- LOCKDOOR IS EXITING -[!]-\033[0m")
-            spc()
+            shrts.spc()
             print("                 \033[91m-[!]- EXITING AT " + dt_string + " -[!]-\033[0m")
             sys.exit()
