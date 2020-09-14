@@ -147,6 +147,7 @@ def checkconf():
     else:
         spc()
         print("\033[92m                  -[!]- Lockdoor Config file found!-[!]- \033[91m")
+        
 # incase brk ak chayef :v 
 if (" ".join(sys.argv[1:]) == "--version") or (" ".join(sys.argv[1:]) == "-v"):
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
