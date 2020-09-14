@@ -1,7 +1,7 @@
 from lockdoors import main
-
+from lockdoors import shrts
 def show():
-    main.clscprilo()
+    shrts.clscprilo()
     print("""
 
     #############################################################
@@ -23,5 +23,5 @@ def show():
    As pentesters, most of us has his personal ' /pentest/ ' directory so this
    Framework is helping you to build a perfect one.
     """)
-    main.oktocont()
+    shrts.oktocont()
     main.menu()
