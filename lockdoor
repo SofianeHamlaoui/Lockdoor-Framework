@@ -17,7 +17,6 @@ from platform import system
 from urllib.parse import urlparse
 from time import sleep
 from datetime import datetime
-from os import path
 ###Variables
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
@@ -147,7 +146,7 @@ def checkconf():
     else:
         spc()
         print("\033[92m                  -[!]- Lockdoor Config file found!-[!]- \033[91m")
-        
+
 # incase brk ak chayef :v 
 if (" ".join(sys.argv[1:]) == "--version") or (" ".join(sys.argv[1:]) == "-v"):
     with urllib.request.urlopen('https://raw.githubusercontent.com/SofianeHamlaoui/Lockdoor-Framework/master/VERSION') as response:
