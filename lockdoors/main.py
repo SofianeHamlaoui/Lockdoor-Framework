@@ -16,7 +16,6 @@ from lockdoors import about
 from lockdoors import update
 from datetime import datetime
 from time import sleep
-
 def printlogo():
     print("""
 \033[94m            ..',,,'..           \033[0m
@@ -95,15 +94,12 @@ def okwe():
     spc()
     oktocont()
     menu()
-
 def getinstalldir():
     f = open(config + 'lockdoor.conf')
     contents = f.read().rstrip('\n')
     f.close()
     installdirc = contents.replace('Location:', '')
     return installdirc
-
-
 def menu():
     os.system('clear')
     printlogo()
