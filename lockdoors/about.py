@@ -1,25 +1,7 @@
-import os
-import sys
 from lockdoors import main
-from pathlib import Path
-from datetime import datetime
-from time import sleep
-##########SHRT
-def oktocont():
-    ans = input("\033[0;36mPress Enter to Continue...\033[0m")
-def clr():
-    os.system('clear')
-def spc():
-    print("")
-def prilogspc():
-    main.printlogo()
-    spc()
-def clscprilo():
-    clr()
-    main.printlogo()
-############
+
 def show():
-    clscprilo()
+    main.clscprilo()
     print("""
 
     #############################################################
@@ -41,5 +23,5 @@ def show():
    As pentesters, most of us has his personal ' /pentest/ ' directory so this
    Framework is helping you to build a perfect one.
     """)
-    oktocont()
+    main.oktocont()
     main.menu()
