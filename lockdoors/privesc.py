@@ -5,7 +5,6 @@ from pathlib import Path
 from datetime import datetime
 from time import sleep
 #VAR
-config = str(Path.home()) + "/.config/lockdoor/"
 yes = set(['yes', 'y', 'ye', 'Y'])
 no = set(['no', 'n', 'nop', 'N'])
 cwd = os.getcwd()
