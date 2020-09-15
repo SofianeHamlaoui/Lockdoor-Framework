@@ -18,6 +18,6 @@ def lockdoor():
         shrts.oktocont()
         print("\033[92mUpdating The Tools...\033[90m")
         shrts.spc()
-        os.system('sudo find ' + shrts.getinstalldir() + ' -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull origin master" \;')
+        os.system('sudo find ' + shrts.getinstalldir() + ' -type d -name .git -exec sh -c "cd \"{}\"/../ && git pull --ff-only origin master" \;')
         shrts.clr()
         main.menu()
