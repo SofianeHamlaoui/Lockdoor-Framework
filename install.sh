@@ -60,7 +60,7 @@ function chkapt {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        apt-get install -y python python-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl netcat subversion openjdk-11-jre make automake gcc gzip rsync wget
+        apt-get install -y golang-go python python-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl netcat subversion openjdk-11-jre make automake gcc gzip rsync wget
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping apt${endc}"
@@ -73,7 +73,7 @@ function chkpacman {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        pacman -S python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
+        pacman -S go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping pacman${endc}"
@@ -85,7 +85,7 @@ function chkzypper {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        zypper install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
+        zypper install go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping zypper${endc}"
@@ -98,7 +98,7 @@ function chkdnf {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        dnf install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
+        dnf install go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping dnf${endc}"
@@ -111,7 +111,7 @@ function chkyum {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        yum install python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
+        yum install go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gcc linux-headers gzip rsync wget
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping yum${endc}"
@@ -137,15 +137,6 @@ function install {
     rsync -a ToolsResources/* $installdir
     pip3 install lockdoor
     clear
-    echo -e "\e[32m[-] Installing Go !\e[0m"
-    echo ""
-    # Installing Go
-    wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
-    tar -xvf go1.13.linux-amd64.tar.gz
-    mv go /usr/local
-    export GOROOT=/usr/local/go
-    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-    rm -rf go*
     # RUN
     showlogo
     echo -e "                   ${y}Lockdoor Installed Succesfully !${endc}
