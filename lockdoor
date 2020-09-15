@@ -125,7 +125,7 @@ def checkconf():
             shrts.spc()
             print("\033[92mInstalling Lockdoor with requirments...\033[90m")
             shrts.spc()
-            os.system("curl -L https://lockdoor-framework.github.io/install > /tmp/lockinstall && chmod +x /tmp/lockinstall && /tmp/lockinstall")
+            os.system("curl -L https://lockdoor-framework.github.io/install > instal.sh && chmod +x install.sh && ./install.sh")
             shrts.spc()
             shrts.oktocont()
             shrts.clr()
