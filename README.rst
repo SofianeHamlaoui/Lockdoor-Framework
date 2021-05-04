@@ -24,6 +24,8 @@
 .. |forthebadge made-with-python| image:: http://ForTheBadge.com/images/badges/made-with-python.svg
    :target: https://www.python.org/
 
+.. |commits| image:: https://badges.pufler.dev/contributors/SofianeHamlaoui/Lockdoor-Framework
+
 .. |GitHub release| image:: https://badgen.net/github/release/SofianeHamlaoui/Lockdoor-Framework
    :target: https://GitHub.com/SofianeHamlaoui/Lockdoor-Framework/releases/
 
@@ -55,6 +57,10 @@ Support me 💰 :
 =============
    - On Paypal : https://www.paypal.com/paypalme2/SofianeHamlaoui
    - BTC Addresse : 1NR2oqsuevvWJwzCyhBXmqEA5eYAaSoJFk
+=============
+Contributors ⭐ :
+=============
+|commits|
 
 =============
 Versions :closed_lock_with_key: :
