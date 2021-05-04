@@ -604,7 +604,7 @@ def Raccoon():
         shrts.prilogspc()
         print("\033[92m           " + Raccoon.title + "\033[90m")
         shrts.spc()
-        target = sanitize.bash_escape_restrictor(input("Select a Target (use 'raccoon --help' for more options) : "))
+        target = sanitize.bash_escape_restrictor(input("Select a Target (use 'raccoon --help' for more options) : ")
         shrts.spc()
         print("\033[92mCheatsheets that can help you with this :")
         shrts.spc()
