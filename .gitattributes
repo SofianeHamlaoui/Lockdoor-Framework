@@ -1,4 +1,4 @@
-ToolsResources/* linguist-vendored
+ToolsResources/* linguist-detectable=false
 *.y linguist-detectable=false
 *.h linguist-detectable=false
 *.sh linguist-detectable=false
