@@ -1,35 +1,7 @@
 ToolsResources/* linguist-vendored
-*.y linguist-vendored=false
-*.h linguist-vendored=false
-*.sh linguist-vendored=false
-*.c linguist-vendored=false
-*.pl linguist-vendored=false
+*.y linguist-detectable=false
+*.h linguist-detectable=false
+*.sh linguist-detectable=false
+*.c linguist-detectable=false
+*.pl linguist-detectable=false
 
-# Source files
-# ============
-*.pxd    text diff=python
-*.py     text diff=python
-*.py3    text diff=python
-*.pyw    text diff=python
-*.pyx    text diff=python
-*.pyz    text diff=python
-*.pyi    text diff=python
-
-# Binary files
-# ============
-*.db     binary
-*.p      binary
-*.pkl    binary
-*.pickle binary
-*.pyc    binary
-*.pyd    binary
-*.pyo    binary
-
-# Jupyter notebook
-*.ipynb  text
-
-# Note: .db, .p, and .pkl files are associated
-# with the python modules ``pickle``, ``dbm.*``,
-# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
-# (among others).
-© 2021 GitHub, Inc.
