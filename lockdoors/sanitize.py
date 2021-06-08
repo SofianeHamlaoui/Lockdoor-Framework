@@ -1,6 +1,6 @@
 # input sanitization function
 def bash_escape_restrictor(data):
-    escape_list = [";","&","|","*"," "]
+    escape_list = [";","&","|","*"," ","`"]
     for charecter in data:
         if charecter in escape_list:
             data = data.split(charecter)[0]
