@@ -1,5 +1,6 @@
 import os
 import sys
+import shlex
 from lockdoors import main
 from lockdoors import shrts
 from lockdoors import sanitize
@@ -178,8 +179,8 @@ def Nasnum():
         os.system("find " + shrts.getinstalldir() + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'ftp.*enum|ftp.*enum'")
         print(" \033[90m")
         shrts.pop()
-        target = input("Select A Target : ")
-        output = input("Select an output file : ")
+        target = shlex.quote(input("Select A Target : "))
+        output = shlex.quote(input("Select an output file : "))
         if not smb in no:
             smb = "-s"
         else:
@@ -595,45 +596,45 @@ def Photon():
         os.system("chmod +x /usr/local/bin/Photon")
         print("You can now use " + "\033[91m" + Photon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" )
         shrts.okinf()
-def Raccoon():
-    Raccoon.title = "Raccoon : an offensive security tool for reconnaissance and vulnerability scanning."
-    tool_dir = "/INFO-GATH/Tools/Raccoon"
-    if os.path.exists('/usr/local/bin/Raccoon'):
-        shrts.prilogspc()
-        os.system("git clone https://github.com/evyatarmeged/Raccoon.git " + shrts.getinstalldir() + tool_dir + null)
-        shrts.prilogspc()
-        print("\033[92m           " + Raccoon.title + "\033[90m")
-        shrts.spc()
-        target = sanitize.bash_escape_restrictor(input("Select a Target (use 'raccoon --help' for more options) : ")
-        shrts.spc()
-        print("\033[92mCheatsheets that can help you with this :")
-        shrts.spc()
-        os.system("find " + shrts.getinstalldir() + "/INFO-GATH/CHEATSHEETS/ -type f | grep vulnerability")
-        print("\033[90m")
-        shrts.pop()
-        os.system("raccoon " + target)
-        shrts.spc()
-        print("\033[92mFor more options, Use raccoon --help\033[0m")
-        shrts.okinf()
-    else:
-        shrts.prilogspc()
-        print("\033[92m           " + Raccoon.title + "\033[90m")
-        shrts.spc()
-        print("\033[91mDownloading ...\033[0m")
-        shrts.spc()
-        os.system("git clone https://github.com/evyatarmeged/Raccoon.git " + shrts.getinstalldir() + tool_dir + null)
-        shrts.prilogspc()
-        print("\033[92m           " + Raccoon.title + "\033[90m")
-        shrts.spc()
-        shrts.printlogo()
-        print("\033[91mInstalling ...\033[0m.")
-        shrts.spc()
-        os.system("cd " + shrts.getinstalldir() + tool_dir + " && pip3 install -r " + shrts.getinstalldir() + tool_dir + "/requirements.txt" + null)
-        os.system("cd " + shrts.getinstalldir() + tool_dir + " && python3 setup.py install" + null)
-        os.system("ln -s /usr/bin/raccoon /usr/local/bin/Raccoon")
-        shrts.prilogspc()
-        print(("You can now use " + "\033[91m" + Raccoon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
-        shrts.okinf()
+# def Raccoon():
+#     Raccoon.title = "Raccoon : an offensive security tool for reconnaissance and vulnerability scanning."
+#     tool_dir = "/INFO-GATH/Tools/Raccoon"
+#     if os.path.exists('/usr/local/bin/Raccoon'):
+#         shrts.prilogspc()
+#         os.system("git clone https://github.com/evyatarmeged/Raccoon.git " + shrts.getinstalldir() + tool_dir + null)
+#         shrts.prilogspc()
+#         print("\033[92m           " + Raccoon.title + "\033[90m")
+#         shrts.spc()
+#         target = sanitize.bash_escape_restrictor(input("Select a Target (use 'raccoon --help' for more options) : ")
+#         shrts.spc()
+#         print("\033[92mCheatsheets that can help you with this :")
+#         shrts.spc()
+#         os.system("find " + shrts.getinstalldir() + "/INFO-GATH/CHEATSHEETS/ -type f | grep vulnerability")
+#         print("\033[90m")
+#         shrts.pop()
+#         os.system("raccoon " + target)
+#         shrts.spc()
+#         print("\033[92mFor more options, Use raccoon --help\033[0m")
+#         shrts.okinf()
+#     else:
+#         shrts.prilogspc()
+#         print("\033[92m           " + Raccoon.title + "\033[90m")
+#         shrts.spc()
+#         print("\033[91mDownloading ...\033[0m")
+#         shrts.spc()
+#         os.system("git clone https://github.com/evyatarmeged/Raccoon.git " + shrts.getinstalldir() + tool_dir + null)
+#         shrts.prilogspc()
+#         print("\033[92m           " + Raccoon.title + "\033[90m")
+#         shrts.spc()
+#         shrts.printlogo()
+#         print("\033[91mInstalling ...\033[0m.")
+#         shrts.spc()
+#         os.system("cd " + shrts.getinstalldir() + tool_dir + " && pip3 install -r " + shrts.getinstalldir() + tool_dir + "/requirements.txt" + null)
+#         os.system("cd " + shrts.getinstalldir() + tool_dir + " && python3 setup.py install" + null)
+#         os.system("ln -s /usr/bin/raccoon /usr/local/bin/Raccoon")
+#         shrts.prilogspc()
+#         print(("You can now use " + "\033[91m" + Raccoon.title + "\033[90m" + " from Lockdoor [\033[92m Lockdoor \033[90m ]" ))
+#         shrts.okinf()
 def dnsrecon():
     dnsrecon.title = "DnsRecon : A DNS Enumeration Script"
     tool_dir = "/INFO-GATH/Tools/DnsRecon"
