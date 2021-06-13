@@ -1,6 +1,7 @@
 import os
 import sys
 from lockdoors import main
+from lockdoors import sanitize
 from lockdoors import shrts
 from lockdoors import sanitize
 from pathlib import Path
@@ -178,8 +179,8 @@ def Nasnum():
         os.system("find " + shrts.getinstalldir() + "/INFO-GATH/CHEATSHEETS/ -type f | grep -E 'ftp.*enum|ftp.*enum'")
         print(" \033[90m")
         shrts.pop()
-        target = input("Select A Target : ")
-        output = input("Select an output file : ")
+        target = sanitize.bash_escape_restrictor(input("Select A Target : "))
+        output = sanitize.bash_escape_restrictor(input("Select an output file : "))
         if not smb in no:
             smb = "-s"
         else:
