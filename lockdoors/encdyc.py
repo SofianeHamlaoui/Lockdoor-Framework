@@ -1,6 +1,7 @@
 import os
 import sys
 from lockdoors import main
+from lockdoors import sanitize
 from lockdoors import shrts
 from pathlib import Path
 from datetime import datetime
@@ -79,7 +80,7 @@ def findmyhash():
               LDAP_SHA1 - SHA1 Base64 encoded
         """)
         algo = input("What Algo you want to use ? : ")
-        hash = input("Enter the hash : ")
+        hash = sanitize.bash_escape_restrictor(input("Enter the hash : "))
         os.system("python2 " + shrts.getinstalldir() + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
         shrts.okenc()
     else:
