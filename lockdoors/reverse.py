@@ -1,6 +1,7 @@
 import os
 import sys
 from lockdoors import main
+from lockdoors import sanitize
 from lockdoors import shrts
 from pathlib import Path
 from datetime import datetime
@@ -38,8 +39,8 @@ def virustotal():
         shrts.prilogspc()
         print("\033[92m           " + virustotal.title + "\033[90m")
         shrts.spc()
-        key = input("\033[92mEnter the Virtustoal Api  ? : \033[90m")
-        outp = input("\033[92mEnter directory containing files to scan ? : \033[90m")
+        key = sanitize.bash_escape_restrictor(input("\033[92mEnter the Virtustoal Api  ? : \033[90m"))
+        outp = sanitize.bash_escape_restrictor(input("\033[92mEnter directory containing files to scan ? : \033[90m"))
         os.system("python2 " + shrts.getinstalldir() + tool_dir + "/vt.py --key "+key+" " +outp)
         shrts.okrev()
     else:
