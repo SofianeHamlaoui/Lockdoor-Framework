@@ -14,8 +14,7 @@
    <h2 align="center">
    !NEWS!</h2>
    <h3 align="center">
-   Version v2.2.4 IS OUT !! <br>
-   Check the changelog here <a href="https://github.com/SofianeHamlaoui/Lockdoor-Framework/wiki/changelog-of-v2.2.4">Changelog of v2.2.4</a>
+   Version v2.3 IS OUT !! <br>
    </h3>
 
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
