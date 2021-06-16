@@ -13,7 +13,7 @@ def lockdoor():
     if not choiceupdate in no:
         print("\033[92mUpdating Lockdoor...\033[90m")
         shrts.spc()
-        os.system('pip install --upgrade lockdoor')
+        os.system('pip3 install --upgrade lockdoor')
         shrts.spc()
         shrts.oktocont()
         print("\033[92mUpdating The Tools...\033[90m")
