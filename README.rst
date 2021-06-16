@@ -294,6 +294,9 @@ https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on the 
                                        sudo docker exec -it lockdoor-container bash
 
 - Automatically
+      **Installing it using the script may take some time depends on the packages already installed on your system.**
+            here you can find a fresh installation on a new debian distro with no pre-installed packages : [11min]
+               .. image:: https://i.imgur.com/2yvXOYm.png
 
          .. code-block:: console
 
