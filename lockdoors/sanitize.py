@@ -1,3 +1,4 @@
+# Lockdoor Framework
 # input sanitization function
 def bash_escape_restrictor(data):
     escape_list = [";","&","|","*"," ","`"]
