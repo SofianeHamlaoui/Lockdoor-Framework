@@ -302,14 +302,7 @@ https://hub.docker.com/r/sofianehamlaoui/lockdoor. It is initially based on the 
 
                    1) Automatically(x2) installation :
 
-                      bash <(wget -qO- https://git.io/JUBlZ)
-
-                   2) Automatically(x1) installation :
-
-                      git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && cd Lockdoor-Framework
-                      chmod +x ./install.sh
-                      ./install.sh
-
+                   git clone https://github.com/SofianeHamlaoui/Lockdoor-Framework.git && cd Lockdoor-Framework && chmod +x ./install.sh && ./install.sh                  
 - Manually
 
    - Installing requirments
