@@ -4,4 +4,3 @@ ToolsResources/* linguist-detectable=false
 *.sh linguist-detectable=false
 *.c linguist-detectable=false
 *.pl linguist-detectable=false
-
