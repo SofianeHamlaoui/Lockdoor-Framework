@@ -15,6 +15,15 @@
    !NEWS!</h2>
    <h3 align="center">
    Version v2.3 IS OUT !! <br>
+
+      - Fixing some CI <br>
+
+      - making a more stable version <br>
+
+      - new docker iaage build<br>
+
+      - adding packages for each supported distros<br>
+
    </h3>
 
 .. |code-quality| image:: https://api.codacy.com/project/badge/Grade/a5ccede5f91247ab91b14eb97309b74b
