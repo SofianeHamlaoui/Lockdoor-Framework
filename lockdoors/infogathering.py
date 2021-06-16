@@ -278,7 +278,7 @@ def Sublist3r():
         shrts.spc()
         print("\033[91mInstalling ...\033[0m")
         shrts.spc()
-        os.system("pip install -r " + shrts.getinstalldir() + tool_dir + "/requirements.txt" + null)
+        os.system("pip3 install -r " + shrts.getinstalldir() + tool_dir + "/requirements.txt" + null)
         os.system("""echo "#!/bin/bash" > /usr/local/bin/Sublist3r""")
         os.system("""echo "#Dev : Sofiane Hamlaoui" >> /usr/local/bin/Sublist3r""")
         os.system("echo python3 " + shrts.getinstalldir() + tool_dir + "/sublist3r.py >> /usr/local/bin/Sublist3r")
