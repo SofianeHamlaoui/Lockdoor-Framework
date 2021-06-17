@@ -2,9 +2,6 @@
 <p align="center">
   <img src="https://up.sofianehamlaoui.fr/lockdoor/lockdoor_small.png">
 </p>
-<h1 align="center"> Lockdoor Pentesting Framework</h1>
-
-
 
 # Table of contents
 
