@@ -3,6 +3,8 @@
   <img src="https://up.sofianehamlaoui.fr/lockdoor/lockdoor_small.png">
 </p>
 
+<h2 align="center"> Lockdoor v2.3</h2>
+
 # Table of contents
 
 - [Table of contents](#table-of-contents)
