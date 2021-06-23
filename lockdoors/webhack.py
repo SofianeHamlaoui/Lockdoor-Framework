@@ -1,6 +1,7 @@
 import os
 from lockdoors import main
 from lockdoors import shrts
+from lockdoors import sanitize
 from pathlib import Path
 from datetime import datetime
 from time import sleep
@@ -59,7 +60,7 @@ def Spaghetti():
             agent = ""
         proxy = input("Set a proxy ? (Y/N) : ")
         if proxy in yes:
-            proxy = input("Set the Proxy (host:port) : ")
+            proxy = sanitize.bash_escape_restrictor(input("Set the Proxy (host:port) : "))
             proxy = " --proxy " + proxy
         verbose = input("Verbose output ? (Y/N) : ")
         if verbose in yes:
