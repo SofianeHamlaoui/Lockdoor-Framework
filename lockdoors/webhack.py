@@ -167,7 +167,7 @@ def whatweb():
         shrts.spc()
         print("\033[92m           " + whatweb.title + "\033[90m")
         shrts.spc()
-        target = input("Select a Target : ")
+        target = sanitize.bash_escape_restrictor(input("Select a Target : "))
         shrts.prilogspc()
         os.system(shrts.getinstalldir() + tool_dir + "/whatweb " + target)
         shrts.okwe()
