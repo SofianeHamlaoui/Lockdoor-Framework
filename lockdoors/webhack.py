@@ -58,9 +58,9 @@ def Spaghetti():
             agent = " --agent " + agent
         else:
             agent = ""
-        proxy = input("Set a proxy ? (Y/N) : ")
+        proxy = sanitize.bash_escape_restrictor(input("Set a proxy ? (Y/N) : "))
         if proxy in yes:
-            proxy = input("Set the Proxy (host:port) : ")
+            proxy = sanitize.bash_escape_restrictor(input("Set the Proxy (host:port) : "))
             proxy = " --proxy " + proxy
         verbose = input("Verbose output ? (Y/N) : ")
         if verbose in yes:
