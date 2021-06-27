@@ -200,7 +200,7 @@ def sqlmap():
         shrts.prilogspc()
         print("\033[92m           " + sqlmap.title + "\033[90m")
         shrts.spc()
-        target = input("Select a Target : ")
+        target = sanitize.bash_escape_restrictor(input("Select a Target : "))
         shrts.spc()
         print("Check the sqli cheatsheets to know more")
         shrts.spc()
