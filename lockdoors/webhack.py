@@ -29,7 +29,7 @@ def Spaghetti():
         shrts.prilogspc()
         print("\033[92m           " + Spaghetti.title + "\033[90m")
         shrts.spc()
-        target = input("Select a Target: ")
+        target = str(raw_input("Select a Target: "))
         shrts.spc()
         print("""Scan Options :
             0:	Full Scan
