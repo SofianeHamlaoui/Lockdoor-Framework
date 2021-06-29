@@ -2,6 +2,7 @@ import os
 from lockdoors import main
 from lockdoors import shrts
 from pathlib import Path
+from lockdoors import sanitize
 from datetime import datetime
 from time import sleep
 from os import path
@@ -51,9 +52,9 @@ def Spaghetti():
             ranagent = " --random-agent "
         else:
             ranagent = ""
-        agent = input("Use a specified Agent ? (Y/N) : ")
+        agent = sanitize.bash_escape_restrictor(input("Use a specified Agent ? (Y/N) : "))
         if agent in yes:
-            agent = input("Specify the Agent ! : ")
+            agent = sanitize.bash_escape_restrictor(input("Specify the Agent ! : "))
             agent = " --agent " + agent
         else:
             agent = ""
