@@ -79,7 +79,7 @@ def findmyhash():
               LDAP_MD5  - MD5 Base64 encoded
               LDAP_SHA1 - SHA1 Base64 encoded
         """)
-        algo = input("What Algo you want to use ? : ")
+        algo = sanitize.bash_escape_restrictor(input("What Algo you want to use ? : "))
         hash = sanitize.bash_escape_restrictor(input("Enter the hash : "))
         os.system("python2 " + shrts.getinstalldir() + tool_dir + "/findmyhash.py " +algo+ " -h " +hash)
         shrts.okenc()
