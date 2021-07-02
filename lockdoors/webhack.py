@@ -41,7 +41,7 @@ def Spaghetti():
             5:	Vulns (shellshock,..)
             6:	Fingerprint only
         """)
-        scoption = input("choose a Scan Option: ")
+        scoption = sanitize.bash_escape_restrictor(input("choose a Scan Option: "))
         crawler = input("Use Deep crawling (Slow) ? (Y/N) : ")
         if crawler in yes:
             crawler = " --crawler "
