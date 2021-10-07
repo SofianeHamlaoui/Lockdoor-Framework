@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SofianeHamlaoui/junk/master/lockdoor/2.3/lockdoor_small.png">
+  <img src="http://up.sofianehamlaoui.fr/lockdoor/2.3/lockdoor_small.png">
 </p>
 
 <h2 align="center"> Lockdoor v2.3</h2>
