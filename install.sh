@@ -60,7 +60,7 @@ function chkapt {
     if [ "$?" -eq "0" ]; then
         echo -e "   ${g} [-] Installing the Packages${endc}"
         echo ""
-        apt-get install -y golang-go python python3-pip python3 python3-requests python3-pip gcc ruby php git wget bc curl netcat subversion openjdk-11-jre make automake gcc gzip rsync wget
+        apt-get install -y golang-go python3 python3-pip python3-requests python3-pip gcc ruby php git wget bc curl netcat-traditional subversion openjdk-11-jre make automake gcc gzip rsync wget
         gem install bundler:1.17.2
     else
         echo -e "   ${g} [-] Skipping apt${endc}"
