@@ -74,15 +74,40 @@ function install_packages {
     sleep 1
 }
 
+function show_progress {
+    local duration=$1
+    local increment=$(($duration / 20))
+    local progress=0
+
+    while [ $progress -lt 100 ]; do
+        echo -ne "["
+        for ((i=0; i<$progress; i+=5)); do echo -ne "#"; done
+        for ((i=$progress; i<100; i+=5)); do echo -ne "."; done
+        echo -ne "] $progress% \r"
+        sleep $increment
+        progress=$((progress + 5))
+    done
+    echo -ne "["
+    for ((i=0; i<100; i+=5)); do echo -ne "#"; done
+    echo -ne "] 100% \r"
+    echo
+}
+
 function install {
     showlogo && checkroot
-    
+
+    echo "Starting installation..."
+    show_progress 30 &
+    progress_pid=$!
+
     install_packages "apt" "apt-get install -y golang-go python3 python3-pip python3-requests gcc ruby php git wget bc curl netcat-traditional subversion openjdk-11-jre make automake gzip rsync"
     install_packages "pacman" "pacman -S go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gzip rsync"
     install_packages "zypper" "zypper install -y go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gzip rsync"
     install_packages "dnf" "dnf install -y go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gzip rsync"
     install_packages "yum" "yum install -y go python python-pip python-requests python2 python2-pip gcc ruby php git wget bc curl netcat subversion jre-openjdk make automake gzip rsync"
     
+    wait $progress_pid
+
     clear
     showlogo
     echo ""
@@ -92,6 +117,7 @@ function install {
     echo ""
     echo -e "\e[32m[-] Installing .... !\e[0m"
     echo ""
+
     mkdir -p $installdir
     mkdir -p $HOME"/.config/lockdoor"
     files=$(grep -l Sofiane /usr/local/bin/* 2>/dev/null)
@@ -99,8 +125,12 @@ function install {
         echo "$files" | xargs rm
     fi
     echo "Location: $installdir" > $HOME"/.config/lockdoor/lockdoor.conf"
-    rsync -a ToolsResources/* $installdir > /dev/null 2>&1
+
+    echo "Syncing files..."
+    rsync -a --info=progress2 ToolsResources/* $installdir | pv -lep -s $(du -sb ToolsResources | awk '{print $1}') > /dev/null 2>&1
+
     pip3 install lockdoor > /dev/null 2>&1
+
     clear
     # RUN
     showlogo
