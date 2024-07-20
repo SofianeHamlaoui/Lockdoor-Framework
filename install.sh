@@ -74,6 +74,18 @@ function install_packages {
     sleep 1
 }
 
+function install_pv {
+    which pv > /dev/null 2>&1
+    if [ "$?" -ne "0" ]; then
+        echo -e "   ${y} [-] 'pv' not found. Installing 'pv'...${endc}"
+        install_packages "apt" "apt-get install -y pv"
+        install_packages "pacman" "pacman -S --noconfirm pv"
+        install_packages "zypper" "zypper install -y pv"
+        install_packages "dnf" "dnf install -y pv"
+        install_packages "yum" "yum install -y pv"
+    fi
+}
+
 function show_progress {
     local duration=$1
     local increment=$(($duration / 20))
@@ -95,6 +107,8 @@ function show_progress {
 
 function install {
     showlogo && checkroot
+
+    install_pv
 
     echo "Starting installation..."
     show_progress 30 &
