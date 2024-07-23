@@ -139,7 +139,7 @@ function install {
     echo "Syncing files..."
     rsync -a --info=progress2 ToolsResources/* $installdir | pv -lep -s $(du -sb ToolsResources | awk '{print $1}') > /dev/null 2>&1
 
-    pip3 install lockdoor > /dev/null 2>&1
+    pip3 install lockdoor --break-system-packages > /dev/null 2>&1
 
     clear
     # RUN
