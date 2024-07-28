@@ -63,7 +63,6 @@
 
 # Badges 📌 :
 ![made-with-python]( http://ForTheBadge.com/images/badges/made-with-python.svg)
-![Twitter](https://badgen.net/twitter/follow/S0fianeHamlaoui)
 ![GitHub](https://badgen.net/github/release/SofianeHamlaoui/Lockdoor-Framework)
 ![License](https://badgen.net/pypi/license/lockdoor)
 ![TestedON](https://img.shields.io/badge/Tested%20on%20%20-Linux%20%26%20Windows-blue)
