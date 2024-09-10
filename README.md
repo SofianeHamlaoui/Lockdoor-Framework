@@ -3,7 +3,11 @@
   <img src="https://avatars.githubusercontent.com/u/55242164?s=400">
 </p>
 
-<h2 align="center"> Lockdoor v2.3</h2>
+<h2 align="center"> Lockdoor v2.3<br>
+⚠️ This project is not maintained anymore. ⚠️
+</h2>
+
+
 
 # Table of contents
 
